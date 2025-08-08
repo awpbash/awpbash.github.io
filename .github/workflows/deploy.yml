@@ -2,7 +2,7 @@ name: Deploy Astro to GitHub Pages
 
 on:
   push:
-    branches: [main]  # or your default branch
+    branches: [main]  # Deploys on push to main
 
 permissions:
   contents: write
@@ -26,11 +26,12 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
-      - name: Add .nojekyll
-        run: touch dist/.nojekyll
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+      - name: Copy build to root (overwrite repo root with dist)
+        run: |
+          cp -r dist/* ./
+          touch .nojekyll
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "deploy: overwrite with build output"
+          git push
