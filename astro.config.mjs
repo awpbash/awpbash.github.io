@@ -8,4 +8,5 @@ export default defineConfig({
   site: 'https://awpbash.github.io',
   integrations: [mdx(), sitemap(), tailwind()],
   base: '/',
+  outDir: 'dist'
 });
