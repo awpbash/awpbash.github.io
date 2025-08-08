@@ -5,55 +5,60 @@ import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
 const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
-    <div class="py-2">
-      <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
-      </text>
+    <div class="text-5xl font-bold">I'm Jun Wei</div>
+    <div class="text-3xl py-3 font-bold">AI Engineer, Builder & Problem Solver</div>
+    <div class="py-2 text-lg leading-relaxed">
+      I'm endlessly curious about how AI can solve meaningful problems. I love learning new things, building scrappy prototypes, and turning them into useful solutions. From computer vision tools to smart assistants, I enjoy exploring the possibilities of intelligent systems. 
+    </div>
+    <div class="py-2 text-lg leading-relaxed">
+      I'm currently pursuing my MSc in Business Analytics at NUS, where I’m combining technical depth with real-world impact to build smarter, data-driven solutions.
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
-      </a>
+      <a class="btn" href="https://www.linkedin.com/in/jun-wei-ng-2b06b6251/" target="_blank">Let’s connect</a>
+      <a href="https://github.com/awpbash" target="_blank" class="btn btn-outline ml-5">GitHub</a>
+      <a href="https://huggingface.co/awpbash" target="_blank" class="btn btn-outline ml-5">Huggingface</a>
     </div>
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-2">My recent projects {"</>"}</div>
   </div>
-
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
+    title="Product Interaction for Video Retail Analytics"
+    img="/product_interaction.jpg"
+    desc="Utilising computer vision to process CCTV footage and derive business insights on customer production interaction."
+    url="/projects/product-interaction"
+    badge="CV in Retail"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="ClearPlate"
+    img="/clearplate.png"
+    desc="Computer vision pipeline for monocular weight estimation to derive insights on amount and type of food waste on plates.<br /><br /> Winner of EIC 2025 Merit award."
+    url="/projects/clearplate"
+    badge="AI x Sustainability"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  title="Pocket Missy"
+  img="/pocketmissy.png"
+  desc="An innovative all-in-one app built to advance value-based healthcare in Singapore and support seniors in living independently. <br /><br /> Winner of Healthhack 2025 Intersystems challenge."
+  url="/projects/pocket-missy"
+  badge="AI for Good"
+/>
+<div class="divider my-0"></div>
+  <HorizontalCard
+    title="An RL Apprach to Congestion Aware Taxi Rebalancing in AMoD Networks"
+    img="/taxi_rebalancing.jpg"
+    desc="A congestion-aware reinforcement learning framework that dynamically rebalances autonomous vehicles to optimise level of service of ridehailing service providers. <br /><br /> Final year dissertation."
     url="#"
-    badge="FOSS"
+    badge="RL Research"
   />
 
   <div>

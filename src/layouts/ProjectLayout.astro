@@ -1,0 +1,69 @@
+---
+import { type StoreSchema } from "../content/config";
+import BaseLayout from "./BaseLayout.astro";
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
+import { Image } from "astro:assets";
+
+export interface Props extends StoreSchema {}
+
+const {
+  title,
+  description,
+  updatedDate,
+  heroImage,
+  custom_link,
+  custom_link_label,
+  badge,
+  tags,
+} = Astro.props;
+
+dayjs.extend(localizedFormat);
+const displayDate = dayjs(updatedDate).format("ll");
+---
+
+<BaseLayout title={title} description={description} image={heroImage}>
+  <main class="md:flex md:justify-center">
+    <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
+
+      {heroImage && (
+        <Image
+          width={750}
+          height={422}
+          format="webp"
+          src={heroImage}
+          alt={title}
+          class="w-full mb-6"
+        />
+      )}
+
+      <div>
+        <h1 class="title my-2 text-4xl font-bold">
+          {title}
+          {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
+        </h1>
+
+        <p class="text-sm text-gray-500 mb-2">Last updated: {displayDate}</p>
+
+        {tags && Array.isArray(tags) && tags.length > 0 && (
+          <div class="mb-4 flex flex-wrap gap-2">
+            {tags.map(tag => (
+              <span class="badge badge-outline text-sm" key={tag}>{tag}</span>
+            ))}
+          </div>
+        )}
+
+        {custom_link && (
+          <div class="my-4">
+            <a class="btn btn-outline" href={custom_link} target="_blank" rel="noopener noreferrer">
+              {custom_link_label}
+            </a>
+          </div>
+        )}
+      </div>
+
+      <div class="divider my-2"></div>
+      <slot />
+    </article>
+  </main>
+</BaseLayout>
