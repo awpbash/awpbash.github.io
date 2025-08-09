@@ -1,0 +1,111 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout sideBarActiveItemID="about">
+  <section class="prose prose-lg max-w-none px-4 py-8">
+
+    <h1 class="text-4xl font-bold mb-4">About Me</h1>
+    <p>
+        I’m Jun Wei, an engineer turned AI practitioner who thrives at the intersection of data, algorithms, and real-world applications.
+      </p>
+    <!-- Table of Contents -->
+    <nav class="mb-8 text-sm">
+      <h3 class="text-lg font-semibold mb-2">Jump to:</h3>
+      <ul class="list-disc ml-5 space-y-1 text-blue-600">
+        <li><a href="#background">Engineering Foundations</a></li>
+        <li><a href="#ai-journey">Discovering AI</a></li>
+        <li><a href="#interests">Beyond Code</a></li>
+        <li><a href="#contact">Get in Touch</a></li>
+      </ul>
+    </nav>
+
+    <!-- SECTION: Background -->
+    <section id="background">
+    <h2 class="text-2xl font-bold mb-4">Engineering Foundations</h2>
+
+    <p>
+        My journey began in <strong>civil engineering</strong>, driven by a deep curiosity about how large-scale structures are designed and built. During my pre-university days, I found myself captivated by
+        <a href="https://www.youtube.com/@PracticalEngineeringChannel" target="_blank" rel="noopener noreferrer">Practical Engineering</a>, diving into the mechanics of soil, concrete, and the principles that make our built environment possible.
+        <i><br>Something about digging a 15m wide tunnel for trains 40m below ground level just intrigues me a lot!</br></i>
+    </p>
+
+    <p>
+        I was fortunate to receive the <strong>NUS Engineering Scholarship</strong>, which enabled me to pursue my undergraduate studies at an accelerated pace. This opportunity not only supported my academic growth but also exposed me to a wide range of interdisciplinary experiences early on.
+    </p>
+    <!-- Image + Caption -->
+    <h2 class="text-2xl font-bold mb-4">Undergraduate Research in Concrete Technology</h2>
+
+  <p>
+    During my time with CEE, I worked on a research project exploring the use of <strong>recycled tunnel muck</strong>, waste rock from tunneling, as a replacement for sand in concrete. This experience exposed me to the intricate challenges of sustainable construction practices and lab research work which I found both tedious and rewarding. Our findings showed that this substitution was not only feasible, improved the sustainability by reducing carbon footprint, but also reduced Singapore’s dependency on imported sand, strengthening our local supply chain resiliency.
+  </p>
+
+  <p>
+    The project was recognised with several awards, including the <strong>2023 Engineering Innovation Award</strong>, <strong>CDE High Achievement Award</strong>, and the <strong>NUS Outstanding Undergraduate Researcher Prize (OURP)</strong>!
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+    <figure class="text-center">
+      <img src="/about/materials.png" alt="Testing sustainable concrete mix" class="rounded-lg shadow mx-auto object-cover w-[400px] h-[266px]"  />
+      <figcaption class="text-sm text-gray-500 mt-2">Fig 1: Lab testing of sustainable concrete mixtures</figcaption>
+    </figure>
+
+    <figure class="text-center">
+      <img src="/about/team.png" alt="Team" class="rounded-lg shadow mx-auto object-cover w-[400px] h-[266px]"  />
+      <figcaption class="text-sm text-gray-500 mt-2">Fig 2: The team behind the research</figcaption>
+    </figure>
+  </div>
+    </section>
+
+    <!-- SECTION: AI Journey -->
+    <section id="ai-journey" class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">Discovering AI</h2>
+      <p>
+        As part of my Specialisation in Digitalisation of Urban Infrastructure, I took a course on <strong>Optimization and Algorithms for Civil Engineers</strong> in my second semster of studies. This course introduced me to the world of <strong>AI and digitalization</strong>, where I learned how drones and computer vision can be used to identify cracks and defects on buildings. In this project, we had to design a system that could autonomously fly a drone across multiple points of interests, capture images, and classify the defects, all while ensuring the flight path taken was as short as possible. (Travelling Salesman!)
+      </p>
+        <div class="flex justify-center mt-6">
+        <figure class="text-center">
+            <img 
+            src="/about/drone.png" 
+            alt="Testing sustainable concrete mix" 
+            class="rounded-lg shadow mx-auto object-cover w-[400px] h-[400px]"  
+            />
+            <figcaption class="text-sm text-gray-500 mt-2">
+            Fig 3: Using Tello drone to capture and classify images of pingpong balls as simulated defects!
+            </figcaption>
+        </figure>
+        </div>
+
+      <p>
+        Since then, I’ve dived headfirst into the world of <strong>AI</strong>. Whether it's building reinforcement learning agents or hacking together a computer vision prototype, I’m most alive when I’m figuring things out and turning ideas into something real.
+      </p>
+    </section>
+
+    <!-- SECTION: Interests -->
+    <section id="interests" class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">Beyond Code</h2>
+      <p>
+        Outside of work and studies, I like to keep my curiosity sharp with a mix of (sometimes painful) hobbies:
+      </p>
+      <ul class="list-disc ml-6">
+        <li><strong>GeoGuessr:</strong> Something about being able to identify where you are just by looking at your surroundings just tickled my brain and I'm greatly amused at how people can pinpoint their location just by looking at the soil and carplates around them. I am currently trying to master the bollard meta!</li>
+        <li><strong>Formula 1:</strong> Cars going around in circles may sound boring, but the thrill of racing strategies and team tactics just picks at my brain a lot. I'm an unfortuante Mercedes fan and aspire to be a race strategiest one day!</li>
+        <li><strong>League of Legends:</strong> I've been playing this godforsaken game since I was 13 and have a love hates relationship with it. The macro stratgies and micro mechanics are just so intriguing and fun to me but I'm more of an ARAM and URF player where I can just off my brain and autopilot. </li>
+      </ul>
+    </section>
+
+    <!-- SECTION: Contact -->
+    <section id="contact" class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">Get in Touch</h2>
+      <p>
+        I believe in building fast, learning faster, and making useful things along the way. If you're into cool tech, wild ideas, or just want to yap about anything, don't hesitate to reach out!
+      </p>
+
+      <div class="mt-6">
+        <a class="btn btn-primary mr-4" href="https://www.linkedin.com/in/jun-wei-ng-2b06b6251/" target="_blank">Connect on LinkedIn</a>
+        <a class="btn btn-outline" href="mailto:e0957730@u.nus.edu">Drop me an email</a>
+      </div>
+    </section>
+
+  </section>
+</BaseLayout>
