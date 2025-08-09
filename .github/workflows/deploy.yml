@@ -26,12 +26,11 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
-      - name: Copy build to root (overwrite repo root with dist)
-        run: |
-          cp -r dist/* ./
-          touch .nojekyll
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "deploy: overwrite with build output"
-          git push
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          # This is the key line. It tells the action to push the built
+          # files to a separate branch called 'gh-pages'.
+          publish_branch: gh-pages
