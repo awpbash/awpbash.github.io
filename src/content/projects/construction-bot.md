@@ -9,7 +9,7 @@ tags: ["Vector Search", "RAG", "LLM", "OpenAI", "Document Retrieval"]
 
 Construction projects are a data-intensive environment, with thousands of documents ranging from architectural blueprints to contracts and governmental regulations. Quickly finding the right information is critical for efficiency, compliance, and safety. However, traditional search methods are often slow and inefficient, and the presence of updated documents can easily lead to the use of outdated information.
 
-Developed as a pilot project for KTC, the **Construction Bot** is an intelligent document retrieval system built to solve this problem. It allows project teams to find precise, context-aware information from their vast library of project documents leveraging vector search technology, natural language queries and large language reasoning models.
+Developed as a pilot project for KTC, the **Construction Bot** is an intelligent document retrieval chat bot system built to solve this problem. It allows project teams to find precise, context-aware information from their vast library of project documents leveraging vector search technology, natural language queries and large language reasoning models.
 
 ## The Problem
 
@@ -34,7 +34,7 @@ This project is built on a robust and scalable AI stack designed for document pr
 
 ## How It Works
 
-The bot's pipeline can be broken down into a few simple steps:
+The chat bot's pipeline can be broken down into a few simple steps:
 
 1.  **Document Ingestion:** Project documents (PDFs, images, text files) are parsed, chunked, and converted into dense vector embeddings.
 2.  **Vector Indexing:** These embeddings are stored in ChromaDB, creating a searchable index of the entire document library.
