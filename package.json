@@ -16,13 +16,19 @@
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.1",
     "@astrojs/tailwind": "^5.0.3",
+    "@dqbd/tiktoken": "^1.0.22",
+    "@xenova/transformers": "^2.17.2",
     "astro": "^5.12.8",
     "daisyui": "^4.4.10",
     "dayjs": "^1.11.9",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "sharp": "^0.32.6",
-    "tailwindcss": "^3.3.5"
+    "tailwindcss": "^3.3.5",
+    "tiktoken": "^1.0.22"
   },
   "devDependencies": {
+    "@astrojs/react": "^4.3.0",
     "@tailwindcss/typography": "^0.5.10"
   }
 }
