@@ -81,7 +81,7 @@ The findings from my data pretty much lines up with the conversion chart.
 - Shoot into the centre as Onana doesn't seem to stay stationary. Looks like a free goal to me. Plus it sends Onana to the shops!
 
 ## Why you should trust me
-- I won a fifa 'tournament' once and got golden boot.
+- I won a fifa 'tournament' once and got a golden ball.
 ![win](/onana/trophy.jpg)
 
 
