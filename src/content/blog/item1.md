@@ -50,7 +50,7 @@ From this, we can see that the bottom left where Archer shot had a conversion ra
 ## Validation (ish but not really)
 To make sure my recommendations are data driven, I have personally reviewed 102 on target penalties from the 23/24 EPL season to try and P-hack my way through on why shooting into the centre is worth it.
 
-[Download my dataset here!](/onana/EPL_23_24_pen_data.xlsx)
+[Download my dataset here!](https://docs.google.com/spreadsheets/d/1I6EPd4dlWOTZPona3DFKvQjrntvYARKGKt8bk2TJ2UY/edit?usp=sharing)
 
 Doing a quick and simple analysis, we can draw the following conclusions:
 
