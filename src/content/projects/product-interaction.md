@@ -2,7 +2,7 @@
 title: "Product Interaction"
 description: "A computer vision system to detect product interactions in retail CCTV footage using pose estimation, segmentation, and depth analysis. Built during my internship at Tictag."
 pubDate: "August 2025"
-heroImage: "/productinteraction/header.png"
+heroImage: "/projects/product-interaction/header.png"
 tags: ["Computer Vision", "Deep Learning", "Retail Insights", "Video Analytics"]
 ---
 
@@ -108,7 +108,7 @@ The system is currently used internally at Tictag and cannot be shared due to co
 
 However, here’s a representative demo GIF showcasing the interaction detection in action:
 
-<img src="/productinteraction/pid.gif" width="600" alt="Interaction Detection Demo" />
+<img src="/projects/product-interaction/pid.gif" width="600" alt="Interaction Detection Demo" />
 
 ---
 

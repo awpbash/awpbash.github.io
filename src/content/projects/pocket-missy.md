@@ -2,7 +2,7 @@
 title: "Pocket Missy"
 description: "An all-in-one app advancing value-based healthcare through AI-driven insights, vector search, and multilingual support. Winner of HealthHack 2025 Intersystems Challenge."
 pubDate: "July 2025"
-heroImage: "/pocketmissy.png"
+heroImage: "/projects/pocket-missy.png"
 tags: ["AI for Good", "Healthcare", "RAG", "Vector Search"]
 ---
 
@@ -50,7 +50,7 @@ Healthcare for seniors is often fragmented, with vital services, appointments, p
 
 ### System Architecture
 
-<img src="/pocketmissy/pocketmissy1.png" width="100%" alt="System Architecture of Pocket Missy" />
+<img src="/projects/pocket-missy/pocketmissy1.png" width="100%" alt="System Architecture of Pocket Missy" />
 
 ---
 
@@ -104,7 +104,7 @@ Healthcare for seniors is often fragmented, with vital services, appointments, p
 
 ### The Team
 
-<img src="/pocketmissy/pocketmissy2.png" alt="Pocket Missy Team" width="100%" class="my-4 rounded-lg shadow-md" />
+<img src="/projects/pocket-missy/pocketmissy2.png" alt="Pocket Missy Team" width="100%" class="my-4 rounded-lg shadow-md" />
 
 - [Allexis Yu](https://www.linkedin.com/in/allexis-yu-3018a6244/) – NUS Year 2 Business Analytics
 - [Gerard Goh](https://www.linkedin.com/in/gerard-goh-ba888521b/) – NUS Year 2 Business Analytics  

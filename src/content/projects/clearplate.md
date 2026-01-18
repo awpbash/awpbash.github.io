@@ -2,7 +2,7 @@
 title: "ClearPlate"
 description: "ClearPlate uses cutting-edge computer vision and regression models to estimate food waste weight and composition from images, helping institutions reduce environmental impact."
 pubDate: "Aug 8 2025"
-heroImage: "/clearplate/header.png"
+heroImage: "/projects/clearplate/header.png"
 badge: "Computer Vision"
 tags: ["Computer Vision", "Foodwaste", "Segmentation", "Consumption Insights", "XGBoost"]
 ---
@@ -50,7 +50,7 @@ ClearPlate aims to help kitchens and policymakers:
 
 ## Demo Video
 
-![Demo](/clearplate/demo.gif)
+![Demo](/projects/clearplate/demo.gif)
 
 
 ## Deployment Ready
@@ -61,7 +61,7 @@ The full system is containerized via Docker and can be deployed on-prem or in th
 
 ## The Team
 
-![Team Photo of the ClearPlate team](/clearplate/team.png)
+![Team Photo of the ClearPlate team](/projects/clearplate/team.png)
 
 This project was a collaborative effort by a dedicated team of problem solvers:
 

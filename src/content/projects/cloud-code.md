@@ -2,7 +2,7 @@
 title: "Cloud Code"
 description: "A LeetCode-style learning platform for cloud architecture featuring drag-and-drop challenges, real-time cost optimization, and AI-powered evaluation. Built during HackNRoll 2026."
 pubDate: "Jan 18 2026"
-heroImage: "/cloud-code/demo_archi.png"
+heroImage: "/projects/cloud-code/demo_archi.png"
 badge: "HackNRoll 2026"
 tags: ["Cloud Architecture", "AI Evaluation", "Gamification", "React", "Firebase", "OpenAI"]
 ---
@@ -17,11 +17,11 @@ tags: ["Cloud Architecture", "AI Evaluation", "Gamification", "React", "Firebase
 
 Learning cloud architecture presents a significant barrier for aspiring developers. The vast ecosystem of cloud services across AWS, Azure, and GCP creates analysis paralysis—students struggle to move from theoretical knowledge to practical application. Traditional learning methods lack immediate feedback, cost awareness, and the gamified progression that keeps learners engaged.
 
-![Comic Strip](/cloud-code/comic_strip.jpg)
+![Comic Strip](/projects/cloud-code/comic_strip.jpg)
 
 The fundamental questions remain: *Which services should I use? How do I know if my architecture is optimal? How much will this actually cost?*
 
-![Meme](/cloud-code/meme.avif)
+![Meme](/projects/cloud-code/meme.avif)
 
 ---
 
@@ -66,13 +66,13 @@ For beginners, the platform includes a structured guided course that provides fo
 ### Platform Interface
 
 #### Homepage
-<img src="/cloud-code/homepage.jpg" alt="Cloud Code Homepage" width="100%" />
+<img src="/projects/cloud-code/homepage.jpg" alt="Cloud Code Homepage" width="100%" />
 
 #### Challenge Interface
-<img src="/cloud-code/challenge.jpg" alt="Challenge Builder Interface" width="100%" />
+<img src="/projects/cloud-code/challenge.jpg" alt="Challenge Builder Interface" width="100%" />
 
 #### Architecture Visualization
-<img src="/cloud-code/demo_2.png" alt="Example Cloud Architecture" width="100%" />
+<img src="/projects/cloud-code/demo_2.png" alt="Example Cloud Architecture" width="100%" />
 
 ---
 

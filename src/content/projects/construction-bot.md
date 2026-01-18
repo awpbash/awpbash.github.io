@@ -2,7 +2,7 @@
 title: "Construction Bot"
 description: "A smart document retrieval system for the construction industry using Vector Search and RAG to provide instant, accurate answers from project documentation."
 pubDate: "Aug 1 2025"
-heroImage: "/constructionbot/header.png"
+heroImage: "/projects/construction-bot/header.png"
 badge: "RAG & AI"
 tags: ["Vector Search", "RAG", "LLM", "OpenAI", "Document Retrieval"]
 ---
@@ -19,7 +19,7 @@ The challenge in construction is not a lack of data, but the difficulty of acces
 
 The approximate time complexity of a basic search function is often O(N), where N is the number of documents. To make searching more efficient, we use RAG (Retrieval-Augmented Generation) to preprocess the data. This reduces the search complexity to O(1) or O(log N) by creating vector embeddings and using a vector database.
 
-![Vector Search](/constructionbot/vector.png)
+![Vector Search](/projects/construction-bot/vector.png)
 
 These vectors are then fed into a large language model (LLM), such as one from OpenAI, to reason and summarize the information. The LLM can interpret these vectors to identify the most relevant and updated documents, or to synthesize information from multiple documents to provide a comprehensive answer.
 
