@@ -1,91 +1,120 @@
-<!DOCTYPE html><html lang="en" data-theme="lofi"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.12.8"><!-- Primary Meta Tags --><title>Cloud Code</title><meta name="title" content="Cloud Code"><meta name="description" content="A gamified cloud architecture learning platform featuring LeetCode-style challenges with drag-and-drop interface, cost optimization, and AI-powered evaluation. Built in 24 hours for HackNRoll 2026."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://awpbash.github.io/projects/cloud-code/"><meta property="og:title" content="Cloud Code"><meta property="og:description" content="A gamified cloud architecture learning platform featuring LeetCode-style challenges with drag-and-drop interface, cost optimization, and AI-powered evaluation. Built in 24 hours for HackNRoll 2026."><meta property="og:image" content="https://awpbash.github.io/cloud-code/demo_archi.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://awpbash.github.io/projects/cloud-code/"><meta property="twitter:title" content="Cloud Code"><meta property="twitter:description" content="A gamified cloud architecture learning platform featuring LeetCode-style challenges with drag-and-drop interface, cost optimization, and AI-powered evaluation. Built in 24 hours for HackNRoll 2026."><meta property="twitter:image" content="https://awpbash.github.io/cloud-code/demo_archi.png"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DZnDNxNb.js"></script><link rel="stylesheet" href="/_astro/aboutme.D3txcmxR.css">
+<!DOCTYPE html><html lang="en" data-theme="lofi"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.12.8"><!-- Primary Meta Tags --><title>Cloud Code</title><meta name="title" content="Cloud Code"><meta name="description" content="A LeetCode-style learning platform for cloud architecture featuring drag-and-drop challenges, real-time cost optimization, and AI-powered evaluation. Built during HackNRoll 2026."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://awpbash.github.io/projects/cloud-code/"><meta property="og:title" content="Cloud Code"><meta property="og:description" content="A LeetCode-style learning platform for cloud architecture featuring drag-and-drop challenges, real-time cost optimization, and AI-powered evaluation. Built during HackNRoll 2026."><meta property="og:image" content="https://awpbash.github.io/cloud-code/demo_archi.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://awpbash.github.io/projects/cloud-code/"><meta property="twitter:title" content="Cloud Code"><meta property="twitter:description" content="A LeetCode-style learning platform for cloud architecture featuring drag-and-drop challenges, real-time cost optimization, and AI-powered evaluation. Built during HackNRoll 2026."><meta property="twitter:image" content="https://awpbash.github.io/cloud-code/demo_archi.png"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DZnDNxNb.js"></script><link rel="stylesheet" href="/_astro/aboutme.ClKeHkaY.css">
 <style>.time-line-container>div:last-child .education__time>.education__line{display:none}.astro-route-announcer{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}
-</style></head> <body> <div class="bg-base-100 drawer lg:drawer-open"> <input id="my-drawer" type="checkbox" class="drawer-toggle"> <div class="drawer-content bg-base-100"> <div class="sticky lg:hidden top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm"> <div class="navbar"> <div class="navbar-start"> <label for="my-drawer" class="btn btn-square btn-ghost"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </label> </div> <div class="navbar-center"> <a class="btn btn-ghost normal-case text-xl" href="/">Jun Wei 👷‍♂️</a> </div> <div class="navbar-end"></div> </div> </div> <div class="md:flex md:justify-center"> <main class="p-6 pt-10 lg:max-w-[900px] max-w-[100vw]">  <main class="md:flex md:justify-center"> <article class="prose prose-lg max-w-[750px] prose-img:mx-auto"> <img src="/cloud-code/demo_archi.png" alt="Cloud Code" loading="lazy" decoding="async" fetchpriority="auto" width="750" height="422" class="w-full mb-6"> <div> <h1 class="title my-2 text-4xl font-bold"> Cloud Code <div class="badge badge-secondary mx-2">HackNRoll 2026</div> </h1> <p class="text-sm text-gray-500 mb-2">Last updated: Jan 18, 2026</p> <div class="mb-4 flex flex-wrap gap-2"> <span class="badge badge-outline text-sm" key="Cloud Architecture">Cloud Architecture</span><span class="badge badge-outline text-sm" key="AI Evaluation">AI Evaluation</span><span class="badge badge-outline text-sm" key="Gamification">Gamification</span><span class="badge badge-outline text-sm" key="React">React</span><span class="badge badge-outline text-sm" key="Firebase">Firebase</span><span class="badge badge-outline text-sm" key="OpenAI">OpenAI</span> </div>  </div> <div class="divider my-2"></div>  <p>Cloud Code is a LeetCode-style platform that gamifies cloud architecture learning through interactive drag-and-drop challenges, real-time cost estimation, and AI-powered feedback. Built during HackNRoll 2026, a 24-hour hackathon.</p>
-<h2 id="the-problem">The Problem</h2>
-<p>Arguably the average aspiring software developer today:</p>
-<p><img src="/cloud-code/comic_strip.jpg" alt="Comic Strip showing developers confused about cloud architecture"></p>
-<p>Ever tried understanding cloud architecture but got lost in the theory without practical exposure? So many possible cloud services, how do I even start? Or how do I know what’s best out of the many options? What even is in the cloud? That was us too…</p>
-<p><img src="/cloud-code/meme.avif" alt="Meme about cloud confusion"></p>
-<h2 id="our-solution">Our Solution</h2>
-<p>So what better way to learn Cloud Architecture than by feeding our daily desire for gratification through LeetCode-style problems! Through our challenges, users can drag and drop cloud components (e.g. from AWS, Azure, and GCP) to build solutions that are evaluated based on:</p>
-<ul>
-<li><strong>Functionality</strong>: Does it meet the requirements?</li>
-<li><strong>Cost Efficiency</strong>: Does it meet the budget constraints?</li>
-<li><strong>Complexity</strong>: Is it over-engineered or optimally simple?</li>
-<li><strong>Best Practices</strong>: AI-powered evaluation for security and scalability</li>
-</ul>
-<p>For the complete noob, we also provide a simple guided course to bring you from zero to at least something for your first project, or for the working world! And it’s risk-free with feedback from our AI evaluators.</p>
+</style></head> <body> <div class="bg-base-100 drawer lg:drawer-open"> <input id="my-drawer" type="checkbox" class="drawer-toggle"> <div class="drawer-content bg-base-100"> <div class="sticky lg:hidden top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm"> <div class="navbar"> <div class="navbar-start"> <label for="my-drawer" class="btn btn-square btn-ghost"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </label> </div> <div class="navbar-center"> <a class="btn btn-ghost normal-case text-xl" href="/">Jun Wei 👷‍♂️</a> </div> <div class="navbar-end"></div> </div> </div> <div class="md:flex md:justify-center"> <main class="p-6 pt-10 lg:max-w-[900px] max-w-[100vw]">  <main class="md:flex md:justify-center"> <article class="prose prose-lg max-w-[750px] prose-img:mx-auto"> <img src="/cloud-code/demo_archi.png" alt="Cloud Code" loading="lazy" decoding="async" fetchpriority="auto" width="750" height="422" class="w-full mb-6"> <div> <h1 class="title my-2 text-4xl font-bold"> Cloud Code <div class="badge badge-secondary mx-2">HackNRoll 2026</div> </h1> <p class="text-sm text-gray-500 mb-2">Last updated: Jan 18, 2026</p> <div class="mb-4 flex flex-wrap gap-2"> <span class="badge badge-outline text-sm" key="Cloud Architecture">Cloud Architecture</span><span class="badge badge-outline text-sm" key="AI Evaluation">AI Evaluation</span><span class="badge badge-outline text-sm" key="Gamification">Gamification</span><span class="badge badge-outline text-sm" key="React">React</span><span class="badge badge-outline text-sm" key="Firebase">Firebase</span><span class="badge badge-outline text-sm" key="OpenAI">OpenAI</span> </div> </div> <div class="divider my-2"></div>  <h3 id="overview">Overview</h3>
+<p><strong>Cloud Code</strong> is an interactive learning platform that gamifies cloud architecture education through LeetCode-style challenges. Developed during <strong>HackNRoll 2026</strong>, a 24-hour hackathon, this project addresses the steep learning curve of cloud infrastructure by providing hands-on, practical experience with drag-and-drop architecture building, real-time cost estimation, and AI-powered feedback.</p>
 <hr>
-<h2 id="features">Features</h2>
-<ul>
-<li>🏗️ <strong>(Daily) Challenges</strong> - Intuitive drag &#x26; drop architecture builder with problem statements</li>
-<li>☁️ <strong>Multi-Cloud Information</strong> - Up-to-date details about services such as AWS, Azure, and GCP</li>
-<li>💰 <strong>Cost Estimation</strong> - Real-world pricing for services</li>
-<li>🤖 <strong>AI Evaluation</strong> - LLM-based feedback using GPT-4</li>
-<li>🏆 <strong>Leaderboards</strong> - Global rankings to manifest our unavoidable Singaporean competitive side</li>
-</ul>
+<h3 id="the-challenge">The Challenge</h3>
+<p>Learning cloud architecture presents a significant barrier for aspiring developers. The vast ecosystem of cloud services across AWS, Azure, and GCP creates analysis paralysis—students struggle to move from theoretical knowledge to practical application. Traditional learning methods lack immediate feedback, cost awareness, and the gamified progression that keeps learners engaged.</p>
+<p><img src="/cloud-code/comic_strip.jpg" alt="Comic Strip"></p>
+<p>The fundamental questions remain: <em>Which services should I use? How do I know if my architecture is optimal? How much will this actually cost?</em></p>
+<p><img src="/cloud-code/meme.avif" alt="Meme"></p>
 <hr>
-<h2 id="platform-screenshots">Platform Screenshots</h2>
-<h3 id="homepage">Homepage</h3>
-<p><img src="/cloud-code/homepage.jpg" alt="Homepage showing the main interface"></p>
-<h3 id="challenge-interface">Challenge Interface</h3>
-<p><img src="/cloud-code/challenge.jpg" alt="Challenge page with drag-and-drop architecture builder"></p>
-<h3 id="architecture-demo">Architecture Demo</h3>
-<p><img src="/cloud-code/demo_2.png" alt="Example architecture solution"></p>
+<h3 id="solution-architecture">Solution Architecture</h3>
+<p>Cloud Code transforms cloud architecture learning into an interactive challenge system modeled after LeetCode’s proven gamification approach. Users build cloud solutions through a visual drag-and-drop interface, receiving multi-dimensional evaluation across four critical axes:</p>
+<ul>
+<li><strong>Functionality</strong>: Validates that the architecture meets the specified requirements and handles the expected workload.</li>
+<li><strong>Cost Efficiency</strong>: Ensures the solution remains within budget constraints using real-world pricing data.</li>
+<li><strong>Complexity Analysis</strong>: Evaluates whether the architecture is appropriately scaled—neither over-engineered nor under-provisioned.</li>
+<li><strong>Best Practices</strong>: Leverages AI evaluation to assess security, scalability, and adherence to cloud architecture principles.</li>
+</ul>
+<p>For beginners, the platform includes a structured guided course that provides foundational knowledge before progressing to independent challenges.</p>
 <hr>
-<h2 id="tech-stack">Tech Stack</h2>
-<h3 id="backend">Backend</h3>
+<h3 id="key-features">Key Features</h3>
 <ul>
-<li><strong>Node.js</strong> + <strong>Express</strong> - REST API</li>
-<li><strong>Firebase Firestore</strong> - Database for users, challenges, and submissions</li>
-<li><strong>JWT</strong> - Password Hashing</li>
-</ul>
-<h3 id="frontend">Frontend</h3>
-<ul>
-<li><strong>React 18</strong> - UI framework</li>
-<li><strong>Vercel</strong> - Hosting</li>
-</ul>
-<h3 id="ai-integration">AI Integration</h3>
-<ul>
-<li><strong>OpenAI GPT-4</strong> - Intelligent architecture evaluation</li>
-</ul>
-<hr>
-<h2 id="how-it-works">How It Works</h2>
-<h3 id="1-register-an-account">1. Register an Account</h3>
-<ul>
-<li>Navigate to the platform at <a href="https://hnr2026-fe.vercel.app/">https://hnr2026-fe.vercel.app/</a></li>
-<li>Create a new account with a username, using your email and a secure password</li>
-</ul>
-<h3 id="2-browse-challenges">2. Browse Challenges</h3>
-<ul>
-<li>Access challenges either from the home page or the challenges section</li>
-<li>Filter by difficulty level (Easy, Medium, Hard) or Category</li>
-<li>Select a challenge and start solving!</li>
-</ul>
-<h3 id="3-build-your-solution">3. Build Your Solution</h3>
-<ul>
-<li>Drag and drop cloud components to build your architecture</li>
-<li>See real-time cost estimations as you add services</li>
-<li>Submit your solution for AI evaluation</li>
-</ul>
-<h3 id="4-view-results">4. View Results</h3>
-<ul>
-<li>See if your solution passed or failed</li>
-<li>Review cost estimations and efficiency scores</li>
-<li>Compare your solution across the leaderboard</li>
-</ul>
-<h3 id="5-learn-from-scratch">5. Learn from Scratch</h3>
-<ul>
-<li>Follow our guided course to understand cloud architecture basics</li>
-<li>Complete modules and quizzes to build your knowledge</li>
+<li>
+<p><strong>Interactive Drag-and-Drop Builder</strong>
+Visual interface for constructing cloud architectures using services from AWS, Azure, and GCP.</p>
+</li>
+<li>
+<p><strong>Real-Time Cost Estimation</strong>
+Live pricing feedback as components are added, helping users understand the financial implications of architectural decisions.</p>
+</li>
+<li>
+<p><strong>AI-Powered Evaluation</strong>
+GPT-4-based assessment providing detailed feedback on security, scalability, and architectural patterns.</p>
+</li>
+<li>
+<p><strong>Multi-Cloud Support</strong>
+Up-to-date service information across major cloud providers, exposing users to diverse ecosystems.</p>
+</li>
+<li>
+<p><strong>Progressive Challenge System</strong>
+Difficulty-graded challenges (Easy, Medium, Hard) with category-based filtering for targeted learning.</p>
+</li>
+<li>
+<p><strong>Global Leaderboards</strong>
+Competitive rankings to drive engagement and showcase optimal solutions.</p>
+</li>
+<li>
+<p><strong>Guided Learning Path</strong>
+Structured curriculum for absolute beginners, building foundational cloud architecture knowledge.</p>
+</li>
 </ul>
 <hr>
-<h2 id="the-hackathon-experience">The Hackathon Experience</h2>
-<p>This project was built during <strong>HackNRoll 2026</strong>, a 24-hour hackathon, where we challenged ourselves to create an engaging educational platform that makes cloud architecture accessible and fun to learn.</p>
+<h3 id="platform-interface">Platform Interface</h3>
+<h4 id="homepage">Homepage</h4>
+<img src="/cloud-code/homepage.jpg" alt="Cloud Code Homepage" width="100%">
+<h4 id="challenge-interface">Challenge Interface</h4>
+<img src="/cloud-code/challenge.jpg" alt="Challenge Builder Interface" width="100%">
+<h4 id="architecture-visualization">Architecture Visualization</h4>
+<img src="/cloud-code/demo_2.png" alt="Example Cloud Architecture" width="100%">
 <hr>
-<h2 id="project-links">Project Links</h2>
+<h3 id="technical-implementation">Technical Implementation</h3>
+<h4 id="backend-infrastructure">Backend Infrastructure</h4>
 <ul>
-<li><strong><a href="https://hnr2026-fe.vercel.app/">Live Demo</a></strong></li>
+<li><strong>Node.js + Express</strong>: RESTful API handling authentication, challenge management, and submission processing.</li>
+<li><strong>Firebase Firestore</strong>: NoSQL database storing user profiles, challenge data, and submission history.</li>
+<li><strong>JWT Authentication</strong>: Secure token-based authentication for user sessions.</li>
+</ul>
+<h4 id="frontend-stack">Frontend Stack</h4>
+<ul>
+<li><strong>React 18</strong>: Component-based UI framework with hooks for state management.</li>
+<li><strong>Vercel</strong>: Edge-optimized hosting for low-latency global access.</li>
+</ul>
+<h4 id="ai-integration">AI Integration</h4>
+<ul>
+<li><strong>OpenAI GPT-4</strong>: Natural language evaluation of cloud architectures, providing context-aware feedback on design decisions.</li>
+</ul>
+<hr>
+<h3 id="user-workflow">User Workflow</h3>
+<ol>
+<li>
+<p><strong>Account Creation</strong>
+Users register with email authentication to track progress and submissions.</p>
+</li>
+<li>
+<p><strong>Challenge Selection</strong>
+Browse challenges filtered by difficulty (Easy/Medium/Hard) or domain category (Compute, Storage, Networking, etc.).</p>
+</li>
+<li>
+<p><strong>Architecture Design</strong>
+Use the drag-and-drop canvas to construct cloud solutions, with real-time cost updates and service compatibility indicators.</p>
+</li>
+<li>
+<p><strong>AI Evaluation</strong>
+Submit solutions for automated assessment across functionality, cost, complexity, and best practices dimensions.</p>
+</li>
+<li>
+<p><strong>Leaderboard Ranking</strong>
+Compare solutions against the community to identify optimization opportunities and learn from top performers.</p>
+</li>
+<li>
+<p><strong>Guided Learning</strong>
+For beginners, follow the structured course path covering foundational concepts before attempting challenges.</p>
+</li>
+</ol>
+<hr>
+<h3 id="hackathon-context">Hackathon Context</h3>
+<p>This project was built during <strong>HackNRoll 2026</strong>, one of Southeast Asia’s largest student hackathons. The 24-hour constraint pushed us to focus on core functionality while maintaining a polished user experience. The challenge was balancing technical depth with accessibility—creating a platform that serves both beginners exploring cloud basics and experienced developers refining their architectural skills.</p>
+<hr>
+<h3 id="reflections">Reflections</h3>
+<p>Building Cloud Code in 24 hours taught us valuable lessons about rapid prototyping and feature prioritization. The integration of GPT-4 for architecture evaluation was particularly challenging—crafting effective prompts that could assess diverse cloud designs required iterative refinement. We also gained practical experience with Firebase’s real-time capabilities and React’s component architecture under time pressure.</p>
+<hr>
+<h3 id="demo">Demo</h3>
+<p>Try the live platform: <strong><a href="https://hnr2026-fe.vercel.app/">https://hnr2026-fe.vercel.app/</a></strong></p>
+<hr>
+<h3 id="project-links">Project Links</h3>
+<ul>
 <li><strong><a href="https://github.com/awpbash/hacknroll26">GitHub Repository</a></strong></li>
 </ul>
 <hr>  </article> </main>  </main> </div> <footer class="footer footer-center block mb-5 pt-10"> <div class="pb-2">
