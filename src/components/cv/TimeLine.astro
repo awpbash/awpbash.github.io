@@ -1,5 +1,5 @@
 ---
-const { title, subtitle, isLast = false } = Astro.props;
+const { title, subtitle, isLast = false, logo } = Astro.props;
 ---
 
 <div class="relative flex gap-4 py-0">
@@ -9,7 +9,10 @@ const { title, subtitle, isLast = false } = Astro.props;
   </div>
 
   <div class="flex-1 pb-6">
-    <h3 class="font-semibold text-lg leading-snug mb-1">{title}</h3>
+    <div class="flex items-center gap-3 mb-1">
+      {logo && <img src={logo} alt="" class="w-8 h-8 object-contain rounded" />}
+      <h3 class="font-semibold text-lg leading-snug">{title}</h3>
+    </div>
     <p class="text-sm text-gray-500 mb-2">{subtitle}</p>
     <div class="text-sm leading-relaxed text-justify space-y-2">
       <slot />

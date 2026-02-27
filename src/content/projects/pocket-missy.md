@@ -2,7 +2,7 @@
 title: "Pocket Missy"
 description: "An all-in-one app advancing value-based healthcare through AI-driven insights, vector search, and multilingual support. Winner of HealthHack 2025 Intersystems Challenge."
 pubDate: "July 2025"
-heroImage: "/projects/pocket-missy.png"
+heroImage: "/projects/pocket-missy/pocketmissy1.png"
 tags: ["AI for Good", "Healthcare", "RAG", "Vector Search"]
 ---
 

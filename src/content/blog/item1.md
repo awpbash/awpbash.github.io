@@ -2,7 +2,7 @@
 title: "How to Beat Onana at Penalties"
 description: "My personal take and recommendation to Southampton FC"
 pubDate: "Aug 19, 2025"
-heroImage: "/onana/image.png"
+heroImage: "/projects/onana/image.png"
 tags: ["Football", "Fun", "Opinion"]
 ---
 
@@ -25,18 +25,18 @@ Right-footers mostly go low and wide.
 - Bottom left: 18%
 - Top corners: ~1% each
 
-![Right-footed shot distribution](/onana/probability.png)
+![Right-footed shot distribution](/projects/onana/probability.png)
 
 In Southampton vs United, Archer went bottom left. That matches the right-footer trend. The bottom left quadrant had the highest probability of 44%, Onana guessed correctly, saved the pen, and his potential retirement.
 
-![Archer missed pen](/onana/missed.png)
+![Archer missed pen](/projects/onana/missed.png)
 
 ---
 
 ## Where could Archer have shot?
 Using conversion stats from a bunch of penalties, we can make a reasonable, though not definitive, call on where to shoot.
 
-![Conversion success by grid](/onana/success.png)
+![Conversion success by grid](/projects/onana/success.png)
 
 - Top corners: ~100%
 - Bottom centre: 93.8%
@@ -61,7 +61,7 @@ Doing a quick and simple analysis, we can draw the following conclusions:
 
 Note: 3×3 grid below is numbered left-to-right, top-to-bottom (1–3, 4–6, 7–9).
 
-![score](/onana/score.png)
+![score](/projects/onana/score.png)
 
 ### Penalty conversion by zone (3×3, goal layout)
 
@@ -82,13 +82,13 @@ The findings from my data pretty much lines up with the conversion chart.
 
 ## Why you should trust me
 - I won a fifa 'tournament' once and got a golden ball.
-![win](/onana/trophy.jpg)
+![win](/projects/onana/trophy.jpg)
 
 
 TLDR; Just go centre, Onana always dives anyways [^disc]
 
 Thanks for reading!
 
-![sadnana](/onana/sadnana.gif)
+![sadnana](/projects/onana/sadnana.gif)
 
 [^disc]: This is purely for fun and half jokes. The math and stats are very obviously wrong but it's still fun to think about how I can retire Onana at penalties.
