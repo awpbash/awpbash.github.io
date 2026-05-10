@@ -1,10 +1,13 @@
 ---
 title: "Construction Bot"
-description: "A smart document retrieval system for the construction industry using Vector Search and RAG to provide instant, accurate answers from project documentation."
+description: "A document retrieval chatbot for the construction industry using vector search and RAG to surface answers from thousands of pages of project documentation."
 pubDate: "Aug 1 2025"
 heroImage: "/projects/construction-bot/header.png"
-badge: "RAG & AI"
-tags: ["Vector Search", "RAG", "LLM", "OpenAI", "Document Retrieval"]
+badge: "Side Project"
+stack: ["rag", "llm"]
+context: "experiment"
+repo: "https://github.com/awpbash/Construction_Bot"
+tools: ["langchain", "openai", "azure"]
 ---
 
 Construction projects are a data-intensive environment, with thousands of documents ranging from architectural blueprints to contracts and governmental regulations. Quickly finding the right information is critical for efficiency, compliance, and safety. However, traditional search methods are often slow and inefficient, and the presence of updated documents can easily lead to the use of outdated information.

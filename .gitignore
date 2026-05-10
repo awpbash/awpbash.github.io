@@ -21,6 +21,13 @@ pnpm-debug.log*
 # Astro
 .astro/
 
+# Vercel build output
+.vercel/
+
 # claude files
 claude/
 .claude/
+
+# cloned source repos for /interrogate workflow — not part of the site
+_sources/
+.vercel

@@ -1,88 +1,91 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
-import { getCollection } from "astro:content";
-import createSlug from "../lib/createSlug"
+import { Image } from "astro:assets";
+import { getCollection, getEntry } from "astro:content";
+import createSlug from "../lib/createSlug";
 
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const last_posts = posts.slice(0, 3);
+// Three curated highlights for the homepage. Edit this array to change the
+// hero reel; everything else lives on /projects.
+const HIGHLIGHT_SLUGS = ["silvergait", "retailmind", "pocket-missy"];
+const highlights = await Promise.all(
+  HIGHLIGHT_SLUGS.map((slug) => getEntry("projects", slug))
+);
+
+const allProjects = await getCollection("projects");
+const projectCount = allProjects.length;
+
+const lastPosts = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
     <div class="text-5xl font-bold">I'm Jun Wei</div>
-    <div class="text-3xl py-3 font-bold">AI Engineer, Builder & Problem Solver</div>
-    <div class="py-2 text-lg leading-relaxed">
-      I’m endlessly curious about how AI can solve meaningful problems. I love learning new things, building scrappy prototypes, and turning them into useful solutions. From computer vision tools to smart assistants, I enjoy exploring the possibilities of intelligent systems.
+    <div class="text-2xl py-3 font-semibold text-base-content/80">
+      MSBA at NUS · Building multimodal AI at GovTech
     </div>
     <div class="py-2 text-lg leading-relaxed">
-      Currently a Data Science Intern at GovTech, building multimodal AI systems for Whole-of-Government applications. I’m also pursuing my MSc in Business Analytics at NUS, combining technical depth with real-world impact.
+      I build AI products that actually ship, mostly in healthcare and retail. Recently placed 2nd at the AI Innovation Challenge 2026 with <a href="/projects/silvergait" class="link link-hover font-semibold">SilverGait</a>, a phone-camera frailty assessment for seniors. Came into 2026 not knowing what a VPC was; spent the year as a fervent Claude Code abuser and prolific Gemini caller, figuring out where AWS hides the actual error message, and shipping things anyway.
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://www.linkedin.com/in/jun-wei-ng-2b06b6251/" target="_blank">Let’s connect</a>
-      <a href="https://github.com/awpbash" target="_blank" class="btn btn-outline ml-5">GitHub</a>
-      <a href="https://huggingface.co/awpbash" target="_blank" class="btn btn-outline ml-5">Huggingface</a>
+      <a class="btn" href="https://www.linkedin.com/in/jun-wei-ng-2b06b6251/" target="_blank">Let's connect</a>
+      <a href="https://github.com/awpbash" target="_blank" class="btn btn-outline ml-3">GitHub</a>
+      <a href="https://huggingface.co/awpbash" target="_blank" class="btn btn-outline ml-3">Huggingface</a>
     </div>
   </div>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">My recent projects {"</>"}</div>
+  <div class="mb-2 flex items-baseline justify-between">
+    <h2 class="text-3xl font-bold">Highlights</h2>
+    <a href="/projects" class="text-sm link link-hover text-base-content/70">
+      See all {projectCount} projects →
+    </a>
   </div>
-  <HorizontalCard
-    title="Cloud Code"
-    img="/projects/cloud-code/demo_archi.png"
-    desc="A LeetCode-style learning platform for cloud architecture with drag-and-drop challenges, real-time cost optimization, and AI evaluation. <br /><br /> Built in 24 hours at HackNRoll 2026."
-    url="/projects/cloud-code"
-    badge="HackNRoll 2026"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Product Interaction for Video Retail Analytics"
-    img="/projects/product-interaction/header.png"
-    desc="Utilising computer vision to process CCTV footage and derive business insights on customer production interaction."
-    url="/projects/product-interaction"
-    badge="CV for Retail"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="ClearPlate"
-    img="/projects/clearplate/header.png"
-    desc="Computer vision pipeline for monocular weight estimation to derive insights on amount and type of food waste on plates.<br /><br /> Winner of EIC 2025 Merit award."
-    url="/projects/clearplate"
-    badge="AI for Sustainability"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-  title="Pocket Missy"
-  img="/projects/pocket-missy/pocketmissy1.png"
-  desc="An innovative all-in-one app built to advance value-based healthcare in Singapore and support seniors in living independently. <br /><br /> Winner of Healthhack 2025 Intersystems challenge."
-  url="/projects/pocket-missy"
-  badge="AI for Healthcare"
-/>
-<div class="divider my-0"></div>
-  <HorizontalCard
-    title="Geo-Safe-Filter"
-    img="/projects/geo-safe-filter/image.png"
-    desc="An AI-powered mobile app that detects and redacts location-revealing elements in photos before sharing, protecting users from unintentional location exposure. <br /><br /> Built for TikTok TechJam 2025."
-    url="/projects/geo-safe-filter"
-    badge="TikTok TechJam 2025"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="An RL Apprach to Congestion Aware Taxi Rebalancing in AMoD Networks"
-    img="/projects/taxi-rebalancing/preview.jpg"
-    desc="A congestion-aware reinforcement learning framework that dynamically rebalances autonomous vehicles to optimise level of service of ridehailing service providers. <br /><br /> Final year dissertation."
-    url="#"
-    badge="RL Research"
-  />
+  <p class="text-base-content/70 mb-5">Three I'd point a recruiter to first.</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+    {
+      highlights.map((project) => (
+        <a
+          href={"/projects/" + createSlug(project.data.title, project.slug)}
+          class="block rounded-lg overflow-hidden bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[101%]"
+        >
+          {project.data.heroImage && (
+            <Image
+              src={project.data.heroImage}
+              width={600}
+              height={338}
+              format="webp"
+              alt={project.data.title}
+              class="w-full h-44 object-cover"
+            />
+          )}
+          <div class="p-4">
+            {project.data.badge && (
+              <span class="badge badge-secondary badge-sm mb-2">
+                {project.data.badge}
+              </span>
+            )}
+            <h3 class="text-lg font-bold leading-tight mb-1">
+              {project.data.title}
+            </h3>
+            <p class="text-sm text-base-content/70 line-clamp-3">
+              {project.data.description}
+            </p>
+          </div>
+        </a>
+      ))
+    }
+  </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+    <div class="text-3xl w-full font-bold mb-5">Latest from blog</div>
   </div>
 
   {
-    last_posts.map((post) => (
+    lastPosts.map((post) => (
       <>
         <HorizontalCard
           title={post.data.title}

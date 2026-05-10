@@ -1,10 +1,13 @@
 ---
 title: "ClearPlate"
-description: "ClearPlate uses cutting-edge computer vision and regression models to estimate food waste weight and composition from images, helping institutions reduce environmental impact."
+description: "A computer vision pipeline that estimates food waste weight and composition from a single plate image, helping dining halls track post-consumption waste at scale."
 pubDate: "Aug 8 2025"
 heroImage: "/projects/clearplate/header.png"
-badge: "Computer Vision"
-tags: ["Computer Vision", "Foodwaste", "Segmentation", "Consumption Insights", "XGBoost"]
+badge: "EIC 2025 Merit"
+stack: ["vision"]
+context: "hackathon"
+featured: true
+repo: "https://github.com/awpbash/ClearPlate"
 ---
 
 ClearPlate is a computer vision pipeline that detects and estimates food waste from plate images using segmentation, depth-aware estimation, and regression models. Designed to reduce manual annotation effort and improve sustainability tracking, ClearPlate is especially useful for F&B outlets, institutions, and food courts seeking data-driven waste reduction strategies.

@@ -1,6 +1,7 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
+import { CollectionEntry, getCollection, getEntry } from "astro:content";
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import createSlug from "../../lib/createSlug";
 
 export async function getStaticPaths() {
   const projectEntries = await getCollection("projects");
@@ -17,6 +18,16 @@ interface Props {
 const { entry } = Astro.props;
 const project = entry.data;
 const { Content } = await entry.render();
+
+let relatedPostUrl: string | null = null;
+let relatedPostTitle: string | null = null;
+if (project.relatedPost) {
+  const post = await getEntry("blog", project.relatedPost);
+  if (post) {
+    relatedPostUrl = "/blog/" + createSlug(post.data.title, post.slug);
+    relatedPostTitle = post.data.title;
+  }
+}
 ---
 
 <ProjectLayout
@@ -25,7 +36,11 @@ const { Content } = await entry.render();
   heroImage={project.heroImage}
   pubDate={project.pubDate}
   badge={project.badge}
-  tags={project.tags}
+  tools={project.tools}
+  repo={project.repo}
+  demo={project.demo}
+  relatedPostUrl={relatedPostUrl}
+  relatedPostTitle={relatedPostTitle}
 >
   <Content />
 </ProjectLayout>

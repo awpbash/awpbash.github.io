@@ -1,11 +1,22 @@
 ---
-import { type ProjectSchema } from "../content/config";
 import BaseLayout from "./BaseLayout.astro";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 import { Image } from "astro:assets";
 
-export interface Props extends ProjectSchema {}
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: string;
+  heroImage?: string;
+  badge?: string;
+  tools?: string[];
+  repo?: string;
+  demo?: string;
+  relatedPostUrl?: string | null;
+  relatedPostTitle?: string | null;
+}
 
 const {
   title,
@@ -14,7 +25,11 @@ const {
   updatedDate,
   heroImage,
   badge,
-  tags,
+  tools,
+  repo,
+  demo,
+  relatedPostUrl,
+  relatedPostTitle,
 } = Astro.props;
 
 dayjs.extend(localizedFormat);
@@ -23,7 +38,7 @@ const displayDate = dayjs(updatedDate || pubDate).format("ll");
 
 <BaseLayout title={title} description={description} image={heroImage}>
   <main class="md:flex md:justify-center">
-    <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
+    <article class="prose prose-lg max-w-[1000px] prose-img:mx-auto">
 
       {heroImage && (
         <Image
@@ -44,11 +59,29 @@ const displayDate = dayjs(updatedDate || pubDate).format("ll");
 
         <p class="text-sm text-gray-500 mb-2">Last updated: {displayDate}</p>
 
-        {tags && Array.isArray(tags) && tags.length > 0 && (
-          <div class="mb-4 flex flex-wrap gap-2">
-            {tags.map(tag => (
-              <span class="badge badge-outline text-sm" key={tag}>{tag}</span>
-            ))}
+        {tools && Array.isArray(tools) && tools.length > 0 && (
+          <p class="text-sm text-gray-500 mb-3">
+            Tools: {tools.join(" · ")}
+          </p>
+        )}
+
+        {(repo || demo || relatedPostUrl) && (
+          <div class="mb-2 flex flex-wrap gap-2 not-prose">
+            {demo && (
+              <a href={demo} target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                Live demo
+              </a>
+            )}
+            {repo && (
+              <a href={repo} target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                GitHub
+              </a>
+            )}
+            {relatedPostUrl && (
+              <a href={relatedPostUrl} class="btn btn-sm btn-outline">
+                Read the story: {relatedPostTitle}
+              </a>
+            )}
           </div>
         )}
       </div>

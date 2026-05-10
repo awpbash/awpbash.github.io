@@ -4,7 +4,12 @@ description: "A LeetCode-style learning platform for cloud architecture featurin
 pubDate: "Jan 18 2026"
 heroImage: "/projects/cloud-code/demo_archi.png"
 badge: "HackNRoll 2026"
-tags: ["Cloud Architecture", "AI Evaluation", "Gamification", "React", "Firebase", "OpenAI"]
+stack: ["agents", "llm"]
+context: "hackathon"
+featured: true
+repo: "https://github.com/awpbash/hacknroll26"
+demo: "https://hnr2026-fe.vercel.app/"
+tools: ["openai", "firebase"]
 ---
 
 ### Overview

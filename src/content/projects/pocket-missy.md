@@ -1,9 +1,14 @@
 ---
 title: "Pocket Missy"
-description: "An all-in-one app advancing value-based healthcare through AI-driven insights, vector search, and multilingual support. Winner of HealthHack 2025 Intersystems Challenge."
+description: "An AI healthcare companion for Singapore seniors that unifies vitals, prescriptions, and records, with a multilingual chatbot powered by vector search and RAG. Winner of HealthHack 2025 Intersystems Challenge."
 pubDate: "July 2025"
 heroImage: "/projects/pocket-missy/pocketmissy1.png"
-tags: ["AI for Good", "Healthcare", "RAG", "Vector Search"]
+badge: "HealthHack 2025"
+stack: ["rag", "llm"]
+context: "hackathon"
+featured: true
+repo: "https://github.com/awpbash/healthhack"
+tools: ["azure-openai", "intersystems-iris"]
 ---
 
 ### Overview

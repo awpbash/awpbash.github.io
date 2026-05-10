@@ -1,30 +1,222 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro"
-import HorizontalCard from "../../components/HorizontalCard.astro"
-import { getCollection } from "astro:content"
-import createSlug from "../../lib/createSlug"
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import createSlug from "../../lib/createSlug";
+import { STACK_LABELS, CONTEXT_LABELS, type StackTag, type ContextTag } from "../../lib/tags";
 
-const posts = (await getCollection("projects")).sort(
+const projects = (await getCollection("projects")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-)
+);
+
+// Build chip counts. Only show chips for values that actually appear.
+const stackCounts = new Map<StackTag, number>();
+const contextCounts = new Map<ContextTag, number>();
+for (const p of projects) {
+  for (const s of p.data.stack) {
+    stackCounts.set(s as StackTag, (stackCounts.get(s as StackTag) ?? 0) + 1);
+  }
+  const c = p.data.context as ContextTag;
+  contextCounts.set(c, (contextCounts.get(c) ?? 0) + 1);
+}
+const presentStacks = Array.from(stackCounts.keys());
+const presentContexts = Array.from(contextCounts.keys());
 ---
 
-<BaseLayout sideBarActiveItemID="projects">
+<BaseLayout sideBarActiveItemID="projects" title="Projects">
   <div class="pb-8 mt-5">
-    <div class="text-4xl font-bold mb-4">Projects</div>
-    {
-      posts.map((post) => (
-        <>
-          <HorizontalCard
-            title={post.data.title}
-            img={post.data.heroImage}
-            desc={post.data.description}
-            url={"/projects/" + createSlug(post.data.title, post.slug)}
-            badge={post.data.badge}
-          />
-          <div class="divider my-0" />
-        </>
-      ))
-    }
+    <div class="text-4xl font-bold mb-2">Projects</div>
+    <p class="text-base-content/70 mb-4">
+      Filter by what was built and why.
+    </p>
+
+    <div class="mb-4">
+      <div class="text-xs uppercase tracking-wider text-base-content/60 mb-2">Stack</div>
+      <div class="flex flex-wrap gap-2" id="filter-stack">
+        <button class="btn btn-sm btn-primary" data-filter="all">All ({projects.length})</button>
+        {
+          presentStacks.map((tag) => (
+            <button class="btn btn-sm btn-outline" data-filter={tag}>
+              {STACK_LABELS[tag]} ({stackCounts.get(tag)})
+            </button>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="mb-6">
+      <div class="text-xs uppercase tracking-wider text-base-content/60 mb-2">Context</div>
+      <div class="flex flex-wrap gap-2" id="filter-context">
+        <button class="btn btn-sm btn-primary" data-filter="all">All</button>
+        {
+          presentContexts.map((tag) => (
+            <button class="btn btn-sm btn-outline" data-filter={tag}>
+              {CONTEXT_LABELS[tag]} ({contextCounts.get(tag)})
+            </button>
+          ))
+        }
+      </div>
+    </div>
+
+    <p class="text-sm text-base-content/60 mb-4" id="filter-summary">
+      Showing {projects.length} of {projects.length}
+    </p>
+
+    <div id="projects-list">
+      {
+        projects.map((project) => (
+          <>
+            <article
+              class="project-card"
+              data-stack={project.data.stack.join(" ")}
+              data-context={project.data.context}
+            >
+              <a
+                href={"/projects/" + createSlug(project.data.title, project.slug)}
+                class="block rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[101%]"
+              >
+                <div class="hero-content flex-col md:flex-row">
+                  {project.data.heroImage && (
+                    <Image
+                      src={project.data.heroImage}
+                      width={750}
+                      height={422}
+                      format="webp"
+                      alt={project.data.title}
+                      class="max-w-full md:max-w-[13rem] rounded-lg"
+                    />
+                  )}
+                  <div class="grow w-full">
+                    <h2 class="text-xl font-bold">
+                      {project.data.title}
+                      {project.data.badge && (
+                        <span class="badge badge-secondary mx-2">
+                          {project.data.badge}
+                        </span>
+                      )}
+                    </h2>
+                    <p class="py-1">{project.data.description}</p>
+                    <div class="flex flex-wrap gap-1 mt-2">
+                      {project.data.stack.map((s) => (
+                        <span class="badge badge-outline">
+                          {STACK_LABELS[s as StackTag]}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <div class="divider my-0" />
+          </>
+        ))
+      }
+    </div>
+
+    <div class="hidden mt-8 text-center text-base-content/60" id="empty-state">
+      <p>No projects match these filters.</p>
+      <button class="btn btn-sm btn-ghost mt-2" id="clear-filters">Clear filters</button>
+    </div>
   </div>
 </BaseLayout>
+
+<script>
+  function initProjectFilter() {
+    const stackContainer = document.getElementById("filter-stack");
+    const contextContainer = document.getElementById("filter-context");
+    const summary = document.getElementById("filter-summary");
+    const emptyState = document.getElementById("empty-state");
+    const clearBtn = document.getElementById("clear-filters");
+    if (!stackContainer || !contextContainer) return;
+
+    const stackChips = stackContainer.querySelectorAll<HTMLButtonElement>("button");
+    const contextChips = contextContainer.querySelectorAll<HTMLButtonElement>("button");
+    const cards = document.querySelectorAll<HTMLElement>(".project-card");
+
+    let activeStack = "all";
+    let activeContext = "all";
+
+    const params = new URLSearchParams(window.location.search);
+    const urlStack = params.get("stack");
+    const urlContext = params.get("context");
+    if (urlStack) activeStack = urlStack;
+    if (urlContext) activeContext = urlContext;
+
+    function setActive(chips: NodeListOf<HTMLButtonElement>, value: string) {
+      chips.forEach((c) => {
+        const isActive = c.dataset.filter === value;
+        c.classList.toggle("btn-primary", isActive);
+        c.classList.toggle("btn-outline", !isActive);
+      });
+    }
+
+    function updateUrl() {
+      const params = new URLSearchParams();
+      if (activeStack !== "all") params.set("stack", activeStack);
+      if (activeContext !== "all") params.set("context", activeContext);
+      const query = params.toString();
+      const newUrl = window.location.pathname + (query ? "?" + query : "");
+      window.history.replaceState(null, "", newUrl);
+    }
+
+    function applyFilter() {
+      let visibleCount = 0;
+      cards.forEach((card) => {
+        const next = card.nextElementSibling as HTMLElement | null;
+        const stacks = (card.dataset.stack ?? "").split(" ");
+        const ctx = card.dataset.context ?? "";
+        const stackMatch = activeStack === "all" || stacks.includes(activeStack);
+        const ctxMatch = activeContext === "all" || ctx === activeContext;
+        const show = stackMatch && ctxMatch;
+        card.style.display = show ? "" : "none";
+        if (next?.classList.contains("divider")) {
+          next.style.display = show ? "" : "none";
+        }
+        if (show) visibleCount++;
+      });
+
+      if (summary) {
+        summary.textContent = `Showing ${visibleCount} of ${cards.length}`;
+      }
+      if (emptyState) {
+        emptyState.classList.toggle("hidden", visibleCount > 0);
+      }
+    }
+
+    setActive(stackChips, activeStack);
+    setActive(contextChips, activeContext);
+    applyFilter();
+
+    stackChips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        activeStack = chip.dataset.filter ?? "all";
+        setActive(stackChips, activeStack);
+        applyFilter();
+        updateUrl();
+      });
+    });
+
+    contextChips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        activeContext = chip.dataset.filter ?? "all";
+        setActive(contextChips, activeContext);
+        applyFilter();
+        updateUrl();
+      });
+    });
+
+    if (clearBtn) {
+      clearBtn.addEventListener("click", () => {
+        activeStack = "all";
+        activeContext = "all";
+        setActive(stackChips, "all");
+        setActive(contextChips, "all");
+        applyFilter();
+        updateUrl();
+      });
+    }
+  }
+
+  initProjectFilter();
+  document.addEventListener("astro:page-load", initProjectFilter);
+</script>

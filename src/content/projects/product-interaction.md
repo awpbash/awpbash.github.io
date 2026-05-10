@@ -1,9 +1,12 @@
 ---
 title: "Product Interaction"
-description: "A computer vision system to detect product interactions in retail CCTV footage using pose estimation, segmentation, and depth analysis. Built during my internship at Tictag."
+description: "A computer vision system that detects shopper-product interactions in CCTV footage using pose estimation, segmentation, and monocular depth. Built during my internship at Tictag."
 pubDate: "August 2025"
 heroImage: "/projects/product-interaction/header.png"
-tags: ["Computer Vision", "Deep Learning", "Retail Insights", "Video Analytics"]
+badge: "Tictag Internship"
+stack: ["vision"]
+context: "internship"
+featured: true
 ---
 
 ### Overview

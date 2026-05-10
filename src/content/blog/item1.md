@@ -3,7 +3,6 @@ title: "How to Beat Onana at Penalties"
 description: "My personal take and recommendation to Southampton FC"
 pubDate: "Aug 19, 2025"
 heroImage: "/projects/onana/image.png"
-tags: ["Football", "Fun", "Opinion"]
 ---
 
 FC24, previously known as FIFA, was my main source of bonding with my boys in RC4. During my *career* as a pro FIFA player, I have witnessed how André Onana has been an absolute disaster of a keeper and have positioning worst than a cat playing chess. Thus I will dedicate this blog post on how to play against Onana in the hopes of getting him benched and hopefully Manchester United can be not another dusty banter club.

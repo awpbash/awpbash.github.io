@@ -1,10 +1,14 @@
 ---
 title: "Geo-Safe-Filter"
-description: "An AI-powered mobile app that detects and redacts location-revealing elements in photos before sharing, protecting users from unintentional location exposure. Built for TikTok TechJam 2025."
+description: "A mobile app that detects and redacts location-revealing elements in photos before sharing, protecting users from unintentional geolocation exposure. Built for TikTok TechJam 2025."
 pubDate: "Jul 12 2025"
 heroImage: "/projects/geo-safe-filter/image.png"
 badge: "TikTok TechJam 2025"
-tags: ["Computer Vision", "Privacy", "React Native", "FastAPI", "Gemini", "Grounding DINO"]
+stack: ["vision", "multimodal"]
+context: "hackathon"
+featured: true
+repo: "https://github.com/awpbash/Geo-Safe-Filter"
+tools: ["gemini"]
 ---
 
 ### Overview

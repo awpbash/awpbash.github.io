@@ -1,4 +1,14 @@
 import { z, defineCollection } from "astro:content";
+import {
+    STACK_TAGS,
+    CONTEXT_TAGS,
+    BLOG_KINDS,
+} from "../lib/tags";
+
+const stackEnum = z.enum(STACK_TAGS);
+const contextEnum = z.enum(CONTEXT_TAGS);
+const blogKindEnum = z.enum(BLOG_KINDS);
+
 const blogSchema = z.object({
     title: z.string(),
     description: z.string(),
@@ -6,22 +16,9 @@ const blogSchema = z.object({
     updatedDate: z.string().optional(),
     heroImage: z.string().optional(),
     badge: z.string().optional(),
-    tags: z.array(z.string()).refine(items => new Set(items).size === items.length, {
-        message: 'tags must be unique',
-    }).optional(),
-});
-
-const storeSchema = z.object({
-    title: z.string(),
-    description: z.string(),
-    custom_link_label: z.string(),
-    custom_link: z.string().optional(),
-    updatedDate: z.coerce.date(),
-    pricing: z.string().optional(),
-    oldPricing: z.string().optional(),
-    badge: z.string().optional(),
-    checkoutUrl: z.string().optional(),
-    heroImage: z.string().optional(),
+    kind: blogKindEnum.optional(),
+    relatedProject: z.string().optional(),
+    featured: z.boolean().optional(),
 });
 
 const projectSchema = z.object({
@@ -31,21 +28,32 @@ const projectSchema = z.object({
     updatedDate: z.string().optional(),
     heroImage: z.string().optional(),
     badge: z.string().optional(),
-    tags: z.array(z.string()).refine(items => new Set(items).size === items.length, {
-        message: 'tags must be unique',
+    // What you built. Filterable on /projects. At least one required.
+    stack: z.array(stackEnum).min(1).refine(items => new Set(items).size === items.length, {
+        message: 'stack tags must be unique',
+    }),
+    // Why it exists. Filterable on /projects. Single value.
+    context: contextEnum,
+    // Vendor / framework names worth surfacing on the detail page (max 3 by
+    // convention). Plain text, not chips, no landing pages.
+    tools: z.array(z.string()).max(3).refine(items => new Set(items).size === items.length, {
+        message: 'tools must be unique',
     }).optional(),
+    repo: z.string().url().optional(),
+    demo: z.string().url().optional(),
+    // Slug of the companion blog post (the "story" side). Renders a CTA on the page.
+    relatedPost: z.string().optional(),
+    // Promotes to the home page.
+    featured: z.boolean().optional(),
 });
 
 export type BlogSchema = z.infer<typeof blogSchema>;
-export type StoreSchema = z.infer<typeof storeSchema>;
 export type ProjectSchema = z.infer<typeof projectSchema>;
 
 const blogCollection = defineCollection({ schema: blogSchema });
-const storeCollection = defineCollection({ schema: storeSchema });
 const projectCollection = defineCollection({ schema: projectSchema });
 
 export const collections = {
     'blog': blogCollection,
-    'store': storeCollection,
     'projects': projectCollection
 }
