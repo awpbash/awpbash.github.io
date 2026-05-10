@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
 import { ViewTransitions } from "astro:transitions";
+import { inject } from "@vercel/analytics";
 
 import { SITE_TITLE, SITE_DESCRIPTION, TRANSITION_API } from "../config";
 
@@ -15,6 +16,8 @@ const {
   sideBarActiveItemID,
   ogType,
 } = Astro.props;
+
+inject();
 ---
 
 <!doctype html>
