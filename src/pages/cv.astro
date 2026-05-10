@@ -54,14 +54,33 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       subtitle="Jan 2026 to May 2026 at GovTech, Singapore"
       logo="/logos/govtech.png"
     >
-      Built multimodal AI systems using RF-DETR, Gemini 3, Qwen-TTS/STT, and SAM3 for Whole-of-Government applications. Developed RAG pipelines and agentic vision workflows. Managed cloud infrastructure with Docker, AWS, GCP, GPU-backed inference, and DGX Spark. Contributed to GovTech Multimodal Hub.
+      <p>Multimodal Hub team, building shipped AI systems for Whole-of-Government agencies.</p>
+      <ul class="list-disc pl-5 space-y-2 text-left">
+        <li><strong>Rat detection MLOps loop.</strong> Cold-started RF-DETR on a manually labelled seed of trap footage, then wired it into a flywheel: new clips in, model auto-labels, human corrects the iffy frames, corrected set goes back into training. Less manual labelling needed each round.</li>
+        <li><strong>Smoking detection on public CCTV.</strong> Built a cascade detection pipeline that narrows from body to head before classifying smoke vs no-smoke, with ByteTrack and ReID layered on top to identify individual smokers and avoid double-counting across cameras.</li>
+        <li><strong>Wildlife detection + species ID pipeline.</strong> Built the whole stack: D-FINE for real-time detection on edge (suitable for DGX Spark), SAM3 + BioCLIP for open-vocab species identification, with the lookup grounded against an iNaturalist reference set embedded by BioCLIP2 and localised to Singapore species. Gemini reasons over the output and fires the warning in real time.</li>
+        <li><strong>Vessel mooring compliance for MPA.</strong> Built a pipeline that ingests drone imagery of ships at their moorings, detects and identifies each vessel, then cross-checks against an approved mooring schedule to flag vessels parked at the wrong buoy or outside their allowed window.</li>
+        <li><strong>Generative docs for public officers.</strong> Officers were burning hours on slides, infographics, and diagrams. Built a wizard-driven workflow: drop in a PDF or prose writeup, attach reference examples for style, and context engineering generates editable artefacts via code generation and image generation. Output is editable, not flat, so officers finish with minor touch-ups instead of starting from a blank canvas. Shipped as a WoG proof-of-concept on PlatformAI, GovTech's internal AI platform.</li>
+        <li><strong>NParks claims auto-approval (cat neutering and capture).</strong> Receipts, invoices, and claims come in messy. Model extracts structured fields, a configurable rules engine matches them against the claim, and auto-approves the clean cases. Reviewers only see the edge cases.</li>
+      </ul>
+      <p class="mt-3"><strong>Beyond models:</strong> built the frontend, backend, and serverless deployment for each POC. (DS can also be SWE!)</p>
+      <p class="mt-2"><strong>Cloud:</strong> AWS (Lambda, S3 Vectors, Bedrock Nova embeddings), GCP (CloudRun, Firestore), RunPod, Docker, GPU-backed inference on DGX Spark.</p>
+      <p class="mt-2"><strong>Also:</strong> debugged version mismatches on existing services so they would actually run on GPU, and contributed to QA across team deliverables.</p>
     </TimeLineElement>
     <TimeLineElement
       title="Data Scientist Intern at Tictag"
       subtitle="Jun 2025 to Aug 2025 at Tictag, Singapore"
       logo="/logos/tictag.png"
     >
-      Designed and implemented scalable deep learning models for computer vision, speech, and video analytics. Built modular ETL pipelines for fine-tuning and production-ready workflows for pose classification and ROI event tracking. Delivered business insights from CCTV footage using segmentation and depth models.
+      <p>Computer vision R&D team. Prototyped retail analytics pipelines from in-store CCTV, built custom benchmarks, and explored emerging vision models.</p>
+      <ul class="list-disc pl-5 space-y-2 text-left">
+        <li><strong>Product interaction analytics from in-store CCTV</strong> (main project, R&D). End-to-end pipeline: define ROIs across the store, run a model stack to detect when shoppers interact with each region, classify what was taken vs put back, then aggregate into a retail insights report. Also built custom human detection benchmarks on CCTV and surveillance footage to evaluate candidate models for the domain.</li>
+        <li><strong>Frontier model exploration.</strong> Benchmarked emerging vision and multimodal models (RexThinker, Hunyuan, GroundingDINO, D-FINE, RF-DETR) for discovery and capability building, mapping which were production-ready and which weren't.</li>
+        <li><strong>Customer service assessment demo.</strong> Built a HuggingFace demo that scores service officers on friendliness and professionalism from facial expression and audio, with translation and transcription handled in-pipeline.</li>
+        <li><strong>Action classification data flywheel.</strong> Architected the pipeline that extracts human pose features from raw video, routes them to labellers for action tagging, and feeds the labelled set back into action classifier training. Pilot for a self-improving labelling loop.</li>
+        <li><strong>Camera calibration to floorplan heatmaps.</strong> Used Nvidia DeepStream and 2D depth estimation to project shopper positions from CCTV camera-space onto store floorplans, plotted paths, then aggregated into activity heatmaps for retail analysis.</li>
+      </ul>
+      <p class="mt-3"><strong>Stack:</strong> VMs, A100 GPUs, Gradio for demos, HuggingFace for models and datasets.</p>
     </TimeLineElement>
     <TimeLineElement
       title="Undergraduate Teaching Assistant for CS2040"
