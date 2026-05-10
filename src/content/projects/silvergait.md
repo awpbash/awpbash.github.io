@@ -9,11 +9,18 @@ context: "hackathon"
 featured: true
 repo: "https://github.com/awpbash/SilverGait"
 demo: "https://silvergait-production.up.railway.app/"
-relatedPost: "silvergait-story"
 tools: ["gemini", "langgraph", "elevenlabs"]
 ---
 
 SilverGait runs a clinically-validated frailty assessment from a phone camera. Seniors do balance, gait, and chair-stand tests at home, pose extraction and a deterministic classifier handle the scoring, and a multilingual chat agent handles follow-up. Built over 9 weeks for the AI Innovation Challenge 2026, where it placed 2nd.
+
+## How it started
+
+The project came from one of my teammates, a pharmacist at Singapore General Hospital, noticing how much clinical time goes into frailty assessments. The Short Physical Performance Battery is a standardized test for community-dwelling seniors, and it needs trained eyes. It doesn't scale. He brought it to the team and we workshopped it from there. Six of us, all NUS MSBA.
+
+Healthcare in Singapore is personal to us. Our parents and grandparents use it. This was our healthcare system, our problem to solve, and we weren't going to half-ass a project on aging Singaporeans. That's not a strategy, it's just how we felt going in.
+
+The click moment came nine weeks in, when we tested SilverGait on ourselves, in Singlish, sitting on chairs in a meeting room at NUS. The joint tracking caught the chair-stand timing, the scoring spat out a number, and someone laughed and said "wait, this actually works." Not the most accurate run we'd ever do, but accurate enough that the system was doing what we built it to do.
 
 ## What it does
 
@@ -33,6 +40,8 @@ Two pipelines, intentionally split.
 
 **Voice and language.** MERaLiON AudioLLM handles Singlish-accented STT, with Gemini as fallback for the other languages. ElevenLabs handles TTS and the caregiver voice cloning, with Gemini TTS as a fallback. The frontend (React 18 + Vite + Zustand + TS) is tuned for elderly users: 18px+ fonts, 48px+ touch targets, high-contrast palette, voice on every screen. Backend is FastAPI with async SQLAlchemy. LangGraph orchestrates both pipelines.
 
+The voice cloning is a small detail in the architecture diagram and the entire UX in practice. The first time we played a cloned voice back, that was the moment the team understood what we were building was actually for someone, not just for the demo.
+
 ![Caregiver voice cloning and multilingual flow](/projects/silvergait/voice.png)
 
 ## What was hard
@@ -43,11 +52,21 @@ The second was being a non-CS team. We are NUS MSBA students. Most of the time s
 
 The third was resisting the obvious shortcut for the scoring path. The fast version is "send the video to a vision LLM and ask for a frailty score." The clinically defensible version is what we built: deterministic scoring backed by published rubrics, with the LLM strictly evaluating keypoint trajectories against rules. The first time you demo to a clinician, the second version is the one they trust.
 
+## What we cut, and what we'd change
+
+The thing we cut early was a full agentic pipeline for the monitoring layer. We had ideas about tool-calling cron jobs, agents that "decide" when to run check-ins, but when we mapped the actual decisions, they were linear. Run check-in, if alert, notify caregiver. There was no agentic graph type shit needed. So we cut it and kept the orchestration where reasoning was actually load-bearing.
+
+The bigger thing I'd change next time is real wearables integration. We scoped it in early and dropped it for difficulty. Frailty signals like heart rate variability and gait asymmetry over weeks live in wearables data. The phone-camera assessment is point-in-time, and wearables would close the loop. I'd also start with a smaller multilingual scope. We did English, Mandarin, Malay, and Tamil with MERaLiON for Singlish. It worked, but each language added testing surface area we didn't have time to be thorough on.
+
 ## Outcome
 
 2nd place at the NUS x Synapxe x IMDA AI Innovation Challenge 2026. Live deployment at [silvergait-production.up.railway.app](https://silvergait-production.up.railway.app/).
 
 ![The team with the winner's cheque at the AI Innovation Challenge 2026 finals](/projects/silvergait/team.jpg)
+
+The thing that surprised me most was how varied the team's strengths were. I did the entire stack: backend, frontend, the Railway deployment, the API integrations. My teammates ran pitching, the clinical research, and the user study with seniors. Without their parts, the technical demo lands flat. Without my parts, the pitching team has nothing to demo. That's obvious in retrospect, and not obvious at all when you're 6 MSBA students staring at a competition brief.
+
+Also: Claude Code is genuinely the reason a non-CS team ships a multimodal multilingual system in 9 weeks. I would not have written the FastAPI async + SQLAlchemy + LangGraph orchestration that fast on my own.
 
 For the full clinical evidence base (35+ peer-reviewed citations), interactive LangGraph diagrams, and node-level architecture specs, see the [SilverGait documentation site](https://awpbash.github.io/SilverGait/). Specific deep-dives:
 

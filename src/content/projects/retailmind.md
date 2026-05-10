@@ -9,7 +9,6 @@ context: "coursework"
 featured: true
 repo: "https://github.com/awpbash/cs5224"
 demo: "https://dquehu2ohxwqm.cloudfront.net/"
-relatedPost: "retailmind-cloud-learning"
 tools: ["aws", "bedrock", "cdk"]
 ---
 
@@ -138,4 +137,12 @@ What I'd change with more time:
 - **Migrate the heavy training to EC2 if usage grew.** Fargate is the right answer for unpredictable, low-volume workloads. Once you know your training load is sustained, EC2 spot fleets with autoscaling get cheaper per training-minute. We'd need real metrics first.
 - **Try Kubernetes.** I skipped EKS because the workload didn't warrant it, but the orchestration surface area is something I want to learn separately. Probably as a side project.
 
-For the deeper context on my learning arc through this project (going from "I'll just buy a computer" to "let's split the architecture across twelve AWS services on purpose"), see the [companion blog post](/blog/retailmind-cloud-learning). Built with five teammates from the NUS MSBA cohort.
+## What this taught me
+
+Before this course, my mental model for "deploy an app" was: get a computer, install Postgres on it, install Python on it, run a server. That's it. I knew "the cloud" in the abstract, in the way you know "blockchain" exists, but I had never written infrastructure-as-code, never spun up a Lambda, didn't know what a VPC was for, and would have told you with a straight face that scaling means buying a bigger computer.
+
+The single biggest thing this course taught me was the difference between always-on and event-driven. In the buy-a-computer model, your server is sitting there twenty-four hours a day, drawing power, charging you whether anyone uses it or not. In the event-driven model, nothing runs unless something triggers it. Nobody clicks anything for an hour, you pay zero. A thousand people show up at once, AWS spins up a thousand parallel Lambdas. This sounds obvious written down. It was not obvious in my head before the course.
+
+Infrastructure is a design problem, not a logistics problem. The choice between EC2 and Lambda is not a deployment detail; it's a choice about how the system behaves under load, what costs look like, and what happens when no one is using it. I will never have the engineering depth of someone who has been writing code since they were fourteen, but I now know what serverless is for, what it costs, where it breaks, and how to argue for it in a room of people who don't. Worth the four weeks of CloudWatch hell.
+
+Built with five teammates from the NUS MSBA cohort.
