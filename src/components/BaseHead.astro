@@ -8,9 +8,24 @@ export interface Props {
 	description: string;
 	image?: string;
 	ogType?: string;
+	noindex?: boolean;
 }
 
-const { title, description, image = '/assets/social_img.webp', ogType = 'website' } = Astro.props;
+const { title, description, image = '/assets/social_img.webp', ogType = 'website', noindex = false } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
+const absoluteImage = new URL(image, Astro.site ?? Astro.url).toString();
+
+const personLd = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	"name": "Jun Wei Ng",
+	"url": (Astro.site ?? Astro.url).toString(),
+	"sameAs": [
+		"https://www.linkedin.com/in/jun-wei-ng-2b06b6251/",
+		"https://github.com/awpbash"
+	]
+};
 ---
 
 <!-- Global Metadata -->
@@ -23,17 +38,24 @@ const { title, description, image = '/assets/social_img.webp', ogType = 'website
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta name="author" content="Jun Wei Ng" />
+<link rel="canonical" href={canonicalURL} />
+{noindex && <meta name="robots" content="noindex,follow" />}
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={ogType} />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={absoluteImage} />
+<meta property="og:site_name" content="Jun Wei Ng" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:url" content={canonicalURL} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:image" content={absoluteImage} />
+
+<!-- Person structured data (site-wide) -->
+<script type="application/ld+json" set:html={JSON.stringify(personLd)} />

@@ -7,9 +7,15 @@ import vercel from '@astrojs/vercel/static';
 
 // https://astro.build/config
 export default defineConfig({
-  // TODO: update to the real domain after Vercel deploy gives you a URL.
-  site: 'https://awpbash.github.io',
-  integrations: [react(), mdx(), sitemap(), tailwind()],
+  site: 'https://junwei.ng',
+  integrations: [
+    react(),
+    mdx(),
+    sitemap({
+      filter: (page) => !page.includes('/fitsensei/'),
+    }),
+    tailwind(),
+  ],
   output: 'static',
   adapter: vercel({
     webAnalytics: { enabled: true },

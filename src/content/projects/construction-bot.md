@@ -10,53 +10,33 @@ repo: "https://github.com/awpbash/Construction_Bot"
 tools: ["langchain", "openai", "azure"]
 ---
 
-Construction projects are a data-intensive environment, with thousands of documents ranging from architectural blueprints to contracts and governmental regulations. Quickly finding the right information is critical for efficiency, compliance, and safety. However, traditional search methods are often slow and inefficient, and the presence of updated documents can easily lead to the use of outdated information.
+Construction projects sit on enormous piles of documents: blueprints, contracts, regulations, RFIs, change orders, safety protocols. The information is all there. Finding the right page when you need it is the hard part.
 
-Developed as a pilot project for KTC, the **Construction Bot** is an intelligent document retrieval chat bot system built to solve this problem. It allows project teams to find precise, context-aware information from their vast library of project documents leveraging vector search technology, natural language queries and large language reasoning models.
+This was a pilot we ran for KTC, a Singapore construction firm. The Construction Bot is a RAG-based chatbot that sits on top of their Autodesk Construction Cloud and answers questions in plain language, with citations back to the source document.
 
-## The Problem
+## The actual problem
 
-The challenge in construction is not a lack of data, but the difficulty of accessing it. A project manager might need to know the specific fire rating of a wall type, or a site supervisor might need to recall a specific safety protocol from over 200 documents, each with 400 pages. In our pilot study, KTC's Autodesk construction cloud had over 2Tb of data and it takes an experienced engineer over 15 minutes to find out who to contact regarding pipe related matters.
+KTC's Autodesk cloud had over 2TB of project data across hundreds of documents, each running into the hundreds of pages. In the pilot study, it took an experienced engineer about 15 minutes just to figure out who to contact for a pipe-related query, because the answer was buried somewhere in a directory tree.
 
-## Solution
+Site supervisors ask very specific questions ("what's the fire rating for this wall type", "which RFI covers the revised slab thickness on level 7"). The information exists. The lookup is the friction.
 
-The approximate time complexity of a basic search function is often O(N), where N is the number of documents. To make searching more efficient, we use RAG (Retrieval-Augmented Generation) to preprocess the data. This reduces the search complexity to O(1) or O(log N) by creating vector embeddings and using a vector database.
+## What we built
+
+A pretty standard RAG pipeline, honestly. The interesting choices were less in the architecture and more in how to make it fit a construction workflow.
 
 ![Vector Search](/projects/construction-bot/vector.png)
 
-These vectors are then fed into a large language model (LLM), such as one from OpenAI, to reason and summarize the information. The LLM can interpret these vectors to identify the most relevant and updated documents, or to synthesize information from multiple documents to provide a comprehensive answer.
+- **Embedding store:** ChromaDB. Light enough to run alongside the existing setup, with hooks back to Azure.
+- **Retrieval and generation:** LangChain orchestrating an OpenAI LLM for the answer step.
+- **Source integration:** Autodesk Construction Cloud as the document source of truth, so when KTC updates a document, the index reflects it.
+- **Citations on every answer.** Every response surfaces the page and chunk the LLM pulled from, so the user can verify against the original document rather than trust the chatbot blindly. This was the feature engineers actually cared about; nobody was going to use a search tool they couldn't fact-check.
 
-## Technology Stack
+The pipeline itself is the textbook one: ingest documents, chunk and embed, store in Chroma, embed the user query, retrieve top-k chunks, pass to the LLM with the question. The work that mattered was on the edges: keeping the index in sync with a live document store, surfacing citations cleanly, and getting answer quality to a point where a site engineer trusted it more than a manual search.
 
-This project is built on a robust and scalable AI stack designed for document processing:
+## How it ended
 
--   **Vector Search & Databases:** ChromaDB.
--   **RAG:** Langchain framework as backbone for RAG pipeline.
--   **Tokeniser and LLM:** OpenAI API.
--   **Cloud Integration:** Microsoft Azure and Autodesk Construction Cloud integration
-
-## How It Works
-
-The chat bot's pipeline can be broken down into a few simple steps:
-
-1.  **Document Ingestion:** Project documents (PDFs, images, text files) are parsed, chunked, and converted into dense vector embeddings.
-2.  **Vector Indexing:** These embeddings are stored in ChromaDB, creating a searchable index of the entire document library.
-3.  **User Query:** A user submits a question in plain language (e.g., "What is the concrete mix ratio for the foundation?").
-4.  **Retrieval:** The query is also converted into a vector, and a similarity search is performed to find the most relevant document chunks.
-5.  **Generation:** The retrieved text chunks are passed to the LLM along with the user's question, allowing it to generate a precise, accurate, and context-specific answer.
-
-## Features & Benefits
-
--   **Unmatched Accuracy:** Provides answers directly from your project documents, eliminating guesswork.
--   **Instant Retrieval:** Drastically reduces the time spent searching through large files.
--   **Enhanced Compliance:** Helps project teams quickly access and adhere to safety protocols and regulatory requirements.
--   **Seamless Integration:** Designed to work with existing cloud document management systems.
--   **Verifiable Responses:** All responses includes the exact page and vector returned from the query so users can view the organic document. 
+We didn't close the project commercially. The technical pilot worked, the value was real, but the sales cycle and procurement side of construction is its own animal that I didn't have the bandwidth or seniority to drive. Still one of the more useful things I've built, in the sense that the people we demoed it to immediately wanted to use it.
 
 ## Project Links
 
--   **[GitHub Repository](https://github.com/awpbash/Construction_Bot)**
-
----
-
-Unfortunately we did not close the project, but it's still a good learning experience!
+- **[GitHub Repository](https://github.com/awpbash/Construction_Bot)**

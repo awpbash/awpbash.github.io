@@ -4,9 +4,10 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { Image } from "astro:assets";
 import { getCollection, getEntry } from "astro:content";
 import createSlug from "../lib/createSlug";
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
+dayjs.extend(localizedFormat);
 
-// Three curated highlights for the homepage. Edit this array to change the
-// hero reel; everything else lives on /projects.
 const HIGHLIGHT_SLUGS = ["silvergait", "retailmind", "pocket-missy"];
 const highlights = await Promise.all(
   HIGHLIGHT_SLUGS.map((slug) => getEntry("projects", slug))
@@ -21,46 +22,80 @@ const lastPosts = (await getCollection("blog"))
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Jun Wei</div>
-    <div class="text-2xl py-3 font-semibold text-base-content/80">
-      MSBA at NUS · Building multimodal AI at GovTech
+  <div id="hero" class="relative pb-12 mt-5 overflow-hidden">
+    <div
+      id="hero-glow"
+      class="pointer-events-none absolute inset-0 -z-10 opacity-0 transition-opacity duration-700"
+      style="background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 30%), rgba(99,102,241,0.18), transparent 45%);"
+    >
     </div>
-    <div class="py-2 text-lg leading-relaxed">
-      I build AI products that actually ship, mostly in healthcare and retail. Recently placed 2nd at the AI Innovation Challenge 2026 with <a href="/projects/silvergait" class="link link-hover font-semibold">SilverGait</a>, a phone-camera frailty assessment for seniors. Came into 2026 not knowing what a VPC was; spent the year as a fervent Claude Code abuser and prolific Gemini caller, figuring out where AWS hides the actual error message, and shipping things anyway.
+
+    <div class="hero-line" style="--delay: 0ms">
+      <div class="text-xl py-1">Hey, I'm Jun Wei.</div>
     </div>
-    <div class="mt-8">
-      <a class="btn" href="https://www.linkedin.com/in/jun-wei-ng-2b06b6251/" target="_blank">Let's connect</a>
-      <a href="https://github.com/awpbash" target="_blank" class="btn btn-outline ml-3">GitHub</a>
-      <a href="https://huggingface.co/awpbash" target="_blank" class="btn btn-outline ml-3">Huggingface</a>
+    <div class="hero-line" style="--delay: 90ms">
+      <h1 class="text-5xl font-bold leading-tight">
+        I build small AI things
+        <span class="relative inline-block">
+          <span class="relative z-10">and see which ones survive...</span>
+          <span class="absolute inset-x-0 bottom-1 h-2 bg-yellow-200/70 -z-0"></span>
+        </span>
+      </h1>
+    </div>
+
+    <div class="hero-line" style="--delay: 220ms">
+      <p class="py-4 text-lg leading-relaxed text-base-content/90">
+        Mostly in healthcare and retail, but also a bit of everything. Right now it's
+        <a href="/projects/silvergait" class="font-semibold link link-hover decoration-yellow-300 underline underline-offset-4">SilverGait</a>,
+        a phone-camera frailty check for seniors my team built over nine weeks.
+        By day I'm doing data science at GovTech, on the PlatformAI team shipping
+        multimodal AI for the Whole-of-Government.
+      </p>
+    </div>
+
+    <div class="hero-line" style="--delay: 320ms">
+      <p class="text-lg leading-relaxed text-base-content/70">
+        A year ago I didn't know what a damn dockerfile was, and now I'm letting AI write my docker compose files lol. I write about my projects and AI on this blog, feel free to reach out if you wanna chat about anything AI, multimodal stuff, or just wanna say hi!
+      </p>
+    </div>
+
+    <div class="hero-line mt-7 flex flex-wrap gap-3" style="--delay: 440ms">
+      <a class="btn btn-primary group" href="https://www.linkedin.com/in/jun-wei-ng-2b06b6251/" target="_blank">
+        Say hi
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ml-1 transition-transform group-hover:translate-x-0.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <a href="https://github.com/awpbash" target="_blank" class="btn btn-outline">GitHub</a>
+      <a href="https://huggingface.co/awpbash" target="_blank" class="btn btn-outline">Huggingface</a>
     </div>
   </div>
 
   <div class="mb-2 flex items-baseline justify-between">
-    <h2 class="text-3xl font-bold">Highlights</h2>
+    <h2 class="text-3xl font-bold">What I've been making</h2>
     <a href="/projects" class="text-sm link link-hover text-base-content/70">
-      See all {projectCount} projects →
+      See all {projectCount} →
     </a>
   </div>
-  <p class="text-base-content/70 mb-5">Three I'd point a recruiter to first.</p>
+  <p class="text-base-content/70 mb-5">Three I'd point you at first.</p>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
     {
-      highlights.map((project) => (
+      highlights.map((project, i) => (
         <a
           href={"/projects/" + createSlug(project.data.title, project.slug)}
-          class="block rounded-lg overflow-hidden bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[101%]"
+          class="highlight-card group block rounded-lg overflow-hidden bg-base-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+          style={`--stagger: ${i * 80}ms`}
         >
           {project.data.heroImage && (
-            <Image
-              src={project.data.heroImage}
-              width={600}
-              height={338}
-              format="webp"
-              alt={project.data.title}
-              class="w-full h-44 object-cover"
-            />
+            <div class="relative overflow-hidden">
+              <Image
+                src={project.data.heroImage}
+                width={600}
+                height={338}
+                format="webp"
+                alt={project.data.title}
+                class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
           )}
           <div class="p-4">
             {project.data.badge && (
@@ -68,9 +103,12 @@ const lastPosts = (await getCollection("blog"))
                 {project.data.badge}
               </span>
             )}
-            <h3 class="text-lg font-bold leading-tight mb-1">
+            <h3 class="text-lg font-bold leading-tight mb-1 group-hover:text-primary transition-colors">
               {project.data.title}
             </h3>
+            <p class="text-xs text-base-content/60 mb-1">
+              {dayjs(project.data.pubDate).format("ll")}
+            </p>
             <p class="text-sm text-base-content/70 line-clamp-3">
               {project.data.description}
             </p>
@@ -80,8 +118,9 @@ const lastPosts = (await getCollection("blog"))
     }
   </div>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-5">Latest from blog</div>
+  <div class="mb-5 flex items-baseline justify-between">
+    <h2 class="text-3xl font-bold">From the blog</h2>
+    <a href="/blog" class="text-sm link link-hover text-base-content/70">All posts →</a>
   </div>
 
   {
@@ -94,9 +133,82 @@ const lastPosts = (await getCollection("blog"))
           url={"/blog/" + createSlug(post.data.title, post.slug)}
           target="_self"
           badge={post.data.badge}
+          date={post.data.pubDate}
         />
         <div class="divider my-0" />
       </>
     ))
   }
 </BaseLayout>
+
+<style>
+  @keyframes hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-line {
+    opacity: 0;
+    animation: hero-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--delay, 0ms);
+  }
+
+  @keyframes card-rise {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .highlight-card {
+    opacity: 0;
+    animation: card-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(550ms + var(--stagger, 0ms));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-line,
+    .highlight-card {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
+
+<script>
+  function initHeroGlow() {
+    const hero = document.getElementById("hero");
+    const glow = document.getElementById("hero-glow");
+    if (!hero || !glow) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const onMove = (e: MouseEvent) => {
+      const rect = hero.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      glow.style.setProperty("--mx", `${x}%`);
+      glow.style.setProperty("--my", `${y}%`);
+      glow.style.opacity = "1";
+    };
+    const onLeave = () => {
+      glow.style.opacity = "0";
+    };
+
+    hero.addEventListener("mousemove", onMove);
+    hero.addEventListener("mouseleave", onLeave);
+  }
+
+  initHeroGlow();
+  document.addEventListener("astro:page-load", initHeroGlow);
+</script>

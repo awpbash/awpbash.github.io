@@ -10,55 +10,40 @@ featured: true
 repo: "https://github.com/awpbash/ClearPlate"
 ---
 
-ClearPlate is a computer vision pipeline that detects and estimates food waste from plate images using segmentation, depth-aware estimation, and regression models. Designed to reduce manual annotation effort and improve sustainability tracking, ClearPlate is especially useful for F&B outlets, institutions, and food courts seeking data-driven waste reduction strategies.
+ClearPlate estimates how much food was wasted on a plate, and what kind of food it was, from a single photo. No scale, no labelling, no special hardware. You point a phone at a tray, the system segments the food, estimates the depth, infers the weight per food type, and logs it.
 
-## Project Context
+Built for the Engineering Innovation Challenge 2025, where it picked up a Merit award.
 
-The inspiration for ClearPlate came from our experience as NUS RC4 students, where we observed a significant amount of food being thrown away in the dining halls. We realized that while many solutions exist to track food waste at the production and preparation levels, few address waste insights at the **post-consumption** level.
+## Why we built it
 
-Additionally, many existing solutions are often costly, relying on complicated weighing scales and image classification models that lack the **granularity** needed for in-depth analysis. These systems can't distinguish between different food types on a single plate, making it difficult to understand *what* is being wasted, not just *how much*.
+We were RC4 students at the time, and the dining hall was the obvious target. There's a tray return point. There's a queue. There's a non-trivial amount of food being scraped into a bin every single meal, and the only existing data on it lives in someone's vague intuition about "this menu was unpopular."
 
-We aimed to solve this by developing a system that identifies all food types on a plate and estimates their weight, **purely from a single image** which could provide a more detailed, cost-effective, and scalable solution for waste analysis.
+Most existing food-waste tooling tracks waste at production or prep, before anyone has eaten anything. The bit nobody had a clean answer for was the post-consumption bin: what got served but didn't get eaten. That's the signal a dining hall actually wants, because that's the one that tells you whether the menu landed.
 
-This project was developed for the **Engineering Innovation Challenge 2025**, where our solution was recognized with a **Merit Award**.
+A weighing scale at the tray return point gives you total weight. Useful, but uninformative. You don't know if it was the rice, the vegetables, or the chicken curry. ClearPlate's goal was to get to "people are wasting 30% of the rice and 5% of the chicken on Mondays" rather than just "people threw away 12kg of stuff today."
 
----
+## How it works
 
-## Project Goals and Impact
+Single image in, food-by-food waste estimate out. Four pieces:
 
-The goal of ClearPlate is to provide actionable insights for both dining hall managers and individual users. By tracking post-consumption food waste, dining halls can make data-driven decisions to **adjust serving sizes** and improve menu planning. Simultaneously, the platform aims to empower **users to track their own waste**, fostering a greater awareness and encouraging behavioral changes. This dual approach ensures that both parties can actively contribute to reducing food waste.
+- **SAMv2** for segmentation. We bootstrap the food regions with minimal manual labelling, because every menu change means new food types and we wanted the labelling step to take minutes, not hours.
+- **YOLO11** detects the plate and a reference object in the frame (we use a coin) so we can scale pixel distances to real distances.
+- **XGBoost on hand-crafted features** for monocular depth, which is what gives us a weight estimate. We tried full depth-estimation models early and the lift wasn't worth the latency or the deployment headache.
+- **OpenCV + Gradio** for the post-processing and the demo frontend.
 
-The pipeline is built with **scalability and rapid adaptability** in mind. Our system is designed to learn and adapt to new menus quickly. With a user-friendly interface, dining hall staff can simply scan a few images, perform some quick labeling, and update the model in under 30 minutes. This quick and easy process ensures the solution remains relevant and effective, even with constantly changing menus.
+The end-to-end loop, from "scan a few plates of a new menu" to "model is ready to estimate waste on that menu," runs in under 30 minutes. That was the actual design constraint; if menu adaptation took a day, the dining hall would never use it.
 
----
+## What we cut
 
-## Tech Stack
+The temptation in a hackathon is to overbuild every layer. We didn't. The classification model is intentionally simple, the depth model is XGBoost not a neural net, and the deployment is a single Docker container. None of those are the most accurate option on paper; all of them were the right call for a system that actually had to run on a dining-hall laptop with a webcam.
 
-We combine multiple state-of-the-art AI tools:
-
--   **Meta SAMv2** for rapid instance segmentation with minimal manual labeling.
--   **YOLO11** for food and reference object (e.g., coin) detection.
--   **XGBoost** for monocular depth reconstruction.
--   **OpenCV** for post-processing and analysis.
--   **Gradio** frontend for user-friendly visual inspection.
-
-## Environmental Impact
-
-ClearPlate aims to help kitchens and policymakers:
-
--   Quantify exactly how much and what type of food is being wasted
--   Identify trends over time (e.g. high rice wastage every Monday lunch)
--   Improve procurement planning
--   Meet ESG and sustainability goals with real data
-
-## Demo Video
+## Demo
 
 ![Demo](/projects/clearplate/demo.gif)
 
+## Deployment
 
-## Deployment Ready
-
-The full system is containerized via Docker and can be deployed on-prem or in the cloud. It supports API-based integration with existing food inventory or POS systems.
+Containerised with Docker. Runs on-prem or in the cloud. Has a basic API hook for integrating with existing POS or inventory systems, though we never deployed it that far in practice.
 
 ---
 
@@ -66,19 +51,13 @@ The full system is containerized via Docker and can be deployed on-prem or in th
 
 ![Team Photo of the ClearPlate team](/projects/clearplate/team.png)
 
-This project was a collaborative effort by a dedicated team of problem solvers:
-
 - [Don Han](https://www.linkedin.com/in/donhanyc/) – NUS Year 1 Business & Communications & New Media (DDP)
 - [Ng Jun Wei (me!)](https://www.linkedin.com/in/jun-wei-ng-2b06b6251/) – NUS Year 3 Civil Engineering
 - [Ryan Tan](https://www.linkedin.com/in/ryan-tan-yan-tong/) – NUS Year 3 Business & Business Analytics (DDP)
 - [Teo Jia Xin](https://www.linkedin.com/in/teojiaxin/) – NUS Year 3 Environmental Engineering & Economics (DDP)
 
-Special mention to our mentor [Dr Jovan Tan](https://www.linkedin.com/in/jovantan/), for his guidance and unwavering support, and students and staff of RC4 for helping us in our data collection! 
-
----
+Thanks to our mentor [Dr Jovan Tan](https://www.linkedin.com/in/jovantan/) for the guidance, and to the RC4 staff and students who let us collect data off their dinner plates.
 
 ## Project Links
 
--   **[GitHub Repository](https://github.com/awpbash/ClearPlate)**
-
----
+- **[GitHub Repository](https://github.com/awpbash/ClearPlate)**

@@ -13,6 +13,7 @@ interface Props {
   badge?: string;
   relatedProjectUrl?: string | null;
   relatedProjectTitle?: string | null;
+  noindex?: boolean;
 }
 
 const {
@@ -24,13 +25,39 @@ const {
   badge,
   relatedProjectUrl,
   relatedProjectTitle,
+  noindex = false,
 } = Astro.props;
 
 dayjs.extend(localizedFormat);
 const displayDate = dayjs(pubDate).format("ll");
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
+const absoluteImage = heroImage
+  ? new URL(heroImage, Astro.site ?? Astro.url).toString()
+  : undefined;
+
+const blogPostingLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "datePublished": new Date(pubDate).toISOString(),
+  "dateModified": updatedDate ? new Date(updatedDate).toISOString() : new Date(pubDate).toISOString(),
+  ...(absoluteImage && { "image": absoluteImage }),
+  "author": {
+    "@type": "Person",
+    "name": "Jun Wei Ng",
+    "url": (Astro.site ?? Astro.url).toString()
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalURL
+  }
+};
 ---
 
-<BaseLayout title={title} description={description} image={heroImage} ogType="article">
+<BaseLayout title={title} description={description} image={heroImage} ogType="article" noindex={noindex}>
+  <script type="application/ld+json" set:html={JSON.stringify(blogPostingLd)} />
   <main class="md:flex md:justify-center">
     <article class="prose prose-lg max-w-[1000px] prose-img:mx-auto">
       {heroImage && (

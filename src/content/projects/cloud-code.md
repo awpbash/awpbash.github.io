@@ -12,59 +12,41 @@ demo: "https://hnr2026-fe.vercel.app/"
 tools: ["openai", "firebase"]
 ---
 
-### Overview
+### The pitch
 
-**Cloud Code** is an interactive learning platform that gamifies cloud architecture education through LeetCode-style challenges. Developed during **HackNRoll 2026**, a 24-hour hackathon, this project addresses the steep learning curve of cloud infrastructure by providing hands-on, practical experience with drag-and-drop architecture building, real-time cost estimation, and AI-powered feedback.
+Cloud Code is LeetCode but for cloud architecture. You get a brief ("design a system for X with budget Y"), drag AWS/Azure/GCP services onto a canvas, wire them up, and submit. GPT-4 reads the architecture and grades it. We built it in 24 hours at HackNRoll 2026.
 
----
-
-### The Challenge
-
-Learning cloud architecture presents a significant barrier for aspiring developers. The vast ecosystem of cloud services across AWS, Azure, and GCP creates analysis paralysis—students struggle to move from theoretical knowledge to practical application. Traditional learning methods lack immediate feedback, cost awareness, and the gamified progression that keeps learners engaged.
+The problem we kept hitting in our own learning: every cloud course teaches you what the services do, but nothing teaches you how to put them together. You learn S3 in a vacuum, Lambda in a vacuum, then stare at a blank diagram tool wondering which combination is sane and how much it'll cost.
 
 ![Comic Strip](/projects/cloud-code/comic_strip.jpg)
 
-The fundamental questions remain: *Which services should I use? How do I know if my architecture is optimal? How much will this actually cost?*
+The actual questions you want answered are: *Which services should I use? Is my architecture overkill or under-built? How much will this thing cost me?*
 
 ![Meme](/projects/cloud-code/meme.avif)
 
 ---
 
-### Solution Architecture
+### How the grading works
 
-Cloud Code transforms cloud architecture learning into an interactive challenge system modeled after LeetCode's proven gamification approach. Users build cloud solutions through a visual drag-and-drop interface, receiving multi-dimensional evaluation across four critical axes:
+A submission gets scored on four things:
 
-- **Functionality**: Validates that the architecture meets the specified requirements and handles the expected workload.
-- **Cost Efficiency**: Ensures the solution remains within budget constraints using real-world pricing data.
-- **Complexity Analysis**: Evaluates whether the architecture is appropriately scaled—neither over-engineered nor under-provisioned.
-- **Best Practices**: Leverages AI evaluation to assess security, scalability, and adherence to cloud architecture principles.
+- **Functionality.** Does this architecture actually solve the brief?
+- **Cost.** Is it within the budget, with live pricing data.
+- **Complexity.** Is it appropriately sized, not three Kubernetes clusters when you needed a Lambda.
+- **Best practices.** Security, scalability, the things a senior would flag in review.
 
-For beginners, the platform includes a structured guided course that provides foundational knowledge before progressing to independent challenges.
+Beginners get a guided track that walks through the basics before they're thrown at open challenges.
 
 ---
 
-### Key Features
+### What's actually in there
 
-- **Interactive Drag-and-Drop Builder**
-  Visual interface for constructing cloud architectures using services from AWS, Azure, and GCP.
-
-- **Real-Time Cost Estimation**
-  Live pricing feedback as components are added, helping users understand the financial implications of architectural decisions.
-
-- **AI-Powered Evaluation**
-  GPT-4-based assessment providing detailed feedback on security, scalability, and architectural patterns.
-
-- **Multi-Cloud Support**
-  Up-to-date service information across major cloud providers, exposing users to diverse ecosystems.
-
-- **Progressive Challenge System**
-  Difficulty-graded challenges (Easy, Medium, Hard) with category-based filtering for targeted learning.
-
-- **Global Leaderboards**
-  Competitive rankings to drive engagement and showcase optimal solutions.
-
-- **Guided Learning Path**
-  Structured curriculum for absolute beginners, building foundational cloud architecture knowledge.
+- Drag-and-drop builder with services from AWS, Azure, and GCP.
+- Live cost estimate that updates as you build, using real pricing.
+- GPT-4 reviewing your architecture and writing the feedback in plain English.
+- Easy / Medium / Hard challenges, filterable by domain (compute, storage, networking).
+- A global leaderboard so you can see how your design stacks up.
+- A guided beginner track for people who want the fundamentals first.
 
 ---
 
@@ -119,15 +101,11 @@ For beginners, the platform includes a structured guided course that provides fo
 
 ---
 
-### Hackathon Context
+### What we'd do differently
 
-This project was built during **HackNRoll 2026**, one of Southeast Asia's largest student hackathons. The 24-hour constraint pushed us to focus on core functionality while maintaining a polished user experience. The challenge was balancing technical depth with accessibility—creating a platform that serves both beginners exploring cloud basics and experienced developers refining their architectural skills.
+24 hours is enough time to ship a working demo, not enough time to think hard about it. The GPT-4 grading prompt went through maybe ten rewrites in the last six hours alone, because the model would happily approve an architecture that put a database behind no auth or recommend you put everything in Lambda. Most of the prompt work was teaching it to be the senior engineer in code review, not the enthusiastic intern.
 
----
-
-### Reflections
-
-Building Cloud Code in 24 hours taught us valuable lessons about rapid prototyping and feature prioritization. The integration of GPT-4 for architecture evaluation was particularly challenging—crafting effective prompts that could assess diverse cloud designs required iterative refinement. We also gained practical experience with Firebase's real-time capabilities and React's component architecture under time pressure.
+Firebase was the right call for the timebox (auth, db, hosting in one) but I'd swap it for something with stricter schema and a saner local dev story if we kept building. The drag-and-drop layer is React-only right now; a serious version would let you export to Terraform or CDK so a grader's verdict translates into something you could actually deploy.
 
 ---
 

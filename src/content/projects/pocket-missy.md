@@ -11,115 +11,78 @@ repo: "https://github.com/awpbash/healthhack"
 tools: ["azure-openai", "intersystems-iris"]
 ---
 
-### Overview
+Pocket Missy is an AI healthcare companion for Singapore seniors. The pitch is simple: an elderly user opens one app instead of five, gets their vitals, prescriptions, and care history in one view, and asks questions in plain language. Underneath it's RAG over the user's own data with InterSystems IRIS vector search and Azure OpenAI for the chat.
 
-**Pocket Missy** is an AI-powered healthcare companion app designed to simplify and personalize healthcare for seniors in Singapore. Developed during HealthHack 2025, this project unifies multiple healthcare services into a single intuitive platform. At its core, Pocket Missy leverages advanced **vector search**, **Retrieval-Augmented Generation (RAG)**, and **Azure OpenAI** integration to provide personalized health insights and actionable recommendations.
+Built at HealthHack 2025, where it won the InterSystems Challenge.
 
----
+## Why this exists
 
-### The Challenge
+Healthcare for seniors in Singapore is fragmented in a frustratingly avoidable way. Vitals from one app, appointments from another, prescriptions from a third, records from the hospital portal that an 80-year-old is realistically never going to log into. The result is that symptoms get underreported, prescriptions get missed, and the clinician on the other end has no continuous picture of what's going on between visits.
 
-Healthcare for seniors is often fragmented, with vital services, appointments, prescriptions, and records scattered across different apps. This creates friction for elderly users and leads to **underreporting of symptoms**, which delays care. Clinicians, too, face cognitive overload, often unable to tap into rich lifestyle and sensor data due to time constraints.
+On the clinician side, the data exists. It's just buried in different systems with different schemas, and a doctor with twelve minutes per consultation isn't going to surface useful patterns from a stream of wearable data.
 
----
+We wanted one surface that worked for both: simple enough for a senior to use without a tutorial, and rich enough that a clinician could ask "how was this person sleeping last week" and get a real answer.
 
-### Key Features
+## What's in it
 
-- **Unified Health Dashboard**  
-  Consolidates vitals, diet, activity, and medical history into one view for users and healthcare providers.
+- **One dashboard.** Vitals, diet, activity, and medical history pulled into a single view for both the senior and their care provider.
+- **Ask Missy, the chatbot.** Multilingual, RAG-grounded against the user's own data. The senior asks "what was my blood pressure trend this month" in their own language and the model answers from their actual records, not from generic web content.
+- **Proactive monitoring.** Wearable signals (falls, irregular heart rate, etc.) get auto-logged and surfaced before they need to be asked about.
+- **Modes for the chatbot.** Symptom checker, medical summary, treatment recommendations, general health Q&A. Each one tunes the retrieval and the prompt for the kind of answer the user is asking for.
 
-- **"Ask Missy" Multilingual Chatbot**  
-  An AI assistant that taps into user data to deliver contextual, personalized responses. Modes include:  
-  • Symptom Checker  
-  • Medical Summary  
-  • Treatment Recommendations  
-  • General Health Queries
+## How it works
 
-- **Proactive Health Monitoring**  
-  Automatically logs key events like falls or unusual symptoms using wearable sensors and user inputs.
+1. User logs health data via sensors or manual input.
+2. Data is chunked, embedded, and stored in IRIS with vector search.
+3. When the user asks a question, vector search retrieves the relevant slices of their own record.
+4. Retrieved context plus the question goes to Azure OpenAI, which produces the answer.
 
-- **AI-Powered Data Retrieval**  
-  Combines **IRIS vector search** and **RAG-based prompt engineering** to serve data-relevant, accurate outputs via Azure OpenAI.
-
----
-
-### Technical Stack
+### Stack
 
 - **Frontend:** React Native (TypeScript)
 - **Backend:** Flask (Python)
 - **Database:** InterSystems IRIS with vector search
-- **NLP:** SentenceTransformer (`pritamdeka/S-PubMedBert-MS-MARCO`)  
-- **LLM Integration:** Azure OpenAI API
+- **Embeddings:** SentenceTransformer (`pritamdeka/S-PubMedBert-MS-MARCO`)
+- **LLM:** Azure OpenAI
 
----
-
-### System Architecture
+### System diagram
 
 <img src="/projects/pocket-missy/pocketmissy1.png" width="100%" alt="System Architecture of Pocket Missy" />
 
----
-
-### Workflow at a Glance
-
-1. Users log health data via sensors or manual input  
-2. Data is embedded into vector format and stored in IRIS  
-3. Pocket Missy uses **vector search + RAG** to retrieve relevant data  
-4. A prompt is sent to Azure OpenAI to generate personalized insights  
-
----
-
-### Demo
+## Demo
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-  <iframe 
-    src="https://www.youtube.com/embed/7Qxpbz3fE30" 
+  <iframe
+    src="https://www.youtube.com/embed/7Qxpbz3fE30"
     title="Pocket Missy Demo"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-    frameborder="0" 
+    frameborder="0"
     allowfullscreen>
   </iframe>
 </div>
 
----
+## What was hard
 
-### Challenges faced
+This was my first real run at LLMs and prompt engineering, and the lessons came fast.
 
-- **First Experience with LLMs & Prompt Engineering**  
-  - Steep learning curve designing effective prompts for medical use cases  
-  - Balancing accuracy, safety, and user-friendliness in chatbot responses  
-  - Multi-language support added complexity to prompt structure and handling
+- **Prompting for medical contexts is different.** You're not trying to make the model sound impressive. You're trying to make it refuse to guess when it doesn't know, surface uncertainty in plain language, and never confidently say the wrong thing about a drug interaction. We rewrote the system prompt more times than I want to count.
+- **IRIS locally was a setup story of its own.** Running the database on our hackathon laptops took non-trivial effort, and the embedding pipeline plus the RAG plus the Azure OpenAI call needed custom glue we had to write under time pressure.
+- **Multilingual broke our prompt structure.** Switching languages didn't just mean translating output, it meant rethinking which medical terms to keep in English (drug names) and which to localise (symptom descriptions). Each language we added doubled the testing surface.
 
-- **Working with InterSystems IRIS Vector Search**  
-  - Difficult to run IRIS database locally – required significant setup and system resources  
-  - Embedding unstructured data into vector format and managing query performance was non-trivial  
-  - Integration with RAG pipeline and Azure OpenAI needed custom data flow handling
+Despite all that, we came out with a working multilingual RAG pipeline and a real demo. The InterSystems Challenge win was nice; the part that stuck with me was watching one of the judges, who works in elderly care, try the chatbot and immediately ask follow-up questions about deployment.
 
-- **Time Constraints During Hackathon**  
-  - Rapid prototyping under tight deadlines  
-  - Limited time to fully optimize database and model performance
-
-> Despite these challenges, we gained hands-on experience with **RAG architecture**, **semantic search**, and building **LLM-driven healthcare applications**.
-
-### Recognition
-
-🏆 **Winner** – HealthHack 2025 Intersystems Challenge  
-📍 Built at NUS to improve elderly care and reduce healthcare friction.
-
----
-
-### The Team
+## The Team
 
 <img src="/projects/pocket-missy/pocketmissy2.png" alt="Pocket Missy Team" width="100%" class="my-4 rounded-lg shadow-md" />
 
 - [Allexis Yu](https://www.linkedin.com/in/allexis-yu-3018a6244/) – NUS Year 2 Business Analytics
-- [Gerard Goh](https://www.linkedin.com/in/gerard-goh-ba888521b/) – NUS Year 2 Business Analytics  
-- [Lee Xin Yi](https://www.linkedin.com/in/xin-yi-lee-b600552b0/) – NUS Year 3 Medicine  
-- [Ng Jun Wei (me!)](https://www.linkedin.com/in/jun-wei-ng-2b06b6251/) – NUS Year 3 Civil Engineering 
+- [Gerard Goh](https://www.linkedin.com/in/gerard-goh-ba888521b/) – NUS Year 2 Business Analytics
+- [Lee Xin Yi](https://www.linkedin.com/in/xin-yi-lee-b600552b0/) – NUS Year 3 Medicine
+- [Ng Jun Wei (me!)](https://www.linkedin.com/in/jun-wei-ng-2b06b6251/) – NUS Year 3 Civil Engineering
 - [Ryan Tan](https://www.linkedin.com/in/ryan-tan-yan-tong/) – NUS Year 3 Business & Business Analytics (DDP)
 
----
+Thanks to the organisers at NUS Yong Loo Lin School of Medicine, the GovTech judges, and the InterSystems sponsors.
 
-### Learn More
+## Links
 
-- GitHub: [https://github.com/awpbash/healthhack](https://github.com/awpbash/healthhack)  
-- Special thanks to the organisers at NUS Yong Loo Lin School of Medicine, judges at GovTech, and sponsors at Intersystems.
+- GitHub: [github.com/awpbash/healthhack](https://github.com/awpbash/healthhack)

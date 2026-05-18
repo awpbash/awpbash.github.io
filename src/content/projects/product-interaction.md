@@ -11,18 +11,18 @@ featured: true
 
 ### Overview
 
-During my internship at **Tictag**, I worked on an advanced **product interaction detection system** designed for retail environments. The goal was to analyze monocular CCTV footage and automatically identify when a shopper **interacts with a product** in a specific Region of Interest (ROI) — including whether an item was **picked up**, **put back**, or left untouched.
+This was the main project of my Tictag internship: a computer vision pipeline that watches retail CCTV footage and figures out, for each shopper, when they actually interacted with a product on a shelf and whether they picked it up or put it back.
 
-Instead of relying on basic motion detection, this project leverages **deep learning models**, **pose estimation**, **segmentation**, and **depth perception** to infer intent and behavior, unlocking new potential for **in-store analytics**, **shelf optimization**, and **product placement evaluation**.
+The reason it's harder than it sounds is that motion detection alone is useless in a retail aisle. People walk past shelves constantly. The signal we care about is the moment a shopper's hand reaches into a specific region of the shelf and a product physically changes. Catching that, on monocular angled CCTV, with crowding and occlusion, was the actual problem.
 
 ---
 
-### Key Objectives
+### What it does, end to end
 
-- Detect human interaction with products using overhead or angled CCTV cameras.
-- Determine **which ROI** (e.g., product shelf) was interacted with.
-- Classify interactions as either **addition** or **removal** of products.
-- Enable **retail analytics** for customer behavior without requiring additional sensors.
+- Detects every person in the frame from a fixed overhead or angled camera.
+- Figures out which shelf region (ROI) each person is interacting with.
+- Classifies whether they added or removed an item.
+- Outputs the event stream for downstream retail analytics, without needing any extra sensors on the shelf.
 
 ---
 
@@ -100,7 +100,7 @@ Building a reliable interaction detection system for retail CCTV analytics was f
 - **Performance Bottlenecks:**  
   Processing just 1 minute of video could take **over 6 minutes** on an **NVIDIA A100 GPU**, due to the heavy stack of models—**person detection**, **pose estimation**, **segmentation**, and **depth inference** all run frame-by-frame. This made real-time or near-real-time deployment infeasible without major optimization.
 
-Despite these obstacles, we developed a reasonably robust pipeline by combining multiple vision models and rule-based logic, offering actionable insights for retail clients.
+None of these went away. The pipeline we ended up with is a combination of vision models stacked with rule-based filters that catch each model's worst failure modes. "Robust" is the wrong word; "useful, with known limitations" is closer to the truth.
 
 ---
 
@@ -117,7 +117,9 @@ However, here’s a representative demo GIF showcasing the interaction detection
 
 ### Reflections
 
-This was my first time integrating **multiple AI models** into a real-world deployment pipeline. I learned how to stitch together multiple stages of perception, work with noisy outputs, and build a practical, scalable solution. It also gave me a deeper appreciation for **human-in-the-loop annotation**, something Tictag specializes in.
+This was the first time I had to stitch a real perception pipeline together rather than treat each model as its own demo. Most of what I learned wasn't about any single model; it was about how noise compounds. Every stage has its own failure modes, and by the time pose estimation passes a jittery wrist into the XGBoost classifier, which passes a borderline call into the depth estimator, the cumulative noise can swamp the signal. Half the work was figuring out where to insert sanity checks and where to lean on rule-based logic to catch the model when it was wrong.
+
+It also made me appreciate why Tictag's whole business model is human-in-the-loop annotation. The cleanest fix for most of the failure modes wasn't a better model. It was a better-labelled corner case.
 
 ---
 
@@ -140,6 +142,6 @@ This was my first time integrating **multiple AI models** into a real-world depl
 
 ---
 
-### Internship @ Tictag
+### Internship at Tictag
 
-This project was part of my internship at **Tictag**, a startup that builds hybrid AI-human data labeling tools. I worked closely with their engineering and product teams to design, build, and iterate on this interaction detection module. It was an eye-opening experience into the messy but rewarding world of applied computer vision.
+Tictag is a Singapore startup building hybrid AI/human data-labelling tools. I spent the internship embedded with their engineering and product teams, iterating on this pipeline. It was my first proper exposure to applied CV outside of a coursework setting, and the gap between a clean academic dataset and an actual angled CCTV stream from a real store is the part of the experience I think about most.

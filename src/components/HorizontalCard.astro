@@ -1,6 +1,10 @@
 ---
-const { title, img, desc, url, badge, target = "_self" } = Astro.props;
+const { title, img, desc, url, badge, target = "_self", date } = Astro.props;
 import { Image } from "astro:assets";
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
+dayjs.extend(localizedFormat);
+const displayDate = date ? dayjs(date).format("ll") : null;
 ---
 
 <div
@@ -25,6 +29,9 @@ import { Image } from "astro:assets";
           {title}
           {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
         </h1>
+        {displayDate && (
+          <p class="text-xs text-base-content/60 mt-1">{displayDate}</p>
+        )}
         <p class="py-1 text-1xl" set:html={desc}></p>
       </div>
     </div>
