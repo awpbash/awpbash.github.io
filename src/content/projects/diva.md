@@ -14,6 +14,8 @@ DIVA stands for Document Intelligence with Visual Attribution. It takes a collec
 
 The key detail is provenance. Every extracted value carries its source snippet, page number, and page coordinates. A user can open a citation and see the exact clause, paragraph, or table row that supports the answer.
 
+<img src="/projects/diva/robot-logo.png" alt="DIVA robot holding a document with a highlighted field" width="320" />
+
 ## Why I built it
 
 A typical document RAG system retrieves chunks and asks a model to write an answer. Broad questions are straightforward. Auditing becomes harder when the answer is a date, fee, threshold, obligation, or total.
