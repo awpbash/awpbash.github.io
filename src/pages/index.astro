@@ -8,7 +8,7 @@ import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 dayjs.extend(localizedFormat);
 
-const HIGHLIGHT_SLUGS = ["silvergait", "retailmind", "pocket-missy"];
+const HIGHLIGHT_SLUGS = ["diva", "silvergait", "retailmind"];
 const highlights = await Promise.all(
   HIGHLIGHT_SLUGS.map((slug) => getEntry("projects", slug))
 );
@@ -34,50 +34,42 @@ const lastPosts = (await getCollection("blog"))
       <div class="text-xl py-1">Hey, I'm Jun Wei.</div>
     </div>
     <div class="hero-line" style="--delay: 90ms">
-      <h1 class="text-5xl font-bold leading-tight">
-        I build small AI things
-        <span class="relative inline-block">
-          <span class="relative z-10">and see which ones survive...</span>
-          <span class="absolute inset-x-0 bottom-1 h-2 bg-yellow-200/70 -z-0"></span>
-        </span>
-      </h1>
+      <h1 class="text-5xl font-bold leading-tight">I build applied AI systems.</h1>
     </div>
 
     <div class="hero-line" style="--delay: 220ms">
       <p class="py-4 text-lg leading-relaxed text-base-content/90">
-        Mostly in healthcare and retail, but also a bit of everything. Right now it's
-        <a href="/projects/silvergait" class="font-semibold link link-hover decoration-yellow-300 underline underline-offset-4">SilverGait</a>,
-        a phone-camera frailty check for seniors my team built over nine weeks.
-        By day I'm doing data science at GovTech, on the PlatformAI team shipping
-        multimodal AI for the Whole-of-Government.
+        I work on multimodal AI at GovTech. Outside work, I build tools across document intelligence, healthcare, and
+        computer vision. Recent projects include
+        <a href="/projects/diva" class="font-semibold link link-hover">DIVA</a>, which keeps document answers linked to
+        their source pages, and <a href="/projects/silvergait" class="font-semibold link link-hover">SilverGait</a>, a
+        phone-camera frailty assessment for seniors.
       </p>
     </div>
 
     <div class="hero-line" style="--delay: 320ms">
       <p class="text-lg leading-relaxed text-base-content/70">
-        A year ago I didn't know what a damn dockerfile was, and now I'm letting AI write my docker compose files lol. I write about my projects and AI on this blog, feel free to reach out if you wanna chat about anything AI, multimodal stuff, or just wanna say hi!
+        I use this site to document what I build, what worked, and what I would change.
       </p>
     </div>
 
     <div class="hero-line mt-7 flex flex-wrap gap-3" style="--delay: 440ms">
       <a class="btn btn-primary group" href="https://www.linkedin.com/in/jun-wei-ng-2b06b6251/" target="_blank">
-        Say hi
+        LinkedIn
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ml-1 transition-transform group-hover:translate-x-0.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </a>
       <a href="https://github.com/awpbash" target="_blank" class="btn btn-outline">GitHub</a>
-      <a href="https://huggingface.co/awpbash" target="_blank" class="btn btn-outline">Huggingface</a>
+      <a href="https://huggingface.co/awpbash" target="_blank" class="btn btn-outline">Hugging Face</a>
     </div>
   </div>
 
   <div class="mb-2 flex items-baseline justify-between">
-    <h2 class="text-3xl font-bold">What I've been making</h2>
+    <h2 class="text-3xl font-bold">Selected projects</h2>
     <a href="/projects" class="text-sm link link-hover text-base-content/70">
       See all {projectCount} →
     </a>
   </div>
-  <p class="text-base-content/70 mb-5">Three I'd point you at first.</p>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5 mb-12">
     {
       highlights.map((project, i) => (
         <a
