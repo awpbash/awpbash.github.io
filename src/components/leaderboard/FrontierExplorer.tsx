@@ -1,10 +1,43 @@
 import { useMemo, useState } from "react";
 import { inkFor, FEATURED_INKS, OTHER_INK } from "../../lib/leaderboard/scene/theme";
 import type { DatasetConfig } from "../../lib/leaderboard/metrics";
-import type { LeaderboardData, ModelRecord } from "../../lib/leaderboard/types";
+import type { DatasetId, LeaderboardData, ModelRecord, WeightsFilter } from "../../lib/leaderboard/types";
 import FilterControls from "./FilterControls";
 import LeaderboardScene from "./LeaderboardScene";
 import { useLeaderboardFilter } from "./useLeaderboardFilter";
+
+type CoverageFilter = "all" | "complete" | "missing";
+
+interface MetricGroup {
+  id: string;
+  label: string;
+  keys: string[];
+}
+
+const METRIC_GROUPS: Record<DatasetId, MetricGroup[]> = {
+  language: [
+    { id: "quality", label: "Quality", keys: ["intelligence"] },
+    { id: "cost", label: "Cost", keys: ["costTask", "tokenPrice", "inputPrice", "outputPrice"] },
+    { id: "token-use", label: "Token use", keys: ["tokensTask"] },
+    { id: "performance", label: "Speed and latency", keys: ["speed", "latency", "totalTime"] },
+    { id: "capacity", label: "Context", keys: ["context"] },
+  ],
+  image: [
+    { id: "quality", label: "Quality", keys: ["quality", "winRate"] },
+    { id: "cost", label: "Cost", keys: ["price"] },
+    { id: "evidence", label: "Rating evidence", keys: ["appearances", "uncertainty"] },
+  ],
+  voice: [
+    { id: "quality", label: "Quality", keys: ["quality", "speechReasoning", "agentSuccess"] },
+    { id: "cost", label: "Cost", keys: ["inputCost", "inputPrice", "outputPrice", "taskCost"] },
+    { id: "performance", label: "Latency", keys: ["latency"] },
+  ],
+  video: [
+    { id: "quality", label: "Quality", keys: ["quality", "winRate"] },
+    { id: "cost", label: "Cost", keys: ["price"] },
+    { id: "evidence", label: "Rating evidence", keys: ["appearances", "uncertainty"] },
+  ],
+};
 
 function ModelTable({
   rows,
@@ -124,6 +157,8 @@ function ModelTable({
 
 export default function FrontierExplorer({ data }: { data: LeaderboardData }) {
   const [showSurface, setShowSurface] = useState(true);
+  const [metricGroup, setMetricGroup] = useState("all");
+  const [coverage, setCoverage] = useState<CoverageFilter>("all");
   const {
     state,
     update,
@@ -144,15 +179,45 @@ export default function FrontierExplorer({ data }: { data: LeaderboardData }) {
     () => visibleModels.filter((model) => frontierIds.has(model.id)),
     [visibleModels, frontierIds],
   );
-  const allRows = filteredModels;
   const is2D = !state.axes.z;
   const activeKeys = [state.axes.y, state.axes.x, state.axes.z].filter((key): key is string => Boolean(key));
-  const tableColumns = useMemo(() => {
+  const allTableColumns = useMemo(() => {
     const orderedKeys = [...activeKeys, ...config.metrics.map((metric) => metric.key)];
     return [...new Set(orderedKeys)]
       .map((key) => config.metrics.find((metric) => metric.key === key))
       .filter((metric): metric is DatasetConfig["metrics"][number] => Boolean(metric));
   }, [activeKeys.join("|"), config]);
+  const metricGroups = METRIC_GROUPS[config.id];
+  const activeMetricGroup = metricGroups.some((group) => group.id === metricGroup) ? metricGroup : "all";
+  const browserColumns = useMemo(() => {
+    if (activeMetricGroup === "all") return allTableColumns;
+    const keys = metricGroups.find((group) => group.id === activeMetricGroup)?.keys ?? [];
+    return keys
+      .map((key) => config.metrics.find((metric) => metric.key === key))
+      .filter((metric): metric is DatasetConfig["metrics"][number] => Boolean(metric));
+  }, [activeMetricGroup, allTableColumns, config, metricGroups]);
+  const browserRows = useMemo(() => {
+    if (coverage === "all") return filteredModels;
+    return filteredModels.filter((model) => {
+      const complete = config.metrics.every((metric) => model.values[metric.key] != null);
+      return coverage === "complete" ? complete : !complete;
+    });
+  }, [config, coverage, filteredModels]);
+  const tableCreators = useMemo(() => {
+    const creators = new Map<string, string>();
+    for (const model of dataset?.models ?? []) creators.set(model.creator.slug, model.creator.name);
+    return [...creators].sort((left, right) => left[1].localeCompare(right[1]));
+  }, [dataset]);
+  const providerValue = state.creators.length === 1 ? state.creators[0] : state.creators.length > 1 ? "multiple" : "";
+  const tableFiltersActive = Boolean(
+    state.search ||
+      state.creators.length ||
+      state.weights !== "all" ||
+      state.minContext ||
+      state.axisRange ||
+      coverage !== "all" ||
+      activeMetricGroup !== "all",
+  );
   const activeMetricNames = [scales.y, scales.x, scales.z]
     .filter((scale): scale is NonNullable<typeof scale> => Boolean(scale))
     .map((scale) => scale.def.shortTitle.toLowerCase());
@@ -267,24 +332,143 @@ export default function FrontierExplorer({ data }: { data: LeaderboardData }) {
           rows={frontierRows}
           frontier={frontierIds}
           config={config}
-          columns={tableColumns}
+          columns={allTableColumns}
           defaultSortKey={state.axes.y}
         />
-        <details className="fx-all" open>
-          <summary>All matching models ({allRows.length}), with every available metric</summary>
+
+        <section className="fx-data-browser" aria-labelledby="benchmark-data-heading">
+          <div className="fx-data-browser-head">
+            <div>
+              <p className="fx-label">Dataset browser</p>
+              <h2 id="benchmark-data-heading">All benchmark data</h2>
+            </div>
+            <p>Filter the records, choose a metric group, then sort any column.</p>
+          </div>
+
+          <div className="fx-table-controls">
+            <div className="fx-table-control fx-table-categories">
+              <span className="fx-label">Model category</span>
+              <div className="fx-table-category-list" role="tablist" aria-label="Table model category">
+                {data.datasets.map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    role="tab"
+                    aria-selected={state.datasetId === item.id}
+                    className={state.datasetId === item.id ? "is-on" : ""}
+                    onClick={() => {
+                      setMetricGroup("all");
+                      setCoverage("all");
+                      update({ datasetId: item.id });
+                    }}
+                  >
+                    {item.label}
+                    <span>{item.modelCount}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="fx-table-filter-grid">
+              <label className="fx-table-control">
+                <span className="fx-label">Search</span>
+                <input
+                  type="search"
+                  value={state.search}
+                  placeholder="Model or provider"
+                  onChange={(event) => update({ search: event.target.value })}
+                />
+              </label>
+
+              <label className="fx-table-control">
+                <span className="fx-label">Provider</span>
+                <select
+                  value={providerValue}
+                  onChange={(event) => update({ creators: event.target.value ? [event.target.value] : [] })}
+                >
+                  <option value="">All providers</option>
+                  {providerValue === "multiple" && (
+                    <option value="multiple" disabled>{state.creators.length} providers selected</option>
+                  )}
+                  {tableCreators.map(([slug, name]) => <option key={slug} value={slug}>{name}</option>)}
+                </select>
+              </label>
+
+              <label className="fx-table-control">
+                <span className="fx-label">Weights</span>
+                <select
+                  value={state.weights}
+                  onChange={(event) => update({ weights: event.target.value as WeightsFilter })}
+                >
+                  <option value="all">All models</option>
+                  <option value="open">Open weights</option>
+                  <option value="closed">Closed weights</option>
+                </select>
+              </label>
+
+              <label className="fx-table-control">
+                <span className="fx-label">Data coverage</span>
+                <select value={coverage} onChange={(event) => setCoverage(event.target.value as CoverageFilter)}>
+                  <option value="all">Any coverage</option>
+                  <option value="complete">All metrics available</option>
+                  <option value="missing">Has missing metrics</option>
+                </select>
+              </label>
+            </div>
+
+            <div className="fx-table-control fx-metric-groups">
+              <span className="fx-label">Metric category</span>
+              <div className="fx-metric-group-list">
+                <button
+                  type="button"
+                  aria-pressed={activeMetricGroup === "all"}
+                  className={activeMetricGroup === "all" ? "is-on" : ""}
+                  onClick={() => setMetricGroup("all")}
+                >
+                  All metrics
+                </button>
+                {metricGroups.map((group) => (
+                  <button
+                    key={group.id}
+                    type="button"
+                    aria-pressed={activeMetricGroup === group.id}
+                    className={activeMetricGroup === group.id ? "is-on" : ""}
+                    onClick={() => setMetricGroup(group.id)}
+                  >
+                    {group.label}
+                  </button>
+                ))}
+                {tableFiltersActive && (
+                  <button
+                    type="button"
+                    className="fx-table-clear"
+                    onClick={() => {
+                      reset();
+                      setCoverage("all");
+                      setMetricGroup("all");
+                    }}
+                  >
+                    Clear table filters
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+
           <p className="fx-table-note">
-            Search and filters above apply here. Models missing a selected chart metric remain in this table and show n/a.
+            Showing <strong>{browserRows.length}</strong> of {dataset.models.length} models. These filters also update the chart
+            and frontier. Models missing a chart metric remain available here and show n/a.
           </p>
           <ModelTable
-            key={`${dataset.id}-all`}
-            rows={allRows}
+            key={`${dataset.id}-${activeMetricGroup}`}
+            rows={browserRows}
             frontier={frontierIds}
             config={config}
-            columns={tableColumns}
+            columns={browserColumns}
             defaultSortKey={state.axes.y}
             scrollBody={true}
           />
-        </details>
+        </section>
         {dataset.id === "language" && <p className="fx-footnote">* Intelligence score estimated by Artificial Analysis.</p>}
       </div>
     </section>
