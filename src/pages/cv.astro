@@ -1,200 +1,263 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
+
+const skillGroups = [
+  {
+    title: "Languages",
+    skills: ["Python", "TypeScript", "JavaScript", "Java", "SQL", "R", "MATLAB"],
+  },
+  {
+    title: "Applied AI",
+    skills: ["PyTorch", "TensorFlow", "Scikit-learn", "XGBoost", "OpenCV", "LangChain"],
+  },
+  {
+    title: "Product and data",
+    skills: ["FastAPI", "React", "PostgreSQL", "HTML", "CSS", "Jupyter"],
+  },
+  {
+    title: "Infrastructure",
+    skills: ["Docker", "Azure", "AWS", "GCP", "Git"],
+  },
+];
 ---
 
-<BaseLayout title="Resume" sideBarActiveItemID="cv">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
+<BaseLayout
+  title="CV | Jun Wei Ng"
+  description="Jun Wei Ng's experience, education, awards, and technical skills in AI engineering and applied machine learning."
+  sideBarActiveItemID="cv"
+>
+  <div class="mx-auto max-w-5xl">
+    <section class="cv-reveal mb-12 mt-5 max-w-4xl">
+      <h1 class="text-4xl font-bold">Resume</h1>
+      <p class="mt-5 text-lg leading-relaxed text-base-content/90">
+        AI engineer with a civil engineering background and an M.Sc. in Business Analytics from NUS. I build document intelligence, multimodal, and computer vision systems. Most recently, I worked on enterprise document intelligence and Azure AI Foundry at Keppel, after building multimodal AI systems at GovTech.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a class="btn btn-primary" href="/resume.pdf" target="_blank" rel="noopener">
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+            <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+            <path d="M12 18v-6"></path>
+            <path d="m9 15 3 3 3-3"></path>
+          </svg>
+          Resume PDF
+        </a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/jun-wei-ng-2b06b6251/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-outline" href="https://github.com/awpbash" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <section class="cv-section mt-14" aria-labelledby="experience-heading">
+      <h2 id="experience-heading" class="cv-reveal mb-6 text-3xl font-bold">Experience</h2>
+
+      <div class="mt-6">
+        <TimeLineElement
+          title="AI Engineer Intern at Keppel Ltd"
+          subtitle="Jun 2026 to Aug 2026 at Keppel Ltd, Singapore"
+          logo="/logos/keppel.svg"
+          logoClass="h-8 w-16"
+        >
+          <p>AI engineering internship focused on enterprise document intelligence and Azure AI Foundry.</p>
+          <ul class="list-disc space-y-2 pl-5">
+            <li><strong>Enterprise document intelligence.</strong> Built an internal POC with the same core approach as DIVA: schema-based extraction, searchable records, evidence-grounded retrieval, and answers linked to their source documents.</li>
+            <li><strong>Azure AI Foundry sandbox.</strong> Spearheaded the team's initial sandbox setup, configured the environment, explored the platform's capabilities and constraints, and built working POCs to guide adoption.</li>
+          </ul>
+          <p><strong>Focus:</strong> Azure AI Foundry, document intelligence, RAG, and enterprise AI prototyping.</p>
+        </TimeLineElement>
+
+        <TimeLineElement
+          title="Data Science Intern at GovTech"
+          subtitle="Jan 2026 to May 2026 at GovTech, Singapore"
+          logo="/logos/govtech.png"
+          delay={60}
+        >
+          <p>Multimodal Hub team, building shipped AI systems for Whole-of-Government agencies.</p>
+          <ul class="list-disc space-y-2 pl-5">
+            <li><strong>Rat detection MLOps loop.</strong> Cold-started RF-DETR on a manually labelled seed of trap footage, then wired it into a flywheel: new clips in, model auto-labels, human corrects uncertain frames, and the corrected set goes back into training. Less manual labelling was needed each round.</li>
+            <li><strong>Smoking detection on public CCTV.</strong> Built a cascade detection pipeline that narrows from body to head before classifying smoke vs no-smoke, with ByteTrack and ReID layered on top to identify individual smokers and avoid double-counting across cameras.</li>
+            <li><strong>Wildlife detection and species ID.</strong> Built the full stack with D-FINE for real-time edge detection, SAM3 and BioCLIP for open-vocabulary species identification, and an iNaturalist reference set localised to Singapore species. Gemini reasons over the output and triggers warnings in real time.</li>
+            <li><strong>Vessel mooring compliance for MPA.</strong> Built a pipeline that ingests drone imagery of ships at their moorings, detects and identifies each vessel, then checks an approved schedule to flag vessels at the wrong buoy or outside their allowed window.</li>
+            <li><strong>Generative documents for public officers.</strong> Built a guided workflow that turns PDFs or prose into editable slides, infographics, and diagrams using reference examples, code generation, and image generation. Shipped as a Whole-of-Government proof of concept on PlatformAI.</li>
+            <li><strong>NParks claims auto-approval.</strong> Extracted structured fields from receipts, invoices, and claims, then matched them through a configurable rules engine so reviewers only handled edge cases.</li>
+          </ul>
+          <p><strong>Product work:</strong> built the frontend, backend, and serverless deployment for each POC.</p>
+          <p><strong>Cloud:</strong> AWS Lambda, S3 Vectors, Bedrock Nova embeddings, GCP Cloud Run, Firestore, RunPod, Docker, and GPU-backed inference on DGX Spark.</p>
+          <p><strong>Additional work:</strong> resolved dependency and GPU compatibility issues in existing services and contributed to QA across team deliverables.</p>
+        </TimeLineElement>
+
+        <TimeLineElement
+          title="Data Scientist Intern at Tictag"
+          subtitle="Jun 2025 to Aug 2025 at Tictag, Singapore"
+          logo="/logos/tictag.png"
+          delay={120}
+        >
+          <p>Computer vision R&amp;D team. Prototyped retail analytics pipelines from in-store CCTV, built custom benchmarks, and explored emerging vision models.</p>
+          <ul class="list-disc space-y-2 pl-5">
+            <li><strong>Product interaction analytics from in-store CCTV.</strong> Built an end-to-end pipeline to define store regions, detect shopper interactions, classify what was taken or returned, and aggregate the results into a retail insights report. Also built custom human-detection benchmarks for CCTV footage.</li>
+            <li><strong>Frontier model exploration.</strong> Benchmarked emerging vision and multimodal models including RexThinker, Hunyuan, GroundingDINO, D-FINE, and RF-DETR, mapping their production readiness and limitations.</li>
+            <li><strong>Customer service assessment demo.</strong> Built a Hugging Face demo that scores service officers on friendliness and professionalism from facial expression and audio, with translation and transcription handled in the pipeline.</li>
+            <li><strong>Action classification data flywheel.</strong> Architected a pipeline that extracts human pose features from video, routes them for action labelling, and feeds the labelled set back into classifier training.</li>
+            <li><strong>Camera calibration to floorplan heatmaps.</strong> Used NVIDIA DeepStream and monocular depth estimation to project shopper positions from camera space onto store floorplans, plot paths, and aggregate activity heatmaps.</li>
+          </ul>
+          <p><strong>Stack:</strong> VMs, A100 GPUs, Gradio, and Hugging Face models and datasets.</p>
+        </TimeLineElement>
+
+        <TimeLineElement
+          title="Undergraduate Teaching Assistant for CS2040"
+          subtitle="Aug 2024 to Dec 2025 at NUS School of Computing, Singapore"
+          logo="/logos/nus.png"
+          delay={180}
+        >
+          Conducted weekly tutorials on data structures and algorithms in Java for 30 students across AY24/25 and AY25/26. Guided lab sessions, graded assignments, and received the Honour Roll award.
+        </TimeLineElement>
+
+        <TimeLineElement
+          title="Climate Models Analytics Intern"
+          subtitle="May 2024 to Aug 2024 at DSTA, Singapore"
+          logo="/logos/dsta.png"
+          delay={240}
+          isLast={true}
+        >
+          Built a pipeline with Selenium and APIs to automate weather data retrieval. Enhanced rainfall analysis using super-resolution models including SRGAN and RDN. Deployed a Llama-based offline chatbot for domain experts in meteorology.
+        </TimeLineElement>
+      </div>
+    </section>
+
+    <section class="cv-section mt-14" aria-labelledby="education-heading">
+      <h2 id="education-heading" class="cv-reveal mb-6 text-3xl font-bold">Education</h2>
+
+      <div class="mt-6">
+        <TimeLineElement
+          title="M.Sc. in Business Analytics"
+          subtitle="Aug 2025 to Aug 2026 at National University of Singapore"
+          logo="/logos/nus.png"
+        >
+          <ul class="detail-list">
+            <li><span>GPA</span><strong>4.88 / 5.00</strong></li>
+            <li><span>Awards</span><strong>NUS Engineering Scholarship and DSO-AISG Incentive Award</strong></li>
+          </ul>
+        </TimeLineElement>
+
+        <TimeLineElement
+          title="B.Eng. in Civil Engineering, Highest Distinction"
+          subtitle="Aug 2022 to May 2025 at National University of Singapore"
+          logo="/logos/nus.png"
+          delay={80}
+          isLast={true}
+        >
+          <ul class="detail-list">
+            <li><span>GPA</span><strong>4.67 / 5.00</strong></li>
+            <li><span>Study</span><strong>Digitalisation of Urban Infrastructure, with minors in Computer Science and Data Analytics</strong></li>
+            <li><span>Dissertation</span><strong>RL for Taxi Rebalancing to Reduce Congestion</strong></li>
+            <li><span>Recognition</span><strong>Dean's List AY23/24 Semester 1, NUS Engineering Scholar, IAHR-Singapore Hydraulics Medal</strong></li>
+          </ul>
+        </TimeLineElement>
+      </div>
+    </section>
+
+    <section class="cv-section mt-14" aria-labelledby="credentials-heading">
+      <h2 id="credentials-heading" class="cv-reveal mb-6 text-3xl font-bold">Credentials and activities</h2>
+
+      <div class="grid gap-x-12 gap-y-10 md:grid-cols-2">
+        <article class="cv-reveal border-t border-base-300 pt-5">
+          <h3 class="text-lg font-semibold">Certifications</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-base-content/80">
+            <li>AI Singapore, Foundations in AI</li>
+            <li>Google Data Analytics Certificate</li>
+            <li>DeepLearning.AI, Generative AI with LLMs</li>
+          </ul>
+        </article>
+
+        <article class="cv-reveal border-t border-base-300 pt-5" style="--reveal-delay: 60ms">
+          <h3 class="text-lg font-semibold">Awards</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-base-content/80">
+            <li>EIC 2023 and 2025 Merit Award</li>
+            <li>CDE Innovation and Research Award, High Achievement</li>
+            <li>NUS Outstanding Undergraduate Researcher Prize, Group</li>
+            <li>IAHR-Singapore Hydraulics Medal</li>
+          </ul>
+        </article>
+
+        <article class="cv-reveal border-t border-base-300 pt-5">
+          <h3 class="text-lg font-semibold">Leadership</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-base-content/80">
+            <li>President, NUS Civil Engineering Club, Aug 2023 to Aug 2024</li>
+            <li>AUA Youth Forum 2024 Best Presenter</li>
+          </ul>
+        </article>
+
+        <article class="cv-reveal border-t border-base-300 pt-5" style="--reveal-delay: 60ms">
+          <h3 class="text-lg font-semibold">Languages</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-base-content/80">
+            <li>English, native</li>
+            <li>Mandarin, mother tongue</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="cv-section mb-6 mt-14" aria-labelledby="skills-heading">
+      <h2 id="skills-heading" class="cv-reveal mb-6 text-3xl font-bold">Technical skills</h2>
+
+      <div class="grid gap-x-12 gap-y-8 sm:grid-cols-2">
+        {skillGroups.map((group, index) => (
+          <article class="cv-reveal border-t border-base-300 pt-5" style={`--reveal-delay: ${(index % 2) * 60}ms`}>
+            <h3 class="text-lg font-semibold">{group.title}</h3>
+            <div class="mt-3 flex flex-wrap gap-2">
+              {group.skills.map((skill) => <span class="badge badge-outline">{skill}</span>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
   </div>
-
-  <div class="mb-10 text-justify">
-    AI engineer with a civil engineering background and an M.Sc. in Business Analytics from NUS. I build document intelligence, multimodal, and computer vision systems. Most recently, I worked on enterprise document intelligence and Azure AI Foundry at Keppel, after building multimodal AI systems at GovTech.
-  </div>
-   <a class="mt-4 inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 underline" href="/resume.pdf">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-    Download my Resume
-  </a>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
-  </div>
-
-  <div class="reveal time-line-container flex flex-col mb-10">
-    <TimeLineElement
-      title="M.Sc Business Analytics"
-      subtitle="Aug 2025 to Aug 2026 at National University of Singapore, Singapore"
-      logo="/logos/nus.png"
-    >
-      GPA: 4.88 / 5.00<br/>
-      Recipient of the NUS Engineering Scholarship.<br/>
-      Recipient of DSO-AISG Incentive Award
-    </TimeLineElement>
-    <TimeLineElement
-      title="B.Eng Civil Engineering (Highest Distinction)"
-      subtitle="Aug 2022 to May 2025 at National University of Singapore, Singapore"
-      logo="/logos/nus.png"
-      isLast={true}
-    >
-      GPA: 4.67 / 5.00 | Dean's List AY23/24 Semester 1 | NUS Engineering Scholar<br/>
-      Specialisation: Digitalisation of Urban Infrastructure<br/>
-      Minors in Computer Science and Data Analytics<br/>
-      Dissertation: "RL for Taxi Rebalancing to Reduce Congestion"<br/>
-      IAHR-Singapore Hydraulics Medal
-    </TimeLineElement>
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
-  </div>
-
-  <div class="reveal time-line-container flex flex-col mb-10">
-    <TimeLineElement
-      title="AI Engineer Intern at Keppel Ltd"
-      subtitle="Jun 2026 to Aug 2026 at Keppel Ltd, Singapore"
-      logo="/logos/keppel.svg"
-      logoClass="w-16 h-8"
-    >
-      <p>AI engineering internship focused on enterprise document intelligence and Azure AI Foundry.</p>
-      <ul class="list-disc pl-5 space-y-2 text-left">
-        <li><strong>Enterprise document intelligence.</strong> Built an internal POC with the same core approach as DIVA: schema-based extraction, searchable records, evidence-grounded retrieval, and answers linked to their source documents.</li>
-        <li><strong>Azure AI Foundry sandbox.</strong> Spearheaded the team's initial sandbox setup, configured the environment, explored the platform's capabilities and constraints, and built working POCs to guide adoption.</li>
-      </ul>
-      <p class="mt-3"><strong>Focus:</strong> Azure AI Foundry, document intelligence, RAG, and enterprise AI prototyping.</p>
-    </TimeLineElement>
-    <TimeLineElement
-      title="Data Science Intern at GovTech"
-      subtitle="Jan 2026 to May 2026 at GovTech, Singapore"
-      logo="/logos/govtech.png"
-    >
-      <p>Multimodal Hub team, building shipped AI systems for Whole-of-Government agencies.</p>
-      <ul class="list-disc pl-5 space-y-2 text-left">
-        <li><strong>Rat detection MLOps loop.</strong> Cold-started RF-DETR on a manually labelled seed of trap footage, then wired it into a flywheel: new clips in, model auto-labels, human corrects the iffy frames, corrected set goes back into training. Less manual labelling needed each round.</li>
-        <li><strong>Smoking detection on public CCTV.</strong> Built a cascade detection pipeline that narrows from body to head before classifying smoke vs no-smoke, with ByteTrack and ReID layered on top to identify individual smokers and avoid double-counting across cameras.</li>
-        <li><strong>Wildlife detection + species ID pipeline.</strong> Built the whole stack: D-FINE for real-time detection on edge (suitable for DGX Spark), SAM3 + BioCLIP for open-vocab species identification, with the lookup grounded against an iNaturalist reference set embedded by BioCLIP2 and localised to Singapore species. Gemini reasons over the output and fires the warning in real time.</li>
-        <li><strong>Vessel mooring compliance for MPA.</strong> Built a pipeline that ingests drone imagery of ships at their moorings, detects and identifies each vessel, then cross-checks against an approved mooring schedule to flag vessels parked at the wrong buoy or outside their allowed window.</li>
-        <li><strong>Generative docs for public officers.</strong> Officers were burning hours on slides, infographics, and diagrams. Built a wizard-driven workflow: drop in a PDF or prose writeup, attach reference examples for style, and context engineering generates editable artefacts via code generation and image generation. Output is editable, not flat, so officers finish with minor touch-ups instead of starting from a blank canvas. Shipped as a WoG proof-of-concept on PlatformAI, GovTech's internal AI platform.</li>
-        <li><strong>NParks claims auto-approval (cat neutering and capture).</strong> Receipts, invoices, and claims come in messy. Model extracts structured fields, a configurable rules engine matches them against the claim, and auto-approves the clean cases. Reviewers only see the edge cases.</li>
-      </ul>
-      <p class="mt-3"><strong>Beyond models:</strong> built the frontend, backend, and serverless deployment for each POC. (DS can also be SWE!)</p>
-      <p class="mt-2"><strong>Cloud:</strong> AWS (Lambda, S3 Vectors, Bedrock Nova embeddings), GCP (CloudRun, Firestore), RunPod, Docker, GPU-backed inference on DGX Spark.</p>
-      <p class="mt-2"><strong>Also:</strong> debugged version mismatches on existing services so they would actually run on GPU, and contributed to QA across team deliverables.</p>
-    </TimeLineElement>
-    <TimeLineElement
-      title="Data Scientist Intern at Tictag"
-      subtitle="Jun 2025 to Aug 2025 at Tictag, Singapore"
-      logo="/logos/tictag.png"
-    >
-      <p>Computer vision R&D team. Prototyped retail analytics pipelines from in-store CCTV, built custom benchmarks, and explored emerging vision models.</p>
-      <ul class="list-disc pl-5 space-y-2 text-left">
-        <li><strong>Product interaction analytics from in-store CCTV</strong> (main project, R&D). End-to-end pipeline: define ROIs across the store, run a model stack to detect when shoppers interact with each region, classify what was taken vs put back, then aggregate into a retail insights report. Also built custom human detection benchmarks on CCTV and surveillance footage to evaluate candidate models for the domain.</li>
-        <li><strong>Frontier model exploration.</strong> Benchmarked emerging vision and multimodal models (RexThinker, Hunyuan, GroundingDINO, D-FINE, RF-DETR) for discovery and capability building, mapping which were production-ready and which weren't.</li>
-        <li><strong>Customer service assessment demo.</strong> Built a HuggingFace demo that scores service officers on friendliness and professionalism from facial expression and audio, with translation and transcription handled in-pipeline.</li>
-        <li><strong>Action classification data flywheel.</strong> Architected the pipeline that extracts human pose features from raw video, routes them to labellers for action tagging, and feeds the labelled set back into action classifier training. Pilot for a self-improving labelling loop.</li>
-        <li><strong>Camera calibration to floorplan heatmaps.</strong> Used Nvidia DeepStream and 2D depth estimation to project shopper positions from CCTV camera-space onto store floorplans, plotted paths, then aggregated into activity heatmaps for retail analysis.</li>
-      </ul>
-      <p class="mt-3"><strong>Stack:</strong> VMs, A100 GPUs, Gradio for demos, HuggingFace for models and datasets.</p>
-    </TimeLineElement>
-    <TimeLineElement
-      title="Undergraduate Teaching Assistant for CS2040"
-      subtitle="Aug 2024 to Dec 2025 at NUS School of Computing, Singapore"
-      logo="/logos/nus.png"
-    >
-      Conducted weekly tutorials on data structures and algorithms in Java for 30 students (AY24/25 and AY25/26). Guided lab sessions and graded assignments. Honour Roll recipient.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Climate Models Analytics Intern"
-      subtitle="May 2024 to Aug 2024 at DSTA, Singapore"
-      logo="/logos/dsta.png"
-      isLast={true}
-    >
-      Built a robust pipeline with Selenium and APIs to automate weather data retrieval. Enhanced rainfall analysis using super-resolution models (SRGAN, RDN). Deployed a Llama-based offline chatbot to support domain experts in meteorology.
-    </TimeLineElement>
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
-  </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li><a href="#" target="_blank">AI Singapore - Foundations in AI</a></li>
-    <li><a href="#" target="_blank">Google Data Analytics Certificate</a></li>
-    <li><a href="#" target="_blank">DeepLearning.AI Generative AI with LLMs</a></li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Awards</div>
-  </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>EIC 2023 & 2025 Merit Award</li>
-    <li>CDE Innovation & Research Award (High Achievement)</li>
-    <li>NUS Outstanding Undergraduate Researcher Prize (Group)</li>
-    <li>IAHR-Singapore Hydraulics Medal</li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Leadership</div>
-  </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>President, NUS Civil Engineering Club (Aug 2023 – Aug 2024)</li>
-    <li>AUA Youth Forum 2024 Best Presenter</li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Languages</div>
-  </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>English (Native)</li>
-    <li>Mandarin (Mother Tongue)</li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
-  </div>
-
-  <ul class="reveal list-disc md:columns-5 columns-2 mx-6">
-    <li>Python</li>
-    <li>PyTorch</li>
-    <li>TensorFlow</li>
-    <li>Scikit-learn</li>
-    <li>XGBoost</li>
-    <li>OpenCV</li>
-    <li>LangChain</li>
-    <li>FastAPI</li>
-    <li>React</li>
-    <li>TypeScript</li>
-    <li>JavaScript</li>
-    <li>Java</li>
-    <li>R</li>
-    <li>SQL</li>
-    <li>PostgreSQL</li>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>MATLAB</li>
-    <li>Docker</li>
-    <li>Azure</li>
-    <li>AWS</li>
-    <li>GCP</li>
-    <li>Git</li>
-    <li>Jupyter</li>
-  </ul>
 </BaseLayout>
 
 <style>
-  .reveal {
+  .detail-list {
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .detail-list li {
+    display: grid;
+    grid-template-columns: minmax(5.5rem, 0.25fr) minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  .detail-list span {
+    opacity: 0.6;
+    font-weight: 500;
+  }
+
+  .detail-list strong {
+    font-weight: 600;
+  }
+
+  .cv-reveal {
     opacity: 0;
     transform: translateY(14px);
-    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    transition:
+      opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
   }
-  .reveal.is-visible {
+
+  .cv-reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
   }
+
+  @media (max-width: 639px) {
+    .detail-list li {
+      grid-template-columns: 1fr;
+      gap: 0.1rem;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .reveal {
+    .cv-reveal {
       opacity: 1;
       transform: none;
       transition: none;
@@ -203,26 +266,32 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 </style>
 
 <script>
-  function initReveal() {
-    const els = document.querySelectorAll<HTMLElement>(".reveal");
+  function initCvReveal() {
+    const elements = document.querySelectorAll<HTMLElement>(
+      ".cv-reveal:not(.is-visible), .timeline-entry:not(.is-visible)"
+    );
+
+    if (!elements.length) return;
+
     if (!("IntersectionObserver" in window)) {
-      els.forEach((el) => el.classList.add("is-visible"));
+      elements.forEach((element) => element.classList.add("is-visible"));
       return;
     }
-    const io = new IntersectionObserver(
+
+    const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            io.unobserve(entry.target);
-          }
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -36px 0px" }
     );
-    els.forEach((el) => io.observe(el));
+
+    elements.forEach((element) => observer.observe(element));
   }
 
-  initReveal();
-  document.addEventListener("astro:page-load", initReveal);
+  initCvReveal();
+  document.addEventListener("astro:page-load", initCvReveal);
 </script>
