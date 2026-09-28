@@ -970,8 +970,14 @@
   contain: inline-size;
 }
 
+.fx-table-wrap.is-scrollable {
+  max-height: min(72vh, 48rem);
+  overflow: auto;
+}
+
 .fx-table {
-  width: 100%;
+  width: max-content;
+  min-width: 100%;
   border-collapse: collapse;
   font-size: 0.82rem;
 }
@@ -985,6 +991,9 @@
 }
 
 .fx-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 3;
   background: var(--fx-canvas);
   color: var(--fx-muted);
   font-size: 0.68rem;
@@ -994,11 +1003,61 @@
 }
 
 .fx-table tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: 0.45rem;
+  background: var(--fx-bg);
   color: var(--fx-text);
   font-weight: 600;
+}
+
+.fx-table thead th:first-child {
+  left: 0;
+  z-index: 4;
+}
+
+.fx-sort-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.fx-table th.num .fx-sort-button {
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.fx-sort-button svg {
+  width: 0.7rem;
+  height: 0.8rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.3;
+  opacity: 0.45;
+}
+
+.fx-sort-button svg.is-active {
+  color: var(--fx-accent);
+  opacity: 1;
+}
+
+.fx-sort-button:hover,
+.fx-sort-button:focus-visible {
+  color: var(--fx-accent);
+  outline: none;
 }
 
 .fx-table .num {
@@ -1016,6 +1075,10 @@
   background: #eff6ff;
 }
 
+.fx-table tbody tr:hover th {
+  background: #eff6ff;
+}
+
 .fx-table tbody tr.is-frontier th {
   color: #174ea6;
 }
@@ -1030,6 +1093,12 @@
   font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
+}
+
+.fx-table-note {
+  margin: -0.1rem 0 0.7rem !important;
+  color: var(--fx-muted) !important;
+  font-size: 0.8rem !important;
 }
 
 .fx-footnote {

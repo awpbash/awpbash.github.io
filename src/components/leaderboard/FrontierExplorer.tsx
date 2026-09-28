@@ -10,30 +10,94 @@ function ModelTable({
   rows,
   frontier,
   config,
-  activeKeys,
+  columns,
+  defaultSortKey,
+  scrollBody = false,
 }: {
   rows: ModelRecord[];
   frontier: Set<string>;
   config: DatasetConfig;
-  activeKeys: string[];
+  columns: DatasetConfig["metrics"];
+  defaultSortKey: string;
+  scrollBody?: boolean;
 }) {
-  const columns = activeKeys.map((key) => config.metrics.find((item) => item.key === key)!).filter(Boolean);
+  const [sort, setSort] = useState<{ key: string; direction: "asc" | "desc" }>(() => {
+    const metric = config.metrics.find((item) => item.key === defaultSortKey);
+    return { key: defaultSortKey, direction: metric?.better === "low" ? "asc" : "desc" };
+  });
+
+  const sortedRows = useMemo(() => {
+    const direction = sort.direction === "asc" ? 1 : -1;
+    return [...rows].sort((left, right) => {
+      if (sort.key === "model") return direction * left.fullName.localeCompare(right.fullName);
+      if (sort.key === "provider") return direction * left.creator.name.localeCompare(right.creator.name);
+
+      const a = left.values[sort.key];
+      const b = right.values[sort.key];
+      if (a == null && b == null) return left.fullName.localeCompare(right.fullName);
+      if (a == null) return 1;
+      if (b == null) return -1;
+      return direction * (a - b) || left.fullName.localeCompare(right.fullName);
+    });
+  }, [rows, sort]);
+
+  const setSortKey = (key: string) => {
+    setSort((current) => {
+      if (current.key === key) {
+        return { key, direction: current.direction === "asc" ? "desc" : "asc" };
+      }
+      const metric = config.metrics.find((item) => item.key === key);
+      return {
+        key,
+        direction: key === "model" || key === "provider" || metric?.better === "low" ? "asc" : "desc",
+      };
+    });
+  };
+
+  const ariaSort = (key: string): "ascending" | "descending" | "none" =>
+    sort.key === key ? (sort.direction === "asc" ? "ascending" : "descending") : "none";
+
+  const SortButton = ({ label, sortKey }: { label: string; sortKey: string }) => (
+    <button type="button" className="fx-sort-button" onClick={() => setSortKey(sortKey)}>
+      <span>{label}</span>
+      <svg viewBox="0 0 12 14" aria-hidden="true" className={sort.key === sortKey ? "is-active" : ""}>
+        {sort.key === sortKey && sort.direction === "asc" ? (
+          <path d="m2 8 4-4 4 4M6 4v7" />
+        ) : sort.key === sortKey ? (
+          <path d="m2 6 4 4 4-4M6 3v7" />
+        ) : (
+          <path d="m2 5 4-3 4 3M2 9l4 3 4-3" />
+        )}
+      </svg>
+    </button>
+  );
+
   return (
-    <div className="fx-table-wrap">
+    <div className={scrollBody ? "fx-table-wrap is-scrollable" : "fx-table-wrap"}>
       <table className="fx-table">
         <thead>
           <tr>
-            <th scope="col">Model</th>
-            <th scope="col">Provider</th>
+            <th scope="col" aria-sort={ariaSort("model")}>
+              <SortButton label="Model" sortKey="model" />
+            </th>
+            <th scope="col" aria-sort={ariaSort("provider")}>
+              <SortButton label="Provider" sortKey="provider" />
+            </th>
             {columns.map((column) => (
-              <th scope="col" className="num" key={column.key} title={column.description}>
-                {column.shortTitle}
+              <th
+                scope="col"
+                className="num"
+                key={column.key}
+                title={column.description}
+                aria-sort={ariaSort(column.key)}
+              >
+                <SortButton label={column.shortTitle} sortKey={column.key} />
               </th>
             ))}
           </tr>
         </thead>
         <tbody>
-          {rows.map((model) => (
+          {sortedRows.map((model) => (
             <tr key={model.id} className={frontier.has(model.id) ? "is-frontier" : ""}>
               <th scope="row">
                 <span
@@ -70,23 +134,25 @@ export default function FrontierExplorer({ data }: { data: LeaderboardData }) {
     config,
     scales,
     visibleModels,
+    filteredModels,
     frontierIds,
     excludedForAxes,
   } = useLeaderboardFilter(data.datasets);
 
   const visibleIds = useMemo(() => new Set(visibleModels.map((model) => model.id)), [visibleModels]);
-  const sortByY = (left: ModelRecord, right: ModelRecord) => {
-    const a = left.values[scales.y.def.key] ?? 0;
-    const b = right.values[scales.y.def.key] ?? 0;
-    return scales.y.def.better === "high" ? b - a : a - b;
-  };
   const frontierRows = useMemo(
-    () => visibleModels.filter((model) => frontierIds.has(model.id)).sort(sortByY),
-    [visibleModels, frontierIds, scales.y],
+    () => visibleModels.filter((model) => frontierIds.has(model.id)),
+    [visibleModels, frontierIds],
   );
-  const allRows = useMemo(() => [...visibleModels].sort(sortByY), [visibleModels, scales.y]);
+  const allRows = filteredModels;
   const is2D = !state.axes.z;
   const activeKeys = [state.axes.y, state.axes.x, state.axes.z].filter((key): key is string => Boolean(key));
+  const tableColumns = useMemo(() => {
+    const orderedKeys = [...activeKeys, ...config.metrics.map((metric) => metric.key)];
+    return [...new Set(orderedKeys)]
+      .map((key) => config.metrics.find((metric) => metric.key === key))
+      .filter((metric): metric is DatasetConfig["metrics"][number] => Boolean(metric));
+  }, [activeKeys.join("|"), config]);
   const activeMetricNames = [scales.y, scales.x, scales.z]
     .filter((scale): scale is NonNullable<typeof scale> => Boolean(scale))
     .map((scale) => scale.def.shortTitle.toLowerCase());
@@ -196,10 +262,28 @@ export default function FrontierExplorer({ data }: { data: LeaderboardData }) {
           Within the current filters, no other model is at least as good on {metricList} while being strictly better on one.
           Changing an axis changes the question and recomputes this set.
         </p>
-        <ModelTable rows={frontierRows} frontier={frontierIds} config={config} activeKeys={activeKeys} />
-        <details className="fx-all">
-          <summary>All plotted models ({allRows.length})</summary>
-          <ModelTable rows={allRows} frontier={frontierIds} config={config} activeKeys={activeKeys} />
+        <ModelTable
+          key={`${dataset.id}-frontier`}
+          rows={frontierRows}
+          frontier={frontierIds}
+          config={config}
+          columns={tableColumns}
+          defaultSortKey={state.axes.y}
+        />
+        <details className="fx-all" open>
+          <summary>All matching models ({allRows.length}), with every available metric</summary>
+          <p className="fx-table-note">
+            Search and filters above apply here. Models missing a selected chart metric remain in this table and show n/a.
+          </p>
+          <ModelTable
+            key={`${dataset.id}-all`}
+            rows={allRows}
+            frontier={frontierIds}
+            config={config}
+            columns={tableColumns}
+            defaultSortKey={state.axes.y}
+            scrollBody={true}
+          />
         </details>
         {dataset.id === "language" && <p className="fx-footnote">* Intelligence score estimated by Artificial Analysis.</p>}
       </div>

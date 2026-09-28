@@ -82,12 +82,10 @@ export function useLeaderboardFilter(datasets: LeaderboardDataset[]) {
     [config, models, state.axes],
   );
 
-  const visibleModels = useMemo(() => {
+  const filteredModels = useMemo(() => {
     const query = state.search.trim().toLowerCase();
     const creators = new Set(state.creators);
-    const activeScales = scales.z ? [scales.x, scales.y, scales.z] : [scales.x, scales.y];
     return models.filter((model) => {
-      if (activeScales.some((scale) => model.values[scale.def.key] == null)) return false;
       if (creators.size && !creators.has(model.creator.slug)) return false;
       if (state.weights === "open" && !model.openWeights) return false;
       if (state.weights === "closed" && model.openWeights) return false;
@@ -100,6 +98,13 @@ export function useLeaderboardFilter(datasets: LeaderboardDataset[]) {
       return true;
     });
   }, [models, scales, state]);
+
+  const visibleModels = useMemo(() => {
+    const activeScales = scales.z ? [scales.x, scales.y, scales.z] : [scales.x, scales.y];
+    return filteredModels.filter((model) =>
+      activeScales.every((scale) => model.values[scale.def.key] != null),
+    );
+  }, [filteredModels, scales]);
 
   const frontierIds = useMemo(
     () =>
@@ -133,6 +138,7 @@ export function useLeaderboardFilter(datasets: LeaderboardDataset[]) {
     dataset,
     config,
     scales,
+    filteredModels,
     visibleModels,
     frontierIds,
     excludedForAxes,
