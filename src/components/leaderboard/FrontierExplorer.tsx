@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { inkFor, FEATURED_INKS, OTHER_INK } from "../../lib/leaderboard/scene/theme";
 import type { DatasetConfig } from "../../lib/leaderboard/metrics";
 import type { LeaderboardData, ModelRecord } from "../../lib/leaderboard/types";
@@ -59,6 +59,7 @@ function ModelTable({
 }
 
 export default function FrontierExplorer({ data }: { data: LeaderboardData }) {
+  const [showSurface, setShowSurface] = useState(true);
   const {
     state,
     update,
@@ -126,6 +127,7 @@ export default function FrontierExplorer({ data }: { data: LeaderboardData }) {
           axes={state.axes}
           visible={visibleIds}
           frontier={frontierIds}
+          surfaceVisible={showSurface}
         />
         <figcaption className="fx-caption">
           <span>
@@ -165,15 +167,26 @@ export default function FrontierExplorer({ data }: { data: LeaderboardData }) {
             Line connects frontier points
           </li>
         ) : (
-          <li>
+          <li className="fx-legend-guide">
             <svg className="fx-legend-sheet" viewBox="0 0 24 14" aria-hidden="true">
-              <path d="M1 13 L8 2 L14 8 L23 3 L23 13 Z" fill="#dbeafe" stroke="#2563eb" strokeWidth="1" />
+              <path d="M1 13 L8 2 L14 8 L23 3 L23 13 Z" fill="#dbeafe" fillOpacity="0.35" stroke="#2563eb" strokeWidth="1" />
               <path d="M8 2 L10 13 M14 8 L10 13 M14 8 L23 13" fill="none" stroke="#2563eb" strokeWidth="0.7" />
             </svg>
-            Surface connects frontier points
+            <span>Interpolated frontier guide</span>
+            <button
+              type="button"
+              className="fx-guide-toggle"
+              aria-pressed={showSurface}
+              onClick={() => setShowSurface((visible) => !visible)}
+            >
+              {showSurface ? "Hide" : "Show"}
+            </button>
           </li>
         )}
       </ul>
+      <p className="fx-guide-note">
+        Frontier markers represent measured models. The connecting {is2D ? "line" : "surface"} is an interpolated visual guide.
+      </p>
 
       <div className="fx-frontier">
         <h2>

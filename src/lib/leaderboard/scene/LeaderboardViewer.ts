@@ -17,6 +17,7 @@ export interface ViewerState {
   axes: AxisSelection;
   visible: Set<string>;
   frontier: Set<string>;
+  surfaceVisible: boolean;
 }
 
 export function webglAvailable(): boolean {
@@ -184,6 +185,7 @@ export class LeaderboardViewer {
     const key = `${state.config.id}:${state.axes.x}:${state.axes.y}:${state.axes.z}`;
     const viewChanged = key !== this.viewKey;
     this.state = state;
+    this.sheet.group.visible = state.surfaceVisible;
 
     if (viewChanged) {
       this.viewKey = key;

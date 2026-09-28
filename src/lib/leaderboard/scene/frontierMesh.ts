@@ -21,14 +21,14 @@ export class FrontierSheet {
     metalness: 0,
     flatShading: true,
     transparent: true,
-    opacity: 0.74,
+    opacity: 0.2,
     side: THREE.DoubleSide,
     depthWrite: false,
   });
   private readonly lineMaterial = new THREE.LineBasicMaterial({
     color: PAPER.sheetEdge,
     transparent: true,
-    opacity: 0.55,
+    opacity: 0.4,
     depthWrite: false,
   });
 

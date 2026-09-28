@@ -9,15 +9,16 @@ interface Props {
   axes: AxisSelection;
   visible: Set<string>;
   frontier: Set<string>;
+  surfaceVisible: boolean;
 }
 
-export default function LeaderboardScene({ models, config, axes, visible, frontier }: Props) {
+export default function LeaderboardScene({ models, config, axes, visible, frontier, surfaceVisible }: Props) {
   const hostRef = useRef<HTMLDivElement>(null);
   const viewerRef = useRef<LeaderboardViewer | null>(null);
-  const latest = useRef<ViewerState>({ config, axes, visible, frontier });
+  const latest = useRef<ViewerState>({ config, axes, visible, frontier, surfaceVisible });
   const [status, setStatus] = useState<"loading" | "ready" | "no-webgl">("loading");
 
-  latest.current = { config, axes, visible, frontier };
+  latest.current = { config, axes, visible, frontier, surfaceVisible };
 
   useEffect(() => {
     let cancelled = false;
@@ -38,8 +39,8 @@ export default function LeaderboardScene({ models, config, axes, visible, fronti
   }, [models]);
 
   useEffect(() => {
-    viewerRef.current?.update({ config, axes, visible, frontier });
-  }, [config, axes, visible, frontier]);
+    viewerRef.current?.update({ config, axes, visible, frontier, surfaceVisible });
+  }, [config, axes, visible, frontier, surfaceVisible]);
 
   return (
     <div className="fx-stage" ref={hostRef} data-status={status}>

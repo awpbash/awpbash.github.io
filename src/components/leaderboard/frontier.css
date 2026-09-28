@@ -899,6 +899,37 @@
   height: 14px;
 }
 
+.fx-legend .fx-legend-guide {
+  gap: 0.45rem;
+}
+
+.fx-guide-toggle {
+  margin-left: 0.1rem;
+  padding: 0.12rem 0.42rem;
+  border: 1px solid var(--fx-border-strong);
+  border-radius: 999px;
+  background: var(--fx-bg);
+  color: var(--fx-text);
+  font: inherit;
+  font-weight: 650;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
+.fx-guide-toggle:hover,
+.fx-guide-toggle:focus-visible {
+  border-color: var(--fx-accent);
+  color: var(--fx-accent);
+  outline: none;
+}
+
+.fx-guide-note {
+  margin: 0.6rem 0 0;
+  color: var(--fx-muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
 .fx-frontier {
   margin-top: 2.75rem;
 }
