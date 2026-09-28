@@ -1,0 +1,257 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FrontierExplorer from "../components/leaderboard/FrontierExplorer";
+import QuickPickIcon from "../components/leaderboard/QuickPickIcon.astro";
+import data from "../data/llm-leaderboard.json";
+import { configFor } from "../lib/leaderboard/metrics";
+import type { DatasetId, LeaderboardData, LeaderboardDataset, ModelRecord } from "../lib/leaderboard/types";
+import "../components/leaderboard/frontier.css";
+
+const leaderboard = data as LeaderboardData;
+const hasData = Array.isArray(leaderboard.datasets) && leaderboard.datasets.some((dataset) => dataset.models.length > 0);
+const asOf = new Date(leaderboard.generatedAt).toLocaleString("en-GB", {
+  timeZone: "UTC",
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+});
+const totalModels = leaderboard.datasets.reduce((sum, dataset) => sum + dataset.modelCount, 0);
+const description =
+  "Compare model quality, cost, token efficiency, speed, and latency with a configurable Pareto frontier.";
+
+type PickIcon = "speed" | "open" | "value" | "image" | "voice" | "video";
+interface QuickPick {
+  label: string;
+  icon: PickIcon;
+  model: ModelRecord;
+  dataset: LeaderboardDataset;
+  metrics: { label: string; value: string }[];
+  rule: string;
+}
+
+const datasetById = (id: DatasetId) => leaderboard.datasets.find((dataset) => dataset.id === id);
+const metricValue = (model: ModelRecord, key: string) => model.values[key];
+const maxMetric = (dataset: LeaderboardDataset, key: string) =>
+  Math.max(...dataset.models.map((model) => metricValue(model, key) ?? -Infinity));
+const highest = (models: ModelRecord[], key: string) =>
+  [...models].filter((model) => metricValue(model, key) != null).sort((a, b) => metricValue(b, key)! - metricValue(a, key)!)[0];
+const lowest = (models: ModelRecord[], key: string) =>
+  [...models].filter((model) => metricValue(model, key) != null).sort((a, b) => metricValue(a, key)! - metricValue(b, key)!)[0];
+const formatMetric = (dataset: LeaderboardDataset, key: string, model: ModelRecord) => {
+  const metric = configFor(dataset.id).metrics.find((item) => item.key === key);
+  const value = metricValue(model, key);
+  return metric && value != null ? metric.format(value) : "n/a";
+};
+const stats = (dataset: LeaderboardDataset, model: ModelRecord, entries: [string, string][]) =>
+  entries.map(([key, label]) => ({ label, value: formatMetric(dataset, key, model) }));
+
+const quickPicks: QuickPick[] = [];
+const language = datasetById("language");
+if (language) {
+  const bestIntelligence = maxMetric(language, "intelligence");
+  const fast = highest(
+    language.models.filter((model) => (metricValue(model, "intelligence") ?? -Infinity) >= bestIntelligence * 0.8),
+    "speed",
+  );
+  const open = highest(language.models.filter((model) => model.openWeights), "intelligence");
+  const value = lowest(language.models.filter((model) => metricValue(model, "intelligence") != null), "costTask");
+  if (fast)
+    quickPicks.push({
+      label: "Fast and capable",
+      icon: "speed",
+      model: fast,
+      dataset: language,
+      metrics: stats(language, fast, [["intelligence", "Intelligence"], ["speed", "Output speed"]]),
+      rule: "Highest speed among models scoring at least 80% of the top intelligence score.",
+    });
+  if (open)
+    quickPicks.push({
+      label: "Open weights",
+      icon: "open",
+      model: open,
+      dataset: language,
+      metrics: stats(language, open, [["intelligence", "Intelligence"], ["speed", "Output speed"]]),
+      rule: "Highest intelligence score among open-weight models.",
+    });
+  if (value)
+    quickPicks.push({
+      label: "Lowest task cost",
+      icon: "value",
+      model: value,
+      dataset: language,
+      metrics: stats(language, value, [["intelligence", "Intelligence"], ["costTask", "Cost per task"]]),
+      rule: "Lowest measured task cost among models with an intelligence score.",
+    });
+}
+
+const image = datasetById("image");
+const imagePick = image && highest(image.models, "quality");
+if (image && imagePick)
+  quickPicks.push({
+    label: "Image generation",
+    icon: "image",
+    model: imagePick,
+    dataset: image,
+    metrics: stats(image, imagePick, [["quality", "Quality Elo"], ["price", "Price"]]),
+    rule: "Highest Image Arena quality score.",
+  });
+
+const voice = datasetById("voice");
+if (voice) {
+  const bestVoiceQuality = maxMetric(voice, "quality");
+  const voicePick = lowest(
+    voice.models.filter((model) => (metricValue(model, "quality") ?? -Infinity) >= bestVoiceQuality * 0.9),
+    "latency",
+  );
+  if (voicePick)
+    quickPicks.push({
+      label: "Realtime voice",
+      icon: "voice",
+      model: voicePick,
+      dataset: voice,
+      metrics: stats(voice, voicePick, [["quality", "Quality"], ["latency", "First audio"]]),
+      rule: "Lowest latency among voice models scoring at least 90% of the top quality score.",
+    });
+}
+
+const video = datasetById("video");
+const videoPick = video && highest(video.models, "quality");
+if (video && videoPick)
+  quickPicks.push({
+    label: "Video generation",
+    icon: "video",
+    model: videoPick,
+    dataset: video,
+    metrics: stats(video, videoPick, [["quality", "Quality Elo"], ["price", "Price"]]),
+    rule: "Highest Video Arena quality score.",
+  });
+---
+
+<BaseLayout title="Model benchmarks" description={description} sideBarActiveItemID="benchmarks" wide={true}>
+  <article class="fx-page">
+    <header class="fx-head">
+      <p class="fx-eyebrow">Quality, cost, speed, and efficiency</p>
+      <h1>Model benchmarks</h1>
+      <p class="fx-dek">
+        Benchmarks make model selection easier by comparing quality, cost, speed, latency, and token use. Each metric covers
+        a different requirement.
+      </p>
+      <p class="fx-dek">
+        A model is on the Pareto frontier when no other model matches or exceeds every selected metric and improves at least
+        one. Select X and Y for a 2D chart. Add Z for a 3D chart.
+      </p>
+      <p class="fx-data-note">
+        {totalModels} model records. Refreshed every 48 hours. Checked <time datetime={leaderboard.generatedAt}>{asOf} UTC</time>.
+      </p>
+    </header>
+
+    <section class="fx-overview" aria-labelledby="quick-overview">
+      <div class="fx-overview-head">
+        <div>
+          <p class="fx-eyebrow">Current data</p>
+          <h2 id="quick-overview">Quick overview</h2>
+        </div>
+        <p>Each pick uses the rule shown on its card. The results update when the benchmark data refreshes.</p>
+      </div>
+      <div class="fx-pick-grid">
+        {
+          quickPicks.map((pick) => (
+            <article class="fx-pick">
+              <div class="fx-pick-top">
+                <QuickPickIcon name={pick.icon} />
+                <span>{pick.label}</span>
+              </div>
+              <h3>{pick.model.fullName}</h3>
+              <p class="fx-pick-provider">
+                <span>{pick.model.creator.name}</span>
+                <span>{configFor(pick.dataset.id).shortLabel}</span>
+              </p>
+              <dl>
+                {pick.metrics.map((metric) => (
+                  <div>
+                    <dt>{metric.label}</dt>
+                    <dd>{metric.value}</dd>
+                  </div>
+                ))}
+              </dl>
+              <p class="fx-pick-rule">{pick.rule}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    {
+      hasData ? (
+        <FrontierExplorer client:only="react" data={leaderboard} />
+      ) : (
+        <p class="fx-dek">The benchmark data is temporarily unavailable. The refresh workflow keeps the last validated copy.</p>
+      )
+    }
+
+    <section class="fx-explainer" aria-labelledby="why-three-dimensions">
+      <div class="fx-explainer-intro">
+        <p class="fx-eyebrow">Metric definitions</p>
+        <h2 id="why-three-dimensions">Four measures used in this explorer</h2>
+      </div>
+      <div class="fx-explainer-grid">
+        <div>
+          <h3>Token efficiency</h3>
+          <p>
+            Output tokens per benchmark task measures how many tokens a language model uses to reach its score. Fewer tokens
+            can matter when a subscription, gateway, or internal system has a fixed token budget.
+          </p>
+        </div>
+        <div>
+          <h3>Cost efficiency</h3>
+          <p>
+            Cost per task combines token use with input, cache, reasoning, and output prices. It gives a direct measure for
+            metered API workloads. Token use and cost can produce different rankings.
+          </p>
+        </div>
+        <div>
+          <h3>Latency and throughput</h3>
+          <p>
+            Time to first output measures the initial wait. Output speed measures how quickly the full response arrives. The
+            explorer includes both metrics.
+          </p>
+        </div>
+        <div>
+          <h3>Beyond language models</h3>
+          <p>
+            Image, voice, and video models have separate metric sets. These include Arena quality, media pricing, time to first
+            audio, and rating evidence. Select a category to view its metrics.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="fx-notes">
+      <div>
+        <h3>How the frontier is computed</h3>
+        <p>
+          A model is on the frontier when no other visible model matches or exceeds every selected metric and improves at least
+          one metric. Filters and axis changes recompute the set in your browser. The 2D line and 3D surface connect measured
+          frontier points as a visual guide.
+        </p>
+      </div>
+      <div>
+        <h3>Metric coverage</h3>
+        <p>
+          Some measurements are unavailable for certain models. The caption reports how many records the current axis choice
+          excludes. Detailed token data covers fewer language models than pricing, speed, and latency data.
+        </p>
+      </div>
+      <div>
+        <h3>Source and refresh</h3>
+        <p>
+          Data comes from public <a href="https://artificialanalysis.ai/" rel="noopener" target="_blank">Artificial Analysis</a> pages.
+          A GitHub Action checks daily and refreshes the data when the current dataset is at least 47 hours old. This produces
+          a refresh roughly every 48 hours. The previous dataset remains available if validation fails.
+        </p>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

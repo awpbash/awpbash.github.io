@@ -17,6 +17,7 @@ const {
   sideBarActiveItemID,
   ogType,
   noindex = false,
+  wide = false,
 } = Astro.props;
 ---
 
@@ -31,8 +32,13 @@ const {
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content bg-base-100">
         <Header title={SITE_TITLE} />
-        <div class="md:flex md:justify-center">
-          <main class="p-6 pt-10 lg:max-w-[1200px] max-w-[100vw]">
+        <div class="min-w-0 md:flex md:justify-center">
+          <main
+            class:list={[
+              "box-border w-full min-w-0 p-6 pt-10",
+              wide ? "max-w-[1500px]" : "max-w-[1200px]",
+            ]}
+          >
             <slot />
           </main>
         </div>

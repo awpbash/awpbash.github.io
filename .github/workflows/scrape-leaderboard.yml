@@ -1,0 +1,67 @@
+name: Refresh model benchmark data
+
+on:
+  schedule:
+    # GitHub cron has no true "every 48 hours" expression. Run the lightweight
+    # gate daily; the scraper only fetches when the last successful data file is
+    # at least 47 hours old. This avoids month-boundary drift from */2 day-of-month.
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape-leaderboard
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      # Validation lives inside the scraper. A bad fetch or parse fails this step
+      # and nothing is committed, so the site keeps the last good data.
+      - name: Scrape leaderboard
+        run: node scripts/scrape-leaderboard.mjs ${{ github.event_name == 'schedule' && '--if-stale-hours=47' || '' }}
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet -- src/data/llm-leaderboard.json; then
+            echo "No data change."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install dependencies
+        if: steps.changes.outputs.changed == 'true'
+        run: npm ci
+
+      - name: Verify production build
+        if: steps.changes.outputs.changed == 'true'
+        run: npm run build
+
+      # Using the repository owner's existing commit identity lets Vercel map
+      # automated refresh commits to the connected GitHub account.
+      - name: Commit refreshed data
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "awpbash"
+          git config user.email "ngjunwei06082001@gmail.com"
+          git add src/data/llm-leaderboard.json
+          git commit -m "chore: refresh model benchmark data"
+          git push origin HEAD:main
+
+      # Vercel's Git integration watches main and creates the production
+      # deployment from this commit. No second hosting workflow is required.
