@@ -27,7 +27,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
   if (query.length < 3) return json({ error: "Ask something a little longer." }, 400);
   if (query.length > 200) return json({ error: "Keep it under 200 characters." }, 400);
 
-  if (rateLimited(request, clientAddress, "map", 30)) return json({ error: "Jev needs a breather. Try again in a few minutes." }, 429);
+  if (rateLimited(request, clientAddress, "map", 100)) return json({ error: "You got rate-limited. Stop spamming my API bruh. Try again in 10 minutes." }, 429);
 
   const jev = await askJev({ request: query }, QUESTIONS);
   if (!jev.ok) return jev.response;

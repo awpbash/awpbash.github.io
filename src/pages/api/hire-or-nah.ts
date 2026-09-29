@@ -52,7 +52,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     if (text.length > LIMITS.max) return json({ error: `Keep it under ${LIMITS.max.toLocaleString()} characters.` }, 400);
   }
 
-  if (rateLimited(request, clientAddress, "hire", 12)) return json({ error: "Jev needs a breather. Try again in a few minutes." }, 429);
+  if (rateLimited(request, clientAddress, "hire", 40)) return json({ error: "You got rate-limited. Stop spamming my API bruh. Try again in 10 minutes." }, 429);
 
   const jev = await askJev(
     { job_description: job, resume },
