@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import type { SampleJob } from "../../data/fun/jobs";
 import { LIMITS, VERDICTS, type HireResult } from "../../lib/fun/hire";
 
-type Mode = "recruiter" | "candidate" | "custom";
+type Mode = "recruiter" | "candidate";
 type Status = "idle" | "thinking" | "done" | "error";
+const CUSTOM_JOB_ID = "custom";
 
 const THINKING_LINES = [
   "reading the job description",
@@ -44,9 +45,7 @@ export default function HireOrNah({ jobs }: { jobs: SampleJob[] }) {
   const tooShort =
     mode === "recruiter"
       ? job.trim().length < LIMITS.min
-      : mode === "candidate"
-        ? resume.trim().length < LIMITS.min
-        : job.trim().length < LIMITS.min || resume.trim().length < LIMITS.min;
+      : resume.trim().length < LIMITS.min || (jobId === CUSTOM_JOB_ID && job.trim().length < LIMITS.min);
 
   useEffect(() => {
     if (status !== "thinking") return;
@@ -65,7 +64,11 @@ export default function HireOrNah({ jobs }: { jobs: SampleJob[] }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(
-          mode === "recruiter" ? { mode, job } : mode === "candidate" ? { mode, jobId, resume } : { mode, job, resume },
+          mode === "recruiter"
+            ? { mode, job }
+            : jobId === CUSTOM_JOB_ID
+              ? { mode: "custom", job, resume }
+              : { mode, jobId, resume },
         ),
       });
       const data = await res.json();
@@ -104,7 +107,8 @@ export default function HireOrNah({ jobs }: { jobs: SampleJob[] }) {
     setError("");
   };
 
-  const selectedJob = jobs.find((j) => j.id === jobId)!;
+  const selectedJob = jobs.find((j) => j.id === jobId);
+  const usingCustomJob = jobId === CUSTOM_JOB_ID;
   const tracks = [...new Set(jobs.map((j) => j.track))];
 
   return (
@@ -115,9 +119,6 @@ export default function HireOrNah({ jobs }: { jobs: SampleJob[] }) {
         </button>
         <button type="button" aria-pressed={mode === "candidate"} onClick={() => switchMode("candidate")}>
           <span className="nb-mono">B.</span> Judge your resume
-        </button>
-        <button type="button" aria-pressed={mode === "custom"} onClick={() => switchMode("custom")}>
-          <span className="nb-mono">C.</span> Bring both
         </button>
       </div>
 
@@ -140,10 +141,10 @@ export default function HireOrNah({ jobs }: { jobs: SampleJob[] }) {
             {job.length.toLocaleString()} / {LIMITS.max.toLocaleString()} characters
           </p>
         </section>
-      ) : mode === "candidate" ? (
+      ) : (
         <>
           <section className="nb-entry">
-            <p className="nb-label">Input 1 of 2 · pick a posting</p>
+            <p className="nb-label">Input 1 of 2 · pick or paste a posting</p>
             <div className="nb-jobs">
               {tracks.map((track) => (
                 <div key={track} className="nb-job-group">
@@ -159,14 +160,46 @@ export default function HireOrNah({ jobs }: { jobs: SampleJob[] }) {
                     ))}
                 </div>
               ))}
+              <div className="nb-job-group">
+                <p className="nb-mono nb-job-track">Your own</p>
+                <label className="nb-job" data-active={usingCustomJob}>
+                  <input
+                    type="radio"
+                    name="job"
+                    value={CUSTOM_JOB_ID}
+                    checked={usingCustomJob}
+                    onChange={() => setJobId(CUSTOM_JOB_ID)}
+                  />
+                  <span className="nb-job-co">Bring your own</span>
+                  <span className="nb-job-role">Paste any job description</span>
+                </label>
+              </div>
             </div>
-            <details className="nb-jd">
-              <summary className="nb-mono">read the {selectedJob.company} posting</summary>
-              <p>{selectedJob.text}</p>
-              <p className="nb-mono nb-source">
-                Condensed from a public posting, Sep 2026. <a href={selectedJob.source} target="_blank" rel="noopener">source</a>
-              </p>
-            </details>
+            {usingCustomJob ? (
+              <div className="nb-own-job">
+                <label className="nb-label" htmlFor="custom-job">Your job description</label>
+                <textarea
+                  id="custom-job"
+                  className="nb-textarea"
+                  value={job}
+                  onChange={(e) => setJob(e.target.value)}
+                  placeholder="Paste the job description here"
+                  rows={10}
+                  maxLength={LIMITS.max}
+                />
+                <p className="nb-count nb-mono">
+                  {job.length.toLocaleString()} / {LIMITS.max.toLocaleString()} characters
+                </p>
+              </div>
+            ) : selectedJob ? (
+              <details className="nb-jd">
+                <summary className="nb-mono">read the {selectedJob.company} posting</summary>
+                <p>{selectedJob.text}</p>
+                <p className="nb-mono nb-source">
+                  Condensed from a public posting, Sep 2026. <a href={selectedJob.source} target="_blank" rel="noopener">source</a>
+                </p>
+              </details>
+            ) : null}
           </section>
           <section className="nb-entry">
             <label className="nb-label" htmlFor="resume-text">Input 2 of 2 · your resume</label>
@@ -176,43 +209,6 @@ export default function HireOrNah({ jobs }: { jobs: SampleJob[] }) {
               value={resume}
               onChange={(e) => setResume(e.target.value)}
               placeholder="Paste your resume as text, or load a PDF below"
-              rows={10}
-              maxLength={LIMITS.max}
-            />
-            <div className="nb-pdf">
-              <label className="nb-btn nb-btn-quiet">
-                Load a PDF
-                <input type="file" accept="application/pdf" onChange={(e) => onPdf(e.target.files?.[0])} hidden />
-              </label>
-              <span className="nb-mono nb-count">{pdfNote || `${resume.length.toLocaleString()} / ${LIMITS.max.toLocaleString()} characters`}</span>
-            </div>
-          </section>
-        </>
-      ) : (
-        <>
-          <section className="nb-entry">
-            <label className="nb-label" htmlFor="custom-job">Input 1 of 2 · job description</label>
-            <textarea
-              id="custom-job"
-              className="nb-textarea"
-              value={job}
-              onChange={(e) => setJob(e.target.value)}
-              placeholder="Paste the job description here"
-              rows={10}
-              maxLength={LIMITS.max}
-            />
-            <p className="nb-count nb-mono">
-              {job.length.toLocaleString()} / {LIMITS.max.toLocaleString()} characters
-            </p>
-          </section>
-          <section className="nb-entry">
-            <label className="nb-label" htmlFor="custom-resume">Input 2 of 2 · resume</label>
-            <textarea
-              id="custom-resume"
-              className="nb-textarea"
-              value={resume}
-              onChange={(e) => setResume(e.target.value)}
-              placeholder="Paste the resume as text, or load a PDF below"
               rows={10}
               maxLength={LIMITS.max}
             />
