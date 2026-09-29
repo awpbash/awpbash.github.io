@@ -1,11 +1,11 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import FrontierExplorer from "../components/leaderboard/FrontierExplorer";
-import QuickPickIcon from "../components/leaderboard/QuickPickIcon.astro";
-import data from "../data/llm-leaderboard.json";
-import { configFor } from "../lib/leaderboard/metrics";
-import type { DatasetId, LeaderboardData, LeaderboardDataset, ModelRecord } from "../lib/leaderboard/types";
-import "../components/leaderboard/frontier.css";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FrontierExplorer from "../../components/leaderboard/FrontierExplorer";
+import QuickPickIcon from "../../components/leaderboard/QuickPickIcon.astro";
+import data from "../../data/llm-leaderboard.json";
+import { configFor } from "../../lib/leaderboard/metrics";
+import type { DatasetId, LeaderboardData, LeaderboardDataset, ModelRecord } from "../../lib/leaderboard/types";
+import "../../components/leaderboard/frontier.css";
 
 const leaderboard = data as LeaderboardData;
 const hasData = Array.isArray(leaderboard.datasets) && leaderboard.datasets.some((dataset) => dataset.models.length > 0);
@@ -129,18 +129,18 @@ if (video && videoPick)
   });
 ---
 
-<BaseLayout title="Model benchmarks" description={description} sideBarActiveItemID="benchmarks" wide={true}>
+<BaseLayout title="Model benchmarks" description={description} sideBarActiveItemID="fun" wide={true}>
   <article class="fx-page">
     <header class="fx-head">
       <p class="fx-eyebrow">Quality, cost, speed, and efficiency</p>
       <h1>Model benchmarks</h1>
       <p class="fx-dek">
-        Benchmarks make model selection easier by comparing quality, cost, speed, latency, and token use. Each metric covers
-        a different requirement.
+        There are too many models and every provider says theirs is the best. This page puts quality, cost, speed, latency and token
+        use in one place so I can compare them without opening fifteen tabs.
       </p>
       <p class="fx-dek">
-        A model is on the Pareto frontier when no other model matches or exceeds every selected metric and improves at least
-        one. Select X and Y for a 2D chart. Add Z for a 3D chart.
+        The Pareto frontier keeps the models that no other model beats across all your selected metrics. Pick X and Y for a normal
+        chart, then add Z if you want the version you can spin around.
       </p>
       <p class="fx-data-note">
         {totalModels} model records. Refreshed every 48 hours. Checked <time datetime={leaderboard.generatedAt}>{asOf} UTC</time>.
@@ -151,9 +151,9 @@ if (video && videoPick)
       <div class="fx-overview-head">
         <div>
           <p class="fx-eyebrow">Current data</p>
-          <h2 id="quick-overview">Quick overview</h2>
+          <h2 id="quick-overview">A few quick picks</h2>
         </div>
-        <p>Each pick uses the rule shown on its card. The results update when the benchmark data refreshes.</p>
+        <p>These come from the latest data using the rule on each card, so the names can change after a refresh.</p>
       </div>
       <div class="fx-pick-grid">
         {

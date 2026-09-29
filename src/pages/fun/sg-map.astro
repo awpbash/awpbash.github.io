@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SgMap from "../../components/fun/SgMap";
+import areas from "../../data/fun/sg-areas.json";
+import "../../components/fun/notebook.css";
+---
+
+<BaseLayout
+  title="Where should I go? | Jun Wei Ng"
+  description="Tell Jev what you're in the mood for and it shades a map of Singapore by how likely each area is to be the answer."
+  sideBarActiveItemID="fun"
+  wide={true}
+>
+  <article class="nb nb-wide">
+    <div class="nb-sheet">
+      <header class="nb-head">
+        <p class="nb-eyebrow"><a href="/fun">Fun stuff</a> · entry 03</p>
+        <h1>Where should <em>I go?</em></h1>
+        <p class="nb-dek">
+          Is east side really best side? Is Yishun actually that bad? Give Jev a food, mood or vague plan and it will rank all 55
+          planning areas, including the runners-up nobody asked for.
+        </p>
+        <p class="nb-credit">Map inspired by @chenmubuilds.</p>
+      </header>
+
+      <SgMap client:load features={areas.features as any} />
+
+      <p class="nb-mono nb-foot sg-credit">
+        Map: the 55 planning areas from URA's Master Plan 2019, via data.gov.sg. Smaller neighbourhoods like Joo Chiat light up the
+        area they belong to.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

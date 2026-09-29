@@ -31,3 +31,6 @@ claude/
 # cloned source repos for /interrogate workflow — not part of the site
 _sources/
 .vercel
+
+# Playwright MCP screenshots and logs
+.playwright-mcp/

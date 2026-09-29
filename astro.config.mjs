@@ -3,7 +3,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwind from "@astrojs/tailwind";
 import react from '@astrojs/react';
-import vercel from '@astrojs/vercel/static';
+import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,10 +16,14 @@ export default defineConfig({
     }),
     tailwind(),
   ],
+  // Pages stay prerendered. Only routes with `prerender = false` (the Jev API) run on demand.
   output: 'static',
   adapter: vercel({
-    webAnalytics: { enabled: true },
+    imageService: false,
   }),
+  redirects: {
+    '/benchmarks': '/fun/benchmarks',
+  },
   base: '/',
   outDir: './dist'
 });

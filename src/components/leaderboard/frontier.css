@@ -1323,9 +1323,23 @@
 
   .fx-axes,
   .fx-explainer-grid,
-  .fx-pick-grid,
   .fx-table-filter-grid {
     grid-template-columns: 1fr;
+  }
+
+  .fx-pick-grid {
+    display: flex;
+    width: 100%;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 0.65rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+  }
+
+  .fx-pick {
+    flex: 0 0 min(82vw, 20rem);
+    scroll-snap-align: start;
   }
 
   .fx-overview-head {

@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HireOrNah from "../../components/fun/HireOrNah";
+import { SAMPLE_JOBS } from "../../data/fun/jobs";
+import "../../components/fun/notebook.css";
+---
+
+<BaseLayout
+  title="Hire or Nah | Jun Wei Ng"
+  description="Paste a job description and Jev judges Jun Wei's resume against it, or bring your own job description and resume."
+  sideBarActiveItemID="fun"
+>
+  <article class="nb">
+    <div class="nb-sheet">
+      <header class="nb-head">
+        <p class="nb-eyebrow"><a href="/fun">Fun stuff</a> · entry 02</p>
+        <h1>Hire or <em>Nah</em></h1>
+        <p class="nb-dek">
+          Jev is basically a model for making judgement calls. Give it a job description and a resume, and it picks one of five
+          verdicts from Strong Hire to No Hire. It also scores the match on skills, seniority, domain fit and whether the person has
+          actually shipped anything.
+        </p>
+      </header>
+
+      <HireOrNah client:load jobs={SAMPLE_JOBS} />
+
+      <aside class="nb-about">
+        <p class="nb-label">About the model</p>
+        <h2>So what is a System One model?</h2>
+        <p>
+          Most language models generate an answer one token at a time. Jev only makes decisions from options you define up front.
+          For this page, those options are the five hiring verdicts. It returns a probability for each one together with the smaller
+          checks below, so it cannot suddenly go off and write a motivational speech instead.
+        </p>
+        <p>
+          <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev" target="_blank" rel="noopener">Jev</a> is the first
+          public model from TypeSafe AI. They report response times of 70 to 500 milliseconds for System One tasks and do not charge
+          for output tokens. The result here takes a little longer because I liked the fake deliberation animation too much.
+        </p>
+        <p>
+          Then <a href="https://laya.convaiinnovations.com/" target="_blank" rel="noopener">Laya</a> showed up a few days later. It is
+          an open-source alternative built from research its creator published in March 2025, and it can run on a free Colab GPU.
+          Apparently the race to build the world's fastest boring decision-maker is now a thing.
+        </p>
+        <p class="nb-mono nb-links">
+          <a href="https://docs.typesafe.ai/introduction/quickstart" target="_blank" rel="noopener">Jev docs</a>
+          <a href="https://github.com/NandhaKishorM/laya" target="_blank" rel="noopener">Laya on GitHub</a>
+        </p>
+      </aside>
+    </div>
+  </article>
+</BaseLayout>

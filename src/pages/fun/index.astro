@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import "../../components/fun/notebook.css";
+
+const entries = [
+  {
+    href: "/fun/benchmarks",
+    title: "Model benchmarks",
+    desc: "Compare AI models on quality, cost, speed and latency, then spin the Pareto frontier around in 3D because a normal chart was apparently not enough.",
+    live: true,
+  },
+  {
+    href: "/fun/hire-or-nah",
+    title: "Hire or Nah",
+    desc: "Paste a job description and let Jev decide whether I deserve the role. You can also bring your own job description and resume, or try it against ten real postings.",
+    live: true,
+  },
+  {
+    href: "/fun/sg-map",
+    title: "Where should I go?",
+    desc: "Ask for hawker food, somewhere to cry or a date spot with Wi-Fi. Jev shades the map based on where it thinks you should go.",
+    live: true,
+  },
+];
+---
+
+<BaseLayout
+  title="Fun stuff | Jun Wei Ng"
+  description="Small experiments: model benchmarks, a resume judge powered by Jev, and more."
+  sideBarActiveItemID="fun"
+>
+  <article class="nb">
+    <div class="nb-sheet">
+      <header class="nb-head">
+        <p class="nb-eyebrow">Side quests · experiments</p>
+        <h1>Fun stuff</h1>
+        <p class="nb-dek">Small things I built because I was curious. Some are useful. The rest got slightly out of hand.</p>
+      </header>
+
+      <ol class="nb-toc">
+        {
+          entries.map((entry, i) => (
+            <li>
+              {entry.live ? (
+                <a href={entry.href}>
+                  <span class="nb-toc-num">{String(i + 1).padStart(2, "0")}</span>
+                  <span class="nb-toc-title">{entry.title}</span>
+                  <span class="nb-toc-status" data-live="true">open</span>
+                  <span class="nb-toc-desc">{entry.desc}</span>
+                </a>
+              ) : (
+                <div class="nb-toc-row" aria-disabled="true">
+                  <span class="nb-toc-num">{String(i + 1).padStart(2, "0")}</span>
+                  <span class="nb-toc-title">{entry.title}</span>
+                  <span class="nb-toc-status">in progress</span>
+                  <span class="nb-toc-desc">{entry.desc}</span>
+                </div>
+              )}
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </article>
+</BaseLayout>
