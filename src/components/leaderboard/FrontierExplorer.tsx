@@ -23,7 +23,7 @@ const METRIC_GROUPS: Record<DatasetId, MetricGroup[]> = {
     { id: "capacity", label: "Context", keys: ["context"] },
   ],
   image: [
-    { id: "quality", label: "Quality", keys: ["quality", "winRate"] },
+    { id: "quality", label: "Quality", keys: ["quality"] },
     { id: "cost", label: "Cost", keys: ["price"] },
     { id: "evidence", label: "Rating evidence", keys: ["appearances", "uncertainty"] },
   ],
@@ -33,7 +33,7 @@ const METRIC_GROUPS: Record<DatasetId, MetricGroup[]> = {
     { id: "performance", label: "Latency", keys: ["latency"] },
   ],
   video: [
-    { id: "quality", label: "Quality", keys: ["quality", "winRate"] },
+    { id: "quality", label: "Quality", keys: ["quality"] },
     { id: "cost", label: "Cost", keys: ["price"] },
     { id: "evidence", label: "Rating evidence", keys: ["appearances", "uncertainty"] },
   ],

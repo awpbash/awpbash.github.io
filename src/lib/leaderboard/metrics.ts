@@ -82,7 +82,6 @@ const languageMetrics = [
 const arenaMetrics = (priceTitle: string, priceShort: string) => [
   metric("quality", "Arena quality Elo", "Quality Elo", "Preference rating from blind Arena comparisons.", "high", "linear", (v) => Math.round(v).toString()),
   metric("price", priceTitle, priceShort, "Representative published API price.", "low", "log", formatUsd),
-  metric("winRate", "Arena win rate", "Win rate", "Share of non-tied Arena comparisons won.", "high", "linear", (v) => `${trim((v * 100).toFixed(1))}%`),
   metric("appearances", "Arena comparisons", "Comparisons", "Number of Arena matchups behind the rating.", "high", "log", (v) => Math.round(v).toLocaleString()),
   metric("uncertainty", "Elo confidence interval (±)", "Rating uncertainty", "Smaller intervals indicate a more established rating.", "low", "linear", (v) => `±${Math.round(v)}`),
 ];
@@ -109,7 +108,7 @@ export const DATASET_CONFIGS: Record<DatasetId, DatasetConfig> = {
     description: "Compare Image Arena preference, representative API price, and rating evidence.",
     metrics: arenaMetrics("Price per 1,000 images", "Price / 1k images"),
     presets: [
-      { id: "quality-price", label: "Quality and price", description: "Arena quality, price, and win rate.", axes: { x: "price", y: "quality", z: "winRate" } },
+      { id: "quality-price", label: "Quality and price", description: "Arena quality, price, and rating certainty.", axes: { x: "price", y: "quality", z: "uncertainty" } },
       { id: "rating-confidence", label: "Rating confidence", description: "Quality, uncertainty, and number of Arena comparisons.", axes: { x: "uncertainty", y: "quality", z: "appearances" } },
     ],
   },

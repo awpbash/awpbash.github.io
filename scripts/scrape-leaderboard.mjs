@@ -16,7 +16,7 @@ const OUT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../src/d
 const MIN_DEFAULT_PLOTTABLE = { language: 60, image: 20, voice: 5, video: 10 };
 const DEFAULT_AXES = {
   language: ["costTask", "intelligence", "speed"],
-  image: ["price", "quality", "winRate"],
+  image: ["price", "quality", "uncertainty"],
   voice: ["inputCost", "quality", "latency"],
   video: ["price", "quality", "uncertainty"],
 };
@@ -178,7 +178,6 @@ function normalizeArena(objects, kind) {
       const values = {
         quality: round(positive(value.elo)),
         price: round(price),
-        winRate: round(positive(value.winRate)),
         appearances: round(positive(value.appearances)),
         uncertainty: round(positive(value.ciDelta)),
       };
