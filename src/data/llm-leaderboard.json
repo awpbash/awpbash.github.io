@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-10T09:56:52.824Z",
+ "generatedAt": "2026-10-12T10:59:50.177Z",
  "datasets": [
   {
    "id": "language",
@@ -26,9 +26,9 @@
       "tokenPrice": 0.325,
       "inputPrice": 0.2,
       "outputPrice": 0.7,
-      "speed": 1522.74,
-      "latency": 0.55935,
-      "totalTime": 0.887706,
+      "speed": 1564.09,
+      "latency": 0.568906,
+      "totalTime": 0.888581,
       "context": 131072
      }
     },
@@ -51,9 +51,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 70.3106,
-      "latency": 273.971,
-      "totalTime": 281.082,
+      "speed": 65.9419,
+      "latency": 259.329,
+      "totalTime": 266.911,
       "context": 1000000
      }
     },
@@ -76,9 +76,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 53.8338,
-      "latency": 22.1714,
-      "totalTime": 31.4593,
+      "speed": 58.212,
+      "latency": 19.9405,
+      "totalTime": 28.5298,
       "context": 1000000
      }
     },
@@ -101,9 +101,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 52.599,
-      "latency": 2.84499,
-      "totalTime": 12.3509,
+      "speed": 58.1797,
+      "latency": 2.0391,
+      "totalTime": 10.6332,
       "context": 1000000
      }
     },
@@ -126,9 +126,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 53.6205,
-      "latency": 4.50842,
-      "totalTime": 13.8332,
+      "speed": 56.2729,
+      "latency": 12.81,
+      "totalTime": 21.6952,
       "context": 1000000
      }
     },
@@ -151,9 +151,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 60.3583,
-      "latency": 85.1744,
-      "totalTime": 93.4583,
+      "speed": 62.7709,
+      "latency": 111.475,
+      "totalTime": 119.441,
       "context": 1000000
      }
     },
@@ -176,9 +176,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 237.452,
-      "latency": 292.706,
-      "totalTime": 294.812,
+      "speed": 236.121,
+      "latency": 309.801,
+      "totalTime": 311.919,
       "context": 1000000
      }
     },
@@ -201,9 +201,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 174.173,
-      "latency": 22.6532,
-      "totalTime": 25.5239,
+      "speed": 178.922,
+      "latency": 25.0588,
+      "totalTime": 27.8533,
       "context": 1000000
      }
     },
@@ -226,9 +226,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 177.812,
-      "latency": 9.72004,
-      "totalTime": 12.532,
+      "speed": 172.454,
+      "latency": 9.02181,
+      "totalTime": 11.9211,
       "context": 1000000
      }
     },
@@ -251,9 +251,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 166.363,
-      "latency": 13.4044,
-      "totalTime": 16.4098,
+      "speed": 178.094,
+      "latency": 13.6651,
+      "totalTime": 16.4726,
       "context": 1000000
      }
     },
@@ -276,9 +276,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 188.28,
-      "latency": 57.1239,
-      "totalTime": 59.7795,
+      "speed": 190.057,
+      "latency": 69.0932,
+      "totalTime": 71.724,
       "context": 1000000
      }
     },
@@ -301,9 +301,9 @@
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 97.0113,
-      "latency": 704.182,
-      "totalTime": 709.336,
+      "speed": 96.8012,
+      "latency": 757.092,
+      "totalTime": 762.257,
       "context": 1000000
      }
     },
@@ -326,9 +326,9 @@
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 76.5118,
-      "latency": 36.3705,
-      "totalTime": 42.9054,
+      "speed": 82.5529,
+      "latency": 48.8101,
+      "totalTime": 54.8668,
       "context": 1000000
      }
     },
@@ -351,9 +351,9 @@
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 70.824,
-      "latency": 8.65344,
-      "totalTime": 15.7132,
+      "speed": 80.6123,
+      "latency": 10.8574,
+      "totalTime": 17.06,
       "context": 1000000
      }
     },
@@ -376,9 +376,9 @@
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 75.545,
-      "latency": 21.6607,
-      "totalTime": 28.2793,
+      "speed": 83.0182,
+      "latency": 24.6339,
+      "totalTime": 30.6567,
       "context": 1000000
      }
     },
@@ -401,9 +401,9 @@
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 80.7861,
-      "latency": 127.809,
-      "totalTime": 133.998,
+      "speed": 83.7686,
+      "latency": 159.408,
+      "totalTime": 165.377,
       "context": 1000000
      }
     },
@@ -426,9 +426,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 141.758,
-      "latency": 497.1,
-      "totalTime": 500.627,
+      "speed": 137.582,
+      "latency": 484.087,
+      "totalTime": 487.721,
       "context": 1000000
      }
     },
@@ -451,9 +451,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 100.678,
-      "latency": 11.8717,
-      "totalTime": 16.838,
+      "speed": 105.4,
+      "latency": 13.9086,
+      "totalTime": 18.6525,
       "context": 1000000
      }
     },
@@ -476,9 +476,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 100.442,
-      "latency": 0.877873,
-      "totalTime": 5.85587,
+      "speed": 102.593,
+      "latency": 0.592643,
+      "totalTime": 5.46626,
       "context": 1000000
      }
     },
@@ -501,9 +501,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 99.2525,
-      "latency": 1.86817,
-      "totalTime": 6.90583,
+      "speed": 105.97,
+      "latency": 0.889621,
+      "totalTime": 5.60793,
       "context": 1000000
      }
     },
@@ -526,9 +526,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 104.013,
-      "latency": 29.7394,
-      "totalTime": 34.5464,
+      "speed": 106.436,
+      "latency": 37.6668,
+      "totalTime": 42.3644,
       "context": 1000000
      }
     },
@@ -551,9 +551,9 @@
       "tokenPrice": 4.375,
       "inputPrice": 2.5,
       "outputPrice": 10,
-      "speed": 54.8495,
-      "latency": 1.72196,
-      "totalTime": 10.8378,
+      "speed": 60.2505,
+      "latency": 1.82617,
+      "totalTime": 10.1249,
       "context": 256000
      }
     },
@@ -576,9 +576,9 @@
       "tokenPrice": null,
       "inputPrice": null,
       "outputPrice": null,
-      "speed": 175.283,
-      "latency": 11.886,
-      "totalTime": 14.7385,
+      "speed": 196.117,
+      "latency": 10.6865,
+      "totalTime": 13.236,
       "context": 192000
      }
     },
@@ -601,9 +601,9 @@
       "tokenPrice": 0.525,
       "inputPrice": 0.3,
       "outputPrice": 1.2,
-      "speed": 217.088,
-      "latency": 10.2413,
-      "totalTime": 12.5445,
+      "speed": 205.482,
+      "latency": 10.7616,
+      "totalTime": 13.1949,
       "context": 1000000
      }
     },
@@ -626,9 +626,9 @@
       "tokenPrice": 0.525,
       "inputPrice": 0.3,
       "outputPrice": 1.2,
-      "speed": 227.331,
-      "latency": 1.1249,
-      "totalTime": 3.32434,
+      "speed": 222.041,
+      "latency": 1.05466,
+      "totalTime": 3.3065,
       "context": 1000000
      }
     },
@@ -651,9 +651,9 @@
       "tokenPrice": 0.66,
       "inputPrice": 0.44,
       "outputPrice": 1.32,
-      "speed": 220.572,
-      "latency": 10.1714,
-      "totalTime": 12.4382,
+      "speed": 211.807,
+      "latency": 10.4766,
+      "totalTime": 12.8373,
       "context": 1000000
      }
     },
@@ -676,9 +676,9 @@
       "tokenPrice": 1.98,
       "inputPrice": 1.32,
       "outputPrice": 3.96,
-      "speed": 89.0289,
-      "latency": 24.0526,
-      "totalTime": 29.6687,
+      "speed": 92.9814,
+      "latency": 23.147,
+      "totalTime": 28.5244,
       "context": 1000000
      }
     },
@@ -696,14 +696,14 @@
      "sizeValue": 1000000,
      "values": {
       "intelligence": 20.3605,
-      "costTask": 0.455253,
+      "costTask": 0.355471,
       "tokensTask": null,
       "tokenPrice": 1.98,
       "inputPrice": 1.32,
       "outputPrice": 3.96,
-      "speed": 92.0031,
-      "latency": 1.61356,
-      "totalTime": 7.04816,
+      "speed": 97.0116,
+      "latency": 1.66688,
+      "totalTime": 6.82091,
       "context": 1000000
      }
     },
@@ -726,9 +726,9 @@
       "tokenPrice": 4.5,
       "inputPrice": 2,
       "outputPrice": 12,
-      "speed": 113.88,
-      "latency": 24.8028,
-      "totalTime": 29.1933,
+      "speed": 134.168,
+      "latency": 21.6589,
+      "totalTime": 25.3856,
       "context": 1000000
      }
     },
@@ -751,9 +751,9 @@
       "tokenPrice": 0.85,
       "inputPrice": 0.3,
       "outputPrice": 2.5,
-      "speed": 364.795,
-      "latency": 8.96002,
-      "totalTime": 10.3307,
+      "speed": 424.099,
+      "latency": 7.8985,
+      "totalTime": 9.07747,
       "context": 1000000
      }
     },
@@ -776,9 +776,9 @@
       "tokenPrice": 1.5,
       "inputPrice": 0.75,
       "outputPrice": 3.75,
-      "speed": 124.953,
-      "latency": 26.8429,
-      "totalTime": 30.8444,
+      "speed": 132.665,
+      "latency": 21.4218,
+      "totalTime": 25.1907,
       "context": 1000000
      }
     },
@@ -801,9 +801,9 @@
       "tokenPrice": 0.15,
       "inputPrice": 0.1,
       "outputPrice": 0.3,
-      "speed": 113.523,
-      "latency": 20.0932,
-      "totalTime": 24.4976,
+      "speed": 111.642,
+      "latency": 20.3422,
+      "totalTime": 24.8208,
       "context": 262144
      }
     },
@@ -826,10 +826,35 @@
       "tokenPrice": 0.15,
       "inputPrice": 0.1,
       "outputPrice": 0.3,
-      "speed": 112.166,
-      "latency": 2.39162,
-      "totalTime": 6.84929,
+      "speed": 113.621,
+      "latency": 2.47587,
+      "totalTime": 6.87646,
       "context": 262144
+     }
+    },
+    {
+     "id": "gemma-4-26b-a4b",
+     "name": "Gemma 4 26B A4B",
+     "fullName": "Gemma 4 26B A4B (Reasoning)",
+     "creator": {
+      "slug": "google",
+      "name": "Google"
+     },
+     "openWeights": true,
+     "reasoning": true,
+     "estimated": true,
+     "sizeValue": 256000,
+     "values": {
+      "intelligence": 16.6719,
+      "costTask": null,
+      "tokensTask": null,
+      "tokenPrice": 0.175,
+      "inputPrice": 0.1,
+      "outputPrice": 0.4,
+      "speed": 72.2831,
+      "latency": 28.6529,
+      "totalTime": 35.5701,
+      "context": 256000
      }
     },
     {
@@ -851,9 +876,9 @@
       "tokenPrice": 0.1975,
       "inputPrice": 0.13,
       "outputPrice": 0.4,
-      "speed": 88.1937,
-      "latency": 1.02199,
-      "totalTime": 6.69133,
+      "speed": 97.8333,
+      "latency": 0.984925,
+      "totalTime": 6.09566,
       "context": 256000
      }
     },
@@ -876,9 +901,9 @@
       "tokenPrice": null,
       "inputPrice": null,
       "outputPrice": null,
-      "speed": 35.1575,
-      "latency": 50.5358,
-      "totalTime": 64.7576,
+      "speed": 34.8077,
+      "latency": 50.9728,
+      "totalTime": 65.3374,
       "context": 256000
      }
     },
@@ -901,9 +926,9 @@
       "tokenPrice": 0.22375,
       "inputPrice": 0.165,
       "outputPrice": 0.4,
-      "speed": 42.3126,
-      "latency": 2.1649,
-      "totalTime": 13.9817,
+      "speed": 45.15,
+      "latency": 1.92204,
+      "totalTime": 12.9962,
       "context": 256000
      }
     },
@@ -926,9 +951,9 @@
       "tokenPrice": 0.04,
       "inputPrice": 0.02,
       "outputPrice": 0.1,
-      "speed": 27.3678,
-      "latency": 74.2475,
-      "totalTime": 92.5172,
+      "speed": 34.9168,
+      "latency": 58.2231,
+      "totalTime": 72.5429,
       "context": 128000
      }
     },
@@ -951,9 +976,9 @@
       "tokenPrice": 0.04,
       "inputPrice": 0.02,
       "outputPrice": 0.1,
-      "speed": 24.7692,
-      "latency": 0.822753,
-      "totalTime": 21.0091,
+      "speed": 31.4092,
+      "latency": 0.951565,
+      "totalTime": 16.8705,
       "context": 128000
      }
     },
@@ -976,9 +1001,9 @@
       "tokenPrice": 2.15,
       "inputPrice": 1.4,
       "outputPrice": 4.4,
-      "speed": 83.4802,
-      "latency": 26.6034,
-      "totalTime": 32.5928,
+      "speed": 66.0435,
+      "latency": 33.4878,
+      "totalTime": 41.0586,
       "context": 1000000
      }
     },
@@ -1001,9 +1026,9 @@
       "tokenPrice": 0.2375,
       "inputPrice": 0.15,
       "outputPrice": 0.5,
-      "speed": 57.7403,
-      "latency": 37.6684,
-      "totalTime": 46.3279,
+      "speed": 61.3345,
+      "latency": 35.6136,
+      "totalTime": 43.7657,
       "context": 1000000
      }
     },
@@ -1026,9 +1051,9 @@
       "tokenPrice": 2.15,
       "inputPrice": 1.4,
       "outputPrice": 4.4,
-      "speed": 75.3577,
-      "latency": 29.759,
-      "totalTime": 36.394,
+      "speed": 74.554,
+      "latency": 29.8715,
+      "totalTime": 36.5781,
       "context": 1000000
      }
     },
@@ -1051,9 +1076,9 @@
       "tokenPrice": 4.8125,
       "inputPrice": 1.75,
       "outputPrice": 14,
-      "speed": 91.2729,
-      "latency": 69.926,
-      "totalTime": 75.404,
+      "speed": 115.029,
+      "latency": 76.9241,
+      "totalTime": 81.2708,
       "context": 400000
      }
     },
@@ -1076,9 +1101,9 @@
       "tokenPrice": 11.25,
       "inputPrice": 5,
       "outputPrice": 30,
-      "speed": 139.054,
-      "latency": 15.3308,
-      "totalTime": 18.9265,
+      "speed": 161.973,
+      "latency": 13.2379,
+      "totalTime": 16.3248,
       "context": 400000
      }
     },
@@ -1101,9 +1126,9 @@
       "tokenPrice": 4.5,
       "inputPrice": 2,
       "outputPrice": 12,
-      "speed": 107.721,
-      "latency": 113.734,
-      "totalTime": 118.376,
+      "speed": 125.973,
+      "latency": 151.399,
+      "totalTime": 155.368,
       "context": 1000000
      }
     },
@@ -1126,9 +1151,9 @@
       "tokenPrice": 4.5,
       "inputPrice": 2,
       "outputPrice": 12,
-      "speed": 102.556,
-      "latency": 4.81206,
-      "totalTime": 9.68745,
+      "speed": 106.933,
+      "latency": 7.36283,
+      "totalTime": 12.0387,
       "context": 1000000
      }
     },
@@ -1151,9 +1176,9 @@
       "tokenPrice": 4.5,
       "inputPrice": 2,
       "outputPrice": 12,
-      "speed": 83.9767,
-      "latency": 1.42326,
-      "totalTime": 7.37729,
+      "speed": 103.303,
+      "latency": 1.54196,
+      "totalTime": 6.38209,
       "context": 1000000
      }
     },
@@ -1176,9 +1201,9 @@
       "tokenPrice": 4.5,
       "inputPrice": 2,
       "outputPrice": 12,
-      "speed": 89.6418,
-      "latency": 1.7374,
-      "totalTime": 7.31516,
+      "speed": 103.7,
+      "latency": 1.72049,
+      "totalTime": 6.5421,
       "context": 1000000
      }
     },
@@ -1201,9 +1226,9 @@
       "tokenPrice": 4.5,
       "inputPrice": 2,
       "outputPrice": 12,
-      "speed": 90.5177,
-      "latency": 0.765406,
-      "totalTime": 6.28919,
+      "speed": 105.191,
+      "latency": 0.691135,
+      "totalTime": 5.44438,
       "context": 1000000
      }
     },
@@ -1226,9 +1251,9 @@
       "tokenPrice": 4.5,
       "inputPrice": 2,
       "outputPrice": 12,
-      "speed": 98.668,
-      "latency": 33.3264,
-      "totalTime": 38.394,
+      "speed": 117.052,
+      "latency": 43.0336,
+      "totalTime": 47.3052,
       "context": 1000000
      }
     },
@@ -1251,9 +1276,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 57.4726,
-      "latency": 311.426,
-      "totalTime": 320.126,
+      "speed": 65.7778,
+      "latency": 330.58,
+      "totalTime": 338.182,
       "context": 1000000
      }
     },
@@ -1276,9 +1301,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 49.6643,
-      "latency": 59.9622,
-      "totalTime": 70.0298,
+      "speed": 57.7663,
+      "latency": 65.1721,
+      "totalTime": 73.8276,
       "context": 1000000
      }
     },
@@ -1301,9 +1326,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 47.1159,
-      "latency": 2.80106,
-      "totalTime": 13.4132,
+      "speed": 53.2882,
+      "latency": 2.50492,
+      "totalTime": 11.8879,
       "context": 1000000
      }
     },
@@ -1326,9 +1351,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 49.1994,
-      "latency": 5.76216,
-      "totalTime": 15.9249,
+      "speed": 55.7968,
+      "latency": 8.20922,
+      "totalTime": 17.1703,
       "context": 1000000
      }
     },
@@ -1351,9 +1376,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 53.1578,
-      "latency": 151.518,
-      "totalTime": 160.924,
+      "speed": 63.0505,
+      "latency": 177.169,
+      "totalTime": 185.099,
       "context": 1000000
      }
     },
@@ -1376,9 +1401,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 47.6521,
-      "latency": 388.289,
-      "totalTime": 398.782,
+      "speed": 63.7257,
+      "latency": 376.803,
+      "totalTime": 384.649,
       "context": 1000000
      }
     },
@@ -1401,9 +1426,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 42.3734,
-      "latency": 83.109,
-      "totalTime": 94.9089,
+      "speed": 56.948,
+      "latency": 111.283,
+      "totalTime": 120.063,
       "context": 1000000
      }
     },
@@ -1426,9 +1451,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 41.9849,
-      "latency": 2.68851,
-      "totalTime": 14.5976,
+      "speed": 54.8459,
+      "latency": 2.2851,
+      "totalTime": 11.4016,
       "context": 1000000
      }
     },
@@ -1451,9 +1476,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 41.2882,
-      "latency": 6.03216,
-      "totalTime": 18.1422,
+      "speed": 55.4143,
+      "latency": 7.31504,
+      "totalTime": 16.338,
       "context": 1000000
      }
     },
@@ -1476,9 +1501,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 43.0438,
-      "latency": 203.38,
-      "totalTime": 214.996,
+      "speed": 60.7807,
+      "latency": 178.3,
+      "totalTime": 186.526,
       "context": 1000000
      }
     },
@@ -1501,9 +1526,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 136.927,
-      "latency": 101.521,
-      "totalTime": 105.172,
+      "speed": 138.372,
+      "latency": 103.291,
+      "totalTime": 106.905,
       "context": 1000000
      }
     },
@@ -1526,9 +1551,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 119.578,
-      "latency": 16.6234,
-      "totalTime": 20.8048,
+      "speed": 136.721,
+      "latency": 23.4476,
+      "totalTime": 27.1046,
       "context": 1000000
      }
     },
@@ -1551,9 +1576,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 124.652,
-      "latency": 2.82545,
-      "totalTime": 6.83662,
+      "speed": 134.921,
+      "latency": 2.54893,
+      "totalTime": 6.25479,
       "context": 1000000
      }
     },
@@ -1576,9 +1601,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 125.784,
-      "latency": 0.830408,
-      "totalTime": 4.80549,
+      "speed": 118.419,
+      "latency": 0.827222,
+      "totalTime": 5.04953,
       "context": 1000000
      }
     },
@@ -1601,9 +1626,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 116.359,
-      "latency": 23.5912,
-      "totalTime": 27.8882,
+      "speed": 131.824,
+      "latency": 35.9847,
+      "totalTime": 39.7777,
       "context": 1000000
      }
     },
@@ -1621,14 +1646,14 @@
      "sizeValue": 131072,
      "values": {
       "intelligence": 11.6028,
-      "costTask": 0.107425,
+      "costTask": 0.10729,
       "tokensTask": null,
-      "tokenPrice": 0.26125,
+      "tokenPrice": 0.26,
       "inputPrice": 0.15,
-      "outputPrice": 0.595,
-      "speed": 184.359,
-      "latency": 11.7354,
-      "totalTime": 14.4475,
+      "outputPrice": 0.59,
+      "speed": 242.276,
+      "latency": 9.08081,
+      "totalTime": 11.1446,
       "context": 131072
      }
     },
@@ -1648,12 +1673,12 @@
       "intelligence": 10.2106,
       "costTask": null,
       "tokensTask": null,
-      "tokenPrice": 0.24875,
+      "tokenPrice": 0.2375,
       "inputPrice": 0.15,
-      "outputPrice": 0.545,
-      "speed": 202.607,
-      "latency": 10.748,
-      "totalTime": 13.2158,
+      "outputPrice": 0.5,
+      "speed": 243.73,
+      "latency": 9.0431,
+      "totalTime": 11.0945,
       "context": 131072
      }
     },
@@ -1676,9 +1701,9 @@
       "tokenPrice": 0.0975,
       "inputPrice": 0.07,
       "outputPrice": 0.18,
-      "speed": 175.346,
-      "latency": 12.1563,
-      "totalTime": 15.0078,
+      "speed": 228.087,
+      "latency": 9.45822,
+      "totalTime": 11.6504,
       "context": 131072
      }
     },
@@ -1701,9 +1726,9 @@
       "tokenPrice": 0.10625,
       "inputPrice": 0.07,
       "outputPrice": 0.215,
-      "speed": 226.418,
-      "latency": 9.65549,
-      "totalTime": 11.8638,
+      "speed": 299.326,
+      "latency": 7.41792,
+      "totalTime": 9.08834,
       "context": 131072
      }
     },
@@ -1726,9 +1751,9 @@
       "tokenPrice": 0.1075,
       "inputPrice": 0.06,
       "outputPrice": 0.25,
-      "speed": 15.016,
-      "latency": 34.6298,
-      "totalTime": 67.9277,
+      "speed": 10.0644,
+      "latency": 57.785,
+      "totalTime": 107.465,
       "context": 128000
      }
     },
@@ -1751,9 +1776,9 @@
       "tokenPrice": 0.2825,
       "inputPrice": 0.16,
       "outputPrice": 0.65,
-      "speed": 75.0332,
-      "latency": 27.6176,
-      "totalTime": 34.2814,
+      "speed": 76.5795,
+      "latency": 27.0089,
+      "totalTime": 33.538,
       "context": 131072
      }
     },
@@ -1776,9 +1801,9 @@
       "tokenPrice": 0.0525,
       "inputPrice": 0.03,
       "outputPrice": 0.12,
-      "speed": 215.268,
-      "latency": 9.82497,
-      "totalTime": 12.1477,
+      "speed": 213.144,
+      "latency": 9.96628,
+      "totalTime": 12.3121,
       "context": 131072
      }
     },
@@ -1801,9 +1826,9 @@
       "tokenPrice": 0.1075,
       "inputPrice": 0.06,
       "outputPrice": 0.25,
-      "speed": 51.8893,
-      "latency": 39.289,
-      "totalTime": 48.9249,
+      "speed": 58.199,
+      "latency": 35.093,
+      "totalTime": 43.6843,
       "context": 131072
      }
     },
@@ -1826,9 +1851,9 @@
       "tokenPrice": 3,
       "inputPrice": 2,
       "outputPrice": 6,
-      "speed": 74.2472,
-      "latency": 98.0518,
-      "totalTime": 104.786,
+      "speed": 83.2995,
+      "latency": 88.1385,
+      "totalTime": 94.141,
       "context": 500000
      }
     },
@@ -1851,9 +1876,9 @@
       "tokenPrice": 3,
       "inputPrice": 2,
       "outputPrice": 6,
-      "speed": 64.4741,
-      "latency": 50.2368,
-      "totalTime": 57.9918,
+      "speed": 82.2269,
+      "latency": 52.059,
+      "totalTime": 58.1398,
       "context": 500000
      }
     },
@@ -1876,9 +1901,9 @@
       "tokenPrice": 3,
       "inputPrice": 2,
       "outputPrice": 6,
-      "speed": 59.5355,
-      "latency": 5.45822,
-      "totalTime": 13.8566,
+      "speed": 78.8816,
+      "latency": 6.5002,
+      "totalTime": 12.8388,
       "context": 500000
      }
     },
@@ -1901,9 +1926,9 @@
       "tokenPrice": 1.5,
       "inputPrice": 1,
       "outputPrice": 3,
-      "speed": 35.5758,
-      "latency": 2.2564,
-      "totalTime": 16.3109,
+      "speed": 37.8215,
+      "latency": 2.31156,
+      "totalTime": 15.5315,
       "context": 128000
      }
     },
@@ -1926,9 +1951,9 @@
       "tokenPrice": 1.5,
       "inputPrice": 1,
       "outputPrice": 3,
-      "speed": 38.8393,
-      "latency": 53.961,
-      "totalTime": 66.8345,
+      "speed": 39.9951,
+      "latency": 52.4165,
+      "totalTime": 64.918,
       "context": 128000
      }
     },
@@ -1951,9 +1976,9 @@
       "tokenPrice": 0.24075,
       "inputPrice": 0.136,
       "outputPrice": 0.555,
-      "speed": 82.6607,
-      "latency": 27.2706,
-      "totalTime": 33.3194,
+      "speed": 88.6273,
+      "latency": 25.6529,
+      "totalTime": 31.2945,
       "context": 256000
      }
     },
@@ -1976,9 +2001,9 @@
       "tokenPrice": 1.7625,
       "inputPrice": 1,
       "outputPrice": 4.05,
-      "speed": 167.5,
-      "latency": 13.806,
-      "totalTime": 16.7911,
+      "speed": 189.681,
+      "latency": 12.3393,
+      "totalTime": 14.9753,
       "context": 1000000
      }
     },
@@ -2001,9 +2026,9 @@
       "tokenPrice": 0.525,
       "inputPrice": 0.3,
       "outputPrice": 1.2,
-      "speed": 159.577,
-      "latency": 14.8573,
-      "totalTime": 17.9906,
+      "speed": 192.968,
+      "latency": 12.5656,
+      "totalTime": 15.1567,
       "context": 1000000
      }
     },
@@ -2026,9 +2051,9 @@
       "tokenPrice": null,
       "inputPrice": null,
       "outputPrice": null,
-      "speed": 118.21,
-      "latency": 26.9489,
-      "totalTime": 31.1786,
+      "speed": 116.282,
+      "latency": 21.229,
+      "totalTime": 25.5289,
       "context": 524288
      }
     },
@@ -2051,9 +2076,9 @@
       "tokenPrice": 1.7125,
       "inputPrice": 0.95,
       "outputPrice": 4,
-      "speed": 78.7931,
-      "latency": 31.225,
-      "totalTime": 37.5708,
+      "speed": 65.0272,
+      "latency": 37.0798,
+      "totalTime": 44.7689,
       "context": 256000
      }
     },
@@ -2076,9 +2101,9 @@
       "tokenPrice": 6,
       "inputPrice": 3,
       "outputPrice": 15,
-      "speed": 39.1909,
-      "latency": 54.6286,
-      "totalTime": 67.3866,
+      "speed": 40.8914,
+      "latency": 52.1569,
+      "totalTime": 64.3844,
       "context": 1048580
      }
     },
@@ -2101,9 +2126,9 @@
       "tokenPrice": 6,
       "inputPrice": 3,
       "outputPrice": 15,
-      "speed": 39.2157,
-      "latency": 54.9807,
-      "totalTime": 67.7307,
+      "speed": 43.7042,
+      "latency": 49.0487,
+      "totalTime": 60.4893,
       "context": 1048580
      }
     },
@@ -2126,9 +2151,9 @@
       "tokenPrice": 0.11125,
       "inputPrice": 0.075,
       "outputPrice": 0.22,
-      "speed": 320.982,
-      "latency": 7.93273,
-      "totalTime": 9.49045,
+      "speed": 322.331,
+      "latency": 7.94831,
+      "totalTime": 9.49951,
       "context": 262144
      }
     },
@@ -2151,9 +2176,9 @@
       "tokenPrice": 0.11125,
       "inputPrice": 0.075,
       "outputPrice": 0.22,
-      "speed": 145.335,
-      "latency": 15.6368,
-      "totalTime": 19.0771,
+      "speed": 139.928,
+      "latency": 16.3857,
+      "totalTime": 19.959,
       "context": 262144
      }
     },
@@ -2176,9 +2201,9 @@
       "tokenPrice": null,
       "inputPrice": null,
       "outputPrice": null,
-      "speed": 55.283,
-      "latency": 38.7725,
-      "totalTime": 47.8169,
+      "speed": 40.4614,
+      "latency": 52.6657,
+      "totalTime": 65.0232,
       "context": 262144
      }
     },
@@ -2196,14 +2221,14 @@
      "sizeValue": 1000000,
      "values": {
       "intelligence": 41.0906,
-      "costTask": 0.985689,
+      "costTask": 1.0016,
       "tokensTask": null,
       "tokenPrice": 0.45,
       "inputPrice": 0.3,
       "outputPrice": 0.9,
-      "speed": 213.649,
-      "latency": 11.1259,
-      "totalTime": 13.4662,
+      "speed": 214.868,
+      "latency": 11.1742,
+      "totalTime": 13.5012,
       "context": 1000000
      }
     },
@@ -2226,9 +2251,9 @@
       "tokenPrice": 0.345,
       "inputPrice": 0.345,
       "outputPrice": 0.345,
-      "speed": 16.7271,
-      "latency": 1.84795,
-      "totalTime": 31.7396,
+      "speed": 22.2006,
+      "latency": 1.66686,
+      "totalTime": 24.1887,
       "context": 128000
      }
     },
@@ -2251,9 +2276,9 @@
       "tokenPrice": 0.7125,
       "inputPrice": 0.71,
       "outputPrice": 0.72,
-      "speed": 87.6523,
-      "latency": 1.80824,
-      "totalTime": 7.5126,
+      "speed": 91.8668,
+      "latency": 1.75816,
+      "totalTime": 7.20082,
       "context": 128000
      }
     },
@@ -2276,9 +2301,9 @@
       "tokenPrice": 0.405,
       "inputPrice": 0.25,
       "outputPrice": 0.87,
-      "speed": 34.853,
-      "latency": 1.03942,
-      "totalTime": 15.3854,
+      "speed": 45.298,
+      "latency": 1.06597,
+      "totalTime": 12.104,
       "context": 1000000
      }
     },
@@ -2298,13 +2323,63 @@
       "intelligence": 8.07503,
       "costTask": null,
       "tokensTask": null,
-      "tokenPrice": 0.3125,
-      "inputPrice": 0.19,
-      "outputPrice": 0.68,
-      "speed": 73.1297,
-      "latency": 0.834643,
-      "totalTime": 7.67181,
+      "tokenPrice": 0.3,
+      "inputPrice": 0.18,
+      "outputPrice": 0.66,
+      "speed": 66.7119,
+      "latency": 0.869849,
+      "totalTime": 8.36477,
       "context": 10000000
+     }
+    },
+    {
+     "id": "longcat-2-0",
+     "name": "LongCat 2.0",
+     "fullName": "LongCat 2.0",
+     "creator": {
+      "slug": "longcat",
+      "name": "LongCat"
+     },
+     "openWeights": true,
+     "reasoning": true,
+     "estimated": false,
+     "sizeValue": 1000000,
+     "values": {
+      "intelligence": 19.1123,
+      "costTask": 0.146249,
+      "tokensTask": null,
+      "tokenPrice": 1.3,
+      "inputPrice": 0.75,
+      "outputPrice": 2.95,
+      "speed": 66.275,
+      "latency": 32.8244,
+      "totalTime": 40.3687,
+      "context": 1000000
+     }
+    },
+    {
+     "id": "magistral-small-2509",
+     "name": "Magistral Small 1.2",
+     "fullName": "Magistral Small 1.2",
+     "creator": {
+      "slug": "mistral",
+      "name": "Mistral"
+     },
+     "openWeights": true,
+     "reasoning": true,
+     "estimated": true,
+     "sizeValue": 128000,
+     "values": {
+      "intelligence": 8.59366,
+      "costTask": null,
+      "tokensTask": null,
+      "tokenPrice": 0.75,
+      "inputPrice": 0.5,
+      "outputPrice": 1.5,
+      "speed": 75.3183,
+      "latency": 28.1545,
+      "totalTime": 34.793,
+      "context": 128000
      }
     },
     {
@@ -2326,9 +2401,9 @@
       "tokenPrice": 0.375,
       "inputPrice": 0.25,
       "outputPrice": 0.75,
-      "speed": 817.776,
-      "latency": 3.21124,
-      "totalTime": 3.82266,
+      "speed": 776.428,
+      "latency": 3.33055,
+      "totalTime": 3.97453,
       "context": 260000
      }
     },
@@ -2346,14 +2421,14 @@
      "sizeValue": 1000000,
      "values": {
       "intelligence": 37.8844,
-      "costTask": 0.0623147,
+      "costTask": 0.0623757,
       "tokensTask": null,
       "tokenPrice": 0.175,
       "inputPrice": 0.14,
       "outputPrice": 0.28,
-      "speed": 57.535,
-      "latency": 38.1276,
-      "totalTime": 46.818,
+      "speed": 49.6846,
+      "latency": 43.9405,
+      "totalTime": 54.004,
       "context": 1000000
      }
     },
@@ -2376,9 +2451,9 @@
       "tokenPrice": 0.54375,
       "inputPrice": 0.435,
       "outputPrice": 0.87,
-      "speed": 43.2701,
-      "latency": 49.6673,
-      "totalTime": 61.2227,
+      "speed": 48.8705,
+      "latency": 44.4339,
+      "totalTime": 54.665,
       "context": 1000000
      }
     },
@@ -2401,9 +2476,9 @@
       "tokenPrice": 0.525,
       "inputPrice": 0.3,
       "outputPrice": 1.2,
-      "speed": 100.83,
-      "latency": 21.3086,
-      "totalTime": 26.2675,
+      "speed": 107.19,
+      "latency": 19.607,
+      "totalTime": 24.2716,
       "context": 1000000
      }
     },
@@ -2426,9 +2501,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.2,
       "outputPrice": 0.2,
-      "speed": 71.0749,
-      "latency": 1.07906,
-      "totalTime": 8.1139,
+      "speed": 70.3961,
+      "latency": 0.90281,
+      "totalTime": 8.00548,
       "context": 256000
      }
     },
@@ -2451,9 +2526,9 @@
       "tokenPrice": 0.1,
       "inputPrice": 0.1,
       "outputPrice": 0.1,
-      "speed": 221.891,
-      "latency": 0.587836,
-      "totalTime": 2.84119,
+      "speed": 213.53,
+      "latency": 0.64058,
+      "totalTime": 2.98217,
       "context": 256000
      }
     },
@@ -2476,9 +2551,9 @@
       "tokenPrice": 0.15,
       "inputPrice": 0.15,
       "outputPrice": 0.15,
-      "speed": 101.266,
-      "latency": 0.721882,
-      "totalTime": 5.65937,
+      "speed": 106.686,
+      "latency": 0.735631,
+      "totalTime": 5.42227,
       "context": 256000
      }
     },
@@ -2501,9 +2576,9 @@
       "tokenPrice": 3,
       "inputPrice": 1.5,
       "outputPrice": 7.5,
-      "speed": 163.148,
-      "latency": 14.513,
-      "totalTime": 17.5777,
+      "speed": 164.685,
+      "latency": 14.315,
+      "totalTime": 17.3511,
       "context": 256000
      }
     },
@@ -2526,9 +2601,9 @@
       "tokenPrice": 0.2625,
       "inputPrice": 0.15,
       "outputPrice": 0.6,
-      "speed": 157.613,
-      "latency": 13.4551,
-      "totalTime": 16.6274,
+      "speed": 164.325,
+      "latency": 12.942,
+      "totalTime": 15.9847,
       "context": 256000
      }
     },
@@ -2551,9 +2626,9 @@
       "tokenPrice": 0.2625,
       "inputPrice": 0.15,
       "outputPrice": 0.6,
-      "speed": 151.057,
-      "latency": 0.724897,
-      "totalTime": 4.03492,
+      "speed": 156.729,
+      "latency": 0.869774,
+      "totalTime": 4.05999,
       "context": 256000
      }
     },
@@ -2576,9 +2651,9 @@
       "tokenPrice": 0.58125,
       "inputPrice": 0.325,
       "outputPrice": 1.35,
-      "speed": 119.639,
-      "latency": 18.1071,
-      "totalTime": 22.2863,
+      "speed": 130.592,
+      "latency": 16.3076,
+      "totalTime": 20.1363,
       "context": 131072
      }
     },
@@ -2601,9 +2676,9 @@
       "tokenPrice": 2,
       "inputPrice": 1.25,
       "outputPrice": 4.25,
-      "speed": 124.599,
-      "latency": 80.8296,
-      "totalTime": 84.8424,
+      "speed": 122.478,
+      "latency": 56.2639,
+      "totalTime": 60.3463,
       "context": 1000000
      }
     },
@@ -2626,9 +2701,9 @@
       "tokenPrice": 2,
       "inputPrice": 1.25,
       "outputPrice": 4.25,
-      "speed": 279.511,
-      "latency": 55.9274,
-      "totalTime": 57.7163,
+      "speed": 258.909,
+      "latency": 27.4933,
+      "totalTime": 29.4245,
       "context": 1000000
      }
     },
@@ -2651,9 +2726,9 @@
       "tokenPrice": 0.095,
       "inputPrice": 0.06,
       "outputPrice": 0.2,
-      "speed": 306.705,
-      "latency": 7.08802,
-      "totalTime": 8.71825,
+      "speed": 303.239,
+      "latency": 7.18552,
+      "totalTime": 8.83438,
       "context": 1000000
      }
     },
@@ -2676,9 +2751,9 @@
       "tokenPrice": 0.45,
       "inputPrice": 0.3,
       "outputPrice": 0.9,
-      "speed": 240.456,
-      "latency": 9.02736,
-      "totalTime": 11.1067,
+      "speed": 239.963,
+      "latency": 8.78915,
+      "totalTime": 10.8728,
       "context": 256000
      }
     },
@@ -2701,9 +2776,9 @@
       "tokenPrice": null,
       "inputPrice": null,
       "outputPrice": null,
-      "speed": 48.6471,
-      "latency": 41.7102,
-      "totalTime": 51.9883,
+      "speed": 111.36,
+      "latency": 18.3669,
+      "totalTime": 22.8569,
       "context": 256000
      }
     },
@@ -2726,9 +2801,9 @@
       "tokenPrice": 0.85,
       "inputPrice": 0.3,
       "outputPrice": 2.5,
-      "speed": 167.483,
-      "latency": 1.16783,
-      "totalTime": 4.15321,
+      "speed": 172.555,
+      "latency": 1.06394,
+      "totalTime": 3.96157,
       "context": 1000000
      }
     },
@@ -2751,9 +2826,9 @@
       "tokenPrice": 0.85,
       "inputPrice": 0.3,
       "outputPrice": 2.5,
-      "speed": 187.961,
-      "latency": 24.709,
-      "totalTime": 27.3691,
+      "speed": 188.57,
+      "latency": 28.3892,
+      "totalTime": 31.0408,
       "context": 1000000
      }
     },
@@ -2776,9 +2851,9 @@
       "tokenPrice": 0.85,
       "inputPrice": 0.3,
       "outputPrice": 2.5,
-      "speed": 167.108,
-      "latency": 20.7807,
-      "totalTime": 23.7728,
+      "speed": 174.455,
+      "latency": 19.9443,
+      "totalTime": 22.8103,
       "context": 1000000
      }
     },
@@ -2801,9 +2876,9 @@
       "tokenPrice": 0.85,
       "inputPrice": 0.3,
       "outputPrice": 2.5,
-      "speed": 182.562,
-      "latency": 25.6072,
-      "totalTime": 28.346,
+      "speed": 189.078,
+      "latency": 29.6909,
+      "totalTime": 32.3353,
       "context": 1000000
      }
     },
@@ -2826,9 +2901,9 @@
       "tokenPrice": 3.4375,
       "inputPrice": 1.25,
       "outputPrice": 10,
-      "speed": 102.893,
-      "latency": 1.07325,
-      "totalTime": 5.93266,
+      "speed": 113.491,
+      "latency": 1.04538,
+      "totalTime": 5.45103,
       "context": 256000
      }
     },
@@ -2851,9 +2926,9 @@
       "tokenPrice": 3.4375,
       "inputPrice": 1.25,
       "outputPrice": 10,
-      "speed": 119.175,
-      "latency": 24.6722,
-      "totalTime": 28.8677,
+      "speed": 122.799,
+      "latency": 26.025,
+      "totalTime": 30.0966,
       "context": 256000
      }
     },
@@ -2876,9 +2951,9 @@
       "tokenPrice": 3.4375,
       "inputPrice": 1.25,
       "outputPrice": 10,
-      "speed": 119.6,
-      "latency": 28.6171,
-      "totalTime": 32.7977,
+      "speed": 123.422,
+      "latency": 28.5425,
+      "totalTime": 32.5936,
       "context": 256000
      }
     },
@@ -2901,9 +2976,9 @@
       "tokenPrice": 0.06125,
       "inputPrice": 0.035,
       "outputPrice": 0.14,
-      "speed": 278.702,
-      "latency": 0.881861,
-      "totalTime": 2.67589,
+      "speed": 277.299,
+      "latency": 0.87711,
+      "totalTime": 2.68022,
       "context": 130000
      }
     },
@@ -2926,9 +3001,9 @@
       "tokenPrice": 0.0875,
       "inputPrice": 0.05,
       "outputPrice": 0.2,
-      "speed": 227.304,
-      "latency": 0.972313,
-      "totalTime": 3.17201,
+      "speed": 243.682,
+      "latency": 0.558529,
+      "totalTime": 2.61038,
       "context": 1000000
      }
     },
@@ -2951,9 +3026,9 @@
       "tokenPrice": 0.0875,
       "inputPrice": 0.05,
       "outputPrice": 0.2,
-      "speed": 219.469,
-      "latency": 10.119,
-      "totalTime": 12.3972,
+      "speed": 225.523,
+      "latency": 9.8449,
+      "totalTime": 12.062,
       "context": 1000000
      }
     },
@@ -2976,9 +3051,9 @@
       "tokenPrice": 0.45,
       "inputPrice": 0.3,
       "outputPrice": 0.9,
-      "speed": 151.576,
-      "latency": 14.5061,
-      "totalTime": 17.8048,
+      "speed": 147.023,
+      "latency": 14.9047,
+      "totalTime": 18.3055,
       "context": 1000000
      }
     },
@@ -3001,9 +3076,9 @@
       "tokenPrice": 1.075,
       "inputPrice": 0.6,
       "outputPrice": 2.5,
-      "speed": 135.629,
-      "latency": 18.0347,
-      "totalTime": 21.7212,
+      "speed": 172.23,
+      "latency": 14.3015,
+      "totalTime": 17.2046,
       "context": 262144
      }
     },
@@ -3026,9 +3101,9 @@
       "tokenPrice": 0.3,
       "inputPrice": 0.2,
       "outputPrice": 0.6,
-      "speed": 206.141,
-      "latency": 1.12758,
-      "totalTime": 3.55311,
+      "speed": 206.852,
+      "latency": 1.14725,
+      "totalTime": 3.56444,
       "context": 128000
      }
     },
@@ -3051,9 +3126,9 @@
       "tokenPrice": 0.08625,
       "inputPrice": 0.05,
       "outputPrice": 0.195,
-      "speed": 158.554,
-      "latency": 2.12201,
-      "totalTime": 5.27551,
+      "speed": 166.144,
+      "latency": 1.11045,
+      "totalTime": 4.1199,
       "context": 131072
      }
     },
@@ -3076,9 +3151,9 @@
       "tokenPrice": 0.07,
       "inputPrice": 0.04,
       "outputPrice": 0.16,
-      "speed": 17.5329,
-      "latency": 185.73,
-      "totalTime": 214.248,
+      "speed": 211.46,
+      "latency": 10.0106,
+      "totalTime": 12.3751,
       "context": 131072
      }
     },
@@ -3101,9 +3176,9 @@
       "tokenPrice": 3.5,
       "inputPrice": 2,
       "outputPrice": 8,
-      "speed": 115.884,
-      "latency": 10.7047,
-      "totalTime": 15.0194,
+      "speed": 136.219,
+      "latency": 6.68031,
+      "totalTime": 10.3509,
       "context": 200000
      }
     },
@@ -3126,9 +3201,9 @@
       "tokenPrice": 0.21875,
       "inputPrice": 0.125,
       "outputPrice": 0.5,
-      "speed": 40.1664,
-      "latency": 2.59089,
-      "totalTime": 15.0391,
+      "speed": 41.8294,
+      "latency": 2.43732,
+      "totalTime": 14.3906,
       "context": 16000
      }
     },
@@ -3151,9 +3226,9 @@
       "tokenPrice": null,
       "inputPrice": null,
       "outputPrice": null,
-      "speed": 45.2772,
-      "latency": 0.835067,
-      "totalTime": 11.8782,
+      "speed": 45.4132,
+      "latency": 0.823162,
+      "totalTime": 11.8332,
       "context": 128000
      }
     },
@@ -3176,9 +3251,9 @@
       "tokenPrice": 0.9,
       "inputPrice": 0.6,
       "outputPrice": 1.8,
-      "speed": 125.999,
-      "latency": 17.2339,
-      "totalTime": 21.2022,
+      "speed": 152.253,
+      "latency": 14.4383,
+      "totalTime": 17.7223,
       "context": 1000000
      }
     },
@@ -3201,9 +3276,9 @@
       "tokenPrice": 1.1,
       "inputPrice": 0.4,
       "outputPrice": 3.2,
-      "speed": 130.163,
-      "latency": 17.6935,
-      "totalTime": 21.5349,
+      "speed": 128.718,
+      "latency": 17.8849,
+      "totalTime": 21.7693,
       "context": 262144
      }
     },
@@ -3226,9 +3301,9 @@
       "tokenPrice": 1.1,
       "inputPrice": 0.4,
       "outputPrice": 3.2,
-      "speed": 141.324,
-      "latency": 2.28508,
-      "totalTime": 5.82304,
+      "speed": 143.125,
+      "latency": 2.30236,
+      "totalTime": 5.79581,
       "context": 262144
      }
     },
@@ -3251,9 +3326,9 @@
       "tokenPrice": 1.35,
       "inputPrice": 0.6,
       "outputPrice": 3.6,
-      "speed": 86.8545,
-      "latency": 38.8995,
-      "totalTime": 44.6563,
+      "speed": 88.3425,
+      "latency": 38.2998,
+      "totalTime": 43.9596,
       "context": 262144
      }
     },
@@ -3276,9 +3351,9 @@
       "tokenPrice": 1.35,
       "inputPrice": 0.6,
       "outputPrice": 3.6,
-      "speed": 82.601,
-      "latency": 2.29481,
-      "totalTime": 8.348,
+      "speed": 85.2336,
+      "latency": 2.19127,
+      "totalTime": 8.0575,
       "context": 262144
      }
     },
@@ -3301,9 +3376,9 @@
       "tokenPrice": 0.06,
       "inputPrice": 0.03,
       "outputPrice": 0.15,
-      "speed": 23.107,
-      "latency": 87.4639,
-      "totalTime": 109.102,
+      "speed": 22.3487,
+      "latency": 90.3057,
+      "totalTime": 112.678,
       "context": 262144
      }
     },
@@ -3326,9 +3401,9 @@
       "tokenPrice": 0.06,
       "inputPrice": 0.03,
       "outputPrice": 0.15,
-      "speed": 25.3213,
-      "latency": 0.835332,
-      "totalTime": 20.5816,
+      "speed": 21.044,
+      "latency": 0.840856,
+      "totalTime": 24.6006,
       "context": 262144
      }
     },
@@ -3351,9 +3426,9 @@
       "tokenPrice": 0.15125,
       "inputPrice": 0.135,
       "outputPrice": 0.2,
-      "speed": 64.0802,
-      "latency": 33.1799,
-      "totalTime": 40.9826,
+      "speed": 56.8154,
+      "latency": 36.9273,
+      "totalTime": 45.7277,
       "context": 262144
      }
     },
@@ -3376,9 +3451,9 @@
       "tokenPrice": 0.19,
       "inputPrice": 0.17,
       "outputPrice": 0.25,
-      "speed": 80.727,
-      "latency": 0.704688,
-      "totalTime": 6.8984,
+      "speed": 96.3925,
+      "latency": 0.750099,
+      "totalTime": 5.93722,
       "context": 262144
      }
     },
@@ -3401,9 +3476,9 @@
       "tokenPrice": 0.275,
       "inputPrice": 0.1,
       "outputPrice": 0.8,
-      "speed": 231.573,
-      "latency": 1.81153,
-      "totalTime": 3.97068,
+      "speed": 234.35,
+      "latency": 1.7892,
+      "totalTime": 3.92277,
       "context": 256000
      }
     },
@@ -3426,9 +3501,9 @@
       "tokenPrice": 1.5,
       "inputPrice": 0.4,
       "outputPrice": 4.8,
-      "speed": 89.0598,
-      "latency": 2.03927,
-      "totalTime": 7.65347,
+      "speed": 88.2125,
+      "latency": 2.03137,
+      "totalTime": 7.69951,
       "context": 256000
      }
     },
@@ -3451,9 +3526,9 @@
       "tokenPrice": 0.84375,
       "inputPrice": 0.375,
       "outputPrice": 2.25,
-      "speed": 126.619,
-      "latency": 44.6094,
-      "totalTime": 48.5582,
+      "speed": 129.368,
+      "latency": 43.7272,
+      "totalTime": 47.5921,
       "context": 262144
      }
     },
@@ -3476,9 +3551,9 @@
       "tokenPrice": 0.84375,
       "inputPrice": 0.375,
       "outputPrice": 2.25,
-      "speed": 146.097,
-      "latency": 2.04318,
-      "totalTime": 5.46557,
+      "speed": 138.713,
+      "latency": 2.03736,
+      "totalTime": 5.64192,
       "context": 262144
      }
     },
@@ -3501,9 +3576,9 @@
       "tokenPrice": 0.7,
       "inputPrice": 0.4,
       "outputPrice": 1.6,
-      "speed": 54.1622,
-      "latency": 39.1594,
-      "totalTime": 48.3909,
+      "speed": 54.5883,
+      "latency": 38.904,
+      "totalTime": 48.0635,
       "context": 1000000
      }
     },
@@ -3526,9 +3601,9 @@
       "tokenPrice": 3,
       "inputPrice": 2,
       "outputPrice": 6,
-      "speed": 36.5186,
-      "latency": 57.7531,
-      "totalTime": 71.4448,
+      "speed": 36.9388,
+      "latency": 57.1349,
+      "totalTime": 70.6708,
       "context": 262000
      }
     },
@@ -3551,9 +3626,9 @@
       "tokenPrice": 1.125,
       "inputPrice": 0.5,
       "outputPrice": 3,
-      "speed": 46.0563,
-      "latency": 47.2733,
-      "totalTime": 58.1295,
+      "speed": 46.4949,
+      "latency": 46.803,
+      "totalTime": 57.5569,
       "context": 256000
      }
     },
@@ -3576,9 +3651,9 @@
       "tokenPrice": 1.125,
       "inputPrice": 0.5,
       "outputPrice": 3,
-      "speed": 51.021,
-      "latency": 42.9783,
-      "totalTime": 52.7781,
+      "speed": 53.4887,
+      "latency": 41.1695,
+      "totalTime": 50.5173,
       "context": 256000
      }
     },
@@ -3601,9 +3676,9 @@
       "tokenPrice": 1.125,
       "inputPrice": 0.5,
       "outputPrice": 3,
-      "speed": 53.123,
-      "latency": 41.5419,
-      "totalTime": 50.954,
+      "speed": 52.107,
+      "latency": 42.2613,
+      "totalTime": 51.857,
       "context": 256000
      }
     },
@@ -3626,9 +3701,9 @@
       "tokenPrice": 1.125,
       "inputPrice": 0.5,
       "outputPrice": 3,
-      "speed": 52.315,
-      "latency": 3.74884,
-      "totalTime": 13.3063,
+      "speed": 52.7013,
+      "latency": 3.82139,
+      "totalTime": 13.3088,
       "context": 256000
      }
     },
@@ -3651,9 +3726,9 @@
       "tokenPrice": 0.23,
       "inputPrice": 0.15,
       "outputPrice": 0.47,
-      "speed": 56.0397,
-      "latency": 38.1449,
-      "totalTime": 47.0672,
+      "speed": 50.7339,
+      "latency": 41.4242,
+      "totalTime": 51.2795,
       "context": 256000
      }
     },
@@ -3676,9 +3751,9 @@
       "tokenPrice": 3,
       "inputPrice": 2,
       "outputPrice": 6,
-      "speed": 35.7153,
-      "latency": 58.9223,
-      "totalTime": 72.9219,
+      "speed": 36.2426,
+      "latency": 58.0072,
+      "totalTime": 71.8031,
       "context": 983616
      }
     },
@@ -3696,14 +3771,14 @@
      "sizeValue": 256000,
      "values": {
       "intelligence": 9.23682,
-      "costTask": 0.551804,
+      "costTask": 0.780503,
       "tokensTask": null,
-      "tokenPrice": 0.5625,
-      "inputPrice": 0.35,
+      "tokenPrice": 0.675,
+      "inputPrice": 0.5,
       "outputPrice": 1.2,
-      "speed": 88.4823,
-      "latency": 1.26147,
-      "totalTime": 6.91232,
+      "speed": 70.4571,
+      "latency": 1.0992,
+      "totalTime": 8.19572,
       "context": 256000
      }
     },
@@ -3726,9 +3801,9 @@
       "tokenPrice": 0.4125,
       "inputPrice": 0.15,
       "outputPrice": 1.2,
-      "speed": 168.825,
-      "latency": 2.16956,
-      "totalTime": 5.13121,
+      "speed": 145.208,
+      "latency": 2.30837,
+      "totalTime": 5.75172,
       "context": 262144
      }
     },
@@ -3751,9 +3826,9 @@
       "tokenPrice": 0.4125,
       "inputPrice": 0.15,
       "outputPrice": 1.2,
-      "speed": 162.784,
-      "latency": 14.5147,
-      "totalTime": 17.5863,
+      "speed": 140.959,
+      "latency": 16.4749,
+      "totalTime": 20.022,
       "context": 262144
      }
     },
@@ -3776,9 +3851,9 @@
       "tokenPrice": 0.43,
       "inputPrice": 0.25,
       "outputPrice": 0.97,
-      "speed": 96.5186,
-      "latency": 1.87391,
-      "totalTime": 7.05425,
+      "speed": 95.5358,
+      "latency": 1.85252,
+      "totalTime": 7.08617,
       "context": 65536
      }
     },
@@ -3801,9 +3876,9 @@
       "tokenPrice": 0.43,
       "inputPrice": 0.25,
       "outputPrice": 0.97,
-      "speed": 103.291,
-      "latency": 21.258,
-      "totalTime": 26.0987,
+      "speed": 102.594,
+      "latency": 21.3851,
+      "totalTime": 26.2587,
       "context": 65536
      }
     },
@@ -3826,9 +3901,9 @@
       "tokenPrice": 0.35,
       "inputPrice": 0.2,
       "outputPrice": 0.8,
-      "speed": 93.5141,
-      "latency": 22.7687,
-      "totalTime": 28.1155,
+      "speed": 92.8207,
+      "latency": 22.9891,
+      "totalTime": 28.3758,
       "context": 128000
      }
     },
@@ -3851,9 +3926,9 @@
       "tokenPrice": 0.85,
       "inputPrice": 0.3,
       "outputPrice": 2.5,
-      "speed": 115.646,
-      "latency": 21.0852,
-      "totalTime": 25.4087,
+      "speed": 120.92,
+      "latency": 20.1867,
+      "totalTime": 24.3216,
       "context": 262144
      }
     },
@@ -3876,9 +3951,9 @@
       "tokenPrice": 0.175,
       "inputPrice": 0.1,
       "outputPrice": 0.4,
-      "speed": 74.3342,
-      "latency": 28.816,
-      "totalTime": 35.5424,
+      "speed": 67.9376,
+      "latency": 31.3012,
+      "totalTime": 38.6609,
       "context": 1048580
      }
     },
@@ -3901,9 +3976,9 @@
       "tokenPrice": 0.525,
       "inputPrice": 0.3,
       "outputPrice": 1.2,
-      "speed": 103.897,
-      "latency": 21.1974,
-      "totalTime": 26.0099,
+      "speed": 95.9084,
+      "latency": 22.8301,
+      "totalTime": 28.0434,
       "context": 512000
      }
     },
@@ -3926,9 +4001,9 @@
       "tokenPrice": 1.425,
       "inputPrice": 1,
       "outputPrice": 2.7,
-      "speed": 87.0116,
-      "latency": 25.8019,
-      "totalTime": 31.5482,
+      "speed": 89.2045,
+      "latency": 25.3242,
+      "totalTime": 30.9293,
       "context": 1000000
      }
     },
@@ -3951,14 +4026,14 @@
       "tokenPrice": 0.3875,
       "inputPrice": 0.25,
       "outputPrice": 0.8,
-      "speed": 339.458,
-      "latency": 7.09961,
-      "totalTime": 8.57254,
+      "speed": 348.961,
+      "latency": 6.77577,
+      "totalTime": 8.2086,
       "context": 512000
      }
     }
    ],
-   "modelCount": 158
+   "modelCount": 161
   },
   {
    "id": "image",
@@ -3975,11 +4050,11 @@
       "name": "Krea"
      },
      "openWeights": false,
-     "sizeValue": 16952,
+     "sizeValue": 17272,
      "values": {
-      "quality": 1012.71,
+      "quality": 1012.98,
       "price": 30,
-      "appearances": 16952,
+      "appearances": 17272,
       "uncertainty": 7
      }
     },
@@ -3992,12 +4067,12 @@
       "name": "Recraft"
      },
      "openWeights": false,
-     "sizeValue": 6363,
+     "sizeValue": 6392,
      "values": {
-      "quality": 985.26,
+      "quality": 986.01,
       "price": 210,
-      "appearances": 6363,
-      "uncertainty": 9
+      "appearances": 6392,
+      "uncertainty": 8
      }
     },
     {
@@ -4009,11 +4084,11 @@
       "name": "Fal"
      },
      "openWeights": true,
-     "sizeValue": 5508,
+     "sizeValue": 5520,
      "values": {
-      "quality": 987.03,
+      "quality": 986.52,
       "price": 5,
-      "appearances": 5508,
+      "appearances": 5520,
       "uncertainty": 9
      }
     },
@@ -4028,7 +4103,7 @@
      "openWeights": false,
      "sizeValue": 1982,
      "values": {
-      "quality": 990.1,
+      "quality": 990.39,
       "price": 22,
       "appearances": 1982,
       "uncertainty": 10
@@ -4043,11 +4118,11 @@
       "name": "ByteDance Seed"
      },
      "openWeights": false,
-     "sizeValue": 6761,
+     "sizeValue": 6788,
      "values": {
-      "quality": 1022.1,
+      "quality": 1023,
       "price": 40,
-      "appearances": 6761,
+      "appearances": 6788,
       "uncertainty": 9
      }
     },
@@ -4060,11 +4135,11 @@
       "name": "Meta"
      },
      "openWeights": false,
-     "sizeValue": 8959,
+     "sizeValue": 9482,
      "values": {
-      "quality": 1115.1,
+      "quality": 1113.96,
       "price": 10,
-      "appearances": 8959,
+      "appearances": 9482,
       "uncertainty": 9
      }
     },
@@ -4079,7 +4154,7 @@
      "openWeights": true,
      "sizeValue": 3579,
      "values": {
-      "quality": 887.04,
+      "quality": 887.35,
       "price": 100,
       "appearances": 3579,
       "uncertainty": 9
@@ -4096,7 +4171,7 @@
      "openWeights": false,
      "sizeValue": 6319,
      "values": {
-      "quality": 809.64,
+      "quality": 809.96,
       "price": 10.5,
       "appearances": 6319,
       "uncertainty": 8
@@ -4113,7 +4188,7 @@
      "openWeights": false,
      "sizeValue": 2156,
      "values": {
-      "quality": 832.21,
+      "quality": 832.53,
       "price": 25,
       "appearances": 2156,
       "uncertainty": 9
@@ -4130,7 +4205,7 @@
      "openWeights": true,
      "sizeValue": 4181,
      "values": {
-      "quality": 705.63,
+      "quality": 705.92,
       "price": 100,
       "appearances": 4181,
       "uncertainty": 9
@@ -4145,11 +4220,11 @@
       "name": "HiDream"
      },
      "openWeights": false,
-     "sizeValue": 13524,
+     "sizeValue": 13575,
      "values": {
-      "quality": 1019.74,
+      "quality": 1019.65,
       "price": 80,
-      "appearances": 13524,
+      "appearances": 13575,
       "uncertainty": 8
      }
     },
@@ -4162,11 +4237,11 @@
       "name": "Tencent"
      },
      "openWeights": true,
-     "sizeValue": 2159,
+     "sizeValue": 2167,
      "values": {
-      "quality": 944.76,
+      "quality": 943.61,
       "price": null,
-      "appearances": 2159,
+      "appearances": 2167,
       "uncertainty": 11
      }
     },
@@ -4179,11 +4254,11 @@
       "name": "Recraft"
      },
      "openWeights": false,
-     "sizeValue": 5667,
+     "sizeValue": 5698,
      "values": {
-      "quality": 983.85,
+      "quality": 983.65,
       "price": 40,
-      "appearances": 5667,
+      "appearances": 5698,
       "uncertainty": 9
      }
     },
@@ -4196,12 +4271,12 @@
       "name": "Alibaba"
      },
      "openWeights": false,
-     "sizeValue": 6469,
+     "sizeValue": 6517,
      "values": {
-      "quality": 1031.76,
+      "quality": 1032.39,
       "price": 75,
-      "appearances": 6469,
-      "uncertainty": 9
+      "appearances": 6517,
+      "uncertainty": 8
      }
     },
     {
@@ -4213,12 +4288,12 @@
       "name": "Fal"
      },
      "openWeights": true,
-     "sizeValue": 6360,
+     "sizeValue": 6385,
      "values": {
-      "quality": 986.44,
+      "quality": 987.15,
       "price": 17.5,
-      "appearances": 6360,
-      "uncertainty": 9
+      "appearances": 6385,
+      "uncertainty": 8
      }
     },
     {
@@ -4230,11 +4305,11 @@
       "name": "Black Forest Labs"
      },
      "openWeights": false,
-     "sizeValue": 12135,
+     "sizeValue": 12448,
      "values": {
-      "quality": 1003.6,
+      "quality": 1003.69,
       "price": 30,
-      "appearances": 12135,
+      "appearances": 12448,
       "uncertainty": 8
      }
     },
@@ -4249,7 +4324,7 @@
      "openWeights": true,
      "sizeValue": 3219,
      "values": {
-      "quality": 794.23,
+      "quality": 794.53,
       "price": 9,
       "appearances": 3219,
       "uncertainty": 10
@@ -4266,7 +4341,7 @@
      "openWeights": true,
      "sizeValue": 2429,
      "values": {
-      "quality": 869.6,
+      "quality": 869.91,
       "price": 12,
       "appearances": 2429,
       "uncertainty": 9
@@ -4281,11 +4356,11 @@
       "name": "Recraft"
      },
      "openWeights": false,
-     "sizeValue": 5706,
+     "sizeValue": 5722,
      "values": {
-      "quality": 956.86,
+      "quality": 955.65,
       "price": 7,
-      "appearances": 5706,
+      "appearances": 5722,
       "uncertainty": 9
      }
     },
@@ -4298,11 +4373,11 @@
       "name": "Alibaba"
      },
      "openWeights": false,
-     "sizeValue": 6281,
+     "sizeValue": 6393,
      "values": {
-      "quality": 1074.79,
+      "quality": 1075.03,
       "price": 30,
-      "appearances": 6281,
+      "appearances": 6393,
       "uncertainty": 9
      }
     },
@@ -4317,7 +4392,7 @@
      "openWeights": true,
      "sizeValue": 1973,
      "values": {
-      "quality": 753.75,
+      "quality": 754.07,
       "price": 1.5,
       "appearances": 1973,
       "uncertainty": 10
@@ -4332,11 +4407,11 @@
       "name": "Vidu"
      },
      "openWeights": false,
-     "sizeValue": 6587,
+     "sizeValue": 6590,
      "values": {
-      "quality": 919.63,
+      "quality": 920.67,
       "price": 30,
-      "appearances": 6587,
+      "appearances": 6590,
       "uncertainty": 7
      }
     },
@@ -4349,11 +4424,11 @@
       "name": "Baidu"
      },
      "openWeights": true,
-     "sizeValue": 11916,
+     "sizeValue": 11942,
      "values": {
-      "quality": 924.06,
+      "quality": 924.48,
       "price": 10.49,
-      "appearances": 11916,
+      "appearances": 11942,
       "uncertainty": 8
      }
     },
@@ -4368,7 +4443,7 @@
      "openWeights": false,
      "sizeValue": 2732,
      "values": {
-      "quality": 944.01,
+      "quality": 944.32,
       "price": 14,
       "appearances": 2732,
       "uncertainty": 9
@@ -4383,11 +4458,11 @@
       "name": "Leonardo.Ai"
      },
      "openWeights": false,
-     "sizeValue": 5313,
+     "sizeValue": 5315,
      "values": {
-      "quality": 900.57,
+      "quality": 901.31,
       "price": 17.94,
-      "appearances": 5313,
+      "appearances": 5315,
       "uncertainty": 7
      }
     },
@@ -4400,11 +4475,11 @@
       "name": "OpenAI"
      },
      "openWeights": false,
-     "sizeValue": 5515,
+     "sizeValue": 5542,
      "values": {
-      "quality": 1010.41,
+      "quality": 1011.72,
       "price": 167,
-      "appearances": 5515,
+      "appearances": 5542,
       "uncertainty": 9
      }
     },
@@ -4419,7 +4494,7 @@
      "openWeights": false,
      "sizeValue": 1933,
      "values": {
-      "quality": 883.52,
+      "quality": 883.81,
       "price": 20,
       "appearances": 1933,
       "uncertainty": 10
@@ -4434,11 +4509,11 @@
       "name": "Google"
      },
      "openWeights": false,
-     "sizeValue": 19044,
+     "sizeValue": 19563,
      "values": {
-      "quality": 1125.56,
+      "quality": 1125.24,
       "price": 67,
-      "appearances": 19044,
+      "appearances": 19563,
       "uncertainty": 7
      }
     },
@@ -4451,11 +4526,11 @@
       "name": "Black Forest Labs"
      },
      "openWeights": false,
-     "sizeValue": 4444,
+     "sizeValue": 4446,
      "values": {
-      "quality": 909.07,
+      "quality": 908.69,
       "price": 40,
-      "appearances": 4444,
+      "appearances": 4446,
       "uncertainty": 7
      }
     },
@@ -4470,7 +4545,7 @@
      "openWeights": false,
      "sizeValue": 7707,
      "values": {
-      "quality": 848.16,
+      "quality": 848.47,
       "price": null,
       "appearances": 7707,
       "uncertainty": 8
@@ -4487,7 +4562,7 @@
      "openWeights": false,
      "sizeValue": 11082,
      "values": {
-      "quality": 721.46,
+      "quality": 721.77,
       "price": null,
       "appearances": 11082,
       "uncertainty": 9
@@ -4502,11 +4577,11 @@
       "name": "Black Forest Labs"
      },
      "openWeights": true,
-     "sizeValue": 11820,
+     "sizeValue": 11967,
      "values": {
-      "quality": 941.12,
+      "quality": 941.31,
       "price": 15,
-      "appearances": 11820,
+      "appearances": 11967,
       "uncertainty": 8
      }
     },
@@ -4519,11 +4594,11 @@
       "name": "NVIDIA"
      },
      "openWeights": true,
-     "sizeValue": 12514,
+     "sizeValue": 12766,
      "values": {
-      "quality": 994.39,
+      "quality": 995.09,
       "price": null,
-      "appearances": 12514,
+      "appearances": 12766,
       "uncertainty": 8
      }
     },
@@ -4536,11 +4611,11 @@
       "name": "Microsoft AI"
      },
      "openWeights": false,
-     "sizeValue": 15366,
+     "sizeValue": 15517,
      "values": {
-      "quality": 1103.59,
+      "quality": 1103.15,
       "price": 48.128,
-      "appearances": 15366,
+      "appearances": 15517,
       "uncertainty": 8
      }
     },
@@ -4555,7 +4630,7 @@
      "openWeights": false,
      "sizeValue": 2195,
      "values": {
-      "quality": 912.45,
+      "quality": 912.76,
       "price": 24,
       "appearances": 2195,
       "uncertainty": 9
@@ -4572,7 +4647,7 @@
      "openWeights": true,
      "sizeValue": 11633,
      "values": {
-      "quality": 677.97,
+      "quality": 678.29,
       "price": 9.04,
       "appearances": 11633,
       "uncertainty": 9
@@ -4589,7 +4664,7 @@
      "openWeights": true,
      "sizeValue": 9780,
      "values": {
-      "quality": 840.41,
+      "quality": 840.69,
       "price": 25,
       "appearances": 9780,
       "uncertainty": 7
@@ -4604,11 +4679,11 @@
       "name": "NVIDIA"
      },
      "openWeights": true,
-     "sizeValue": 11905,
+     "sizeValue": 11933,
      "values": {
-      "quality": 986.33,
+      "quality": 987,
       "price": 40,
-      "appearances": 11905,
+      "appearances": 11933,
       "uncertainty": 8
      }
     },
@@ -4623,7 +4698,7 @@
      "openWeights": false,
      "sizeValue": 2067,
      "values": {
-      "quality": 910.45,
+      "quality": 910.74,
       "price": 40,
       "appearances": 2067,
       "uncertainty": 10
@@ -4640,7 +4715,7 @@
      "openWeights": true,
      "sizeValue": 2172,
      "values": {
-      "quality": 759.6,
+      "quality": 759.92,
       "price": 20,
       "appearances": 2172,
       "uncertainty": 10
@@ -4655,11 +4730,11 @@
       "name": "Recraft"
      },
      "openWeights": false,
-     "sizeValue": 17932,
+     "sizeValue": 18285,
      "values": {
-      "quality": 1017.79,
+      "quality": 1017.47,
       "price": 210,
-      "appearances": 17932,
+      "appearances": 18285,
       "uncertainty": 7
      }
     },
@@ -4672,11 +4747,11 @@
       "name": "Krea"
      },
      "openWeights": false,
-     "sizeValue": 17151,
+     "sizeValue": 17497,
      "values": {
-      "quality": 1026.04,
+      "quality": 1026.34,
       "price": 60,
-      "appearances": 17151,
+      "appearances": 17497,
       "uncertainty": 7
      }
     },
@@ -4689,11 +4764,11 @@
       "name": "Microsoft AI"
      },
      "openWeights": false,
-     "sizeValue": 15111,
+     "sizeValue": 15667,
      "values": {
-      "quality": 1099.59,
+      "quality": 1098.85,
       "price": 108.544,
-      "appearances": 15111,
+      "appearances": 15667,
       "uncertainty": 7
      }
     },
@@ -4708,7 +4783,7 @@
      "openWeights": true,
      "sizeValue": 1914,
      "values": {
-      "quality": 873.73,
+      "quality": 874.05,
       "price": 24,
       "appearances": 1914,
       "uncertainty": 10
@@ -4723,11 +4798,11 @@
       "name": "Alibaba"
      },
      "openWeights": false,
-     "sizeValue": 6598,
+     "sizeValue": 6730,
      "values": {
-      "quality": 1088.41,
+      "quality": 1087.49,
       "price": 40,
-      "appearances": 6598,
+      "appearances": 6730,
       "uncertainty": 9
      }
     },
@@ -4740,11 +4815,11 @@
       "name": "Bytedance"
      },
      "openWeights": false,
-     "sizeValue": 5453,
+     "sizeValue": 5457,
      "values": {
-      "quality": 913.18,
+      "quality": 912.69,
       "price": 30,
-      "appearances": 5453,
+      "appearances": 5457,
       "uncertainty": 7
      }
     },
@@ -4757,11 +4832,11 @@
       "name": "ImagineArt"
      },
      "openWeights": false,
-     "sizeValue": 9589,
+     "sizeValue": 9598,
      "values": {
-      "quality": 956.34,
+      "quality": 956.57,
       "price": 30,
-      "appearances": 9589,
+      "appearances": 9598,
       "uncertainty": 7
      }
     },
@@ -4774,11 +4849,11 @@
       "name": "Alibaba"
      },
      "openWeights": false,
-     "sizeValue": 4251,
+     "sizeValue": 4272,
      "values": {
-      "quality": 962.62,
+      "quality": 963.75,
       "price": 35,
-      "appearances": 4251,
+      "appearances": 4272,
       "uncertainty": 8
      }
     },
@@ -4791,12 +4866,12 @@
       "name": "Microsoft AI"
      },
      "openWeights": false,
-     "sizeValue": 9665,
+     "sizeValue": 10205,
      "values": {
-      "quality": 1151.05,
+      "quality": 1151.37,
       "price": 38.9,
-      "appearances": 9665,
-      "uncertainty": 10
+      "appearances": 10205,
+      "uncertainty": 9
      }
     },
     {
@@ -4810,7 +4885,7 @@
      "openWeights": false,
      "sizeValue": 13745,
      "values": {
-      "quality": 542.9,
+      "quality": 543.21,
       "price": 20,
       "appearances": 13745,
       "uncertainty": 11
@@ -4825,11 +4900,11 @@
       "name": "HiDream"
      },
      "openWeights": true,
-     "sizeValue": 11751,
+     "sizeValue": 11775,
      "values": {
-      "quality": 981.26,
+      "quality": 981.89,
       "price": 40,
-      "appearances": 11751,
+      "appearances": 11775,
       "uncertainty": 8
      }
     },
@@ -4842,11 +4917,11 @@
       "name": "Z AI"
      },
      "openWeights": true,
-     "sizeValue": 5345,
+     "sizeValue": 5361,
      "values": {
-      "quality": 890.62,
+      "quality": 890.59,
       "price": 50,
-      "appearances": 5345,
+      "appearances": 5361,
       "uncertainty": 7
      }
     },
@@ -4861,7 +4936,7 @@
      "openWeights": false,
      "sizeValue": 6804,
      "values": {
-      "quality": 798.93,
+      "quality": 799.23,
       "price": 5,
       "appearances": 6804,
       "uncertainty": 7
@@ -4878,7 +4953,7 @@
      "openWeights": true,
      "sizeValue": 5032,
      "values": {
-      "quality": 828.77,
+      "quality": 829.08,
       "price": 40,
       "appearances": 5032,
       "uncertainty": 9
@@ -4893,11 +4968,11 @@
       "name": "Black Forest Labs"
      },
      "openWeights": true,
-     "sizeValue": 6884,
+     "sizeValue": 6939,
      "values": {
-      "quality": 862.57,
+      "quality": 862.77,
       "price": 14,
-      "appearances": 6884,
+      "appearances": 6939,
       "uncertainty": 9
      }
     },
@@ -4912,7 +4987,7 @@
      "openWeights": false,
      "sizeValue": 2959,
      "values": {
-      "quality": 842.99,
+      "quality": 843.3,
       "price": 76.24,
       "appearances": 2959,
       "uncertainty": 9
@@ -4927,11 +5002,11 @@
       "name": "Black Forest Labs"
      },
      "openWeights": false,
-     "sizeValue": 12510,
+     "sizeValue": 12849,
      "values": {
-      "quality": 1019.75,
+      "quality": 1019.4,
       "price": 70,
-      "appearances": 12510,
+      "appearances": 12849,
       "uncertainty": 8
      }
     },
@@ -4944,11 +5019,11 @@
       "name": "Google"
      },
      "openWeights": false,
-     "sizeValue": 17591,
+     "sizeValue": 18152,
      "values": {
-      "quality": 1102.22,
+      "quality": 1102.32,
       "price": 134,
-      "appearances": 17591,
+      "appearances": 18152,
       "uncertainty": 8
      }
     },
@@ -4961,11 +5036,11 @@
       "name": "Tencent"
      },
      "openWeights": true,
-     "sizeValue": 5602,
+     "sizeValue": 5632,
      "values": {
-      "quality": 995.61,
+      "quality": 995.91,
       "price": null,
-      "appearances": 5602,
+      "appearances": 5632,
       "uncertainty": 9
      }
     },
@@ -4980,7 +5055,7 @@
      "openWeights": true,
      "sizeValue": 2186,
      "values": {
-      "quality": 999.18,
+      "quality": 999.46,
       "price": 20,
       "appearances": 2186,
       "uncertainty": 10
@@ -4995,11 +5070,11 @@
       "name": "Luma Labs"
      },
      "openWeights": false,
-     "sizeValue": 5750,
+     "sizeValue": 5782,
      "values": {
-      "quality": 991.6,
+      "quality": 992.59,
       "price": 40.4,
-      "appearances": 5750,
+      "appearances": 5782,
       "uncertainty": 9
      }
     },
@@ -5014,7 +5089,7 @@
      "openWeights": true,
      "sizeValue": 5057,
      "values": {
-      "quality": 863.57,
+      "quality": 863.86,
       "price": 26,
       "appearances": 5057,
       "uncertainty": 7
@@ -5031,7 +5106,7 @@
      "openWeights": true,
      "sizeValue": 9971,
      "values": {
-      "quality": 720.36,
+      "quality": 720.67,
       "price": 35,
       "appearances": 9971,
       "uncertainty": 9
@@ -5046,11 +5121,11 @@
       "name": "Baidu"
      },
      "openWeights": true,
-     "sizeValue": 12180,
+     "sizeValue": 12195,
      "values": {
-      "quality": 912.38,
+      "quality": 912.76,
       "price": 31.46,
-      "appearances": 12180,
+      "appearances": 12195,
       "uncertainty": 8
      }
     },
@@ -5065,7 +5140,7 @@
      "openWeights": false,
      "sizeValue": 3133,
      "values": {
-      "quality": 791.84,
+      "quality": 792.16,
       "price": 80,
       "appearances": 3133,
       "uncertainty": 9
@@ -5082,7 +5157,7 @@
      "openWeights": true,
      "sizeValue": 13596,
      "values": {
-      "quality": 548.76,
+      "quality": 549.07,
       "price": 3.9,
       "appearances": 13596,
       "uncertainty": 11
@@ -5097,11 +5172,11 @@
       "name": "Fal"
      },
      "openWeights": true,
-     "sizeValue": 5559,
+     "sizeValue": 5589,
      "values": {
-      "quality": 983.09,
+      "quality": 984.05,
       "price": 7.5,
-      "appearances": 5559,
+      "appearances": 5589,
       "uncertainty": 9
      }
     },
@@ -5116,7 +5191,7 @@
      "openWeights": false,
      "sizeValue": 1924,
      "values": {
-      "quality": 797.78,
+      "quality": 798.06,
       "price": 3,
       "appearances": 1924,
       "uncertainty": 11
@@ -5131,12 +5206,12 @@
       "name": "SpaceXAI"
      },
      "openWeights": false,
-     "sizeValue": 7352,
+     "sizeValue": 7867,
      "values": {
-      "quality": 1155.66,
+      "quality": 1155.4,
       "price": 60,
-      "appearances": 7352,
-      "uncertainty": 11
+      "appearances": 7867,
+      "uncertainty": 10
      }
     },
     {
@@ -5150,7 +5225,7 @@
      "openWeights": false,
      "sizeValue": 1868,
      "values": {
-      "quality": 878.65,
+      "quality": 878.96,
       "price": null,
       "appearances": 1868,
       "uncertainty": 10
@@ -5165,11 +5240,11 @@
       "name": "Alibaba"
      },
      "openWeights": false,
-     "sizeValue": 5603,
+     "sizeValue": 5630,
      "values": {
-      "quality": 989.48,
+      "quality": 989.15,
       "price": 26,
-      "appearances": 5603,
+      "appearances": 5630,
       "uncertainty": 9
      }
     },
@@ -5184,7 +5259,7 @@
      "openWeights": false,
      "sizeValue": 2550,
      "values": {
-      "quality": 924.05,
+      "quality": 924.37,
       "price": 18,
       "appearances": 2550,
       "uncertainty": 9
@@ -5201,7 +5276,7 @@
      "openWeights": false,
      "sizeValue": 11608,
      "values": {
-      "quality": 775.02,
+      "quality": 775.33,
       "price": 80,
       "appearances": 11608,
       "uncertainty": 8
@@ -5216,11 +5291,11 @@
       "name": "Google"
      },
      "openWeights": false,
-     "sizeValue": 17590,
+     "sizeValue": 18142,
      "values": {
-      "quality": 1095.32,
+      "quality": 1095.65,
       "price": 33.6,
-      "appearances": 17590,
+      "appearances": 18142,
       "uncertainty": 8
      }
     },
@@ -5235,7 +5310,7 @@
      "openWeights": false,
      "sizeValue": 3989,
      "values": {
-      "quality": 897.01,
+      "quality": 897.28,
       "price": 60,
       "appearances": 3989,
       "uncertainty": 7
@@ -5250,11 +5325,11 @@
       "name": "Alibaba"
      },
      "openWeights": false,
-     "sizeValue": 5130,
+     "sizeValue": 5142,
      "values": {
-      "quality": 878.11,
+      "quality": 878.7,
       "price": 10,
-      "appearances": 5130,
+      "appearances": 5142,
       "uncertainty": 7
      }
     },
@@ -5267,11 +5342,11 @@
       "name": "Black Forest Labs"
      },
      "openWeights": true,
-     "sizeValue": 3489,
+     "sizeValue": 3490,
      "values": {
-      "quality": 845.07,
+      "quality": 847,
       "price": 25,
-      "appearances": 3489,
+      "appearances": 3490,
       "uncertainty": 9
      }
     },
@@ -5284,11 +5359,11 @@
       "name": "Ideogram"
      },
      "openWeights": false,
-     "sizeValue": 2433,
+     "sizeValue": 2479,
      "values": {
-      "quality": 1015.78,
+      "quality": 1015.88,
       "price": 100,
-      "appearances": 2433,
+      "appearances": 2479,
       "uncertainty": 11
      }
     },
@@ -5303,7 +5378,7 @@
      "openWeights": false,
      "sizeValue": 2939,
      "values": {
-      "quality": 819.87,
+      "quality": 820.19,
       "price": null,
       "appearances": 2939,
       "uncertainty": 9
@@ -5318,11 +5393,11 @@
       "name": "Tencent"
      },
      "openWeights": false,
-     "sizeValue": 2148,
+     "sizeValue": 2160,
      "values": {
-      "quality": 983.31,
+      "quality": 983.72,
       "price": 32,
-      "appearances": 2148,
+      "appearances": 2160,
       "uncertainty": 11
      }
     },
@@ -5337,7 +5412,7 @@
      "openWeights": false,
      "sizeValue": 3982,
      "values": {
-      "quality": 864.52,
+      "quality": 864.81,
       "price": null,
       "appearances": 3982,
       "uncertainty": 9
@@ -5354,7 +5429,7 @@
      "openWeights": false,
      "sizeValue": 2178,
      "values": {
-      "quality": 861.54,
+      "quality": 861.86,
       "price": 10,
       "appearances": 2178,
       "uncertainty": 9
@@ -5371,7 +5446,7 @@
      "openWeights": false,
      "sizeValue": 5615,
      "values": {
-      "quality": 913.13,
+      "quality": 913.41,
       "price": 86.71,
       "appearances": 5615,
       "uncertainty": 7
@@ -5388,7 +5463,7 @@
      "openWeights": true,
      "sizeValue": 2766,
      "values": {
-      "quality": 902.61,
+      "quality": 902.9,
       "price": 11,
       "appearances": 2766,
       "uncertainty": 9
@@ -5405,7 +5480,7 @@
      "openWeights": false,
      "sizeValue": 8063,
      "values": {
-      "quality": 773.55,
+      "quality": 773.86,
       "price": 22,
       "appearances": 8063,
       "uncertainty": 7
@@ -5422,7 +5497,7 @@
      "openWeights": true,
      "sizeValue": 4438,
      "values": {
-      "quality": 781.63,
+      "quality": 781.94,
       "price": 75,
       "appearances": 4438,
       "uncertainty": 9
@@ -5437,12 +5512,12 @@
       "name": "Black Forest Labs"
      },
      "openWeights": false,
-     "sizeValue": 5587,
+     "sizeValue": 5741,
      "values": {
-      "quality": 1117.31,
+      "quality": 1115.8,
       "price": 48,
-      "appearances": 5587,
-      "uncertainty": 11
+      "appearances": 5741,
+      "uncertainty": 10
      }
     },
     {
@@ -5454,11 +5529,11 @@
       "name": "Bria"
      },
      "openWeights": true,
-     "sizeValue": 3247,
+     "sizeValue": 3248,
      "values": {
-      "quality": 826.04,
+      "quality": 825.84,
       "price": 20,
-      "appearances": 3247,
+      "appearances": 3248,
       "uncertainty": 11
      }
     },
@@ -5471,11 +5546,11 @@
       "name": "OpenAI"
      },
      "openWeights": false,
-     "sizeValue": 15522,
+     "sizeValue": 15601,
      "values": {
-      "quality": 1172.43,
+      "quality": 1171.83,
       "price": 211,
-      "appearances": 15522,
+      "appearances": 15601,
       "uncertainty": 8
      }
     },
@@ -5488,11 +5563,11 @@
       "name": "OpenAI"
      },
      "openWeights": false,
-     "sizeValue": 5068,
+     "sizeValue": 5072,
      "values": {
-      "quality": 918.41,
+      "quality": 919.93,
       "price": 11,
-      "appearances": 5068,
+      "appearances": 5072,
       "uncertainty": 7
      }
     },
@@ -5505,11 +5580,11 @@
       "name": "OpenAI"
      },
      "openWeights": false,
-     "sizeValue": 14432,
+     "sizeValue": 14823,
      "values": {
-      "quality": 1197.57,
+      "quality": 1198.36,
       "price": 210.72,
-      "appearances": 14432,
+      "appearances": 14823,
       "uncertainty": 9
      }
     },
@@ -5522,11 +5597,11 @@
       "name": "Pruna AI"
      },
      "openWeights": false,
-     "sizeValue": 3370,
+     "sizeValue": 3398,
      "values": {
-      "quality": 997.64,
+      "quality": 998.37,
       "price": 15,
-      "appearances": 3370,
+      "appearances": 3398,
       "uncertainty": 10
      }
     },
@@ -5539,11 +5614,11 @@
       "name": "HiDream"
      },
      "openWeights": true,
-     "sizeValue": 4080,
+     "sizeValue": 4095,
      "values": {
-      "quality": 874.9,
+      "quality": 875.14,
       "price": 5,
-      "appearances": 4080,
+      "appearances": 4095,
       "uncertainty": 8
      }
     },
@@ -5556,11 +5631,11 @@
       "name": "Bria"
      },
      "openWeights": true,
-     "sizeValue": 4804,
+     "sizeValue": 4805,
      "values": {
-      "quality": 881.33,
+      "quality": 881.31,
       "price": 40,
-      "appearances": 4804,
+      "appearances": 4805,
       "uncertainty": 7
      }
     },
@@ -5575,7 +5650,7 @@
      "openWeights": true,
      "sizeValue": 4696,
      "values": {
-      "quality": 533.05,
+      "quality": 533.37,
       "price": null,
       "appearances": 4696,
       "uncertainty": 12
@@ -5592,7 +5667,7 @@
      "openWeights": false,
      "sizeValue": 6363,
      "values": {
-      "quality": 834.67,
+      "quality": 834.96,
       "price": 76.24,
       "appearances": 6363,
       "uncertainty": 7
@@ -5607,11 +5682,11 @@
       "name": "SpaceXAI"
      },
      "openWeights": false,
-     "sizeValue": 19506,
+     "sizeValue": 19904,
      "values": {
-      "quality": 1045.86,
+      "quality": 1045.75,
       "price": 50,
-      "appearances": 19506,
+      "appearances": 19904,
       "uncertainty": 7
      }
     },
@@ -5624,11 +5699,11 @@
       "name": "InclusionAI"
      },
      "openWeights": true,
-     "sizeValue": 21708,
+     "sizeValue": 21732,
      "values": {
-      "quality": 997.49,
+      "quality": 998.51,
       "price": 30,
-      "appearances": 21708,
+      "appearances": 21732,
       "uncertainty": 7
      }
     },
@@ -5641,11 +5716,11 @@
       "name": "OpenAI"
      },
      "openWeights": false,
-     "sizeValue": 15144,
+     "sizeValue": 15265,
      "values": {
-      "quality": 1107.38,
+      "quality": 1107.63,
       "price": 133,
-      "appearances": 15144,
+      "appearances": 15265,
       "uncertainty": 8
      }
     },
@@ -5658,12 +5733,12 @@
       "name": "Recraft"
      },
      "openWeights": false,
-     "sizeValue": 6440,
+     "sizeValue": 6474,
      "values": {
-      "quality": 989.27,
+      "quality": 990.55,
       "price": 35,
-      "appearances": 6440,
-      "uncertainty": 9
+      "appearances": 6474,
+      "uncertainty": 8
      }
     },
     {
@@ -5677,7 +5752,7 @@
      "openWeights": false,
      "sizeValue": 3739,
      "values": {
-      "quality": 959.43,
+      "quality": 959.74,
       "price": 30,
       "appearances": 3739,
       "uncertainty": 9
@@ -5692,11 +5767,11 @@
       "name": "Luma Labs"
      },
      "openWeights": false,
-     "sizeValue": 5784,
+     "sizeValue": 5828,
      "values": {
-      "quality": 1015.06,
+      "quality": 1014.33,
       "price": 100,
-      "appearances": 5784,
+      "appearances": 5828,
       "uncertainty": 9
      }
     },
@@ -5709,11 +5784,11 @@
       "name": "Fal"
      },
      "openWeights": true,
-     "sizeValue": 5490,
+     "sizeValue": 5515,
      "values": {
-      "quality": 968.75,
+      "quality": 968.52,
       "price": 10.5,
-      "appearances": 5490,
+      "appearances": 5515,
       "uncertainty": 9
      }
     },
@@ -5728,7 +5803,7 @@
      "openWeights": true,
      "sizeValue": 11732,
      "values": {
-      "quality": 776.63,
+      "quality": 776.95,
       "price": 80,
       "appearances": 11732,
       "uncertainty": 8
@@ -5743,11 +5818,11 @@
       "name": "Alibaba"
      },
      "openWeights": true,
-     "sizeValue": 5085,
+     "sizeValue": 5087,
      "values": {
-      "quality": 889.71,
+      "quality": 889.41,
       "price": 20,
-      "appearances": 5085,
+      "appearances": 5087,
       "uncertainty": 7
      }
     },
@@ -5762,7 +5837,7 @@
      "openWeights": true,
      "sizeValue": 10306,
      "values": {
-      "quality": 971.37,
+      "quality": 971.59,
       "price": null,
       "appearances": 10306,
       "uncertainty": 8
@@ -5779,7 +5854,7 @@
      "openWeights": true,
      "sizeValue": 10388,
      "values": {
-      "quality": 455.75,
+      "quality": 456.11,
       "price": 44,
       "appearances": 10388,
       "uncertainty": 13
@@ -5796,7 +5871,7 @@
      "openWeights": false,
      "sizeValue": 2937,
      "values": {
-      "quality": 961.46,
+      "quality": 961.76,
       "price": 21,
       "appearances": 2937,
       "uncertainty": 9
@@ -5813,7 +5888,7 @@
      "openWeights": false,
      "sizeValue": 4351,
      "values": {
-      "quality": 894.69,
+      "quality": 894.96,
       "price": 60,
       "appearances": 4351,
       "uncertainty": 7
@@ -5828,11 +5903,11 @@
       "name": "Tencent"
      },
      "openWeights": false,
-     "sizeValue": 5498,
+     "sizeValue": 5525,
      "values": {
-      "quality": 974.69,
+      "quality": 976.02,
       "price": 24,
-      "appearances": 5498,
+      "appearances": 5525,
       "uncertainty": 9
      }
     },
@@ -5845,11 +5920,11 @@
       "name": "OpenAI"
      },
      "openWeights": false,
-     "sizeValue": 13808,
+     "sizeValue": 14208,
      "values": {
-      "quality": 1190.85,
+      "quality": 1190.81,
       "price": 210.72,
-      "appearances": 13808,
+      "appearances": 14208,
       "uncertainty": 9
      }
     },
@@ -5864,7 +5939,7 @@
      "openWeights": false,
      "sizeValue": 7815,
      "values": {
-      "quality": 883.27,
+      "quality": 883.57,
       "price": 80,
       "appearances": 7815,
       "uncertainty": 8
@@ -5879,11 +5954,11 @@
       "name": "KlingAI"
      },
      "openWeights": false,
-     "sizeValue": 4449,
+     "sizeValue": 4472,
      "values": {
-      "quality": 916.03,
+      "quality": 916.8,
       "price": 28,
-      "appearances": 4449,
+      "appearances": 4472,
       "uncertainty": 7
      }
     },
@@ -5898,7 +5973,7 @@
      "openWeights": true,
      "sizeValue": 5129,
      "values": {
-      "quality": 839.83,
+      "quality": 840.14,
       "price": 65,
       "appearances": 5129,
       "uncertainty": 9
@@ -5915,7 +5990,7 @@
      "openWeights": false,
      "sizeValue": 2093,
      "values": {
-      "quality": 820,
+      "quality": 820.33,
       "price": 40,
       "appearances": 2093,
       "uncertainty": 10
@@ -5932,7 +6007,7 @@
      "openWeights": true,
      "sizeValue": 4462,
      "values": {
-      "quality": 727.17,
+      "quality": 727.47,
       "price": 150,
       "appearances": 4462,
       "uncertainty": 9
@@ -5949,7 +6024,7 @@
      "openWeights": false,
      "sizeValue": 7889,
      "values": {
-      "quality": 890.87,
+      "quality": 891.17,
       "price": null,
       "appearances": 7889,
       "uncertainty": 8
@@ -5964,12 +6039,12 @@
       "name": "Krea"
      },
      "openWeights": false,
-     "sizeValue": 6383,
+     "sizeValue": 6430,
      "values": {
-      "quality": 1022.41,
+      "quality": 1022.75,
       "price": 15,
-      "appearances": 6383,
-      "uncertainty": 9
+      "appearances": 6430,
+      "uncertainty": 8
      }
     },
     {
@@ -5983,7 +6058,7 @@
      "openWeights": false,
      "sizeValue": 9626,
      "values": {
-      "quality": 731.46,
+      "quality": 731.77,
       "price": 10,
       "appearances": 9626,
       "uncertainty": 9
@@ -5998,11 +6073,11 @@
       "name": "Google"
      },
      "openWeights": false,
-     "sizeValue": 6055,
+     "sizeValue": 6166,
      "values": {
-      "quality": 1160.06,
+      "quality": 1160.29,
       "price": 33.6,
-      "appearances": 6055,
+      "appearances": 6166,
       "uncertainty": 10
      }
     },
@@ -6017,7 +6092,7 @@
      "openWeights": false,
      "sizeValue": 11179,
      "values": {
-      "quality": 838.46,
+      "quality": 838.77,
       "price": null,
       "appearances": 11179,
       "uncertainty": 8
@@ -6032,11 +6107,11 @@
       "name": "Black Forest Labs"
      },
      "openWeights": false,
-     "sizeValue": 5367,
+     "sizeValue": 5370,
      "values": {
-      "quality": 932.5,
+      "quality": 932.97,
       "price": 80,
-      "appearances": 5367,
+      "appearances": 5370,
       "uncertainty": 9
      }
     },
@@ -6051,7 +6126,7 @@
      "openWeights": false,
      "sizeValue": 6725,
      "values": {
-      "quality": 870.56,
+      "quality": 870.87,
       "price": 50,
       "appearances": 6725,
       "uncertainty": 8
@@ -6068,10 +6143,10 @@
      "openWeights": false,
      "sizeValue": 5104,
      "values": {
-      "quality": 823.74,
+      "quality": 824.03,
       "price": 19.43,
       "appearances": 5104,
-      "uncertainty": 8
+      "uncertainty": 7
      }
     },
     {
@@ -6085,7 +6160,7 @@
      "openWeights": true,
      "sizeValue": 2658,
      "values": {
-      "quality": 705.35,
+      "quality": 705.67,
       "price": 40,
       "appearances": 2658,
       "uncertainty": 10
@@ -6100,11 +6175,11 @@
       "name": "Luma Labs"
      },
      "openWeights": false,
-     "sizeValue": 6003,
+     "sizeValue": 6005,
      "values": {
-      "quality": 885.06,
+      "quality": 885,
       "price": 19,
-      "appearances": 6003,
+      "appearances": 6005,
       "uncertainty": 7
      }
     },
@@ -6119,7 +6194,7 @@
      "openWeights": false,
      "sizeValue": 2553,
      "values": {
-      "quality": 1009.44,
+      "quality": 1009.73,
       "price": 35,
       "appearances": 2553,
       "uncertainty": 9
@@ -6134,11 +6209,11 @@
       "name": "SpaceXAI"
      },
      "openWeights": false,
-     "sizeValue": 6684,
+     "sizeValue": 6730,
      "values": {
-      "quality": 1019.26,
+      "quality": 1019.58,
       "price": 20,
-      "appearances": 6684,
+      "appearances": 6730,
       "uncertainty": 8
      }
     },
@@ -6151,11 +6226,11 @@
       "name": "Alibaba"
      },
      "openWeights": false,
-     "sizeValue": 5077,
+     "sizeValue": 5094,
      "values": {
-      "quality": 937.79,
+      "quality": 937.63,
       "price": 30,
-      "appearances": 5077,
+      "appearances": 5094,
       "uncertainty": 7
      }
     },
@@ -6170,7 +6245,7 @@
      "openWeights": false,
      "sizeValue": 10379,
      "values": {
-      "quality": 707.84,
+      "quality": 708.15,
       "price": 10,
       "appearances": 10379,
       "uncertainty": 9
@@ -6185,11 +6260,11 @@
       "name": "Pruna AI"
      },
      "openWeights": false,
-     "sizeValue": 4396,
+     "sizeValue": 4397,
      "values": {
-      "quality": 885.08,
+      "quality": 886.54,
       "price": 5,
-      "appearances": 4396,
+      "appearances": 4397,
       "uncertainty": 7
      }
     },
@@ -6204,7 +6279,7 @@
      "openWeights": false,
      "sizeValue": 10927,
      "values": {
-      "quality": 719.32,
+      "quality": 719.63,
       "price": 9,
       "appearances": 10927,
       "uncertainty": 9
@@ -6219,11 +6294,11 @@
       "name": "Alibaba"
      },
      "openWeights": false,
-     "sizeValue": 5464,
+     "sizeValue": 5500,
      "values": {
-      "quality": 1025.76,
+      "quality": 1025.15,
       "price": 30,
-      "appearances": 5464,
+      "appearances": 5500,
       "uncertainty": 9
      }
     },
@@ -6236,11 +6311,11 @@
       "name": "ByteDance Seed"
      },
      "openWeights": false,
-     "sizeValue": 13184,
+     "sizeValue": 13325,
      "values": {
-      "quality": 1080.51,
+      "quality": 1081.54,
       "price": 90,
-      "appearances": 13184,
+      "appearances": 13325,
       "uncertainty": 8
      }
     },
@@ -6253,11 +6328,11 @@
       "name": "Alibaba"
      },
      "openWeights": false,
-     "sizeValue": 5712,
+     "sizeValue": 5761,
      "values": {
-      "quality": 1015.82,
+      "quality": 1016.5,
       "price": 30,
-      "appearances": 5712,
+      "appearances": 5761,
       "uncertainty": 9
      }
     },
@@ -6270,11 +6345,11 @@
       "name": "ImagineArt"
      },
      "openWeights": false,
-     "sizeValue": 5536,
+     "sizeValue": 5566,
      "values": {
-      "quality": 971.22,
+      "quality": 970.55,
       "price": 30,
-      "appearances": 5536,
+      "appearances": 5566,
       "uncertainty": 9
      }
     },
@@ -6287,11 +6362,11 @@
       "name": "Alibaba"
      },
      "openWeights": true,
-     "sizeValue": 8880,
+     "sizeValue": 8991,
      "values": {
-      "quality": 941.07,
+      "quality": 940.96,
       "price": 5,
-      "appearances": 8880,
+      "appearances": 8991,
       "uncertainty": 8
      }
     },
@@ -6304,11 +6379,11 @@
       "name": "Alibaba"
      },
      "openWeights": false,
-     "sizeValue": 5585,
+     "sizeValue": 5600,
      "values": {
-      "quality": 984.59,
+      "quality": 983.42,
       "price": 75,
-      "appearances": 5585,
+      "appearances": 5600,
       "uncertainty": 9
      }
     },
@@ -6321,12 +6396,12 @@
       "name": "Pruna AI"
      },
      "openWeights": false,
-     "sizeValue": 3669,
+     "sizeValue": 3691,
      "values": {
-      "quality": 967.05,
+      "quality": 967.96,
       "price": 7.5,
-      "appearances": 3669,
-      "uncertainty": 10
+      "appearances": 3691,
+      "uncertainty": 9
      }
     },
     {
@@ -6338,11 +6413,11 @@
       "name": "Pruna AI"
      },
      "openWeights": false,
-     "sizeValue": 3670,
+     "sizeValue": 3689,
      "values": {
-      "quality": 973.86,
+      "quality": 973.57,
       "price": 10,
-      "appearances": 3670,
+      "appearances": 3689,
       "uncertainty": 10
      }
     },
@@ -6355,11 +6430,11 @@
       "name": "Black Forest Labs"
      },
      "openWeights": true,
-     "sizeValue": 11521,
+     "sizeValue": 11539,
      "values": {
-      "quality": 802.5,
+      "quality": 802.62,
       "price": 3,
-      "appearances": 11521,
+      "appearances": 11539,
       "uncertainty": 7
      }
     },
@@ -6372,11 +6447,11 @@
       "name": "Recraft"
      },
      "openWeights": false,
-     "sizeValue": 5823,
+     "sizeValue": 5848,
      "values": {
-      "quality": 985.89,
+      "quality": 988.08,
       "price": 250,
-      "appearances": 5823,
+      "appearances": 5848,
       "uncertainty": 9
      }
     },
@@ -6389,11 +6464,11 @@
       "name": "ByteDance Seed"
      },
      "openWeights": false,
-     "sizeValue": 5755,
+     "sizeValue": 5794,
      "values": {
-      "quality": 1012.27,
+      "quality": 1011.84,
       "price": 35,
-      "appearances": 5755,
+      "appearances": 5794,
       "uncertainty": 9
      }
     },
@@ -6408,7 +6483,7 @@
      "openWeights": false,
      "sizeValue": 11446,
      "values": {
-      "quality": 777.1,
+      "quality": 777.41,
       "price": 40,
       "appearances": 11446,
       "uncertainty": 8
@@ -6423,11 +6498,11 @@
       "name": "Microsoft AI"
      },
      "openWeights": false,
-     "sizeValue": 6135,
+     "sizeValue": 6281,
      "values": {
-      "quality": 1105.42,
+      "quality": 1106.97,
       "price": 19.5,
-      "appearances": 6135,
+      "appearances": 6281,
       "uncertainty": 9
      }
     },
@@ -6440,11 +6515,11 @@
       "name": "Fal"
      },
      "openWeights": true,
-     "sizeValue": 6703,
+     "sizeValue": 6718,
      "values": {
-      "quality": 997.57,
+      "quality": 996.88,
       "price": 8,
-      "appearances": 6703,
+      "appearances": 6718,
       "uncertainty": 8
      }
     },
@@ -6457,11 +6532,11 @@
       "name": "Alibaba"
      },
      "openWeights": true,
-     "sizeValue": 5489,
+     "sizeValue": 5537,
      "values": {
-      "quality": 1034.82,
+      "quality": 1035.99,
       "price": null,
-      "appearances": 5489,
+      "appearances": 5537,
       "uncertainty": 9
      }
     },
@@ -6474,11 +6549,11 @@
       "name": "Black Forest Labs"
      },
      "openWeights": true,
-     "sizeValue": 20731,
+     "sizeValue": 21003,
      "values": {
       "quality": 1000,
       "price": 12,
-      "appearances": 20731,
+      "appearances": 21003,
       "uncertainty": null
      }
     },
@@ -6493,7 +6568,7 @@
      "openWeights": false,
      "sizeValue": 3178,
      "values": {
-      "quality": 944.92,
+      "quality": 945.23,
       "price": 35,
       "appearances": 3178,
       "uncertainty": 9
@@ -6508,11 +6583,11 @@
       "name": "Black Forest Labs"
      },
      "openWeights": false,
-     "sizeValue": 6355,
+     "sizeValue": 6384,
      "values": {
-      "quality": 1026.59,
+      "quality": 1028.07,
       "price": 60,
-      "appearances": 6355,
+      "appearances": 6384,
       "uncertainty": 9
      }
     },
@@ -6525,11 +6600,11 @@
       "name": "Microsoft AI"
      },
      "openWeights": false,
-     "sizeValue": 6210,
+     "sizeValue": 6267,
      "values": {
-      "quality": 1032.47,
+      "quality": 1032.25,
       "price": 19.968,
-      "appearances": 6210,
+      "appearances": 6267,
       "uncertainty": 9
      }
     },
@@ -6544,7 +6619,7 @@
      "openWeights": true,
      "sizeValue": 11478,
      "values": {
-      "quality": 719.74,
+      "quality": 720.05,
       "price": 1.9,
       "appearances": 11478,
       "uncertainty": 9
@@ -6559,11 +6634,11 @@
       "name": "Pruna AI"
      },
      "openWeights": false,
-     "sizeValue": 3198,
+     "sizeValue": 3216,
      "values": {
-      "quality": 914.45,
+      "quality": 914.01,
       "price": 3,
-      "appearances": 3198,
+      "appearances": 3216,
       "uncertainty": 10
      }
     },
@@ -6576,11 +6651,11 @@
       "name": "Recraft"
      },
      "openWeights": false,
-     "sizeValue": 7953,
+     "sizeValue": 8007,
      "values": {
-      "quality": 1021.75,
+      "quality": 1022.06,
       "price": 35,
-      "appearances": 7953,
+      "appearances": 8007,
       "uncertainty": 8
      }
     },
@@ -6593,11 +6668,11 @@
       "name": "Meituan"
      },
      "openWeights": true,
-     "sizeValue": 3847,
+     "sizeValue": 3848,
      "values": {
-      "quality": 860.77,
+      "quality": 860.74,
       "price": 130,
-      "appearances": 3847,
+      "appearances": 3848,
       "uncertainty": 8
      }
     },
@@ -6610,11 +6685,11 @@
       "name": "ByteDance Seed"
      },
      "openWeights": false,
-     "sizeValue": 5728,
+     "sizeValue": 5766,
      "values": {
-      "quality": 1030.46,
+      "quality": 1031.08,
       "price": 30,
-      "appearances": 5728,
+      "appearances": 5766,
       "uncertainty": 9
      }
     },
@@ -6627,11 +6702,11 @@
       "name": "Google"
      },
      "openWeights": false,
-     "sizeValue": 5372,
+     "sizeValue": 5388,
      "values": {
-      "quality": 984.75,
+      "quality": 984.09,
       "price": 39,
-      "appearances": 5372,
+      "appearances": 5388,
       "uncertainty": 9
      }
     },
@@ -6646,7 +6721,7 @@
      "openWeights": false,
      "sizeValue": 11523,
      "values": {
-      "quality": 874.74,
+      "quality": 875.04,
       "price": null,
       "appearances": 11523,
       "uncertainty": 8
@@ -6663,7 +6738,7 @@
      "openWeights": false,
      "sizeValue": 2612,
      "values": {
-      "quality": 998.11,
+      "quality": 998.39,
       "price": 60,
       "appearances": 2612,
       "uncertainty": 10
@@ -6680,7 +6755,7 @@
      "openWeights": false,
      "sizeValue": 3364,
      "values": {
-      "quality": 924.46,
+      "quality": 924.75,
       "price": 25,
       "appearances": 3364,
       "uncertainty": 9
@@ -6697,7 +6772,7 @@
      "openWeights": false,
      "sizeValue": 7458,
      "values": {
-      "quality": 868.81,
+      "quality": 869.1,
       "price": 40,
       "appearances": 7458,
       "uncertainty": 7
@@ -6712,11 +6787,11 @@
       "name": "Black Forest Labs"
      },
      "openWeights": false,
-     "sizeValue": 7438,
+     "sizeValue": 7439,
      "values": {
-      "quality": 891.36,
+      "quality": 891.37,
       "price": 40,
-      "appearances": 7438,
+      "appearances": 7439,
       "uncertainty": 7
      }
     },
@@ -6731,7 +6806,7 @@
      "openWeights": true,
      "sizeValue": 2406,
      "values": {
-      "quality": 874.58,
+      "quality": 874.89,
       "price": 1.7,
       "appearances": 2406,
       "uncertainty": 9
@@ -6746,11 +6821,11 @@
       "name": "Ideogram"
      },
      "openWeights": true,
-     "sizeValue": 12370,
+     "sizeValue": 12403,
      "values": {
-      "quality": 1011.64,
+      "quality": 1011.8,
       "price": 100,
-      "appearances": 12370,
+      "appearances": 12403,
       "uncertainty": 7
      }
     },
@@ -6765,7 +6840,7 @@
      "openWeights": false,
      "sizeValue": 2146,
      "values": {
-      "quality": 941.34,
+      "quality": 941.65,
       "price": 40,
       "appearances": 2146,
       "uncertainty": 9
@@ -6782,7 +6857,7 @@
      "openWeights": false,
      "sizeValue": 4033,
      "values": {
-      "quality": 916.07,
+      "quality": 916.38,
       "price": 40,
       "appearances": 4033,
       "uncertainty": 9
@@ -6797,12 +6872,12 @@
       "name": "Pruna AI"
      },
      "openWeights": false,
-     "sizeValue": 2445,
+     "sizeValue": 2473,
      "values": {
-      "quality": 984.79,
+      "quality": 984.29,
       "price": 33,
-      "appearances": 2445,
-      "uncertainty": 11
+      "appearances": 2473,
+      "uncertainty": 10
      }
     },
     {
@@ -6814,11 +6889,11 @@
       "name": "Ideogram"
      },
      "openWeights": true,
-     "sizeValue": 11308,
+     "sizeValue": 11580,
      "values": {
-      "quality": 1004.06,
+      "quality": 1003.57,
       "price": 60,
-      "appearances": 11308,
+      "appearances": 11580,
       "uncertainty": 8
      }
     }
