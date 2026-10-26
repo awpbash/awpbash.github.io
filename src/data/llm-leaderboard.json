@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-24T08:13:14.261Z",
+ "generatedAt": "2026-10-26T09:03:54.360Z",
  "datasets": [
   {
    "id": "language",
@@ -26,9 +26,9 @@
       "tokenPrice": 0.15,
       "inputPrice": 0.1,
       "outputPrice": 0.3,
-      "speed": 113.084,
-      "latency": 19.0876,
-      "totalTime": 23.5091,
+      "speed": 114.145,
+      "latency": 18.9114,
+      "totalTime": 23.2918,
       "context": 1000000
      }
     },
@@ -51,9 +51,9 @@
       "tokenPrice": 0.125,
       "inputPrice": 0.1,
       "outputPrice": 0.2,
-      "speed": 130.854,
-      "latency": 3.22211,
-      "totalTime": 7.04317,
+      "speed": 141.306,
+      "latency": 3.69589,
+      "totalTime": 7.2343,
       "context": 65536
      }
     },
@@ -76,9 +76,9 @@
       "tokenPrice": 0.325,
       "inputPrice": 0.2,
       "outputPrice": 0.7,
-      "speed": 1541.35,
-      "latency": 0.556214,
-      "totalTime": 0.880605,
+      "speed": 1480.6,
+      "latency": 0.561171,
+      "totalTime": 0.898872,
       "context": 131072
      }
     },
@@ -101,9 +101,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 68.2485,
-      "latency": 209.811,
-      "totalTime": 217.138,
+      "speed": 70.0527,
+      "latency": 180.512,
+      "totalTime": 187.649,
       "context": 1000000
      }
     },
@@ -126,9 +126,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 58.6505,
-      "latency": 25.5482,
-      "totalTime": 34.0733,
+      "speed": 57.9974,
+      "latency": 17.9268,
+      "totalTime": 26.5479,
       "context": 1000000
      }
     },
@@ -151,9 +151,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 58.5316,
-      "latency": 0.976371,
-      "totalTime": 9.51877,
+      "speed": 56.395,
+      "latency": 1.72983,
+      "totalTime": 10.5959,
       "context": 1000000
      }
     },
@@ -176,9 +176,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 55.209,
-      "latency": 3.75648,
-      "totalTime": 12.813,
+      "speed": 55.2993,
+      "latency": 6.97101,
+      "totalTime": 16.0127,
       "context": 1000000
      }
     },
@@ -201,9 +201,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 64.1831,
-      "latency": 60.949,
-      "totalTime": 68.7392,
+      "speed": 62.2399,
+      "latency": 74.4808,
+      "totalTime": 82.5142,
       "context": 1000000
      }
     },
@@ -226,9 +226,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 235.008,
-      "latency": 316.341,
-      "totalTime": 318.469,
+      "speed": 234.216,
+      "latency": 325.802,
+      "totalTime": 327.936,
       "context": 1000000
      }
     },
@@ -251,9 +251,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 176.372,
-      "latency": 17.8082,
-      "totalTime": 20.6432,
+      "speed": 183.721,
+      "latency": 24.3085,
+      "totalTime": 27.0301,
       "context": 1000000
      }
     },
@@ -276,9 +276,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 172.218,
-      "latency": 6.68464,
-      "totalTime": 9.58794,
+      "speed": 169.984,
+      "latency": 7.75854,
+      "totalTime": 10.7,
       "context": 1000000
      }
     },
@@ -301,9 +301,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 178.301,
-      "latency": 7.46162,
-      "totalTime": 10.2659,
+      "speed": 175.091,
+      "latency": 11.2831,
+      "totalTime": 14.1387,
       "context": 1000000
      }
     },
@@ -326,9 +326,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 185.918,
-      "latency": 60.315,
-      "totalTime": 63.0044,
+      "speed": 189.437,
+      "latency": 65.6812,
+      "totalTime": 68.3206,
       "context": 1000000
      }
     },
@@ -351,9 +351,9 @@
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 96.139,
-      "latency": 588.678,
-      "totalTime": 593.879,
+      "speed": 96.7713,
+      "latency": 676.755,
+      "totalTime": 681.922,
       "context": 1000000
      }
     },
@@ -376,9 +376,9 @@
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 76.7634,
-      "latency": 24.2956,
-      "totalTime": 30.8091,
+      "speed": 80.0439,
+      "latency": 31.316,
+      "totalTime": 37.5626,
       "context": 1000000
      }
     },
@@ -401,9 +401,9 @@
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 76.6166,
-      "latency": 5.37935,
-      "totalTime": 11.9053,
+      "speed": 81.811,
+      "latency": 6.35629,
+      "totalTime": 12.4679,
       "context": 1000000
      }
     },
@@ -426,9 +426,9 @@
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 78.0611,
-      "latency": 10.4374,
-      "totalTime": 16.8426,
+      "speed": 83.0038,
+      "latency": 16.4825,
+      "totalTime": 22.5064,
       "context": 1000000
      }
     },
@@ -451,9 +451,9 @@
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 82.1854,
-      "latency": 114.769,
-      "totalTime": 120.852,
+      "speed": 82.0307,
+      "latency": 119.089,
+      "totalTime": 125.185,
       "context": 1000000
      }
     },
@@ -476,9 +476,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 132.021,
-      "latency": 354.262,
-      "totalTime": 358.049,
+      "speed": 138.399,
+      "latency": 388.888,
+      "totalTime": 392.501,
       "context": 1000000
      }
     },
@@ -501,9 +501,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 104.502,
-      "latency": 9.81413,
-      "totalTime": 14.5987,
+      "speed": 105.973,
+      "latency": 11.0794,
+      "totalTime": 15.7976,
       "context": 1000000
      }
     },
@@ -526,9 +526,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 102.012,
-      "latency": 1.40406,
-      "totalTime": 6.30542,
+      "speed": 106.34,
+      "latency": 1.15936,
+      "totalTime": 5.86125,
       "context": 1000000
      }
     },
@@ -551,9 +551,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 100.09,
-      "latency": 1.38913,
-      "totalTime": 6.38461,
+      "speed": 106.509,
+      "latency": 1.33706,
+      "totalTime": 6.03151,
       "context": 1000000
      }
     },
@@ -576,9 +576,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 105.18,
-      "latency": 26.073,
-      "totalTime": 30.8268,
+      "speed": 109.902,
+      "latency": 28.3761,
+      "totalTime": 32.9256,
       "context": 1000000
      }
     },
@@ -601,9 +601,9 @@
       "tokenPrice": 4.375,
       "inputPrice": 2.5,
       "outputPrice": 10,
-      "speed": 54.6336,
-      "latency": 1.73971,
-      "totalTime": 10.8916,
+      "speed": 24.5396,
+      "latency": 2.10915,
+      "totalTime": 22.4843,
       "context": 256000
      }
     },
@@ -626,9 +626,9 @@
       "tokenPrice": null,
       "inputPrice": null,
       "outputPrice": null,
-      "speed": 148.76,
-      "latency": 13.9635,
-      "totalTime": 17.3246,
+      "speed": 161.942,
+      "latency": 12.8772,
+      "totalTime": 15.9647,
       "context": 192000
      }
     },
@@ -651,9 +651,9 @@
       "tokenPrice": 0.525,
       "inputPrice": 0.3,
       "outputPrice": 1.2,
-      "speed": 195.157,
-      "latency": 11.3903,
-      "totalTime": 13.9524,
+      "speed": 169.042,
+      "latency": 13.0229,
+      "totalTime": 15.9807,
       "context": 1000000
      }
     },
@@ -676,9 +676,9 @@
       "tokenPrice": 0.66,
       "inputPrice": 0.44,
       "outputPrice": 1.32,
-      "speed": 187.845,
-      "latency": 12.1336,
-      "totalTime": 14.7954,
+      "speed": 177.609,
+      "latency": 12.8972,
+      "totalTime": 15.7124,
       "context": 1000000
      }
     },
@@ -701,9 +701,9 @@
       "tokenPrice": 1.98,
       "inputPrice": 1.32,
       "outputPrice": 3.96,
-      "speed": 92.5418,
-      "latency": 23.2625,
-      "totalTime": 28.6655,
+      "speed": 103.622,
+      "latency": 21.0537,
+      "totalTime": 25.8789,
       "context": 1000000
      }
     },
@@ -726,9 +726,9 @@
       "tokenPrice": 1.98,
       "inputPrice": 1.32,
       "outputPrice": 3.96,
-      "speed": 94.6391,
-      "latency": 1.71435,
-      "totalTime": 6.99758,
+      "speed": 104.433,
+      "latency": 1.76434,
+      "totalTime": 6.55212,
       "context": 1000000
      }
     },
@@ -751,9 +751,9 @@
       "tokenPrice": 4.5,
       "inputPrice": 2,
       "outputPrice": 12,
-      "speed": 130.186,
-      "latency": 21.0613,
-      "totalTime": 24.902,
+      "speed": 132.241,
+      "latency": 20.5406,
+      "totalTime": 24.3216,
       "context": 1000000
      }
     },
@@ -776,9 +776,9 @@
       "tokenPrice": 0.85,
       "inputPrice": 0.3,
       "outputPrice": 2.5,
-      "speed": 412.348,
-      "latency": 6.51343,
-      "totalTime": 7.726,
+      "speed": 418.868,
+      "latency": 7.84609,
+      "totalTime": 9.03978,
       "context": 1000000
      }
     },
@@ -801,9 +801,9 @@
       "tokenPrice": 1.5,
       "inputPrice": 0.75,
       "outputPrice": 3.75,
-      "speed": 136.871,
-      "latency": 25.1549,
-      "totalTime": 28.808,
+      "speed": 132.166,
+      "latency": 26.4873,
+      "totalTime": 30.2704,
       "context": 1000000
      }
     },
@@ -826,9 +826,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 76.4183,
+      "speed": 80.8601,
       "latency": 57.0072,
-      "totalTime": 63.5502,
+      "totalTime": 63.1908,
       "context": 1000000
      }
     },
@@ -851,9 +851,9 @@
       "tokenPrice": 0.15,
       "inputPrice": 0.1,
       "outputPrice": 0.3,
-      "speed": 117.419,
-      "latency": 19.2573,
-      "totalTime": 23.5156,
+      "speed": 113.305,
+      "latency": 19.8667,
+      "totalTime": 24.2796,
       "context": 262144
      }
     },
@@ -876,9 +876,9 @@
       "tokenPrice": 0.15,
       "inputPrice": 0.1,
       "outputPrice": 0.3,
-      "speed": 119.617,
-      "latency": 2.21854,
-      "totalTime": 6.39853,
+      "speed": 119.841,
+      "latency": 2.24935,
+      "totalTime": 6.42154,
       "context": 262144
      }
     },
@@ -901,9 +901,9 @@
       "tokenPrice": 0.16,
       "inputPrice": 0.1,
       "outputPrice": 0.34,
-      "speed": 81.0148,
-      "latency": 25.6448,
-      "totalTime": 31.8165,
+      "speed": 94.8717,
+      "latency": 21.998,
+      "totalTime": 27.2683,
       "context": 256000
      }
     },
@@ -926,9 +926,9 @@
       "tokenPrice": 0.18625,
       "inputPrice": 0.115,
       "outputPrice": 0.4,
-      "speed": 96.3355,
-      "latency": 0.958008,
-      "totalTime": 6.1482,
+      "speed": 113.934,
+      "latency": 0.923169,
+      "totalTime": 5.31168,
       "context": 256000
      }
     },
@@ -951,9 +951,9 @@
       "tokenPrice": null,
       "inputPrice": null,
       "outputPrice": null,
-      "speed": 36.0225,
-      "latency": 49.2671,
-      "totalTime": 63.1473,
+      "speed": 35.2995,
+      "latency": 50.2687,
+      "totalTime": 64.4332,
       "context": 256000
      }
     },
@@ -976,9 +976,9 @@
       "tokenPrice": 0.22375,
       "inputPrice": 0.165,
       "outputPrice": 0.4,
-      "speed": 51.5093,
-      "latency": 1.69302,
-      "totalTime": 11.4,
+      "speed": 62.0994,
+      "latency": 1.81925,
+      "totalTime": 9.87086,
       "context": 256000
      }
     },
@@ -1001,9 +1001,9 @@
       "tokenPrice": 0.04,
       "inputPrice": 0.02,
       "outputPrice": 0.1,
-      "speed": 40.138,
-      "latency": 50.7896,
-      "totalTime": 63.2466,
+      "speed": 45.7203,
+      "latency": 44.7624,
+      "totalTime": 55.6984,
       "context": 128000
      }
     },
@@ -1026,9 +1026,9 @@
       "tokenPrice": 0.04,
       "inputPrice": 0.02,
       "outputPrice": 0.1,
-      "speed": 49.0367,
-      "latency": 0.83425,
-      "totalTime": 11.0307,
+      "speed": 45.3624,
+      "latency": 0.77646,
+      "totalTime": 11.7988,
       "context": 128000
      }
     },
@@ -1051,9 +1051,9 @@
       "tokenPrice": 2.15,
       "inputPrice": 1.4,
       "outputPrice": 4.4,
-      "speed": 78.0266,
-      "latency": 28.6339,
-      "totalTime": 35.042,
+      "speed": 98.2216,
+      "latency": 22.7472,
+      "totalTime": 27.8377,
       "context": 1000000
      }
     },
@@ -1076,9 +1076,9 @@
       "tokenPrice": 0.2375,
       "inputPrice": 0.15,
       "outputPrice": 0.5,
-      "speed": 64.3215,
-      "latency": 34.4716,
-      "totalTime": 42.245,
+      "speed": 73.4957,
+      "latency": 30.0497,
+      "totalTime": 36.8528,
       "context": 1000000
      }
     },
@@ -1101,9 +1101,9 @@
       "tokenPrice": 2.15,
       "inputPrice": 1.4,
       "outputPrice": 4.4,
-      "speed": 89.1407,
-      "latency": 25.6003,
-      "totalTime": 31.2094,
+      "speed": 89.0046,
+      "latency": 25.3741,
+      "totalTime": 30.9918,
       "context": 1000000
      }
     },
@@ -1126,9 +1126,9 @@
       "tokenPrice": 4.8125,
       "inputPrice": 1.75,
       "outputPrice": 14,
-      "speed": 84.1947,
-      "latency": 60.6189,
-      "totalTime": 66.5575,
+      "speed": 105.443,
+      "latency": 54.9745,
+      "totalTime": 59.7164,
       "context": 400000
      }
     },
@@ -1151,9 +1151,9 @@
       "tokenPrice": 11.25,
       "inputPrice": 5,
       "outputPrice": 30,
-      "speed": 154.739,
-      "latency": 13.81,
-      "totalTime": 17.0413,
+      "speed": 158.381,
+      "latency": 13.526,
+      "totalTime": 16.683,
       "context": 400000
      }
     },
@@ -1176,9 +1176,9 @@
       "tokenPrice": 4.5,
       "inputPrice": 2,
       "outputPrice": 12,
-      "speed": 124.018,
-      "latency": 101.004,
-      "totalTime": 105.035,
+      "speed": 134.701,
+      "latency": 104.142,
+      "totalTime": 107.854,
       "context": 1000000
      }
     },
@@ -1201,9 +1201,9 @@
       "tokenPrice": 4.5,
       "inputPrice": 2,
       "outputPrice": 12,
-      "speed": 107.41,
-      "latency": 2.02786,
-      "totalTime": 6.6829,
+      "speed": 119.158,
+      "latency": 2.23278,
+      "totalTime": 6.42889,
       "context": 1000000
      }
     },
@@ -1226,9 +1226,9 @@
       "tokenPrice": 4.5,
       "inputPrice": 2,
       "outputPrice": 12,
-      "speed": 107.733,
-      "latency": 1.39399,
-      "totalTime": 6.0351,
+      "speed": 115.624,
+      "latency": 1.32663,
+      "totalTime": 5.65101,
       "context": 1000000
      }
     },
@@ -1251,9 +1251,9 @@
       "tokenPrice": 4.5,
       "inputPrice": 2,
       "outputPrice": 12,
-      "speed": 108.799,
-      "latency": 1.59628,
-      "totalTime": 6.19193,
+      "speed": 114.25,
+      "latency": 1.46153,
+      "totalTime": 5.8379,
       "context": 1000000
      }
     },
@@ -1276,9 +1276,9 @@
       "tokenPrice": 4.5,
       "inputPrice": 2,
       "outputPrice": 12,
-      "speed": 111.358,
-      "latency": 0.72715,
-      "totalTime": 5.21717,
+      "speed": 122.003,
+      "latency": 0.745925,
+      "totalTime": 4.84419,
       "context": 1000000
      }
     },
@@ -1301,9 +1301,9 @@
       "tokenPrice": 4.5,
       "inputPrice": 2,
       "outputPrice": 12,
-      "speed": 106.844,
-      "latency": 7.48732,
-      "totalTime": 12.167,
+      "speed": 121.673,
+      "latency": 19.5441,
+      "totalTime": 23.6534,
       "context": 1000000
      }
     },
@@ -1326,9 +1326,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 55.2425,
-      "latency": 207.837,
-      "totalTime": 216.888,
+      "speed": 62.2731,
+      "latency": 246.628,
+      "totalTime": 254.657,
       "context": 1000000
      }
     },
@@ -1351,9 +1351,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 49.8992,
-      "latency": 31.3263,
-      "totalTime": 41.3465,
+      "speed": 54.6529,
+      "latency": 48.3286,
+      "totalTime": 57.4773,
       "context": 1000000
      }
     },
@@ -1376,9 +1376,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 47.4247,
-      "latency": 1.77893,
-      "totalTime": 12.322,
+      "speed": 50.7941,
+      "latency": 2.63847,
+      "totalTime": 12.4821,
       "context": 1000000
      }
     },
@@ -1401,9 +1401,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 48.1236,
-      "latency": 3.96431,
-      "totalTime": 14.3542,
+      "speed": 53.5009,
+      "latency": 4.19664,
+      "totalTime": 13.5423,
       "context": 1000000
      }
     },
@@ -1426,9 +1426,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 50.2951,
-      "latency": 76.567,
-      "totalTime": 86.5084,
+      "speed": 58.7896,
+      "latency": 115.155,
+      "totalTime": 123.66,
       "context": 1000000
      }
     },
@@ -1451,9 +1451,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 55.9295,
-      "latency": 261.404,
-      "totalTime": 270.344,
+      "speed": 66.6692,
+      "latency": 278.25,
+      "totalTime": 285.749,
       "context": 1000000
      }
     },
@@ -1476,9 +1476,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 55.7347,
-      "latency": 35.1967,
-      "totalTime": 44.1677,
+      "speed": 60.517,
+      "latency": 45.0755,
+      "totalTime": 53.3377,
       "context": 1000000
      }
     },
@@ -1501,9 +1501,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 49.4047,
-      "latency": 2.22336,
-      "totalTime": 12.3438,
+      "speed": 51.7125,
+      "latency": 2.34264,
+      "totalTime": 12.0115,
       "context": 1000000
      }
     },
@@ -1526,9 +1526,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 51.7896,
-      "latency": 4.03912,
-      "totalTime": 13.6936,
+      "speed": 58.7911,
+      "latency": 5.21953,
+      "totalTime": 13.7242,
       "context": 1000000
      }
     },
@@ -1551,9 +1551,9 @@
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 53.7956,
-      "latency": 132.307,
-      "totalTime": 141.602,
+      "speed": 68.1288,
+      "latency": 161.518,
+      "totalTime": 168.857,
       "context": 1000000
      }
     },
@@ -1576,9 +1576,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 136.46,
-      "latency": 77.9889,
-      "totalTime": 81.653,
+      "speed": 136.459,
+      "latency": 84.8496,
+      "totalTime": 88.5137,
       "context": 1000000
      }
     },
@@ -1601,9 +1601,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 122.26,
-      "latency": 6.10766,
-      "totalTime": 10.1973,
+      "speed": 119.931,
+      "latency": 10.783,
+      "totalTime": 14.9521,
       "context": 1000000
      }
     },
@@ -1626,34 +1626,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 108.812,
-      "latency": 2.14068,
-      "totalTime": 6.73578,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "gpt-6-luna-medium",
-     "name": "GPT-6 Luna (medium)",
-     "fullName": "GPT-6 Luna (Medium)",
-     "creator": {
-      "slug": "openai",
-      "name": "OpenAI"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 29.9252,
-      "costTask": 0.0174769,
-      "tokensTask": null,
-      "tokenPrice": 0.2,
-      "inputPrice": 0.1,
-      "outputPrice": 0.5,
-      "speed": 91.5429,
-      "latency": 2.78577,
-      "totalTime": 8.24769,
+      "speed": 117.467,
+      "latency": 2.80325,
+      "totalTime": 7.05977,
       "context": 1000000
      }
     },
@@ -1676,9 +1651,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 109.353,
-      "latency": 0.872563,
-      "totalTime": 5.44491,
+      "speed": 120.159,
+      "latency": 0.930624,
+      "totalTime": 5.09179,
       "context": 1000000
      }
     },
@@ -1701,9 +1676,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 123.461,
-      "latency": 15.2938,
-      "totalTime": 19.3436,
+      "speed": 123.055,
+      "latency": 20.6958,
+      "totalTime": 24.7591,
       "context": 1000000
      }
     },
@@ -1726,9 +1701,9 @@
       "tokenPrice": 0.2625,
       "inputPrice": 0.15,
       "outputPrice": 0.6,
-      "speed": 208.119,
-      "latency": 10.4434,
-      "totalTime": 12.8458,
+      "speed": 237.913,
+      "latency": 9.18281,
+      "totalTime": 11.2844,
       "context": 131072
      }
     },
@@ -1751,9 +1726,9 @@
       "tokenPrice": 0.2425,
       "inputPrice": 0.125,
       "outputPrice": 0.595,
-      "speed": 263.207,
-      "latency": 8.42876,
-      "totalTime": 10.3284,
+      "speed": 270.317,
+      "latency": 8.16497,
+      "totalTime": 10.0147,
       "context": 131072
      }
     },
@@ -1776,9 +1751,9 @@
       "tokenPrice": 0.0925,
       "inputPrice": 0.05,
       "outputPrice": 0.22,
-      "speed": 151.565,
-      "latency": 14.0176,
-      "totalTime": 17.3165,
+      "speed": 176.758,
+      "latency": 12.1245,
+      "totalTime": 14.9533,
       "context": 131072
      }
     },
@@ -1801,9 +1776,9 @@
       "tokenPrice": 0.1275,
       "inputPrice": 0.07,
       "outputPrice": 0.3,
-      "speed": 177.765,
-      "latency": 12.1033,
-      "totalTime": 14.916,
+      "speed": 201.596,
+      "latency": 10.8956,
+      "totalTime": 13.3759,
       "context": 131072
      }
     },
@@ -1826,9 +1801,9 @@
       "tokenPrice": 0.2825,
       "inputPrice": 0.16,
       "outputPrice": 0.65,
-      "speed": 85.0822,
-      "latency": 24.1781,
-      "totalTime": 30.0547,
+      "speed": 41.3567,
+      "latency": 49.1554,
+      "totalTime": 61.2453,
       "context": 131072
      }
     },
@@ -1851,9 +1826,9 @@
       "tokenPrice": 0.0525,
       "inputPrice": 0.03,
       "outputPrice": 0.12,
-      "speed": 109.578,
-      "latency": 19.0212,
-      "totalTime": 23.5841,
+      "speed": 42.2306,
+      "latency": 48.0969,
+      "totalTime": 59.9367,
       "context": 131072
      }
     },
@@ -1876,9 +1851,9 @@
       "tokenPrice": 0.1075,
       "inputPrice": 0.06,
       "outputPrice": 0.25,
-      "speed": 92.0635,
-      "latency": 22.4346,
-      "totalTime": 27.8657,
+      "speed": 45.7587,
+      "latency": 44.5129,
+      "totalTime": 55.4398,
       "context": 131072
      }
     },
@@ -1901,9 +1876,9 @@
       "tokenPrice": 3,
       "inputPrice": 2,
       "outputPrice": 6,
-      "speed": 88.7656,
-      "latency": 34.8205,
-      "totalTime": 40.4533,
+      "speed": 87.0931,
+      "latency": 41.7925,
+      "totalTime": 47.5335,
       "context": 500000
      }
     },
@@ -1926,9 +1901,9 @@
       "tokenPrice": 3,
       "inputPrice": 2,
       "outputPrice": 6,
-      "speed": 86.1486,
-      "latency": 19.494,
-      "totalTime": 25.2979,
+      "speed": 85.5233,
+      "latency": 25.2128,
+      "totalTime": 31.0591,
       "context": 500000
      }
     },
@@ -1951,9 +1926,9 @@
       "tokenPrice": 3,
       "inputPrice": 2,
       "outputPrice": 6,
-      "speed": 77.2663,
-      "latency": 4.45198,
-      "totalTime": 10.9231,
+      "speed": 75.1475,
+      "latency": 4.06673,
+      "totalTime": 10.7203,
       "context": 500000
      }
     },
@@ -1976,9 +1951,9 @@
       "tokenPrice": 1.5,
       "inputPrice": 1,
       "outputPrice": 3,
-      "speed": 40.1699,
-      "latency": 2.27609,
-      "totalTime": 14.7232,
+      "speed": 43.6495,
+      "latency": 2.27012,
+      "totalTime": 13.725,
       "context": 128000
      }
     },
@@ -2001,9 +1976,9 @@
       "tokenPrice": 1.5,
       "inputPrice": 1,
       "outputPrice": 3,
-      "speed": 40.9559,
-      "latency": 51.1409,
-      "totalTime": 63.3491,
+      "speed": 43.0268,
+      "latency": 48.8185,
+      "totalTime": 60.4392,
       "context": 128000
      }
     },
@@ -2027,8 +2002,8 @@
       "inputPrice": 0.136,
       "outputPrice": 0.555,
       "speed": 80.6976,
-      "latency": 27.5812,
-      "totalTime": 33.7772,
+      "latency": 27.4841,
+      "totalTime": 33.68,
       "context": 256000
      }
     },
@@ -2051,9 +2026,9 @@
       "tokenPrice": 1.7625,
       "inputPrice": 1,
       "outputPrice": 4.05,
-      "speed": 176.866,
-      "latency": 13.0779,
-      "totalTime": 15.9049,
+      "speed": 162.229,
+      "latency": 14.4251,
+      "totalTime": 17.5071,
       "context": 1000000
      }
     },
@@ -2076,9 +2051,9 @@
       "tokenPrice": 0.525,
       "inputPrice": 0.3,
       "outputPrice": 1.2,
-      "speed": 219.075,
-      "latency": 10.7354,
-      "totalTime": 13.0177,
+      "speed": 222.883,
+      "latency": 10.5543,
+      "totalTime": 12.7976,
       "context": 1000000
      }
     },
@@ -2101,9 +2076,9 @@
       "tokenPrice": null,
       "inputPrice": null,
       "outputPrice": null,
-      "speed": 925.27,
-      "latency": 4.25216,
-      "totalTime": 4.79255,
+      "speed": 971.234,
+      "latency": 4.36992,
+      "totalTime": 4.88473,
       "context": 524288
      }
     },
@@ -2126,9 +2101,9 @@
       "tokenPrice": 1.7125,
       "inputPrice": 0.95,
       "outputPrice": 4,
-      "speed": 57.7095,
-      "latency": 41.4615,
-      "totalTime": 50.1256,
+      "speed": 81.4241,
+      "latency": 30.0119,
+      "totalTime": 36.1525,
       "context": 256000
      }
     },
@@ -2151,9 +2126,9 @@
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 77.0917,
-      "latency": 28.8312,
-      "totalTime": 35.3169,
+      "speed": 52.1856,
+      "latency": 41.2906,
+      "totalTime": 50.8717,
       "context": 1000000
      }
     },
@@ -2176,9 +2151,9 @@
       "tokenPrice": null,
       "inputPrice": null,
       "outputPrice": null,
-      "speed": 57.2805,
-      "latency": 37.441,
-      "totalTime": 46.17,
+      "speed": 57.4464,
+      "latency": 37.4631,
+      "totalTime": 46.1669,
       "context": 262144
      }
     },
@@ -2201,9 +2176,9 @@
       "tokenPrice": 0.45,
       "inputPrice": 0.3,
       "outputPrice": 0.9,
-      "speed": 218.947,
-      "latency": 11.0431,
-      "totalTime": 13.3267,
+      "speed": 212.573,
+      "latency": 11.1876,
+      "totalTime": 13.5398,
       "context": 1000000
      }
     },
@@ -2226,9 +2201,9 @@
       "tokenPrice": 0.345,
       "inputPrice": 0.345,
       "outputPrice": 0.345,
-      "speed": 22.8726,
-      "latency": 1.29361,
-      "totalTime": 23.1538,
+      "speed": 26.377,
+      "latency": 1.37264,
+      "totalTime": 20.3286,
       "context": 128000
      }
     },
@@ -2251,9 +2226,9 @@
       "tokenPrice": 0.67,
       "inputPrice": 0.655,
       "outputPrice": 0.715,
-      "speed": 88.4786,
-      "latency": 1.78525,
-      "totalTime": 7.43633,
+      "speed": 89.1458,
+      "latency": 1.81341,
+      "totalTime": 7.4222,
       "context": 128000
      }
     },
@@ -2276,9 +2251,9 @@
       "tokenPrice": 0.4175,
       "inputPrice": 0.25,
       "outputPrice": 0.92,
-      "speed": 51.725,
-      "latency": 1.06311,
-      "totalTime": 10.7296,
+      "speed": 53.118,
+      "latency": 1.0024,
+      "totalTime": 10.4154,
       "context": 1000000
      }
     },
@@ -2301,9 +2276,9 @@
       "tokenPrice": 0.3,
       "inputPrice": 0.18,
       "outputPrice": 0.66,
-      "speed": 97.9129,
-      "latency": 0.83496,
-      "totalTime": 5.94154,
+      "speed": 118.362,
+      "latency": 0.792897,
+      "totalTime": 5.01723,
       "context": 10000000
      }
     },
@@ -2326,9 +2301,9 @@
       "tokenPrice": 1.3,
       "inputPrice": 0.75,
       "outputPrice": 2.95,
-      "speed": 76.2985,
-      "latency": 28.9289,
-      "totalTime": 35.4821,
+      "speed": 71.6959,
+      "latency": 30.4628,
+      "totalTime": 37.4367,
       "context": 1000000
      }
     },
@@ -2351,9 +2326,9 @@
       "tokenPrice": 0.75,
       "inputPrice": 0.5,
       "outputPrice": 1.5,
-      "speed": 78.1829,
-      "latency": 27.0586,
-      "totalTime": 33.4539,
+      "speed": 77.1724,
+      "latency": 27.3823,
+      "totalTime": 33.8613,
       "context": 128000
      }
     },
@@ -2376,9 +2351,9 @@
       "tokenPrice": 0.375,
       "inputPrice": 0.25,
       "outputPrice": 0.75,
-      "speed": 681.424,
-      "latency": 3.70663,
-      "totalTime": 4.44038,
+      "speed": 710.492,
+      "latency": 3.45003,
+      "totalTime": 4.15377,
       "context": 260000
      }
     },
@@ -2401,9 +2376,9 @@
       "tokenPrice": 0.175,
       "inputPrice": 0.14,
       "outputPrice": 0.28,
-      "speed": 59.5449,
-      "latency": 37.6177,
-      "totalTime": 46.0148,
+      "speed": 52.0917,
+      "latency": 41.6755,
+      "totalTime": 51.2739,
       "context": 1000000
      }
     },
@@ -2426,9 +2401,9 @@
       "tokenPrice": 0.54375,
       "inputPrice": 0.435,
       "outputPrice": 0.87,
-      "speed": 53.85,
-      "latency": 40.0031,
-      "totalTime": 49.2882,
+      "speed": 55.7791,
+      "latency": 38.9885,
+      "totalTime": 47.9524,
       "context": 1000000
      }
     },
@@ -2451,9 +2426,9 @@
       "tokenPrice": 0.525,
       "inputPrice": 0.3,
       "outputPrice": 1.2,
-      "speed": 84.3331,
-      "latency": 25.0187,
-      "totalTime": 30.9476,
+      "speed": 105.262,
+      "latency": 20.3202,
+      "totalTime": 25.0703,
       "context": 1000000
      }
     },
@@ -2476,9 +2451,9 @@
       "tokenPrice": 0.2625,
       "inputPrice": 0.15,
       "outputPrice": 0.6,
-      "speed": 87.1706,
-      "latency": 24.424,
-      "totalTime": 30.1599,
+      "speed": 116.186,
+      "latency": 18.3161,
+      "totalTime": 22.6196,
       "context": 1000000
      }
     },
@@ -2501,9 +2476,9 @@
       "tokenPrice": 0.2,
       "inputPrice": 0.2,
       "outputPrice": 0.2,
-      "speed": 83.0008,
-      "latency": 0.953437,
-      "totalTime": 6.97747,
+      "speed": 73.1205,
+      "latency": 1.08355,
+      "totalTime": 7.92158,
       "context": 256000
      }
     },
@@ -2526,9 +2501,9 @@
       "tokenPrice": 0.1,
       "inputPrice": 0.1,
       "outputPrice": 0.1,
-      "speed": 207.334,
-      "latency": 0.681628,
-      "totalTime": 3.09319,
+      "speed": 213.208,
+      "latency": 0.664269,
+      "totalTime": 3.0094,
       "context": 256000
      }
     },
@@ -2551,9 +2526,9 @@
       "tokenPrice": 0.15,
       "inputPrice": 0.15,
       "outputPrice": 0.15,
-      "speed": 111.542,
-      "latency": 0.862707,
-      "totalTime": 5.34532,
+      "speed": 123.101,
+      "latency": 0.839097,
+      "totalTime": 4.90081,
       "context": 256000
      }
     },
@@ -2576,9 +2551,9 @@
       "tokenPrice": 2.065,
       "inputPrice": 1.36,
       "outputPrice": 4.18,
-      "speed": 92.5337,
-      "latency": 24.7537,
-      "totalTime": 30.1572,
+      "speed": 112.405,
+      "latency": 19.3982,
+      "totalTime": 23.8465,
       "context": 524288
      }
     },
@@ -2601,9 +2576,9 @@
       "tokenPrice": 3,
       "inputPrice": 1.5,
       "outputPrice": 7.5,
-      "speed": 157.683,
-      "latency": 14.9494,
-      "totalTime": 18.1203,
+      "speed": 160.851,
+      "latency": 14.7558,
+      "totalTime": 17.8642,
       "context": 256000
      }
     },
@@ -2626,9 +2601,9 @@
       "tokenPrice": 0.2625,
       "inputPrice": 0.15,
       "outputPrice": 0.6,
-      "speed": 179.141,
-      "latency": 12.0604,
-      "totalTime": 14.8515,
+      "speed": 174.64,
+      "latency": 12.276,
+      "totalTime": 15.1391,
       "context": 256000
      }
     },
@@ -2651,9 +2626,9 @@
       "tokenPrice": 0.2625,
       "inputPrice": 0.15,
       "outputPrice": 0.6,
-      "speed": 166.883,
-      "latency": 0.915422,
-      "totalTime": 3.91153,
+      "speed": 173.289,
+      "latency": 0.961956,
+      "totalTime": 3.8473,
       "context": 256000
      }
     },
@@ -2676,9 +2651,9 @@
       "tokenPrice": 0.525,
       "inputPrice": 0.3,
       "outputPrice": 1.2,
-      "speed": 120.523,
-      "latency": 17.6071,
-      "totalTime": 21.7557,
+      "speed": 103.721,
+      "latency": 20.3495,
+      "totalTime": 25.1701,
       "context": 131072
      }
     },
@@ -2701,9 +2676,9 @@
       "tokenPrice": 2,
       "inputPrice": 1.25,
       "outputPrice": 4.25,
-      "speed": 142.891,
-      "latency": 14.7631,
-      "totalTime": 18.2623,
+      "speed": 165.499,
+      "latency": 12.8702,
+      "totalTime": 15.8914,
       "context": 1048580
      }
     },
@@ -2726,9 +2701,9 @@
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 143.527,
-      "latency": 40.4614,
-      "totalTime": 43.9451,
+      "speed": 190.163,
+      "latency": 40.951,
+      "totalTime": 43.5803,
       "context": 1048580
      }
     },
@@ -2751,9 +2726,9 @@
       "tokenPrice": 0.095,
       "inputPrice": 0.06,
       "outputPrice": 0.2,
-      "speed": 287.26,
-      "latency": 7.60397,
-      "totalTime": 9.34455,
+      "speed": 301.129,
+      "latency": 7.24023,
+      "totalTime": 8.90065,
       "context": 1000000
      }
     },
@@ -2776,9 +2751,9 @@
       "tokenPrice": 0.3125,
       "inputPrice": 0.225,
       "outputPrice": 0.575,
-      "speed": 453.383,
-      "latency": 5.144,
-      "totalTime": 6.24682,
+      "speed": 458.753,
+      "latency": 5.13,
+      "totalTime": 6.21991,
       "context": 1000000
      }
     },
@@ -2801,9 +2776,9 @@
       "tokenPrice": 0.64125,
       "inputPrice": 0.4,
       "outputPrice": 1.365,
-      "speed": 233.7,
-      "latency": 9.33192,
-      "totalTime": 11.4714,
+      "speed": 229.745,
+      "latency": 9.4418,
+      "totalTime": 11.6181,
       "context": 256000
      }
     },
@@ -2826,9 +2801,9 @@
       "tokenPrice": null,
       "inputPrice": null,
       "outputPrice": null,
-      "speed": 60.2586,
-      "latency": 33.6427,
-      "totalTime": 41.9403,
+      "speed": 66.217,
+      "latency": 30.6826,
+      "totalTime": 38.2335,
       "context": 256000
      }
     },
@@ -2851,9 +2826,9 @@
       "tokenPrice": 0.85,
       "inputPrice": 0.3,
       "outputPrice": 2.5,
-      "speed": 170.42,
-      "latency": 1.06148,
-      "totalTime": 3.99541,
+      "speed": 174.342,
+      "latency": 1.00303,
+      "totalTime": 3.87096,
       "context": 1000000
      }
     },
@@ -2876,9 +2851,9 @@
       "tokenPrice": 0.85,
       "inputPrice": 0.3,
       "outputPrice": 2.5,
-      "speed": 178.507,
-      "latency": 27.2562,
-      "totalTime": 30.0572,
+      "speed": 192.959,
+      "latency": 25.0361,
+      "totalTime": 27.6273,
       "context": 1000000
      }
     },
@@ -2901,9 +2876,9 @@
       "tokenPrice": 0.85,
       "inputPrice": 0.3,
       "outputPrice": 2.5,
-      "speed": 173.465,
-      "latency": 20.0702,
-      "totalTime": 22.9526,
+      "speed": 175.122,
+      "latency": 21.0646,
+      "totalTime": 23.9198,
       "context": 1000000
      }
     },
@@ -2926,9 +2901,9 @@
       "tokenPrice": 0.85,
       "inputPrice": 0.3,
       "outputPrice": 2.5,
-      "speed": 172.868,
-      "latency": 22.7074,
-      "totalTime": 25.5998,
+      "speed": 190.524,
+      "latency": 27.1097,
+      "totalTime": 29.734,
       "context": 1000000
      }
     },
@@ -2951,9 +2926,9 @@
       "tokenPrice": 3.4375,
       "inputPrice": 1.25,
       "outputPrice": 10,
-      "speed": 108.403,
-      "latency": 0.975991,
-      "totalTime": 5.5884,
+      "speed": 118.664,
+      "latency": 1.0523,
+      "totalTime": 5.26588,
       "context": 256000
      }
     },
@@ -2976,9 +2951,9 @@
       "tokenPrice": 3.4375,
       "inputPrice": 1.25,
       "outputPrice": 10,
-      "speed": 117.926,
-      "latency": 27.828,
-      "totalTime": 32.0679,
+      "speed": 123.495,
+      "latency": 26.241,
+      "totalTime": 30.2897,
       "context": 256000
      }
     },
@@ -3001,9 +2976,9 @@
       "tokenPrice": 3.4375,
       "inputPrice": 1.25,
       "outputPrice": 10,
-      "speed": 122.941,
-      "latency": 27.6444,
-      "totalTime": 31.7114,
+      "speed": 128.51,
+      "latency": 28.7352,
+      "totalTime": 32.626,
       "context": 256000
      }
     },
@@ -3026,9 +3001,9 @@
       "tokenPrice": 0.06125,
       "inputPrice": 0.035,
       "outputPrice": 0.14,
-      "speed": 275.761,
-      "latency": 0.867447,
-      "totalTime": 2.68061,
+      "speed": 286.116,
+      "latency": 0.799213,
+      "totalTime": 2.54675,
       "context": 130000
      }
     },
@@ -3051,9 +3026,9 @@
       "tokenPrice": 0.0875,
       "inputPrice": 0.05,
       "outputPrice": 0.2,
-      "speed": 265.511,
-      "latency": 0.808203,
-      "totalTime": 2.69137,
+      "speed": 280.102,
+      "latency": 0.766373,
+      "totalTime": 2.55144,
       "context": 1000000
      }
     },
@@ -3076,9 +3051,9 @@
       "tokenPrice": 0.0875,
       "inputPrice": 0.05,
       "outputPrice": 0.2,
-      "speed": 234.621,
-      "latency": 9.45456,
-      "totalTime": 11.5857,
+      "speed": 257.603,
+      "latency": 8.7107,
+      "totalTime": 10.6517,
       "context": 1000000
      }
     },
@@ -3101,9 +3076,9 @@
       "tokenPrice": 1.125,
       "inputPrice": 0.6,
       "outputPrice": 2.7,
-      "speed": 154.21,
-      "latency": 15.9976,
-      "totalTime": 19.2399,
+      "speed": 186.656,
+      "latency": 13.3471,
+      "totalTime": 16.0258,
       "context": 262144
      }
     },
@@ -3126,9 +3101,9 @@
       "tokenPrice": 0.3,
       "inputPrice": 0.2,
       "outputPrice": 0.6,
-      "speed": 203.755,
-      "latency": 1.12213,
-      "totalTime": 3.57606,
+      "speed": 202.028,
+      "latency": 1.02698,
+      "totalTime": 3.50188,
       "context": 128000
      }
     },
@@ -3151,9 +3126,9 @@
       "tokenPrice": 0.08625,
       "inputPrice": 0.05,
       "outputPrice": 0.195,
-      "speed": 163.315,
-      "latency": 1.03631,
-      "totalTime": 4.09787,
+      "speed": 169.949,
+      "latency": 1.02548,
+      "totalTime": 3.96754,
       "context": 131072
      }
     },
@@ -3176,9 +3151,9 @@
       "tokenPrice": 0.07,
       "inputPrice": 0.04,
       "outputPrice": 0.16,
-      "speed": 95.0787,
-      "latency": 21.826,
-      "totalTime": 27.0848,
+      "speed": 193.479,
+      "latency": 10.9203,
+      "totalTime": 13.5046,
       "context": 131072
      }
     },
@@ -3201,9 +3176,9 @@
       "tokenPrice": 3.5,
       "inputPrice": 2,
       "outputPrice": 8,
-      "speed": 132.654,
-      "latency": 7.38822,
-      "totalTime": 11.1574,
+      "speed": 165.78,
+      "latency": 6.80811,
+      "totalTime": 9.82415,
       "context": 200000
      }
     },
@@ -3226,9 +3201,9 @@
       "tokenPrice": 0.21875,
       "inputPrice": 0.125,
       "outputPrice": 0.5,
-      "speed": 38.4949,
-      "latency": 2.67428,
-      "totalTime": 15.663,
+      "speed": 41.7203,
+      "latency": 2.48623,
+      "totalTime": 14.4708,
       "context": 16000
      }
     },
@@ -3251,9 +3226,9 @@
       "tokenPrice": 0.13125,
       "inputPrice": 0.075,
       "outputPrice": 0.3,
-      "speed": 45.6172,
-      "latency": 0.814509,
-      "totalTime": 11.7753,
+      "speed": 45.5602,
+      "latency": 0.860079,
+      "totalTime": 11.8346,
       "context": 128000
      }
     },
@@ -3276,9 +3251,9 @@
       "tokenPrice": 0.165,
       "inputPrice": 0.11,
       "outputPrice": 0.33,
-      "speed": 171.383,
-      "latency": 12.9915,
-      "totalTime": 15.9089,
+      "speed": 165.51,
+      "latency": 13.2347,
+      "totalTime": 16.2557,
       "context": 1000000
      }
     },
@@ -3301,9 +3276,9 @@
       "tokenPrice": 1.1,
       "inputPrice": 0.4,
       "outputPrice": 3.2,
-      "speed": 128.933,
-      "latency": 17.7578,
-      "totalTime": 21.6358,
+      "speed": 131.159,
+      "latency": 17.5547,
+      "totalTime": 21.3668,
       "context": 262144
      }
     },
@@ -3326,9 +3301,9 @@
       "tokenPrice": 1.1,
       "inputPrice": 0.4,
       "outputPrice": 3.2,
-      "speed": 141.407,
-      "latency": 2.24529,
-      "totalTime": 5.78117,
+      "speed": 144.811,
+      "latency": 2.29616,
+      "totalTime": 5.74893,
       "context": 262144
      }
     },
@@ -3351,9 +3326,9 @@
       "tokenPrice": 1.35,
       "inputPrice": 0.6,
       "outputPrice": 3.6,
-      "speed": 57.7095,
-      "latency": 57.303,
-      "totalTime": 65.9671,
+      "speed": 58.7534,
+      "latency": 56.458,
+      "totalTime": 64.9682,
       "context": 262144
      }
     },
@@ -3376,9 +3351,9 @@
       "tokenPrice": 1.35,
       "inputPrice": 0.6,
       "outputPrice": 3.6,
-      "speed": 58.461,
-      "latency": 2.10833,
-      "totalTime": 10.6611,
+      "speed": 59.6177,
+      "latency": 2.26884,
+      "totalTime": 10.6556,
       "context": 262144
      }
     },
@@ -3401,9 +3376,9 @@
       "tokenPrice": 0.06,
       "inputPrice": 0.03,
       "outputPrice": 0.15,
-      "speed": 16.8165,
-      "latency": 119.847,
-      "totalTime": 149.58,
+      "speed": 18.1216,
+      "latency": 111.303,
+      "totalTime": 138.895,
       "context": 262144
      }
     },
@@ -3426,9 +3401,9 @@
       "tokenPrice": 0.06,
       "inputPrice": 0.03,
       "outputPrice": 0.15,
-      "speed": 11.1212,
-      "latency": 1.12187,
-      "totalTime": 46.0809,
+      "speed": 14.1133,
+      "latency": 0.876744,
+      "totalTime": 36.3043,
       "context": 262144
      }
     },
@@ -3451,9 +3426,9 @@
       "tokenPrice": 0.15125,
       "inputPrice": 0.135,
       "outputPrice": 0.2,
-      "speed": 58.8295,
-      "latency": 36.0067,
-      "totalTime": 44.5059,
+      "speed": 56.6098,
+      "latency": 37.3373,
+      "totalTime": 46.1697,
       "context": 262144
      }
     },
@@ -3476,9 +3451,9 @@
       "tokenPrice": 0.19,
       "inputPrice": 0.17,
       "outputPrice": 0.25,
-      "speed": 78.2421,
-      "latency": 0.78345,
-      "totalTime": 7.17387,
+      "speed": 81.6732,
+      "latency": 0.998405,
+      "totalTime": 7.12037,
       "context": 262144
      }
     },
@@ -3501,9 +3476,9 @@
       "tokenPrice": 0.275,
       "inputPrice": 0.1,
       "outputPrice": 0.8,
-      "speed": 228.608,
-      "latency": 1.80185,
-      "totalTime": 3.989,
+      "speed": 234.533,
+      "latency": 1.80199,
+      "totalTime": 3.93388,
       "context": 256000
      }
     },
@@ -3526,9 +3501,9 @@
       "tokenPrice": 1.5,
       "inputPrice": 0.4,
       "outputPrice": 4.8,
-      "speed": 110.869,
-      "latency": 1.98795,
-      "totalTime": 6.49779,
+      "speed": 121.534,
+      "latency": 2.06385,
+      "totalTime": 6.17793,
       "context": 256000
      }
     },
@@ -3551,9 +3526,9 @@
       "tokenPrice": 0.84375,
       "inputPrice": 0.375,
       "outputPrice": 2.25,
-      "speed": 133.24,
-      "latency": 42.4765,
-      "totalTime": 46.2291,
+      "speed": 131.358,
+      "latency": 43.1272,
+      "totalTime": 46.9335,
       "context": 262144
      }
     },
@@ -3576,9 +3551,9 @@
       "tokenPrice": 0.84375,
       "inputPrice": 0.375,
       "outputPrice": 2.25,
-      "speed": 145.167,
-      "latency": 1.98733,
-      "totalTime": 5.43163,
+      "speed": 145.502,
+      "latency": 2.01171,
+      "totalTime": 5.4481,
       "context": 262144
      }
     },
@@ -3601,9 +3576,9 @@
       "tokenPrice": 0.7,
       "inputPrice": 0.4,
       "outputPrice": 1.6,
-      "speed": 59.1279,
-      "latency": 36.1417,
-      "totalTime": 44.5979,
+      "speed": 57.0431,
+      "latency": 37.3826,
+      "totalTime": 46.1479,
       "context": 1000000
      }
     },
@@ -3626,9 +3601,9 @@
       "tokenPrice": 3,
       "inputPrice": 2,
       "outputPrice": 6,
-      "speed": 41.755,
-      "latency": 50.8814,
-      "totalTime": 62.856,
+      "speed": 41.2228,
+      "latency": 51.5109,
+      "totalTime": 63.6401,
       "context": 262000
      }
     },
@@ -3651,9 +3626,9 @@
       "tokenPrice": 1.125,
       "inputPrice": 0.5,
       "outputPrice": 3,
-      "speed": 43.5384,
-      "latency": 49.8211,
-      "totalTime": 61.3053,
+      "speed": 43.9827,
+      "latency": 49.356,
+      "totalTime": 60.7241,
       "context": 256000
      }
     },
@@ -3676,9 +3651,9 @@
       "tokenPrice": 1.125,
       "inputPrice": 0.5,
       "outputPrice": 3,
-      "speed": 51.2495,
-      "latency": 42.9918,
-      "totalTime": 52.748,
+      "speed": 48.4531,
+      "latency": 45.2441,
+      "totalTime": 55.5633,
       "context": 256000
      }
     },
@@ -3701,9 +3676,9 @@
       "tokenPrice": 1.125,
       "inputPrice": 0.5,
       "outputPrice": 3,
-      "speed": 49.7691,
-      "latency": 44.1505,
-      "totalTime": 54.1969,
+      "speed": 46.5671,
+      "latency": 46.9529,
+      "totalTime": 57.69,
       "context": 256000
      }
     },
@@ -3726,9 +3701,9 @@
       "tokenPrice": 1.125,
       "inputPrice": 0.5,
       "outputPrice": 3,
-      "speed": 46.1061,
-      "latency": 3.8272,
-      "totalTime": 14.6717,
+      "speed": 49.9125,
+      "latency": 3.9514,
+      "totalTime": 13.9689,
       "context": 256000
      }
     },
@@ -3751,9 +3726,9 @@
       "tokenPrice": 0.23,
       "inputPrice": 0.15,
       "outputPrice": 0.47,
-      "speed": 51.4652,
-      "latency": 41.0158,
-      "totalTime": 50.7311,
+      "speed": 51.6514,
+      "latency": 40.8084,
+      "totalTime": 50.4887,
       "context": 256000
      }
     },
@@ -3776,9 +3751,9 @@
       "tokenPrice": 3,
       "inputPrice": 2,
       "outputPrice": 6,
-      "speed": 41.6599,
-      "latency": 51.029,
-      "totalTime": 63.0309,
+      "speed": 40.8367,
+      "latency": 51.826,
+      "totalTime": 64.0699,
       "context": 983616
      }
     },
@@ -3801,9 +3776,9 @@
       "tokenPrice": 0.4825,
       "inputPrice": 0.31,
       "outputPrice": 1,
-      "speed": 80.2312,
-      "latency": 1.05152,
-      "totalTime": 7.28351,
+      "speed": 95.861,
+      "latency": 0.888729,
+      "totalTime": 6.10462,
       "context": 256000
      }
     },
@@ -3826,9 +3801,9 @@
       "tokenPrice": 0.35,
       "inputPrice": 0.1,
       "outputPrice": 1.1,
-      "speed": 98.9011,
-      "latency": 0.813838,
-      "totalTime": 5.86939,
+      "speed": 136.005,
+      "latency": 0.751429,
+      "totalTime": 4.42775,
       "context": 262144
      }
     },
@@ -3851,9 +3826,9 @@
       "tokenPrice": 0.43,
       "inputPrice": 0.25,
       "outputPrice": 0.97,
-      "speed": 96.1894,
-      "latency": 1.78209,
-      "totalTime": 6.98016,
+      "speed": 96.413,
+      "latency": 1.87394,
+      "totalTime": 7.05996,
       "context": 65536
      }
     },
@@ -3876,9 +3851,9 @@
       "tokenPrice": 0.43,
       "inputPrice": 0.25,
       "outputPrice": 0.97,
-      "speed": 102.642,
-      "latency": 21.325,
-      "totalTime": 26.1963,
+      "speed": 102.813,
+      "latency": 21.3739,
+      "totalTime": 26.2371,
       "context": 65536
      }
     },
@@ -3901,9 +3876,9 @@
       "tokenPrice": 0.6,
       "inputPrice": 0.4,
       "outputPrice": 1.2,
-      "speed": 326.9,
-      "latency": 6.92932,
-      "totalTime": 8.45884,
+      "speed": 362.521,
+      "latency": 6.17481,
+      "totalTime": 7.55404,
       "context": 1048580
      }
     },
@@ -3926,9 +3901,9 @@
       "tokenPrice": 0.35,
       "inputPrice": 0.2,
       "outputPrice": 0.8,
-      "speed": 88.0243,
-      "latency": 24.1669,
-      "totalTime": 29.8471,
+      "speed": 87.9475,
+      "latency": 24.1389,
+      "totalTime": 29.8241,
       "context": 128000
      }
     },
@@ -3951,9 +3926,9 @@
       "tokenPrice": 0.85,
       "inputPrice": 0.3,
       "outputPrice": 2.5,
-      "speed": 118.534,
-      "latency": 20.63,
-      "totalTime": 24.8482,
+      "speed": 122.229,
+      "latency": 20.093,
+      "totalTime": 24.1836,
       "context": 262144
      }
     },
@@ -3976,9 +3951,9 @@
       "tokenPrice": 0.074,
       "inputPrice": 0.042,
       "outputPrice": 0.17,
-      "speed": 197.153,
-      "latency": 11.75,
-      "totalTime": 14.2861,
+      "speed": 194.42,
+      "latency": 11.9302,
+      "totalTime": 14.5019,
       "context": 128000
      }
     },
@@ -4001,35 +3976,10 @@
       "tokenPrice": 0.175,
       "inputPrice": 0.1,
       "outputPrice": 0.4,
-      "speed": 95.2246,
-      "latency": 22.8364,
-      "totalTime": 28.0871,
+      "speed": 121.651,
+      "latency": 18.2692,
+      "totalTime": 22.3793,
       "context": 1048580
-     }
-    },
-    {
-     "id": "solar-pro4",
-     "name": "Solar Pro 4",
-     "fullName": "Solar Pro 4",
-     "creator": {
-      "slug": "upstage",
-      "name": "Upstage"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 512000,
-     "values": {
-      "intelligence": 26.56,
-      "costTask": 0.711307,
-      "tokensTask": null,
-      "tokenPrice": 0.525,
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
-      "speed": 121.655,
-      "latency": 18.4625,
-      "totalTime": 22.5725,
-      "context": 512000
      }
     },
     {
@@ -4051,9 +4001,9 @@
       "tokenPrice": 1.425,
       "inputPrice": 1,
       "outputPrice": 2.7,
-      "speed": 224.016,
-      "latency": 10.1065,
-      "totalTime": 12.3385,
+      "speed": 220.246,
+      "latency": 10.3188,
+      "totalTime": 12.589,
       "context": 1000000
      }
     },
@@ -4076,14 +4026,14 @@
       "tokenPrice": 0.3875,
       "inputPrice": 0.25,
       "outputPrice": 0.8,
-      "speed": 352.155,
-      "latency": 6.93135,
-      "totalTime": 8.35118,
+      "speed": 342.469,
+      "latency": 7.00253,
+      "totalTime": 8.46252,
       "context": 512000
      }
     }
    ],
-   "modelCount": 163
+   "modelCount": 161
   },
   {
    "id": "image",
@@ -6307,11 +6257,11 @@
       "name": "Runway"
      },
      "openWeights": false,
-     "sizeValue": 3081,
+     "sizeValue": 3251,
      "values": {
-      "quality": 910.96,
+      "quality": 909.68,
       "price": 7.2,
-      "appearances": 3081,
+      "appearances": 3251,
       "uncertainty": 18
      }
     },
@@ -6324,12 +6274,12 @@
       "name": "KlingAI"
      },
      "openWeights": false,
-     "sizeValue": 3011,
+     "sizeValue": 3154,
      "values": {
-      "quality": 888.21,
+      "quality": 889.56,
       "price": 6.72,
-      "appearances": 3011,
-      "uncertainty": 19
+      "appearances": 3154,
+      "uncertainty": 18
      }
     },
     {
@@ -6749,12 +6699,12 @@
       "name": "Pruna AI"
      },
      "openWeights": false,
-     "sizeValue": 3108,
+     "sizeValue": 3271,
      "values": {
-      "quality": 802.42,
+      "quality": 802.34,
       "price": 2.4,
-      "appearances": 3108,
-      "uncertainty": 20
+      "appearances": 3271,
+      "uncertainty": 19
      }
     },
     {
@@ -6766,11 +6716,11 @@
       "name": "Pika Art"
      },
      "openWeights": false,
-     "sizeValue": 2985,
+     "sizeValue": 3133,
      "values": {
-      "quality": 837.06,
+      "quality": 835.46,
       "price": 5.4,
-      "appearances": 2985,
+      "appearances": 3133,
       "uncertainty": 19
      }
     },
