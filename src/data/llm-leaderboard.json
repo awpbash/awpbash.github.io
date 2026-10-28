@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-26T09:03:54.360Z",
+ "generatedAt": "2026-10-28T09:47:57.731Z",
  "datasets": [
   {
    "id": "language",
@@ -7,81 +7,6 @@
    "description": "Language-model benchmarks, token use, pricing, and inference performance.",
    "source": "https://artificialanalysis.ai/models/",
    "models": [
-    {
-     "id": "agnes-2-5-pro-beta",
-     "name": "Agnes 2.5 Pro Beta",
-     "fullName": "Agnes 2.5 Pro Beta",
-     "creator": {
-      "slug": "sapiens-ai",
-      "name": "Sapiens AI"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 35.2413,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.15,
-      "inputPrice": 0.1,
-      "outputPrice": 0.3,
-      "speed": 114.145,
-      "latency": 18.9114,
-      "totalTime": 23.2918,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "apertus-8b-instruct",
-     "name": "Apertus 8B Instruct",
-     "fullName": "Apertus 8B Instruct",
-     "creator": {
-      "slug": "swiss-ai-initiative",
-      "name": "Swiss AI Initiative"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 65536,
-     "values": {
-      "intelligence": 4.83424,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.125,
-      "inputPrice": 0.1,
-      "outputPrice": 0.2,
-      "speed": 141.306,
-      "latency": 3.69589,
-      "totalTime": 7.2343,
-      "context": 65536
-     }
-    },
-    {
-     "id": "celeris-1",
-     "name": "Celeris-1",
-     "fullName": "Celeris-1",
-     "creator": {
-      "slug": "celeris",
-      "name": "Celeris"
-     },
-     "openWeights": false,
-     "reasoning": false,
-     "estimated": false,
-     "sizeValue": 131072,
-     "values": {
-      "intelligence": 6.34695,
-      "costTask": 0.0501576,
-      "tokensTask": null,
-      "tokenPrice": 0.325,
-      "inputPrice": 0.2,
-      "outputPrice": 0.7,
-      "speed": 1480.6,
-      "latency": 0.561171,
-      "totalTime": 0.898872,
-      "context": 131072
-     }
-    },
     {
      "id": "claude-fable-5-1",
      "name": "Claude Fable 5.1 (max with fallback)",
@@ -95,15 +20,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 53.3549,
-      "costTask": 7.62971,
-      "tokensTask": 78110.8,
+      "intelligence": 49.0102,
+      "costTask": 13.0393,
+      "tokensTask": 117941,
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 70.0527,
-      "latency": 180.512,
-      "totalTime": 187.649,
+      "speed": 66.4196,
+      "latency": 132.231,
+      "totalTime": 139.759,
       "context": 1000000
      }
     },
@@ -120,15 +45,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 51.1516,
-      "costTask": 3.91253,
+      "intelligence": 47.025,
+      "costTask": 7.56079,
       "tokensTask": null,
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 57.9974,
-      "latency": 17.9268,
-      "totalTime": 26.5479,
+      "speed": 59.8429,
+      "latency": 16.8543,
+      "totalTime": 25.2095,
       "context": 1000000
      }
     },
@@ -145,15 +70,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 46.8163,
-      "costTask": 2.37103,
+      "intelligence": 38.4836,
+      "costTask": 4.48674,
       "tokensTask": null,
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 56.395,
-      "latency": 1.72983,
-      "totalTime": 10.5959,
+      "speed": 57.475,
+      "latency": 1.99457,
+      "totalTime": 10.694,
       "context": 1000000
      }
     },
@@ -170,15 +95,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 48.9206,
-      "costTask": 2.9826,
+      "intelligence": 42.9716,
+      "costTask": 5.58054,
       "tokensTask": null,
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 55.2993,
-      "latency": 6.97101,
-      "totalTime": 16.0127,
+      "speed": 60.7196,
+      "latency": 7.83022,
+      "totalTime": 16.0648,
       "context": 1000000
      }
     },
@@ -195,15 +120,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 53.2033,
-      "costTask": 5.9783,
+      "intelligence": 49.6716,
+      "costTask": 10.8855,
       "tokensTask": null,
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 62.2399,
-      "latency": 74.4808,
-      "totalTime": 82.5142,
+      "speed": 66.2538,
+      "latency": 103.753,
+      "totalTime": 111.299,
       "context": 1000000
      }
     },
@@ -220,15 +145,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 43.395,
-      "costTask": 0.21277,
-      "tokensTask": 162164,
+      "intelligence": 36.2345,
+      "costTask": 0.411007,
+      "tokensTask": 225966,
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 234.216,
-      "latency": 325.802,
-      "totalTime": 327.936,
+      "speed": 240.696,
+      "latency": 310.72,
+      "totalTime": 312.797,
       "context": 1000000
      }
     },
@@ -245,15 +170,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 37.824,
-      "costTask": 0.0794267,
+      "intelligence": 29.6243,
+      "costTask": 0.15856,
       "tokensTask": null,
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 183.721,
+      "speed": 186.703,
       "latency": 24.3085,
-      "totalTime": 27.0301,
+      "totalTime": 26.9866,
       "context": 1000000
      }
     },
@@ -270,15 +195,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 29.4524,
-      "costTask": 0.0244594,
+      "intelligence": 18.618,
+      "costTask": 0.0437577,
       "tokensTask": null,
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 169.984,
-      "latency": 7.75854,
-      "totalTime": 10.7,
+      "speed": 184.996,
+      "latency": 7.51498,
+      "totalTime": 10.2177,
       "context": 1000000
      }
     },
@@ -295,15 +220,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 34.4647,
-      "costTask": 0.0470308,
+      "intelligence": 24.5513,
+      "costTask": 0.0917646,
       "tokensTask": null,
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
       "speed": 175.091,
-      "latency": 11.2831,
-      "totalTime": 14.1387,
+      "latency": 10.3568,
+      "totalTime": 13.2124,
       "context": 1000000
      }
     },
@@ -320,15 +245,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 41.2489,
-      "costTask": 0.123786,
+      "intelligence": 34.3388,
+      "costTask": 0.248361,
       "tokensTask": null,
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 189.437,
-      "latency": 65.6812,
-      "totalTime": 68.3206,
+      "speed": 196.035,
+      "latency": 67.2007,
+      "totalTime": 69.7513,
       "context": 1000000
      }
     },
@@ -345,15 +270,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 57.6224,
-      "costTask": 5.98201,
-      "tokensTask": 119166,
+      "intelligence": 58.406,
+      "costTask": 10.0364,
+      "tokensTask": 173313,
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 96.7713,
-      "latency": 676.755,
-      "totalTime": 681.922,
+      "speed": 98.3647,
+      "latency": 700.165,
+      "totalTime": 705.248,
       "context": 1000000
      }
     },
@@ -370,15 +295,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 53.5832,
-      "costTask": 1.8225,
+      "intelligence": 51.686,
+      "costTask": 3.46466,
       "tokensTask": null,
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 80.0439,
-      "latency": 31.316,
-      "totalTime": 37.5626,
+      "speed": 80.5373,
+      "latency": 33.5694,
+      "totalTime": 39.7777,
       "context": 1000000
      }
     },
@@ -395,15 +320,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 42.3078,
-      "costTask": 0.55118,
+      "intelligence": 34.5028,
+      "costTask": 0.975529,
       "tokensTask": null,
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 81.811,
-      "latency": 6.35629,
-      "totalTime": 12.4679,
+      "speed": 82.0607,
+      "latency": 5.23865,
+      "totalTime": 11.3317,
       "context": 1000000
      }
     },
@@ -420,15 +345,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 51.2435,
-      "costTask": 1.33601,
+      "intelligence": 48.0581,
+      "costTask": 2.45109,
       "tokensTask": null,
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 83.0038,
+      "speed": 81.9168,
       "latency": 16.4825,
-      "totalTime": 22.5064,
+      "totalTime": 22.5863,
       "context": 1000000
      }
     },
@@ -445,15 +370,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 55.9874,
-      "costTask": 3.45911,
+      "intelligence": 56.9947,
+      "costTask": 6.04719,
       "tokensTask": null,
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 82.0307,
+      "speed": 84.1007,
       "latency": 119.089,
-      "totalTime": 125.185,
+      "totalTime": 125.035,
       "context": 1000000
      }
     },
@@ -470,15 +395,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 56.0001,
-      "costTask": 5.46085,
-      "tokensTask": 197430,
+      "intelligence": 54.2413,
+      "costTask": 10.0206,
+      "tokensTask": 285387,
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 138.399,
-      "latency": 388.888,
-      "totalTime": 392.501,
+      "speed": 140.091,
+      "latency": 455.029,
+      "totalTime": 458.598,
       "context": 1000000
      }
     },
@@ -495,15 +420,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 46.7534,
-      "costTask": 0.88445,
+      "intelligence": 41.1151,
+      "costTask": 1.63613,
       "tokensTask": null,
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 105.973,
+      "speed": 115.135,
       "latency": 11.0794,
-      "totalTime": 15.7976,
+      "totalTime": 15.4222,
       "context": 1000000
      }
     },
@@ -520,15 +445,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 35.8682,
-      "costTask": 0.345161,
+      "intelligence": 25.2997,
+      "costTask": 0.511342,
       "tokensTask": null,
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 106.34,
-      "latency": 1.15936,
-      "totalTime": 5.86125,
+      "speed": 109.436,
+      "latency": 1.29141,
+      "totalTime": 5.8603,
       "context": 1000000
      }
     },
@@ -545,15 +470,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 40.8387,
-      "costTask": 0.483264,
+      "intelligence": 30.3196,
+      "costTask": 0.780656,
       "tokensTask": null,
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 106.509,
-      "latency": 1.33706,
-      "totalTime": 6.03151,
+      "speed": 108.766,
+      "latency": 3.01886,
+      "totalTime": 7.61587,
       "context": 1000000
      }
     },
@@ -570,41 +495,16 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 51.8956,
-      "costTask": 2.01203,
+      "intelligence": 49.574,
+      "costTask": 4.09198,
       "tokensTask": null,
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 109.902,
-      "latency": 28.3761,
-      "totalTime": 32.9256,
+      "speed": 112.915,
+      "latency": 28.6271,
+      "totalTime": 33.0552,
       "context": 1000000
-     }
-    },
-    {
-     "id": "command-a",
-     "name": "Command A",
-     "fullName": "Command A",
-     "creator": {
-      "slug": "cohere",
-      "name": "Cohere"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 6.9582,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 4.375,
-      "inputPrice": 2.5,
-      "outputPrice": 10,
-      "speed": 24.5396,
-      "latency": 2.10915,
-      "totalTime": 22.4843,
-      "context": 256000
      }
     },
     {
@@ -620,15 +520,15 @@
      "estimated": false,
      "sizeValue": 192000,
      "values": {
-      "intelligence": 13.1335,
+      "intelligence": 6.2412,
       "costTask": null,
       "tokensTask": null,
       "tokenPrice": null,
       "inputPrice": null,
       "outputPrice": null,
-      "speed": 161.942,
-      "latency": 12.8772,
-      "totalTime": 15.9647,
+      "speed": 152.276,
+      "latency": 13.6489,
+      "totalTime": 16.9324,
       "context": 192000
      }
     },
@@ -645,40 +545,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 45.0965,
-      "costTask": 0.262048,
-      "tokensTask": 89495.1,
+      "intelligence": 32.4896,
+      "costTask": 0.602105,
+      "tokensTask": 138962,
       "tokenPrice": 0.525,
       "inputPrice": 0.3,
       "outputPrice": 1.2,
-      "speed": 169.042,
-      "latency": 13.0229,
-      "totalTime": 15.9807,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "deepseek-v4-flash-vision",
-     "name": "DeepSeek V4 Flash Vision (max)",
-     "fullName": "DeepSeek V4 Flash Vision (Max)",
-     "creator": {
-      "slug": "deepseek",
-      "name": "DeepSeek"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 34.8391,
-      "costTask": 1.03791,
-      "tokensTask": null,
-      "tokenPrice": 0.66,
-      "inputPrice": 0.44,
-      "outputPrice": 1.32,
-      "speed": 177.609,
-      "latency": 12.8972,
-      "totalTime": 15.7124,
+      "speed": 173.382,
+      "latency": 12.6675,
+      "totalTime": 15.5513,
       "context": 1000000
      }
     },
@@ -695,65 +570,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 35.9968,
-      "costTask": 0.674022,
+      "intelligence": 23.0633,
+      "costTask": 1.76913,
       "tokensTask": null,
       "tokenPrice": 1.98,
       "inputPrice": 1.32,
       "outputPrice": 3.96,
-      "speed": 103.622,
-      "latency": 21.0537,
-      "totalTime": 25.8789,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "deepseek-v4-pro-non-reasoning",
-     "name": "DeepSeek V4 Pro 0813 (non-reasoning)",
-     "fullName": "DeepSeek V4 Pro 0813 (Non-reasoning)",
-     "creator": {
-      "slug": "deepseek",
-      "name": "DeepSeek"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 20.3605,
-      "costTask": 0.355471,
-      "tokensTask": null,
-      "tokenPrice": 1.98,
-      "inputPrice": 1.32,
-      "outputPrice": 3.96,
-      "speed": 104.433,
-      "latency": 1.76434,
-      "totalTime": 6.55212,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "gemini-3-1-pro-preview",
-     "name": "Gemini 3.1 Pro Preview",
-     "fullName": "Gemini 3.1 Pro Preview",
-     "creator": {
-      "slug": "google",
-      "name": "Google"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 29.7186,
-      "costTask": 1.29859,
-      "tokensTask": null,
-      "tokenPrice": 4.5,
-      "inputPrice": 2,
-      "outputPrice": 12,
-      "speed": 132.241,
-      "latency": 20.5406,
-      "totalTime": 24.3216,
+      "speed": 91.7619,
+      "latency": 23.5184,
+      "totalTime": 28.9673,
       "context": 1000000
      }
     },
@@ -770,15 +595,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 22.1685,
-      "costTask": 0.192743,
+      "intelligence": 11.6563,
+      "costTask": 0.692902,
       "tokensTask": null,
       "tokenPrice": 0.85,
       "inputPrice": 0.3,
       "outputPrice": 2.5,
-      "speed": 418.868,
-      "latency": 7.84609,
-      "totalTime": 9.03978,
+      "speed": 460.615,
+      "latency": 6.63028,
+      "totalTime": 7.71579,
       "context": 1000000
      }
     },
@@ -795,15 +620,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 40.9262,
-      "costTask": 1.24279,
-      "tokensTask": 71002.6,
+      "intelligence": 30.5468,
+      "costTask": 7.76601,
+      "tokensTask": 98939.5,
       "tokenPrice": 1.5,
       "inputPrice": 0.75,
       "outputPrice": 3.75,
-      "speed": 132.166,
-      "latency": 26.4873,
-      "totalTime": 30.2704,
+      "speed": 132.626,
+      "latency": 27.2554,
+      "totalTime": 31.0254,
       "context": 1000000
      }
     },
@@ -820,216 +645,16 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 52.5606,
-      "costTask": 1.99032,
-      "tokensTask": 61557.6,
+      "intelligence": 50.4122,
+      "costTask": 3.84134,
+      "tokensTask": 116368,
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 80.8601,
-      "latency": 57.0072,
-      "totalTime": 63.1908,
+      "speed": 82.0494,
+      "latency": 46.6372,
+      "totalTime": 52.7311,
       "context": 1000000
-     }
-    },
-    {
-     "id": "gemma-4-12b",
-     "name": "Gemma 4 12B",
-     "fullName": "Gemma 4 12B (Reasoning)",
-     "creator": {
-      "slug": "google",
-      "name": "Google"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 262144,
-     "values": {
-      "intelligence": 14.1848,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.15,
-      "inputPrice": 0.1,
-      "outputPrice": 0.3,
-      "speed": 113.305,
-      "latency": 19.8667,
-      "totalTime": 24.2796,
-      "context": 262144
-     }
-    },
-    {
-     "id": "gemma-4-12b-non-reasoning",
-     "name": "Gemma 4 12B (non-reasoning)",
-     "fullName": "Gemma 4 12B (Non-reasoning)",
-     "creator": {
-      "slug": "google",
-      "name": "Google"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 262144,
-     "values": {
-      "intelligence": 9.37989,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.15,
-      "inputPrice": 0.1,
-      "outputPrice": 0.3,
-      "speed": 119.841,
-      "latency": 2.24935,
-      "totalTime": 6.42154,
-      "context": 262144
-     }
-    },
-    {
-     "id": "gemma-4-26b-a4b",
-     "name": "Gemma 4 26B A4B",
-     "fullName": "Gemma 4 26B A4B (Reasoning)",
-     "creator": {
-      "slug": "google",
-      "name": "Google"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 16.6719,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.16,
-      "inputPrice": 0.1,
-      "outputPrice": 0.34,
-      "speed": 94.8717,
-      "latency": 21.998,
-      "totalTime": 27.2683,
-      "context": 256000
-     }
-    },
-    {
-     "id": "gemma-4-26b-a4b-non-reasoning",
-     "name": "Gemma 4 26B A4B (non-reasoning)",
-     "fullName": "Gemma 4 26B A4B (Non-reasoning)",
-     "creator": {
-      "slug": "google",
-      "name": "Google"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 13.1304,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.18625,
-      "inputPrice": 0.115,
-      "outputPrice": 0.4,
-      "speed": 113.934,
-      "latency": 0.923169,
-      "totalTime": 5.31168,
-      "context": 256000
-     }
-    },
-    {
-     "id": "gemma-4-31b",
-     "name": "Gemma 4 31B",
-     "fullName": "Gemma 4 31B (Reasoning)",
-     "creator": {
-      "slug": "google",
-      "name": "Google"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 14.669,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": null,
-      "inputPrice": null,
-      "outputPrice": null,
-      "speed": 35.2995,
-      "latency": 50.2687,
-      "totalTime": 64.4332,
-      "context": 256000
-     }
-    },
-    {
-     "id": "gemma-4-31b-non-reasoning",
-     "name": "Gemma 4 31B (non-reasoning)",
-     "fullName": "Gemma 4 31B (Non-reasoning)",
-     "creator": {
-      "slug": "google",
-      "name": "Google"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 13.9199,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.22375,
-      "inputPrice": 0.165,
-      "outputPrice": 0.4,
-      "speed": 62.0994,
-      "latency": 1.81925,
-      "totalTime": 9.87086,
-      "context": 256000
-     }
-    },
-    {
-     "id": "gemma-4-e4b",
-     "name": "Gemma 4 E4B",
-     "fullName": "Gemma 4 E4B (Reasoning)",
-     "creator": {
-      "slug": "google",
-      "name": "Google"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 128000,
-     "values": {
-      "intelligence": 8.90908,
-      "costTask": 0.00816328,
-      "tokensTask": null,
-      "tokenPrice": 0.04,
-      "inputPrice": 0.02,
-      "outputPrice": 0.1,
-      "speed": 45.7203,
-      "latency": 44.7624,
-      "totalTime": 55.6984,
-      "context": 128000
-     }
-    },
-    {
-     "id": "gemma-4-e4b-non-reasoning",
-     "name": "Gemma 4 E4B (non-reasoning)",
-     "fullName": "Gemma 4 E4B (Non-reasoning)",
-     "creator": {
-      "slug": "google",
-      "name": "Google"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 128000,
-     "values": {
-      "intelligence": 7.45765,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.04,
-      "inputPrice": 0.02,
-      "outputPrice": 0.1,
-      "speed": 45.3624,
-      "latency": 0.77646,
-      "totalTime": 11.7988,
-      "context": 128000
      }
     },
     {
@@ -1045,40 +670,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 44.7774,
-      "costTask": 2.00564,
-      "tokensTask": 71127.6,
+      "intelligence": 31.6534,
+      "costTask": 5.00926,
+      "tokensTask": 118987,
       "tokenPrice": 2.15,
       "inputPrice": 1.4,
       "outputPrice": 4.4,
-      "speed": 98.2216,
-      "latency": 22.7472,
-      "totalTime": 27.8377,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "glm-5-3-flash",
-     "name": "GLM-5.3-Flash",
-     "fullName": "GLM-5.3-Flash",
-     "creator": {
-      "slug": "zai",
-      "name": "Z AI"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 41.8075,
-      "costTask": 0.283595,
-      "tokensTask": 68673.2,
-      "tokenPrice": 0.2375,
-      "inputPrice": 0.15,
-      "outputPrice": 0.5,
-      "speed": 73.4957,
-      "latency": 30.0497,
-      "totalTime": 36.8528,
+      "speed": 85.6672,
+      "latency": 26.0273,
+      "totalTime": 31.8638,
       "context": 1000000
      }
     },
@@ -1095,215 +695,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 34.299,
-      "costTask": 0.852217,
+      "intelligence": 23.0579,
+      "costTask": 1.57493,
       "tokensTask": null,
       "tokenPrice": 2.15,
       "inputPrice": 1.4,
       "outputPrice": 4.4,
       "speed": 89.0046,
-      "latency": 25.3741,
-      "totalTime": 30.9918,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "gpt-5-3-codex",
-     "name": "GPT-5.3 Codex (xhigh)",
-     "fullName": "GPT-5.3 Codex (Xhigh)",
-     "creator": {
-      "slug": "openai",
-      "name": "OpenAI"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 400000,
-     "values": {
-      "intelligence": 32.5028,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 4.8125,
-      "inputPrice": 1.75,
-      "outputPrice": 14,
-      "speed": 105.443,
-      "latency": 54.9745,
-      "totalTime": 59.7164,
-      "context": 400000
-     }
-    },
-    {
-     "id": "gpt-5-5-instant-06-26",
-     "name": "GPT-5.5 Instant (June 2026)",
-     "fullName": "GPT-5.5 Instant (June 2026)",
-     "creator": {
-      "slug": "openai",
-      "name": "OpenAI"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 400000,
-     "values": {
-      "intelligence": 26.0135,
-      "costTask": 0.691485,
-      "tokensTask": null,
-      "tokenPrice": 11.25,
-      "inputPrice": 5,
-      "outputPrice": 30,
-      "speed": 158.381,
-      "latency": 13.526,
-      "totalTime": 16.683,
-      "context": 400000
-     }
-    },
-    {
-     "id": "gpt-5-6-terra",
-     "name": "GPT-5.6 Terra (max)",
-     "fullName": "GPT-5.6 Terra (Max)",
-     "creator": {
-      "slug": "openai",
-      "name": "OpenAI"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 42.0829,
-      "costTask": 1.39872,
-      "tokensTask": null,
-      "tokenPrice": 4.5,
-      "inputPrice": 2,
-      "outputPrice": 12,
-      "speed": 134.701,
-      "latency": 104.142,
-      "totalTime": 107.854,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "gpt-5-6-terra-high",
-     "name": "GPT-5.6 Terra (high)",
-     "fullName": "GPT-5.6 Terra (High)",
-     "creator": {
-      "slug": "openai",
-      "name": "OpenAI"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 34.2377,
-      "costTask": 0.337873,
-      "tokensTask": null,
-      "tokenPrice": 4.5,
-      "inputPrice": 2,
-      "outputPrice": 12,
-      "speed": 119.158,
-      "latency": 2.23278,
-      "totalTime": 6.42889,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "gpt-5-6-terra-low",
-     "name": "GPT-5.6 Terra (low)",
-     "fullName": "GPT-5.6 Terra (Low)",
-     "creator": {
-      "slug": "openai",
-      "name": "OpenAI"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 27.4962,
-      "costTask": 0.144462,
-      "tokensTask": null,
-      "tokenPrice": 4.5,
-      "inputPrice": 2,
-      "outputPrice": 12,
-      "speed": 115.624,
-      "latency": 1.32663,
-      "totalTime": 5.65101,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "gpt-5-6-terra-medium",
-     "name": "GPT-5.6 Terra (medium)",
-     "fullName": "GPT-5.6 Terra (Medium)",
-     "creator": {
-      "slug": "openai",
-      "name": "OpenAI"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 30.0938,
-      "costTask": 0.183373,
-      "tokensTask": null,
-      "tokenPrice": 4.5,
-      "inputPrice": 2,
-      "outputPrice": 12,
-      "speed": 114.25,
-      "latency": 1.46153,
-      "totalTime": 5.8379,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "gpt-5-6-terra-non-reasoning",
-     "name": "GPT-5.6 Terra (non-reasoning)",
-     "fullName": "GPT-5.6 Terra (Non-reasoning)",
-     "creator": {
-      "slug": "openai",
-      "name": "OpenAI"
-     },
-     "openWeights": false,
-     "reasoning": false,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 20.7797,
-      "costTask": 0.139724,
-      "tokensTask": null,
-      "tokenPrice": 4.5,
-      "inputPrice": 2,
-      "outputPrice": 12,
-      "speed": 122.003,
-      "latency": 0.745925,
-      "totalTime": 4.84419,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "gpt-5-6-terra-xhigh",
-     "name": "GPT-5.6 Terra (xhigh)",
-     "fullName": "GPT-5.6 Terra (Xhigh)",
-     "creator": {
-      "slug": "openai",
-      "name": "OpenAI"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 37.9513,
-      "costTask": 0.631791,
-      "tokensTask": null,
-      "tokenPrice": 4.5,
-      "inputPrice": 2,
-      "outputPrice": 12,
-      "speed": 121.673,
-      "latency": 19.5441,
-      "totalTime": 23.6534,
+      "latency": 25.2564,
+      "totalTime": 30.8741,
       "context": 1000000
      }
     },
@@ -1320,15 +720,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 51.8333,
-      "costTask": 0.724167,
-      "tokensTask": 38128.4,
+      "intelligence": 54.5087,
+      "costTask": 1.27206,
+      "tokensTask": 67823.7,
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 62.2731,
-      "latency": 246.628,
-      "totalTime": 254.657,
+      "speed": 81.0725,
+      "latency": 278.013,
+      "totalTime": 284.181,
       "context": 1000000
      }
     },
@@ -1345,15 +745,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 50.2378,
-      "costTask": 0.319144,
+      "intelligence": 50.2291,
+      "costTask": 0.590985,
       "tokensTask": null,
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 54.6529,
-      "latency": 48.3286,
-      "totalTime": 57.4773,
+      "speed": 69.8502,
+      "latency": 40.7555,
+      "totalTime": 47.9137,
       "context": 1000000
      }
     },
@@ -1370,15 +770,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 42.0836,
-      "costTask": 0.130752,
+      "intelligence": 34.5029,
+      "costTask": 0.161474,
       "tokensTask": null,
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 50.7941,
-      "latency": 2.63847,
-      "totalTime": 12.4821,
+      "speed": 60.857,
+      "latency": 2.36338,
+      "totalTime": 10.5794,
       "context": 1000000
      }
     },
@@ -1395,15 +795,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 47.7833,
-      "costTask": 0.213701,
+      "intelligence": 46.1469,
+      "costTask": 0.35939,
       "tokensTask": null,
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 53.5009,
-      "latency": 4.19664,
-      "totalTime": 13.5423,
+      "speed": 58.9068,
+      "latency": 3.62455,
+      "totalTime": 12.1125,
       "context": 1000000
      }
     },
@@ -1420,15 +820,165 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 51.0378,
-      "costTask": 0.392861,
+      "intelligence": 52.3082,
+      "costTask": 0.763995,
       "tokensTask": null,
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 58.7896,
-      "latency": 115.155,
-      "totalTime": 123.66,
+      "speed": 69.6169,
+      "latency": 106.404,
+      "totalTime": 113.586,
+      "context": 1000000
+     }
+    },
+    {
+     "id": "gpt-6-1-terra",
+     "name": "GPT-6.1 Terra (max)",
+     "fullName": "GPT-6.1 Terra (Max)",
+     "creator": {
+      "slug": "openai",
+      "name": "OpenAI"
+     },
+     "openWeights": false,
+     "reasoning": true,
+     "estimated": false,
+     "sizeValue": 1000000,
+     "values": {
+      "intelligence": 50.9765,
+      "costTask": 0.961108,
+      "tokensTask": 59883.2,
+      "tokenPrice": 2,
+      "inputPrice": 1,
+      "outputPrice": 5,
+      "speed": 90.8995,
+      "latency": 77.9579,
+      "totalTime": 83.4585,
+      "context": 1000000
+     }
+    },
+    {
+     "id": "gpt-6-1-terra-high",
+     "name": "GPT-6.1 Terra (high)",
+     "fullName": "GPT-6.1 Terra (High)",
+     "creator": {
+      "slug": "openai",
+      "name": "OpenAI"
+     },
+     "openWeights": false,
+     "reasoning": true,
+     "estimated": false,
+     "sizeValue": 1000000,
+     "values": {
+      "intelligence": 42.3345,
+      "costTask": 0.25928,
+      "tokensTask": null,
+      "tokenPrice": 2,
+      "inputPrice": 1,
+      "outputPrice": 5,
+      "speed": 90.9293,
+      "latency": 5.66147,
+      "totalTime": 11.1603,
+      "context": 1000000
+     }
+    },
+    {
+     "id": "gpt-6-1-terra-low",
+     "name": "GPT-6.1 Terra (low)",
+     "fullName": "GPT-6.1 Terra (Low)",
+     "creator": {
+      "slug": "openai",
+      "name": "OpenAI"
+     },
+     "openWeights": false,
+     "reasoning": true,
+     "estimated": false,
+     "sizeValue": 1000000,
+     "values": {
+      "intelligence": 29.2169,
+      "costTask": 0.0713376,
+      "tokensTask": null,
+      "tokenPrice": 2,
+      "inputPrice": 1,
+      "outputPrice": 5,
+      "speed": 90.9536,
+      "latency": 1.29419,
+      "totalTime": 6.7915,
+      "context": 1000000
+     }
+    },
+    {
+     "id": "gpt-6-1-terra-medium",
+     "name": "GPT-6.1 Terra (medium)",
+     "fullName": "GPT-6.1 Terra (Medium)",
+     "creator": {
+      "slug": "openai",
+      "name": "OpenAI"
+     },
+     "openWeights": false,
+     "reasoning": true,
+     "estimated": false,
+     "sizeValue": 1000000,
+     "values": {
+      "intelligence": 38.1152,
+      "costTask": 0.168805,
+      "tokensTask": null,
+      "tokenPrice": 2,
+      "inputPrice": 1,
+      "outputPrice": 5,
+      "speed": 91.0044,
+      "latency": 1.65205,
+      "totalTime": 7.14629,
+      "context": 1000000
+     }
+    },
+    {
+     "id": "gpt-6-1-terra-non-reasoning",
+     "name": "GPT-6.1 Terra (non-reasoning)",
+     "fullName": "GPT-6.1 Terra (Non-reasoning)",
+     "creator": {
+      "slug": "openai",
+      "name": "OpenAI"
+     },
+     "openWeights": false,
+     "reasoning": false,
+     "estimated": false,
+     "sizeValue": 1000000,
+     "values": {
+      "intelligence": 30.4159,
+      "costTask": 0.225896,
+      "tokensTask": null,
+      "tokenPrice": 2,
+      "inputPrice": 1,
+      "outputPrice": 5,
+      "speed": 91.0845,
+      "latency": 0.997009,
+      "totalTime": 6.48642,
+      "context": 1000000
+     }
+    },
+    {
+     "id": "gpt-6-1-terra-xhigh",
+     "name": "GPT-6.1 Terra (xhigh)",
+     "fullName": "GPT-6.1 Terra (Xhigh)",
+     "creator": {
+      "slug": "openai",
+      "name": "OpenAI"
+     },
+     "openWeights": false,
+     "reasoning": true,
+     "estimated": false,
+     "sizeValue": 1000000,
+     "values": {
+      "intelligence": 44.9501,
+      "costTask": 0.400689,
+      "tokensTask": null,
+      "tokenPrice": 2,
+      "inputPrice": 1,
+      "outputPrice": 5,
+      "speed": 90.9036,
+      "latency": 17.4959,
+      "totalTime": 22.9962,
       "context": 1000000
      }
     },
@@ -1445,15 +995,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 52.6737,
-      "costTask": 3.2575,
-      "tokensTask": 27205.5,
+      "intelligence": 56.8539,
+      "costTask": 6.24467,
+      "tokensTask": 51973.2,
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 66.6692,
-      "latency": 278.25,
-      "totalTime": 285.749,
+      "speed": 71.0281,
+      "latency": 268.735,
+      "totalTime": 275.774,
       "context": 1000000
      }
     },
@@ -1470,15 +1020,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 50.9191,
-      "costTask": 1.72525,
+      "intelligence": 54.8498,
+      "costTask": 3.23857,
       "tokensTask": null,
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 60.517,
-      "latency": 45.0755,
-      "totalTime": 53.3377,
+      "speed": 62.7294,
+      "latency": 43.971,
+      "totalTime": 51.9417,
       "context": 1000000
      }
     },
@@ -1495,15 +1045,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 45.7819,
-      "costTask": 0.817514,
+      "intelligence": 43.035,
+      "costTask": 1.42372,
       "tokensTask": null,
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 51.7125,
-      "latency": 2.34264,
-      "totalTime": 12.0115,
+      "speed": 48.3186,
+      "latency": 2.7117,
+      "totalTime": 13.0597,
       "context": 1000000
      }
     },
@@ -1520,15 +1070,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 49.5704,
-      "costTask": 1.54065,
+      "intelligence": 51.4548,
+      "costTask": 2.73244,
       "tokensTask": null,
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 58.7911,
-      "latency": 5.21953,
-      "totalTime": 13.7242,
+      "speed": 59.0173,
+      "latency": 4.57027,
+      "totalTime": 13.0424,
       "context": 1000000
      }
     },
@@ -1545,15 +1095,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 52.3863,
-      "costTask": 2.3088,
+      "intelligence": 55.2557,
+      "costTask": 3.65893,
       "tokensTask": null,
       "tokenPrice": 20,
       "inputPrice": 10,
       "outputPrice": 50,
-      "speed": 68.1288,
-      "latency": 161.518,
-      "totalTime": 168.857,
+      "speed": 68.2292,
+      "latency": 158.587,
+      "totalTime": 165.915,
       "context": 1000000
      }
     },
@@ -1570,15 +1120,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 38.1245,
-      "costTask": 0.067823,
-      "tokensTask": 50011.7,
+      "intelligence": 27.7552,
+      "costTask": 0.151956,
+      "tokensTask": 75296.1,
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 136.459,
-      "latency": 84.8496,
-      "totalTime": 88.5137,
+      "speed": 124.343,
+      "latency": 76.5962,
+      "totalTime": 80.6173,
       "context": 1000000
      }
     },
@@ -1595,15 +1145,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 32.9282,
-      "costTask": 0.0290316,
+      "intelligence": 21.379,
+      "costTask": 0.0729478,
       "tokensTask": null,
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 119.931,
-      "latency": 10.783,
-      "totalTime": 14.9521,
+      "speed": 122.018,
+      "latency": 13.7196,
+      "totalTime": 17.8173,
       "context": 1000000
      }
     },
@@ -1620,15 +1170,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 21.5262,
-      "costTask": 0.00451661,
+      "intelligence": 9.66611,
+      "costTask": 0.00511526,
       "tokensTask": null,
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 117.467,
-      "latency": 2.80325,
-      "totalTime": 7.05977,
+      "speed": 118.997,
+      "latency": 2.43012,
+      "totalTime": 6.63192,
       "context": 1000000
      }
     },
@@ -1645,15 +1195,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 18.4678,
-      "costTask": 0.0113451,
+      "intelligence": 9.39244,
+      "costTask": 0.0714174,
       "tokensTask": null,
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 120.159,
-      "latency": 0.930624,
-      "totalTime": 5.09179,
+      "speed": 116.334,
+      "latency": 0.885784,
+      "totalTime": 5.18374,
       "context": 1000000
      }
     },
@@ -1670,191 +1220,16 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 34.5587,
-      "costTask": 0.0421835,
+      "intelligence": 23.3009,
+      "costTask": 0.104093,
       "tokensTask": null,
       "tokenPrice": 0.2,
       "inputPrice": 0.1,
       "outputPrice": 0.5,
-      "speed": 123.055,
-      "latency": 20.6958,
-      "totalTime": 24.7591,
+      "speed": 122.552,
+      "latency": 16.7979,
+      "totalTime": 20.8778,
       "context": 1000000
-     }
-    },
-    {
-     "id": "gpt-oss-120b",
-     "name": "gpt-oss-120b (high)",
-     "fullName": "gpt-oss-120b (High)",
-     "creator": {
-      "slug": "openai",
-      "name": "OpenAI"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 131072,
-     "values": {
-      "intelligence": 11.6028,
-      "costTask": 0.107559,
-      "tokensTask": null,
-      "tokenPrice": 0.2625,
-      "inputPrice": 0.15,
-      "outputPrice": 0.6,
-      "speed": 237.913,
-      "latency": 9.18281,
-      "totalTime": 11.2844,
-      "context": 131072
-     }
-    },
-    {
-     "id": "gpt-oss-120b-low",
-     "name": "gpt-oss-120b (low)",
-     "fullName": "gpt-oss-120b (Low)",
-     "creator": {
-      "slug": "openai",
-      "name": "OpenAI"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 131072,
-     "values": {
-      "intelligence": 10.2106,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.2425,
-      "inputPrice": 0.125,
-      "outputPrice": 0.595,
-      "speed": 270.317,
-      "latency": 8.16497,
-      "totalTime": 10.0147,
-      "context": 131072
-     }
-    },
-    {
-     "id": "gpt-oss-20b",
-     "name": "gpt-oss-20b (high)",
-     "fullName": "gpt-oss-20b (High)",
-     "creator": {
-      "slug": "openai",
-      "name": "OpenAI"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 131072,
-     "values": {
-      "intelligence": 8.96752,
-      "costTask": 0.0105561,
-      "tokensTask": null,
-      "tokenPrice": 0.0925,
-      "inputPrice": 0.05,
-      "outputPrice": 0.22,
-      "speed": 176.758,
-      "latency": 12.1245,
-      "totalTime": 14.9533,
-      "context": 131072
-     }
-    },
-    {
-     "id": "gpt-oss-20b-low",
-     "name": "gpt-oss-20b (low)",
-     "fullName": "gpt-oss-20b (Low)",
-     "creator": {
-      "slug": "openai",
-      "name": "OpenAI"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 131072,
-     "values": {
-      "intelligence": 9.95295,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.1275,
-      "inputPrice": 0.07,
-      "outputPrice": 0.3,
-      "speed": 201.596,
-      "latency": 10.8956,
-      "totalTime": 13.3759,
-      "context": 131072
-     }
-    },
-    {
-     "id": "granite-4-2-30b",
-     "name": "Granite 4.2 30B",
-     "fullName": "Granite 4.2 30B",
-     "creator": {
-      "slug": "ibm",
-      "name": "IBM"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 131072,
-     "values": {
-      "intelligence": 12.6832,
-      "costTask": 0.0716641,
-      "tokensTask": null,
-      "tokenPrice": 0.2825,
-      "inputPrice": 0.16,
-      "outputPrice": 0.65,
-      "speed": 41.3567,
-      "latency": 49.1554,
-      "totalTime": 61.2453,
-      "context": 131072
-     }
-    },
-    {
-     "id": "granite-4-2-3b",
-     "name": "Granite 4.2 3B",
-     "fullName": "Granite 4.2 3B",
-     "creator": {
-      "slug": "ibm",
-      "name": "IBM"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 131072,
-     "values": {
-      "intelligence": 9.05588,
-      "costTask": 0.00598724,
-      "tokensTask": null,
-      "tokenPrice": 0.0525,
-      "inputPrice": 0.03,
-      "outputPrice": 0.12,
-      "speed": 42.2306,
-      "latency": 48.0969,
-      "totalTime": 59.9367,
-      "context": 131072
-     }
-    },
-    {
-     "id": "granite-4-2-8b",
-     "name": "Granite 4.2 8B",
-     "fullName": "Granite 4.2 8B",
-     "creator": {
-      "slug": "ibm",
-      "name": "IBM"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 131072,
-     "values": {
-      "intelligence": 11.0813,
-      "costTask": 0.0235961,
-      "tokensTask": null,
-      "tokenPrice": 0.1075,
-      "inputPrice": 0.06,
-      "outputPrice": 0.25,
-      "speed": 45.7587,
-      "latency": 44.5129,
-      "totalTime": 55.4398,
-      "context": 131072
      }
     },
     {
@@ -1870,15 +1245,15 @@
      "estimated": false,
      "sizeValue": 500000,
      "values": {
-      "intelligence": 46.4466,
-      "costTask": 3.73833,
-      "tokensTask": 80561.4,
+      "intelligence": 34.335,
+      "costTask": 7.51177,
+      "tokensTask": 92969.5,
       "tokenPrice": 3,
       "inputPrice": 2,
       "outputPrice": 6,
-      "speed": 87.0931,
-      "latency": 41.7925,
-      "totalTime": 47.5335,
+      "speed": 88.7895,
+      "latency": 53.8905,
+      "totalTime": 59.5218,
       "context": 500000
      }
     },
@@ -1895,15 +1270,15 @@
      "estimated": false,
      "sizeValue": 500000,
      "values": {
-      "intelligence": 46.3322,
-      "costTask": 2.72611,
+      "intelligence": 35.0123,
+      "costTask": 6.1836,
       "tokensTask": null,
       "tokenPrice": 3,
       "inputPrice": 2,
       "outputPrice": 6,
-      "speed": 85.5233,
-      "latency": 25.2128,
-      "totalTime": 31.0591,
+      "speed": 97.1074,
+      "latency": 21.6337,
+      "totalTime": 26.7827,
       "context": 500000
      }
     },
@@ -1920,91 +1295,16 @@
      "estimated": false,
      "sizeValue": 500000,
      "values": {
-      "intelligence": 42.2167,
-      "costTask": 1.24797,
+      "intelligence": 30.8821,
+      "costTask": 2.9222,
       "tokensTask": null,
       "tokenPrice": 3,
       "inputPrice": 2,
       "outputPrice": 6,
-      "speed": 75.1475,
-      "latency": 4.06673,
-      "totalTime": 10.7203,
+      "speed": 77.3031,
+      "latency": 5.43044,
+      "totalTime": 11.8985,
       "context": 500000
-     }
-    },
-    {
-     "id": "hermes-4-llama-3-1-405b",
-     "name": "Hermes 4 405B (non-reasoning)",
-     "fullName": "Hermes 4 - Llama-3.1 405B (Non-reasoning)",
-     "creator": {
-      "slug": "nous-research",
-      "name": "Nous Research"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 128000,
-     "values": {
-      "intelligence": 7.41221,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 1.5,
-      "inputPrice": 1,
-      "outputPrice": 3,
-      "speed": 43.6495,
-      "latency": 2.27012,
-      "totalTime": 13.725,
-      "context": 128000
-     }
-    },
-    {
-     "id": "hermes-4-llama-3-1-405b-reasoning",
-     "name": "Hermes 4 405B",
-     "fullName": "Hermes 4 - Llama-3.1 405B (Reasoning)",
-     "creator": {
-      "slug": "nous-research",
-      "name": "Nous Research"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 128000,
-     "values": {
-      "intelligence": 7.49498,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 1.5,
-      "inputPrice": 1,
-      "outputPrice": 3,
-      "speed": 43.0268,
-      "latency": 48.8185,
-      "totalTime": 60.4392,
-      "context": 128000
-     }
-    },
-    {
-     "id": "hy3",
-     "name": "Hy3",
-     "fullName": "Hy3",
-     "creator": {
-      "slug": "tencent",
-      "name": "Tencent"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 25.2973,
-      "costTask": 0.0717976,
-      "tokensTask": null,
-      "tokenPrice": 0.24075,
-      "inputPrice": 0.136,
-      "outputPrice": 0.555,
-      "speed": 80.6976,
-      "latency": 27.4841,
-      "totalTime": 33.68,
-      "context": 256000
      }
     },
     {
@@ -2020,15 +1320,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 24.9848,
-      "costTask": null,
-      "tokensTask": 34656,
+      "intelligence": 12.4782,
+      "costTask": 1.35196,
+      "tokensTask": 51255.7,
       "tokenPrice": 1.7625,
       "inputPrice": 1,
       "outputPrice": 4.05,
-      "speed": 162.229,
-      "latency": 14.4251,
-      "totalTime": 17.5071,
+      "speed": 194.204,
+      "latency": 12.0522,
+      "totalTime": 14.6268,
       "context": 1000000
      }
     },
@@ -2045,15 +1345,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 25.6583,
-      "costTask": 0.089465,
+      "intelligence": 12.9102,
+      "costTask": 0.203161,
       "tokensTask": null,
       "tokenPrice": 0.525,
       "inputPrice": 0.3,
       "outputPrice": 1.2,
-      "speed": 222.883,
-      "latency": 10.5543,
-      "totalTime": 12.7976,
+      "speed": 208.172,
+      "latency": 11.2054,
+      "totalTime": 13.6072,
       "context": 1000000
      }
     },
@@ -2070,41 +1370,16 @@
      "estimated": false,
      "sizeValue": 524288,
      "values": {
-      "intelligence": 30.5015,
+      "intelligence": 17.7703,
       "costTask": null,
-      "tokensTask": 51517.5,
+      "tokensTask": 63665.4,
       "tokenPrice": null,
       "inputPrice": null,
       "outputPrice": null,
-      "speed": 971.234,
-      "latency": 4.36992,
-      "totalTime": 4.88473,
+      "speed": 929.453,
+      "latency": 4.48027,
+      "totalTime": 5.01822,
       "context": 524288
-     }
-    },
-    {
-     "id": "kimi-k2-7-code",
-     "name": "Kimi K2.7 Code",
-     "fullName": "Kimi K2.7 Code",
-     "creator": {
-      "slug": "kimi",
-      "name": "Kimi"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 25.8121,
-      "costTask": 0.54119,
-      "tokensTask": null,
-      "tokenPrice": 1.7125,
-      "inputPrice": 0.95,
-      "outputPrice": 4,
-      "speed": 81.4241,
-      "latency": 30.0119,
-      "totalTime": 36.1525,
-      "context": 256000
      }
     },
     {
@@ -2120,241 +1395,16 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 55.0869,
-      "costTask": 2.11451,
-      "tokensTask": 55194.6,
+      "intelligence": 46.0026,
+      "costTask": 3.6812,
+      "tokensTask": 72239,
       "tokenPrice": 4,
       "inputPrice": 2,
       "outputPrice": 10,
-      "speed": 52.1856,
-      "latency": 41.2906,
-      "totalTime": 50.8717,
+      "speed": 41.4412,
+      "latency": 51.0819,
+      "totalTime": 63.1472,
       "context": 1000000
-     }
-    },
-    {
-     "id": "ling-3-0-tiny",
-     "name": "Ling 3.0 Tiny",
-     "fullName": "Ling 3.0 Tiny",
-     "creator": {
-      "slug": "inclusionai",
-      "name": "InclusionAI"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 262144,
-     "values": {
-      "intelligence": 11.0636,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": null,
-      "inputPrice": null,
-      "outputPrice": null,
-      "speed": 57.4464,
-      "latency": 37.4631,
-      "totalTime": 46.1669,
-      "context": 262144
-     }
-    },
-    {
-     "id": "ling-3-1-flash",
-     "name": "Ling 3.1 Flash",
-     "fullName": "Ling 3.1 Flash",
-     "creator": {
-      "slug": "inclusionai",
-      "name": "InclusionAI"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 41.0906,
-      "costTask": 1.01061,
-      "tokensTask": null,
-      "tokenPrice": 0.45,
-      "inputPrice": 0.3,
-      "outputPrice": 0.9,
-      "speed": 212.573,
-      "latency": 11.1876,
-      "totalTime": 13.5398,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "llama-3-2-instruct-11b-vision",
-     "name": "Llama 3.2 11B (Vision)",
-     "fullName": "Llama 3.2 Instruct 11B (Vision)",
-     "creator": {
-      "slug": "meta",
-      "name": "Meta"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 128000,
-     "values": {
-      "intelligence": 5.40802,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.345,
-      "inputPrice": 0.345,
-      "outputPrice": 0.345,
-      "speed": 26.377,
-      "latency": 1.37264,
-      "totalTime": 20.3286,
-      "context": 128000
-     }
-    },
-    {
-     "id": "llama-3-3-instruct-70b",
-     "name": "Llama 3.3 70B",
-     "fullName": "Llama 3.3 Instruct 70B",
-     "creator": {
-      "slug": "meta",
-      "name": "Meta"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 128000,
-     "values": {
-      "intelligence": 7.66381,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.67,
-      "inputPrice": 0.655,
-      "outputPrice": 0.715,
-      "speed": 89.1458,
-      "latency": 1.81341,
-      "totalTime": 7.4222,
-      "context": 128000
-     }
-    },
-    {
-     "id": "llama-4-maverick",
-     "name": "Llama 4 Maverick",
-     "fullName": "Llama 4 Maverick",
-     "creator": {
-      "slug": "meta",
-      "name": "Meta"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 9.29903,
-      "costTask": 0.0382998,
-      "tokensTask": null,
-      "tokenPrice": 0.4175,
-      "inputPrice": 0.25,
-      "outputPrice": 0.92,
-      "speed": 53.118,
-      "latency": 1.0024,
-      "totalTime": 10.4154,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "llama-4-scout",
-     "name": "Llama 4 Scout",
-     "fullName": "Llama 4 Scout",
-     "creator": {
-      "slug": "meta",
-      "name": "Meta"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": false,
-     "sizeValue": 10000000,
-     "values": {
-      "intelligence": 6.45127,
-      "costTask": 0.112176,
-      "tokensTask": null,
-      "tokenPrice": 0.3,
-      "inputPrice": 0.18,
-      "outputPrice": 0.66,
-      "speed": 118.362,
-      "latency": 0.792897,
-      "totalTime": 5.01723,
-      "context": 10000000
-     }
-    },
-    {
-     "id": "longcat-2-0",
-     "name": "LongCat 2.0",
-     "fullName": "LongCat 2.0",
-     "creator": {
-      "slug": "longcat",
-      "name": "LongCat"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 19.1123,
-      "costTask": 0.146249,
-      "tokensTask": null,
-      "tokenPrice": 1.3,
-      "inputPrice": 0.75,
-      "outputPrice": 2.95,
-      "speed": 71.6959,
-      "latency": 30.4628,
-      "totalTime": 37.4367,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "magistral-small-2509",
-     "name": "Magistral Small 1.2",
-     "fullName": "Magistral Small 1.2",
-     "creator": {
-      "slug": "mistral",
-      "name": "Mistral"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 128000,
-     "values": {
-      "intelligence": 8.59366,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.75,
-      "inputPrice": 0.5,
-      "outputPrice": 1.5,
-      "speed": 77.1724,
-      "latency": 27.3823,
-      "totalTime": 33.8613,
-      "context": 128000
-     }
-    },
-    {
-     "id": "mercury-2-5",
-     "name": "Mercury 2.5",
-     "fullName": "Mercury 2.5",
-     "creator": {
-      "slug": "inception",
-      "name": "Inception"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 260000,
-     "values": {
-      "intelligence": 12.3408,
-      "costTask": 0.116685,
-      "tokensTask": null,
-      "tokenPrice": 0.375,
-      "inputPrice": 0.25,
-      "outputPrice": 0.75,
-      "speed": 710.492,
-      "latency": 3.45003,
-      "totalTime": 4.15377,
-      "context": 260000
      }
     },
     {
@@ -2370,15 +1420,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 37.8844,
-      "costTask": 0.0623757,
+      "intelligence": 26.7277,
+      "costTask": 0.12853,
       "tokensTask": null,
       "tokenPrice": 0.175,
       "inputPrice": 0.14,
       "outputPrice": 0.28,
-      "speed": 52.0917,
-      "latency": 41.6755,
-      "totalTime": 51.2739,
+      "speed": 58.1929,
+      "latency": 37.6792,
+      "totalTime": 46.2713,
       "context": 1000000
      }
     },
@@ -2395,15 +1445,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 46.3242,
-      "costTask": 0.133223,
-      "tokensTask": 64275.7,
+      "intelligence": 29.8898,
+      "costTask": 0.25718,
+      "tokensTask": 121073,
       "tokenPrice": 0.54375,
       "inputPrice": 0.435,
       "outputPrice": 0.87,
-      "speed": 55.7791,
-      "latency": 38.9885,
-      "totalTime": 47.9524,
+      "speed": 57.307,
+      "latency": 38.0498,
+      "totalTime": 46.7748,
       "context": 1000000
      }
     },
@@ -2420,15 +1470,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 29.2203,
-      "costTask": 0.507613,
+      "intelligence": 18.7289,
+      "costTask": 1.2851,
       "tokensTask": null,
       "tokenPrice": 0.525,
       "inputPrice": 0.3,
       "outputPrice": 1.2,
-      "speed": 105.262,
-      "latency": 20.3202,
-      "totalTime": 25.0703,
+      "speed": 108.633,
+      "latency": 19.4477,
+      "totalTime": 24.0504,
       "context": 1000000
      }
     },
@@ -2445,91 +1495,16 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 42.7057,
-      "costTask": 0.220114,
-      "tokensTask": 78612.3,
+      "intelligence": 28.9095,
+      "costTask": 0.490971,
+      "tokensTask": 138176,
       "tokenPrice": 0.2625,
       "inputPrice": 0.15,
       "outputPrice": 0.6,
-      "speed": 116.186,
-      "latency": 18.3161,
-      "totalTime": 22.6196,
+      "speed": 118.564,
+      "latency": 18.0053,
+      "totalTime": 22.2224,
       "context": 1000000
-     }
-    },
-    {
-     "id": "ministral-3-14b",
-     "name": "Ministral 3 14B",
-     "fullName": "Ministral 3 14B",
-     "creator": {
-      "slug": "mistral",
-      "name": "Mistral"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": false,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 6.04437,
-      "costTask": 0.0194364,
-      "tokensTask": null,
-      "tokenPrice": 0.2,
-      "inputPrice": 0.2,
-      "outputPrice": 0.2,
-      "speed": 73.1205,
-      "latency": 1.08355,
-      "totalTime": 7.92158,
-      "context": 256000
-     }
-    },
-    {
-     "id": "ministral-3-3b",
-     "name": "Ministral 3 3B",
-     "fullName": "Ministral 3 3B",
-     "creator": {
-      "slug": "mistral",
-      "name": "Mistral"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": false,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 4.8376,
-      "costTask": 0.00784686,
-      "tokensTask": null,
-      "tokenPrice": 0.1,
-      "inputPrice": 0.1,
-      "outputPrice": 0.1,
-      "speed": 213.208,
-      "latency": 0.664269,
-      "totalTime": 3.0094,
-      "context": 256000
-     }
-    },
-    {
-     "id": "ministral-3-8b",
-     "name": "Ministral 3 8B",
-     "fullName": "Ministral 3 8B",
-     "creator": {
-      "slug": "mistral",
-      "name": "Mistral"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": false,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 5.47767,
-      "costTask": 0.0110864,
-      "tokensTask": null,
-      "tokenPrice": 0.15,
-      "inputPrice": 0.15,
-      "outputPrice": 0.15,
-      "speed": 123.101,
-      "latency": 0.839097,
-      "totalTime": 4.90081,
-      "context": 256000
      }
     },
     {
@@ -2545,91 +1520,16 @@
      "estimated": false,
      "sizeValue": 524288,
      "values": {
-      "intelligence": 38.377,
-      "costTask": 1.13444,
-      "tokensTask": 69495.5,
+      "intelligence": 25.2865,
+      "costTask": 5.53703,
+      "tokensTask": 135318,
       "tokenPrice": 2.065,
       "inputPrice": 1.36,
       "outputPrice": 4.18,
-      "speed": 112.405,
-      "latency": 19.3982,
-      "totalTime": 23.8465,
+      "speed": 114.113,
+      "latency": 19.078,
+      "totalTime": 23.4596,
       "context": 524288
-     }
-    },
-    {
-     "id": "mistral-medium-3-5",
-     "name": "Mistral Medium 3.5",
-     "fullName": "Mistral Medium 3.5",
-     "creator": {
-      "slug": "mistral",
-      "name": "Mistral"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 14.1889,
-      "costTask": 0.502038,
-      "tokensTask": null,
-      "tokenPrice": 3,
-      "inputPrice": 1.5,
-      "outputPrice": 7.5,
-      "speed": 160.851,
-      "latency": 14.7558,
-      "totalTime": 17.8642,
-      "context": 256000
-     }
-    },
-    {
-     "id": "mistral-small-4",
-     "name": "Mistral Small 4",
-     "fullName": "Mistral Small 4 (Reasoning)",
-     "creator": {
-      "slug": "mistral",
-      "name": "Mistral"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 11.2676,
-      "costTask": 0.0150468,
-      "tokensTask": null,
-      "tokenPrice": 0.2625,
-      "inputPrice": 0.15,
-      "outputPrice": 0.6,
-      "speed": 174.64,
-      "latency": 12.276,
-      "totalTime": 15.1391,
-      "context": 256000
-     }
-    },
-    {
-     "id": "mistral-small-4-non-reasoning",
-     "name": "Mistral Small 4 (non-reasoning)",
-     "fullName": "Mistral Small 4 (Non-reasoning)",
-     "creator": {
-      "slug": "mistral",
-      "name": "Mistral"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 8.99009,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.2625,
-      "inputPrice": 0.15,
-      "outputPrice": 0.6,
-      "speed": 173.289,
-      "latency": 0.961956,
-      "totalTime": 3.8473,
-      "context": 256000
      }
     },
     {
@@ -2645,15 +1545,15 @@
      "estimated": false,
      "sizeValue": 131072,
      "values": {
-      "intelligence": 17.4754,
-      "costTask": 0.0575513,
+      "intelligence": 6.34129,
+      "costTask": 0.160962,
       "tokensTask": null,
       "tokenPrice": 0.525,
       "inputPrice": 0.3,
       "outputPrice": 1.2,
-      "speed": 103.721,
-      "latency": 20.3495,
-      "totalTime": 25.1701,
+      "speed": 124.697,
+      "latency": 17.2182,
+      "totalTime": 21.2279,
       "context": 131072
      }
     },
@@ -2670,15 +1570,15 @@
      "estimated": false,
      "sizeValue": 1048580,
      "values": {
-      "intelligence": 38.8667,
-      "costTask": 0.844185,
-      "tokensTask": 40399,
+      "intelligence": 24.6816,
+      "costTask": 2.01767,
+      "tokensTask": 66440.1,
       "tokenPrice": 2,
       "inputPrice": 1.25,
       "outputPrice": 4.25,
-      "speed": 165.499,
-      "latency": 12.8702,
-      "totalTime": 15.8914,
+      "speed": 188.843,
+      "latency": 11.3435,
+      "totalTime": 13.9912,
       "context": 1048580
      }
     },
@@ -2695,41 +1595,16 @@
      "estimated": false,
      "sizeValue": 1048580,
      "values": {
-      "intelligence": 52.3939,
-      "costTask": 4.54003,
-      "tokensTask": 54476.5,
+      "intelligence": 43.3248,
+      "costTask": 6.95204,
+      "tokensTask": 96063.1,
       "tokenPrice": 8,
       "inputPrice": 4,
       "outputPrice": 20,
-      "speed": 190.163,
-      "latency": 40.951,
-      "totalTime": 43.5803,
+      "speed": 207.807,
+      "latency": 40.5801,
+      "totalTime": 42.9861,
       "context": 1048580
-     }
-    },
-    {
-     "id": "nemotron-3-5-lightning",
-     "name": "Nemotron 3.5 Lightning",
-     "fullName": "Nemotron 3.5 Lightning",
-     "creator": {
-      "slug": "nvidia",
-      "name": "NVIDIA"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 12.8572,
-      "costTask": 0.0794896,
-      "tokensTask": null,
-      "tokenPrice": 0.095,
-      "inputPrice": 0.06,
-      "outputPrice": 0.2,
-      "speed": 301.129,
-      "latency": 7.24023,
-      "totalTime": 8.90065,
-      "context": 1000000
      }
     },
     {
@@ -2745,315 +1620,15 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 26.4911,
-      "costTask": 0.188237,
-      "tokensTask": 49173.8,
+      "intelligence": 13.6203,
+      "costTask": 0.556516,
+      "tokensTask": 81434.6,
       "tokenPrice": 0.3125,
       "inputPrice": 0.225,
       "outputPrice": 0.575,
-      "speed": 458.753,
-      "latency": 5.13,
-      "totalTime": 6.21991,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "nemotron-3-nano-omni-30b-a3b",
-     "name": "Nemotron 3 Nano Omni 30B A3B",
-     "fullName": "Nemotron 3 Nano Omni 30B A3B Reasoning",
-     "creator": {
-      "slug": "nvidia",
-      "name": "NVIDIA"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 10.2507,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.64125,
-      "inputPrice": 0.4,
-      "outputPrice": 1.365,
-      "speed": 229.745,
-      "latency": 9.4418,
-      "totalTime": 11.6181,
-      "context": 256000
-     }
-    },
-    {
-     "id": "north-mini-code",
-     "name": "North Mini Code",
-     "fullName": "North Mini Code",
-     "creator": {
-      "slug": "cohere",
-      "name": "Cohere"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 9.91463,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": null,
-      "inputPrice": null,
-      "outputPrice": null,
-      "speed": 66.217,
-      "latency": 30.6826,
-      "totalTime": 38.2335,
-      "context": 256000
-     }
-    },
-    {
-     "id": "nova-2-0-lite",
-     "name": "Nova 2.0 Lite (non-reasoning)",
-     "fullName": "Nova 2.0 Lite (Non-reasoning)",
-     "creator": {
-      "slug": "amazon",
-      "name": "Amazon"
-     },
-     "openWeights": false,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 8.73661,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.85,
-      "inputPrice": 0.3,
-      "outputPrice": 2.5,
-      "speed": 174.342,
-      "latency": 1.00303,
-      "totalTime": 3.87096,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "nova-2-0-lite-reasoning",
-     "name": "Nova 2.0 Lite (high)",
-     "fullName": "Nova 2.0 Lite (High)",
-     "creator": {
-      "slug": "amazon",
-      "name": "Amazon"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 13.3741,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.85,
-      "inputPrice": 0.3,
-      "outputPrice": 2.5,
-      "speed": 192.959,
-      "latency": 25.0361,
-      "totalTime": 27.6273,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "nova-2-0-lite-reasoning-low",
-     "name": "Nova 2.0 Lite (low)",
-     "fullName": "Nova 2.0 Lite (Low)",
-     "creator": {
-      "slug": "amazon",
-      "name": "Amazon"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 11.8041,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.85,
-      "inputPrice": 0.3,
-      "outputPrice": 2.5,
-      "speed": 175.122,
-      "latency": 21.0646,
-      "totalTime": 23.9198,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "nova-2-0-lite-reasoning-medium",
-     "name": "Nova 2.0 Lite (medium)",
-     "fullName": "Nova 2.0 Lite (Medium)",
-     "creator": {
-      "slug": "amazon",
-      "name": "Amazon"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 12.4824,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.85,
-      "inputPrice": 0.3,
-      "outputPrice": 2.5,
-      "speed": 190.524,
-      "latency": 27.1097,
-      "totalTime": 29.734,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "nova-2-0-pro",
-     "name": "Nova 2.0 Pro Preview (non-reasoning)",
-     "fullName": "Nova 2.0 Pro Preview (Non-reasoning)",
-     "creator": {
-      "slug": "amazon",
-      "name": "Amazon"
-     },
-     "openWeights": false,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 9.95905,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 3.4375,
-      "inputPrice": 1.25,
-      "outputPrice": 10,
-      "speed": 118.664,
-      "latency": 1.0523,
-      "totalTime": 5.26588,
-      "context": 256000
-     }
-    },
-    {
-     "id": "nova-2-0-pro-reasoning-low",
-     "name": "Nova 2.0 Pro Preview (low)",
-     "fullName": "Nova 2.0 Pro Preview (Low)",
-     "creator": {
-      "slug": "amazon",
-      "name": "Amazon"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 12.7755,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 3.4375,
-      "inputPrice": 1.25,
-      "outputPrice": 10,
-      "speed": 123.495,
-      "latency": 26.241,
-      "totalTime": 30.2897,
-      "context": 256000
-     }
-    },
-    {
-     "id": "nova-2-0-pro-reasoning-medium",
-     "name": "Nova 2.0 Pro Preview (medium)",
-     "fullName": "Nova 2.0 Pro Preview (Medium)",
-     "creator": {
-      "slug": "amazon",
-      "name": "Amazon"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 14.1555,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 3.4375,
-      "inputPrice": 1.25,
-      "outputPrice": 10,
-      "speed": 128.51,
-      "latency": 28.7352,
-      "totalTime": 32.626,
-      "context": 256000
-     }
-    },
-    {
-     "id": "nova-micro",
-     "name": "Nova Micro",
-     "fullName": "Nova Micro",
-     "creator": {
-      "slug": "amazon",
-      "name": "Amazon"
-     },
-     "openWeights": false,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 130000,
-     "values": {
-      "intelligence": 5.87652,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.06125,
-      "inputPrice": 0.035,
-      "outputPrice": 0.14,
-      "speed": 286.116,
-      "latency": 0.799213,
-      "totalTime": 2.54675,
-      "context": 130000
-     }
-    },
-    {
-     "id": "nvidia-nemotron-3-nano-30b-a3b",
-     "name": "Nemotron 3 Nano (non-reasoning)",
-     "fullName": "NVIDIA Nemotron 3 Nano 30B A3B (Non-reasoning)",
-     "creator": {
-      "slug": "nvidia",
-      "name": "NVIDIA"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 6.84785,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.0875,
-      "inputPrice": 0.05,
-      "outputPrice": 0.2,
-      "speed": 280.102,
-      "latency": 0.766373,
-      "totalTime": 2.55144,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "nvidia-nemotron-3-nano-30b-a3b-reasoning",
-     "name": "Nemotron 3 Nano",
-     "fullName": "NVIDIA Nemotron 3 Nano 30B A3B (Reasoning)",
-     "creator": {
-      "slug": "nvidia",
-      "name": "NVIDIA"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 8.89614,
-      "costTask": 0.0167516,
-      "tokensTask": null,
-      "tokenPrice": 0.0875,
-      "inputPrice": 0.05,
-      "outputPrice": 0.2,
-      "speed": 257.603,
-      "latency": 8.7107,
-      "totalTime": 10.6517,
+      "speed": 448.123,
+      "latency": 5.27639,
+      "totalTime": 6.39215,
       "context": 1000000
      }
     },
@@ -3070,541 +1645,16 @@
      "estimated": false,
      "sizeValue": 262144,
      "values": {
-      "intelligence": 22.9279,
-      "costTask": 0.469697,
+      "intelligence": 11.7593,
+      "costTask": 2.22574,
       "tokensTask": null,
       "tokenPrice": 1.125,
       "inputPrice": 0.6,
       "outputPrice": 2.7,
-      "speed": 186.656,
-      "latency": 13.3471,
-      "totalTime": 16.0258,
+      "speed": 198.461,
+      "latency": 12.7349,
+      "totalTime": 15.2543,
       "context": 262144
-     }
-    },
-    {
-     "id": "nvidia-nemotron-nano-12b-v2-vl",
-     "name": "NVIDIA Nemotron Nano 12B v2 VL (non-reasoning)",
-     "fullName": "NVIDIA Nemotron Nano 12B v2 VL (Non-reasoning)",
-     "creator": {
-      "slug": "nvidia",
-      "name": "NVIDIA"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 128000,
-     "values": {
-      "intelligence": 5.82046,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.3,
-      "inputPrice": 0.2,
-      "outputPrice": 0.6,
-      "speed": 202.028,
-      "latency": 1.02698,
-      "totalTime": 3.50188,
-      "context": 128000
-     }
-    },
-    {
-     "id": "nvidia-nemotron-nano-9b-v2",
-     "name": "NVIDIA Nemotron Nano 9B V2 (non-reasoning)",
-     "fullName": "NVIDIA Nemotron Nano 9B V2 (Non-reasoning)",
-     "creator": {
-      "slug": "nvidia",
-      "name": "NVIDIA"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 131072,
-     "values": {
-      "intelligence": 6.84413,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.08625,
-      "inputPrice": 0.05,
-      "outputPrice": 0.195,
-      "speed": 169.949,
-      "latency": 1.02548,
-      "totalTime": 3.96754,
-      "context": 131072
-     }
-    },
-    {
-     "id": "nvidia-nemotron-nano-9b-v2-reasoning",
-     "name": "NVIDIA Nemotron Nano 9B V2",
-     "fullName": "NVIDIA Nemotron Nano 9B V2 (Reasoning)",
-     "creator": {
-      "slug": "nvidia",
-      "name": "NVIDIA"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 131072,
-     "values": {
-      "intelligence": 7.42882,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.07,
-      "inputPrice": 0.04,
-      "outputPrice": 0.16,
-      "speed": 193.479,
-      "latency": 10.9203,
-      "totalTime": 13.5046,
-      "context": 131072
-     }
-    },
-    {
-     "id": "o3",
-     "name": "o3",
-     "fullName": "o3",
-     "creator": {
-      "slug": "openai",
-      "name": "OpenAI"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 200000,
-     "values": {
-      "intelligence": 20.2008,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 3.5,
-      "inputPrice": 2,
-      "outputPrice": 8,
-      "speed": 165.78,
-      "latency": 6.80811,
-      "totalTime": 9.82415,
-      "context": 200000
-     }
-    },
-    {
-     "id": "phi-4",
-     "name": "Phi-4",
-     "fullName": "Phi-4",
-     "creator": {
-      "slug": "microsoft",
-      "name": "Microsoft"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 16000,
-     "values": {
-      "intelligence": 5.92257,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.21875,
-      "inputPrice": 0.125,
-      "outputPrice": 0.5,
-      "speed": 41.7203,
-      "latency": 2.48623,
-      "totalTime": 14.4708,
-      "context": 16000
-     }
-    },
-    {
-     "id": "phi-4-mini",
-     "name": "Phi-4 Mini",
-     "fullName": "Phi-4 Mini Instruct",
-     "creator": {
-      "slug": "microsoft",
-      "name": "Microsoft"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 128000,
-     "values": {
-      "intelligence": 6.32861,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.13125,
-      "inputPrice": 0.075,
-      "outputPrice": 0.3,
-      "speed": 45.5602,
-      "latency": 0.860079,
-      "totalTime": 11.8346,
-      "context": 128000
-     }
-    },
-    {
-     "id": "quasar-438b",
-     "name": "Quasar 438B (max)",
-     "fullName": "Quasar 438B (Max, Based on GLM-5.2)",
-     "creator": {
-      "slug": "multiverse-computing",
-      "name": "Multiverse Computing"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 26.7373,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.165,
-      "inputPrice": 0.11,
-      "outputPrice": 0.33,
-      "speed": 165.51,
-      "latency": 13.2347,
-      "totalTime": 16.2557,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "qwen3-5-122b-a10b",
-     "name": "Qwen3.5 122B A10B",
-     "fullName": "Qwen3.5 122B A10B (Reasoning)",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 262144,
-     "values": {
-      "intelligence": 15.5694,
-      "costTask": 0.324747,
-      "tokensTask": null,
-      "tokenPrice": 1.1,
-      "inputPrice": 0.4,
-      "outputPrice": 3.2,
-      "speed": 131.159,
-      "latency": 17.5547,
-      "totalTime": 21.3668,
-      "context": 262144
-     }
-    },
-    {
-     "id": "qwen3-5-122b-a10b-non-reasoning",
-     "name": "Qwen3.5 122B A10B (non-reasoning)",
-     "fullName": "Qwen3.5 122B A10B (Non-reasoning)",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 262144,
-     "values": {
-      "intelligence": 17.748,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 1.1,
-      "inputPrice": 0.4,
-      "outputPrice": 3.2,
-      "speed": 144.811,
-      "latency": 2.29616,
-      "totalTime": 5.74893,
-      "context": 262144
-     }
-    },
-    {
-     "id": "qwen3-5-397b-a17b",
-     "name": "Qwen3.5 397B A17B",
-     "fullName": "Qwen3.5 397B A17B (Reasoning)",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 262144,
-     "values": {
-      "intelligence": 18.4204,
-      "costTask": 0.474577,
-      "tokensTask": null,
-      "tokenPrice": 1.35,
-      "inputPrice": 0.6,
-      "outputPrice": 3.6,
-      "speed": 58.7534,
-      "latency": 56.458,
-      "totalTime": 64.9682,
-      "context": 262144
-     }
-    },
-    {
-     "id": "qwen3-5-397b-a17b-non-reasoning",
-     "name": "Qwen3.5 397B A17B (non-reasoning)",
-     "fullName": "Qwen3.5 397B A17B (Non-reasoning)",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 262144,
-     "values": {
-      "intelligence": 21.4367,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 1.35,
-      "inputPrice": 0.6,
-      "outputPrice": 3.6,
-      "speed": 59.6177,
-      "latency": 2.26884,
-      "totalTime": 10.6556,
-      "context": 262144
-     }
-    },
-    {
-     "id": "qwen3-5-4b",
-     "name": "Qwen3.5 4B",
-     "fullName": "Qwen3.5 4B (Reasoning)",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 262144,
-     "values": {
-      "intelligence": 13.1248,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.06,
-      "inputPrice": 0.03,
-      "outputPrice": 0.15,
-      "speed": 18.1216,
-      "latency": 111.303,
-      "totalTime": 138.895,
-      "context": 262144
-     }
-    },
-    {
-     "id": "qwen3-5-4b-non-reasoning",
-     "name": "Qwen3.5 4B (non-reasoning)",
-     "fullName": "Qwen3.5 4B (Non-reasoning)",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 262144,
-     "values": {
-      "intelligence": 10.8123,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.06,
-      "inputPrice": 0.03,
-      "outputPrice": 0.15,
-      "speed": 14.1133,
-      "latency": 0.876744,
-      "totalTime": 36.3043,
-      "context": 262144
-     }
-    },
-    {
-     "id": "qwen3-5-9b",
-     "name": "Qwen3.5 9B",
-     "fullName": "Qwen3.5 9B (Reasoning)",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 262144,
-     "values": {
-      "intelligence": 11.1962,
-      "costTask": 0.212583,
-      "tokensTask": null,
-      "tokenPrice": 0.15125,
-      "inputPrice": 0.135,
-      "outputPrice": 0.2,
-      "speed": 56.6098,
-      "latency": 37.3373,
-      "totalTime": 46.1697,
-      "context": 262144
-     }
-    },
-    {
-     "id": "qwen3-5-9b-non-reasoning",
-     "name": "Qwen3.5 9B (non-reasoning)",
-     "fullName": "Qwen3.5 9B (Non-reasoning)",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 262144,
-     "values": {
-      "intelligence": 13.266,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.19,
-      "inputPrice": 0.17,
-      "outputPrice": 0.25,
-      "speed": 81.6732,
-      "latency": 0.998405,
-      "totalTime": 7.12037,
-      "context": 262144
-     }
-    },
-    {
-     "id": "qwen3-5-omni-flash",
-     "name": "Qwen3.5 Omni Flash",
-     "fullName": "Qwen3.5 Omni Flash",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": false,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 12.474,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.275,
-      "inputPrice": 0.1,
-      "outputPrice": 0.8,
-      "speed": 234.533,
-      "latency": 1.80199,
-      "totalTime": 3.93388,
-      "context": 256000
-     }
-    },
-    {
-     "id": "qwen3-5-omni-plus",
-     "name": "Qwen3.5 Omni Plus",
-     "fullName": "Qwen3.5 Omni Plus",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": false,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 20.384,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 1.5,
-      "inputPrice": 0.4,
-      "outputPrice": 4.8,
-      "speed": 121.534,
-      "latency": 2.06385,
-      "totalTime": 6.17793,
-      "context": 256000
-     }
-    },
-    {
-     "id": "qwen3-6-35b-a3b",
-     "name": "Qwen3.6 35B A3B",
-     "fullName": "Qwen3.6 35B A3B (Reasoning)",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 262144,
-     "values": {
-      "intelligence": 18.229,
-      "costTask": 0.475053,
-      "tokensTask": null,
-      "tokenPrice": 0.84375,
-      "inputPrice": 0.375,
-      "outputPrice": 2.25,
-      "speed": 131.358,
-      "latency": 43.1272,
-      "totalTime": 46.9335,
-      "context": 262144
-     }
-    },
-    {
-     "id": "qwen3-6-35b-a3b-non-reasoning",
-     "name": "Qwen3.6 35B A3B (non-reasoning)",
-     "fullName": "Qwen3.6 35B A3B (Non-reasoning)",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 262144,
-     "values": {
-      "intelligence": 15.2321,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.84375,
-      "inputPrice": 0.375,
-      "outputPrice": 2.25,
-      "speed": 145.502,
-      "latency": 2.01171,
-      "totalTime": 5.4481,
-      "context": 262144
-     }
-    },
-    {
-     "id": "qwen3-7-plus",
-     "name": "Qwen3.7 Plus",
-     "fullName": "Qwen3.7 Plus",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1000000,
-     "values": {
-      "intelligence": 25.1622,
-      "costTask": 0.217026,
-      "tokensTask": null,
-      "tokenPrice": 0.7,
-      "inputPrice": 0.4,
-      "outputPrice": 1.6,
-      "speed": 57.0431,
-      "latency": 37.3826,
-      "totalTime": 46.1479,
-      "context": 1000000
-     }
-    },
-    {
-     "id": "qwen3-8-2-4t-a95b",
-     "name": "Qwen3.8 2.4T A95B",
-     "fullName": "Qwen3.8 2.4T A95B",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 262000,
-     "values": {
-      "intelligence": 39.9462,
-      "costTask": 2.15516,
-      "tokensTask": null,
-      "tokenPrice": 3,
-      "inputPrice": 2,
-      "outputPrice": 6,
-      "speed": 41.2228,
-      "latency": 51.5109,
-      "totalTime": 63.6401,
-      "context": 262000
      }
     },
     {
@@ -3620,115 +1670,15 @@
      "estimated": false,
      "sizeValue": 256000,
      "values": {
-      "intelligence": 33.6763,
-      "costTask": 1.00749,
-      "tokensTask": 66783.2,
+      "intelligence": 20.1069,
+      "costTask": 3.52955,
+      "tokensTask": 109802,
       "tokenPrice": 1.125,
       "inputPrice": 0.5,
       "outputPrice": 3,
-      "speed": 43.9827,
-      "latency": 49.356,
-      "totalTime": 60.7241,
-      "context": 256000
-     }
-    },
-    {
-     "id": "qwen3-8-27b-low",
-     "name": "Qwen3.8 27B (low)",
-     "fullName": "Qwen3.8 27B (Low)",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 26.2048,
-      "costTask": 1.04822,
-      "tokensTask": null,
-      "tokenPrice": 1.125,
-      "inputPrice": 0.5,
-      "outputPrice": 3,
-      "speed": 48.4531,
-      "latency": 45.2441,
-      "totalTime": 55.5633,
-      "context": 256000
-     }
-    },
-    {
-     "id": "qwen3-8-27b-medium",
-     "name": "Qwen3.8 27B (medium)",
-     "fullName": "Qwen3.8 27B (Medium)",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 27.5508,
-      "costTask": 1.13306,
-      "tokensTask": null,
-      "tokenPrice": 1.125,
-      "inputPrice": 0.5,
-      "outputPrice": 3,
-      "speed": 46.5671,
-      "latency": 46.9529,
-      "totalTime": 57.69,
-      "context": 256000
-     }
-    },
-    {
-     "id": "qwen3-8-27b-non-reasoning",
-     "name": "Qwen3.8 27B (non-reasoning)",
-     "fullName": "Qwen3.8 27B (Non-reasoning)",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": false,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 20.1502,
-      "costTask": 2.48776,
-      "tokensTask": null,
-      "tokenPrice": 1.125,
-      "inputPrice": 0.5,
-      "outputPrice": 3,
-      "speed": 49.9125,
-      "latency": 3.9514,
-      "totalTime": 13.9689,
-      "context": 256000
-     }
-    },
-    {
-     "id": "qwen3-8-flash-next",
-     "name": "Qwen3.8-Flash-Next",
-     "fullName": "Qwen3.8-Flash-Next",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 39.8223,
-      "costTask": 0.372176,
-      "tokensTask": null,
-      "tokenPrice": 0.23,
-      "inputPrice": 0.15,
-      "outputPrice": 0.47,
-      "speed": 51.6514,
-      "latency": 40.8084,
-      "totalTime": 50.4887,
+      "speed": 41.2176,
+      "latency": 52.4144,
+      "totalTime": 64.5452,
       "context": 256000
      }
     },
@@ -3745,116 +1695,16 @@
      "estimated": false,
      "sizeValue": 983616,
      "values": {
-      "intelligence": 45.4152,
-      "costTask": 5.40851,
-      "tokensTask": 107730,
+      "intelligence": 33.5546,
+      "costTask": 10.0239,
+      "tokensTask": 170794,
       "tokenPrice": 3,
       "inputPrice": 2,
       "outputPrice": 6,
-      "speed": 40.8367,
-      "latency": 51.826,
-      "totalTime": 64.0699,
+      "speed": 41.6458,
+      "latency": 51.0866,
+      "totalTime": 63.0926,
       "context": 983616
-     }
-    },
-    {
-     "id": "qwen3-coder-next",
-     "name": "Qwen3 Coder Next",
-     "fullName": "Qwen3 Coder Next",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": false,
-     "sizeValue": 256000,
-     "values": {
-      "intelligence": 9.23682,
-      "costTask": 0.469696,
-      "tokensTask": null,
-      "tokenPrice": 0.4825,
-      "inputPrice": 0.31,
-      "outputPrice": 1,
-      "speed": 95.861,
-      "latency": 0.888729,
-      "totalTime": 6.10462,
-      "context": 256000
-     }
-    },
-    {
-     "id": "qwen3-next-80b-a3b-instruct",
-     "name": "Qwen3 Next 80B A3B",
-     "fullName": "Qwen3 Next 80B A3B Instruct",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 262144,
-     "values": {
-      "intelligence": 9.64335,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.35,
-      "inputPrice": 0.1,
-      "outputPrice": 1.1,
-      "speed": 136.005,
-      "latency": 0.751429,
-      "totalTime": 4.42775,
-      "context": 262144
-     }
-    },
-    {
-     "id": "qwen3-omni-30b-a3b-instruct",
-     "name": "Qwen3 Omni 30B A3B",
-     "fullName": "Qwen3 Omni 30B A3B Instruct",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": false,
-     "estimated": true,
-     "sizeValue": 65536,
-     "values": {
-      "intelligence": 6.00612,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.43,
-      "inputPrice": 0.25,
-      "outputPrice": 0.97,
-      "speed": 96.413,
-      "latency": 1.87394,
-      "totalTime": 7.05996,
-      "context": 65536
-     }
-    },
-    {
-     "id": "qwen3-omni-30b-a3b-reasoning",
-     "name": "Qwen3 Omni 30B A3B",
-     "fullName": "Qwen3 Omni 30B A3B (Reasoning)",
-     "creator": {
-      "slug": "alibaba",
-      "name": "Alibaba"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 65536,
-     "values": {
-      "intelligence": 7.76083,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.43,
-      "inputPrice": 0.25,
-      "outputPrice": 0.97,
-      "speed": 102.813,
-      "latency": 21.3739,
-      "totalTime": 26.2371,
-      "context": 65536
      }
     },
     {
@@ -3870,115 +1720,15 @@
      "estimated": false,
      "sizeValue": 1048580,
      "values": {
-      "intelligence": 30.3334,
-      "costTask": 0.226242,
-      "tokensTask": 26315,
+      "intelligence": 17.7307,
+      "costTask": 0.284407,
+      "tokensTask": 34242.2,
       "tokenPrice": 0.6,
       "inputPrice": 0.4,
       "outputPrice": 1.2,
-      "speed": 362.521,
-      "latency": 6.17481,
-      "totalTime": 7.55404,
-      "context": 1048580
-     }
-    },
-    {
-     "id": "reka-flash-3",
-     "name": "Reka Flash 3",
-     "fullName": "Reka Flash 3",
-     "creator": {
-      "slug": "reka-ai",
-      "name": "Reka AI"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 128000,
-     "values": {
-      "intelligence": 5.64602,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.35,
-      "inputPrice": 0.2,
-      "outputPrice": 0.8,
-      "speed": 87.9475,
-      "latency": 24.1389,
-      "totalTime": 29.8241,
-      "context": 128000
-     }
-    },
-    {
-     "id": "ring-2-6-1t",
-     "name": "Ring-2.6-1T",
-     "fullName": "Ring-2.6-1T",
-     "creator": {
-      "slug": "inclusionai",
-      "name": "InclusionAI"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 262144,
-     "values": {
-      "intelligence": 16.6172,
-      "costTask": 0.287157,
-      "tokensTask": null,
-      "tokenPrice": 0.85,
-      "inputPrice": 0.3,
-      "outputPrice": 2.5,
-      "speed": 122.229,
-      "latency": 20.093,
-      "totalTime": 24.1836,
-      "context": 262144
-     }
-    },
-    {
-     "id": "sarvam-105b",
-     "name": "Sarvam 105B (high)",
-     "fullName": "Sarvam 105B (High)",
-     "creator": {
-      "slug": "sarvam",
-      "name": "Sarvam"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": true,
-     "sizeValue": 128000,
-     "values": {
-      "intelligence": 8.79055,
-      "costTask": null,
-      "tokensTask": null,
-      "tokenPrice": 0.074,
-      "inputPrice": 0.042,
-      "outputPrice": 0.17,
-      "speed": 194.42,
-      "latency": 11.9302,
-      "totalTime": 14.5019,
-      "context": 128000
-     }
-    },
-    {
-     "id": "solar-mini4",
-     "name": "Solar Mini 4",
-     "fullName": "Solar Mini 4",
-     "creator": {
-      "slug": "upstage",
-      "name": "Upstage"
-     },
-     "openWeights": false,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 1048580,
-     "values": {
-      "intelligence": 24.0522,
-      "costTask": 0.365585,
-      "tokensTask": null,
-      "tokenPrice": 0.175,
-      "inputPrice": 0.1,
-      "outputPrice": 0.4,
-      "speed": 121.651,
-      "latency": 18.2692,
-      "totalTime": 22.3793,
+      "speed": 371.178,
+      "latency": 5.96944,
+      "totalTime": 7.31651,
       "context": 1048580
      }
     },
@@ -3995,45 +1745,20 @@
      "estimated": false,
      "sizeValue": 1000000,
      "values": {
-      "intelligence": 43.7343,
-      "costTask": 1.02641,
-      "tokensTask": 64144.3,
+      "intelligence": 28.5283,
+      "costTask": 2.34525,
+      "tokensTask": 113473,
       "tokenPrice": 1.425,
       "inputPrice": 1,
       "outputPrice": 2.7,
-      "speed": 220.246,
-      "latency": 10.3188,
-      "totalTime": 12.589,
+      "speed": 183,
+      "latency": 12.1101,
+      "totalTime": 14.8423,
       "context": 1000000
-     }
-    },
-    {
-     "id": "trinity-large-thinking",
-     "name": "Trinity Large Thinking",
-     "fullName": "Trinity Large Thinking",
-     "creator": {
-      "slug": "arcee-ai",
-      "name": "Arcee AI"
-     },
-     "openWeights": true,
-     "reasoning": true,
-     "estimated": false,
-     "sizeValue": 512000,
-     "values": {
-      "intelligence": 10.8242,
-      "costTask": 0.118838,
-      "tokensTask": null,
-      "tokenPrice": 0.3875,
-      "inputPrice": 0.25,
-      "outputPrice": 0.8,
-      "speed": 342.469,
-      "latency": 7.00253,
-      "totalTime": 8.46252,
-      "context": 512000
      }
     }
    ],
-   "modelCount": 161
+   "modelCount": 70
   },
   {
    "id": "image",
@@ -4597,7 +2322,7 @@
      "sizeValue": 8342,
      "values": {
       "quality": 1165.89,
-      "price": 38.9,
+      "price": 38.912,
       "appearances": 8342,
       "uncertainty": 12
      }
@@ -5617,7 +3342,7 @@
      "sizeValue": 5482,
      "values": {
       "quality": 1119.12,
-      "price": 19.5,
+      "price": 19.456,
       "appearances": 5482,
       "uncertainty": 12
      }
@@ -6206,11 +3931,11 @@
       "name": "Alibaba"
      },
      "openWeights": false,
-     "sizeValue": 4989,
+     "sizeValue": 5189,
      "values": {
-      "quality": 1036.77,
+      "quality": 1037.03,
       "price": 9,
-      "appearances": 4989,
+      "appearances": 5189,
       "uncertainty": 15
      }
     },
@@ -6223,12 +3948,12 @@
       "name": "Vidu"
      },
      "openWeights": false,
-     "sizeValue": 3919,
+     "sizeValue": 4106,
      "values": {
-      "quality": 916.02,
+      "quality": 914.68,
       "price": 3.9,
-      "appearances": 3919,
-      "uncertainty": 17
+      "appearances": 4106,
+      "uncertainty": 16
      }
     },
     {
@@ -6240,11 +3965,11 @@
       "name": "Lightricks"
      },
      "openWeights": true,
-     "sizeValue": 3620,
+     "sizeValue": 3818,
      "values": {
-      "quality": 839.16,
+      "quality": 839.07,
       "price": 3.6,
-      "appearances": 3620,
+      "appearances": 3818,
       "uncertainty": 18
      }
     },
@@ -6257,11 +3982,11 @@
       "name": "Runway"
      },
      "openWeights": false,
-     "sizeValue": 3251,
+     "sizeValue": 3398,
      "values": {
-      "quality": 909.68,
+      "quality": 909.19,
       "price": 7.2,
-      "appearances": 3251,
+      "appearances": 3398,
       "uncertainty": 18
      }
     },
@@ -6274,11 +3999,11 @@
       "name": "KlingAI"
      },
      "openWeights": false,
-     "sizeValue": 3154,
+     "sizeValue": 3299,
      "values": {
-      "quality": 889.56,
+      "quality": 887.35,
       "price": 6.72,
-      "appearances": 3154,
+      "appearances": 3299,
       "uncertainty": 18
      }
     },
@@ -6291,11 +4016,11 @@
       "name": "Utopai Studios"
      },
      "openWeights": false,
-     "sizeValue": 5813,
+     "sizeValue": 6000,
      "values": {
-      "quality": 1166.65,
+      "quality": 1167.52,
       "price": null,
-      "appearances": 5813,
+      "appearances": 6000,
       "uncertainty": 15
      }
     },
@@ -6308,12 +4033,12 @@
       "name": "Sapiens AI"
      },
      "openWeights": false,
-     "sizeValue": 4263,
+     "sizeValue": 4475,
      "values": {
-      "quality": 1065.86,
+      "quality": 1065.94,
       "price": 2.4,
-      "appearances": 4263,
-      "uncertainty": 16
+      "appearances": 4475,
+      "uncertainty": 15
      }
     },
     {
@@ -6325,11 +4050,11 @@
       "name": "KlingAI"
      },
      "openWeights": false,
-     "sizeValue": 4036,
+     "sizeValue": 4198,
      "values": {
-      "quality": 1019.63,
+      "quality": 1020.18,
       "price": 8.4,
-      "appearances": 4036,
+      "appearances": 4198,
       "uncertainty": 16
      }
     },
@@ -6342,12 +4067,12 @@
       "name": "ByteDance Seed"
      },
      "openWeights": false,
-     "sizeValue": 6477,
+     "sizeValue": 6654,
      "values": {
-      "quality": 1157.61,
+      "quality": 1155.9,
       "price": 34.12,
-      "appearances": 6477,
-      "uncertainty": 15
+      "appearances": 6654,
+      "uncertainty": 14
      }
     },
     {
@@ -6359,12 +4084,12 @@
       "name": "Creatify"
      },
      "openWeights": false,
-     "sizeValue": 3332,
+     "sizeValue": 3539,
      "values": {
-      "quality": 829.6,
+      "quality": 832.32,
       "price": 2.69,
-      "appearances": 3332,
-      "uncertainty": 19
+      "appearances": 3539,
+      "uncertainty": 18
      }
     },
     {
@@ -6376,11 +4101,11 @@
       "name": "Fal"
      },
      "openWeights": false,
-     "sizeValue": 6144,
+     "sizeValue": 6320,
      "values": {
-      "quality": 1153.51,
+      "quality": 1152.43,
       "price": 4.8,
-      "appearances": 6144,
+      "appearances": 6320,
       "uncertainty": 15
      }
     },
@@ -6393,11 +4118,11 @@
       "name": "Lightricks"
      },
      "openWeights": true,
-     "sizeValue": 3322,
+     "sizeValue": 3505,
      "values": {
-      "quality": 944.79,
+      "quality": 944.06,
       "price": 10.2,
-      "appearances": 3322,
+      "appearances": 3505,
       "uncertainty": 17
      }
     },
@@ -6410,11 +4135,11 @@
       "name": "Google"
      },
      "openWeights": false,
-     "sizeValue": 6818,
+     "sizeValue": 6997,
      "values": {
-      "quality": 1130.05,
+      "quality": 1128.34,
       "price": 9.12,
-      "appearances": 6818,
+      "appearances": 6997,
       "uncertainty": 14
      }
     },
@@ -6427,11 +4152,11 @@
       "name": "Alibaba-ATH"
      },
      "openWeights": false,
-     "sizeValue": 4259,
+     "sizeValue": 4446,
      "values": {
-      "quality": 1032.64,
+      "quality": 1032.56,
       "price": 14.4,
-      "appearances": 4259,
+      "appearances": 4446,
       "uncertainty": 15
      }
     },
@@ -6444,12 +4169,12 @@
       "name": "Google"
      },
      "openWeights": false,
-     "sizeValue": 3443,
+     "sizeValue": 3635,
      "values": {
-      "quality": 949.57,
+      "quality": 951.35,
       "price": 4.8,
-      "appearances": 3443,
-      "uncertainty": 17
+      "appearances": 3635,
+      "uncertainty": 16
      }
     },
     {
@@ -6461,11 +4186,11 @@
       "name": "HeyGen"
      },
      "openWeights": false,
-     "sizeValue": 5520,
+     "sizeValue": 5714,
      "values": {
-      "quality": 1159.85,
+      "quality": 1156.69,
       "price": 2.4,
-      "appearances": 5520,
+      "appearances": 5714,
       "uncertainty": 15
      }
     },
@@ -6478,12 +4203,12 @@
       "name": "Black Forest Labs"
      },
      "openWeights": false,
-     "sizeValue": 5566,
+     "sizeValue": 5724,
      "values": {
-      "quality": 1145.06,
+      "quality": 1142.19,
       "price": 17.4,
-      "appearances": 5566,
-      "uncertainty": 15
+      "appearances": 5724,
+      "uncertainty": 14
      }
     },
     {
@@ -6495,12 +4220,12 @@
       "name": "Lightricks"
      },
      "openWeights": true,
-     "sizeValue": 3503,
+     "sizeValue": 3696,
      "values": {
-      "quality": 949.48,
+      "quality": 948.71,
       "price": 7.8,
-      "appearances": 3503,
-      "uncertainty": 17
+      "appearances": 3696,
+      "uncertainty": 16
      }
     },
     {
@@ -6512,11 +4237,11 @@
       "name": "ByteDance Seed"
      },
      "openWeights": false,
-     "sizeValue": 5511,
+     "sizeValue": 5702,
      "values": {
-      "quality": 1136.43,
+      "quality": 1135.93,
       "price": 22.45,
-      "appearances": 5511,
+      "appearances": 5702,
       "uncertainty": 15
      }
     },
@@ -6529,11 +4254,11 @@
       "name": "Google"
      },
      "openWeights": false,
-     "sizeValue": 3591,
+     "sizeValue": 3765,
      "values": {
-      "quality": 962.62,
+      "quality": 960.64,
       "price": 24,
-      "appearances": 3591,
+      "appearances": 3765,
       "uncertainty": 16
      }
     },
@@ -6546,12 +4271,12 @@
       "name": "PixVerse"
      },
      "openWeights": false,
-     "sizeValue": 3449,
+     "sizeValue": 3642,
      "values": {
-      "quality": 983.53,
+      "quality": 982.76,
       "price": 6.9,
-      "appearances": 3449,
-      "uncertainty": 17
+      "appearances": 3642,
+      "uncertainty": 16
      }
     },
     {
@@ -6563,11 +4288,11 @@
       "name": "SpaceXAI"
      },
      "openWeights": false,
-     "sizeValue": 6643,
+     "sizeValue": 6823,
      "values": {
-      "quality": 991.58,
+      "quality": 990.12,
       "price": 8.4,
-      "appearances": 6643,
+      "appearances": 6823,
       "uncertainty": 14
      }
     },
@@ -6580,11 +4305,11 @@
       "name": "Lightricks"
      },
      "openWeights": true,
-     "sizeValue": 3972,
+     "sizeValue": 4171,
      "values": {
-      "quality": 888.17,
+      "quality": 885.87,
       "price": 4.8,
-      "appearances": 3972,
+      "appearances": 4171,
       "uncertainty": 17
      }
     },
@@ -6597,12 +4322,12 @@
       "name": "Alibaba"
      },
      "openWeights": false,
-     "sizeValue": 6372,
+     "sizeValue": 6547,
      "values": {
-      "quality": 1174.59,
+      "quality": 1173.62,
       "price": 12,
-      "appearances": 6372,
-      "uncertainty": 15
+      "appearances": 6547,
+      "uncertainty": 14
      }
     },
     {
@@ -6614,11 +4339,11 @@
       "name": "KlingAI"
      },
      "openWeights": false,
-     "sizeValue": 5353,
+     "sizeValue": 5533,
      "values": {
       "quality": 1000,
       "price": 10.08,
-      "appearances": 5353,
+      "appearances": 5533,
       "uncertainty": null
      }
     },
@@ -6631,11 +4356,11 @@
       "name": "Vidu"
      },
      "openWeights": false,
-     "sizeValue": 4335,
+     "sizeValue": 4524,
      "values": {
-      "quality": 934.84,
+      "quality": 937.11,
       "price": 7.2,
-      "appearances": 4335,
+      "appearances": 4524,
       "uncertainty": 16
      }
     },
@@ -6648,11 +4373,11 @@
       "name": "Sand.ai"
      },
      "openWeights": false,
-     "sizeValue": 6015,
+     "sizeValue": 6200,
      "values": {
-      "quality": 1042.07,
+      "quality": 1044.14,
       "price": null,
-      "appearances": 6015,
+      "appearances": 6200,
       "uncertainty": 14
      }
     },
@@ -6665,12 +4390,12 @@
       "name": "MiniMax"
      },
      "openWeights": true,
-     "sizeValue": 6484,
+     "sizeValue": 6669,
      "values": {
-      "quality": 1157.62,
+      "quality": 1158.38,
       "price": 4.8,
-      "appearances": 6484,
-      "uncertainty": 15
+      "appearances": 6669,
+      "uncertainty": 14
      }
     },
     {
@@ -6682,11 +4407,11 @@
       "name": "Alibaba-ATH"
      },
      "openWeights": false,
-     "sizeValue": 5732,
+     "sizeValue": 5929,
      "values": {
-      "quality": 1051.09,
+      "quality": 1050.09,
       "price": 10.8,
-      "appearances": 5732,
+      "appearances": 5929,
       "uncertainty": 15
      }
     },
@@ -6699,11 +4424,11 @@
       "name": "Pruna AI"
      },
      "openWeights": false,
-     "sizeValue": 3271,
+     "sizeValue": 3423,
      "values": {
-      "quality": 802.34,
+      "quality": 801.23,
       "price": 2.4,
-      "appearances": 3271,
+      "appearances": 3423,
       "uncertainty": 19
      }
     },
@@ -6716,11 +4441,11 @@
       "name": "Pika Art"
      },
      "openWeights": false,
-     "sizeValue": 3133,
+     "sizeValue": 3293,
      "values": {
-      "quality": 835.46,
+      "quality": 835,
       "price": 5.4,
-      "appearances": 3133,
+      "appearances": 3293,
       "uncertainty": 19
      }
     },
@@ -6733,11 +4458,11 @@
       "name": "SpaceXAI"
      },
      "openWeights": false,
-     "sizeValue": 4340,
+     "sizeValue": 4559,
      "values": {
-      "quality": 1055.82,
+      "quality": 1057.24,
       "price": 15,
-      "appearances": 4340,
+      "appearances": 4559,
       "uncertainty": 15
      }
     },
@@ -6750,11 +4475,11 @@
       "name": "Google"
      },
      "openWeights": false,
-     "sizeValue": 4517,
+     "sizeValue": 4702,
      "values": {
-      "quality": 960.22,
+      "quality": 958.47,
       "price": 7.2,
-      "appearances": 4517,
+      "appearances": 4702,
       "uncertainty": 16
      }
     },
@@ -6767,11 +4492,11 @@
       "name": "Fal"
      },
      "openWeights": false,
-     "sizeValue": 5479,
+     "sizeValue": 5650,
      "values": {
-      "quality": 1155.43,
+      "quality": 1155.17,
       "price": 2.55,
-      "appearances": 5479,
+      "appearances": 5650,
       "uncertainty": 15
      }
     }
