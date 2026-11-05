@@ -54,7 +54,7 @@ async function fetchHtml(source) {
 }
 
 function collectObjects(html) {
-  const chunkRe = /self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)/g;
+  const chunkRe = /self\.__next_f\.push\(\[\s*\d+\s*,\s*("(?:[^"\\]|\\.)*")(?:\s*,[^\]]*)?\s*\]\)/g;
   let flight = "";
   for (const match of html.matchAll(chunkRe)) flight += JSON.parse(match[1]);
 
