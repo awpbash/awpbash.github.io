@@ -105,8 +105,7 @@ function normalizeLanguage(modelObjects, leaderboardObjects) {
       typeof value.id === "string" &&
       typeof value.slug === "string" &&
       typeof value.intelligenceIndex === "number" &&
-      value.creator && typeof value.creator === "object" &&
-      value.timescaleData && typeof value.timescaleData === "object",
+      value.creator && typeof value.creator === "object",
     (value) => value.id,
   );
 
@@ -122,7 +121,7 @@ function normalizeLanguage(modelObjects, leaderboardObjects) {
     (value) =>
       typeof value.slug === "string" &&
       typeof value.intelligenceIndex === "number" &&
-      typeof value.medianOutputTokensPerSecond === "number" &&
+      (typeof value.outputSpeed === "number" || typeof value.medianOutputTokensPerSecond === "number") &&
       typeof value.modelCreatorName === "string",
     (value) => value.slug,
   );
@@ -140,9 +139,21 @@ function normalizeLanguage(modelObjects, leaderboardObjects) {
         tokenPrice: round(inputPrice && outputPrice ? (3 * inputPrice + outputPrice) / 4 : null),
         inputPrice: round(inputPrice),
         outputPrice: round(outputPrice),
-        speed: round(positive(detail?.timescaleData?.medianOutputSpeed ?? value.medianOutputTokensPerSecond)),
-        latency: round(positive(detail?.timeToFirstAnswerToken?.total ?? value.medianTimeToFirstAnswerTokenSeconds ?? value.medianTimeToFirstTokenSeconds)),
-        totalTime: round(positive(detail?.endToEndResponseTime?.total ?? value.medianEndToEndResponseTimeSeconds)),
+        speed: round(
+          positive(detail?.timescaleData?.medianOutputSpeed ?? value.outputSpeed ?? value.medianOutputTokensPerSecond),
+        ),
+        latency: round(
+          positive(
+            detail?.timeToFirstAnswerToken?.total ??
+              value.timeToFirstAnswerToken ??
+              value.medianTimeToFirstAnswerTokenSeconds ??
+              value.timeToFirstToken ??
+              value.medianTimeToFirstTokenSeconds,
+          ),
+        ),
+        totalTime: round(
+          positive(detail?.endToEndResponseTime?.total ?? detail?.endToEndTime ?? value.medianEndToEndResponseTimeSeconds),
+        ),
         context: round(positive(detail?.contextWindowTokens ?? value.contextWindowTokens)),
       };
       return {
